@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "09_Sergei", "09_Sergei", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_ParityCheck", "06_Jury\02_ParityCheck\02_ParityCheck.csproj", "{BF709E5C-DD11-4F18-9993-9DE3C40598BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Ping", "10_Sergei\01_Ping\01_Ping.csproj", "{B88C2F3B-71C5-4840-B425-78A4DD5E6657}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Ping", "09_Sergei\01_Ping\01_Ping.csproj", "{B88C2F3B-71C5-4840-B425-78A4DD5E6657}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
