@@ -4,20 +4,41 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
+	ProjectSection(SolutionItems) = preProject
+		01_Vladimir\readMe.txt = 01_Vladimir\readMe.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_Igor", "02_Igor", "{1680F505-0533-4DF0-9A62-B617A5D6FAF0}"
+	ProjectSection(SolutionItems) = preProject
+		02_Igor\readMe.txt = 02_Igor\readMe.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_Oleg", "03_Oleg", "{1E5F935B-DC63-439B-BFE0-A5154DB54DBA}"
+	ProjectSection(SolutionItems) = preProject
+		03_Oleg\readMe.txt = 03_Oleg\readMe.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_Artem", "04_Artem", "{B52353BC-F389-4825-BADA-5C5D97B1DB72}"
+	ProjectSection(SolutionItems) = preProject
+		04_Artem\readMe.txt = 04_Artem\readMe.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_Eugene", "05_Eugene", "{574D8AE2-3CF2-4AC5-B558-850669DA4184}"
+	ProjectSection(SolutionItems) = preProject
+		05_Eugene\readMe.txt = 05_Eugene\readMe.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06_Jury", "06_Jury", "{79A650D6-BA91-47D1-88CE-EC002A70A94C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07_Novel", "07_Novel", "{EC9A435A-03FF-4A1C-B66A-5643A572C7C6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07_Roman", "07_Roman", "{EC9A435A-03FF-4A1C-B66A-5643A572C7C6}"
+	ProjectSection(SolutionItems) = preProject
+		07_Roman\readMe.txt = 07_Roman\readMe.txt
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08_Danilo", "08_Danilo", "{DDF8AE58-88FE-4DB5-AB48-D78BE93969F1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08_Danila", "08_Danila", "{DDF8AE58-88FE-4DB5-AB48-D78BE93969F1}"
+	ProjectSection(SolutionItems) = preProject
+		08_Danilo\readMe.txt = 08_Danilo\readMe.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "09_Sergei", "09_Sergei", "{E4CE2450-2BB1-4440-9BBF-34FEE661A092}"
 EndProject
