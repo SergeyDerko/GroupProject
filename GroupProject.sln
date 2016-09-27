@@ -25,6 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_Artem", "04_Artem", "{B5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_Eugene", "05_Eugene", "{574D8AE2-3CF2-4AC5-B558-850669DA4184}"
 	ProjectSection(SolutionItems) = preProject
+		05_Eugene\03_Rectangle\03_Rectangle.csproj = 05_Eugene\03_Rectangle\03_Rectangle.csproj
 		05_Eugene\readMe.txt = 05_Eugene\readMe.txt
 	EndProjectSection
 EndProject
