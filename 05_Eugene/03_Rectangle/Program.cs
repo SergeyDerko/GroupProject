@@ -4,6 +4,16 @@ namespace _03_Rectangle
 {
 	class Program
 	{
+		static void Line(int x)
+		{
+			var count = 0;
+			while (count++ < x)
+			{
+				Console.Write("*");
+			}
+			Console.WriteLine();
+		}
+
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Введите ширину");
@@ -13,14 +23,7 @@ namespace _03_Rectangle
 			int y;
 			y = Convert.ToInt32(Console.ReadLine());
 			//рисует верхнюю линию
-			{
-				var count = 0;
-				while (count++ < x)
-				{
-					Console.Write("*");
-				}
-				Console.WriteLine();
-			}
+			Line(x);
 			//рисует боковые линии
 
 			{
@@ -39,12 +42,7 @@ namespace _03_Rectangle
 			}
 			//рисует нижнюю линию
 			{
-				int count = 0;
-				while (count++ < x)
-				{
-					Console.Write("*");
-				}
-				Console.WriteLine();
+				Line(x);
 			}
 			Console.ReadKey();
 		}

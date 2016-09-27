@@ -25,7 +25,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_Artem", "04_Artem", "{B5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_Eugene", "05_Eugene", "{574D8AE2-3CF2-4AC5-B558-850669DA4184}"
 	ProjectSection(SolutionItems) = preProject
-		05_Eugene\03_Rectangle\03_Rectangle.csproj = 05_Eugene\03_Rectangle\03_Rectangle.csproj
 		05_Eugene\readMe.txt = 05_Eugene\readMe.txt
 	EndProjectSection
 EndProject
@@ -55,6 +54,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTemplate", "CW\002\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "003_Array", "CW\003\003_Array\003_Array.csproj", "{5E103080-AFC1-4393-BB60-CC2DC81C466A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Rectangle", "05_Eugene\03_Rectangle\03_Rectangle.csproj", "{D869010E-57A1-4979-8C27-D4911AB527B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +78,10 @@ Global
 		{5E103080-AFC1-4393-BB60-CC2DC81C466A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E103080-AFC1-4393-BB60-CC2DC81C466A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E103080-AFC1-4393-BB60-CC2DC81C466A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D869010E-57A1-4979-8C27-D4911AB527B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D869010E-57A1-4979-8C27-D4911AB527B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D869010E-57A1-4979-8C27-D4911AB527B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D869010E-57A1-4979-8C27-D4911AB527B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,5 +92,6 @@ Global
 		{8007C73E-1051-4B7B-9EAF-1B7F49016D70} = {7768E47D-6065-4302-B586-26014DD0EA0B}
 		{47D82EAC-0CD5-45B2-A41D-063104749887} = {8007C73E-1051-4B7B-9EAF-1B7F49016D70}
 		{5E103080-AFC1-4393-BB60-CC2DC81C466A} = {8007C73E-1051-4B7B-9EAF-1B7F49016D70}
+		{D869010E-57A1-4979-8C27-D4911AB527B0} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 	EndGlobalSection
 EndGlobal
