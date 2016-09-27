@@ -60,7 +60,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "003", "003", "{C0817CA3-51A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "001", "001", "{8F5FA19E-BAFE-4C62-9B7E-883CB47FF9AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_colorConsoleWrite", "01_colorConsoleWrite\01_colorConsoleWrite.csproj", "{7879E73B-D017-4056-8DB4-34193668287D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_colorConsoleWrite", "CW\001\01_colorConsoleWrite\01_colorConsoleWrite.csproj", "{7879E73B-D017-4056-8DB4-34193668287D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
