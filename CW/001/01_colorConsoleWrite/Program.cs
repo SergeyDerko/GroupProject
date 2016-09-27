@@ -1,5 +1,4 @@
-﻿
-namespace _01_colorConsoleWrite
+﻿namespace _01_colorConsoleWrite
 {
 	internal class Program
 	{

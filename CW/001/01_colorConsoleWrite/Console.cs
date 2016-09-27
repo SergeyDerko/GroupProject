@@ -268,11 +268,14 @@ namespace _01_colorConsoleWrite
 		[HostProtection(SecurityAction.LinkDemand, UI = true)]
 		public static void WriteLine(string value)
 		{
+			var color = System.Console.ForegroundColor;
 			for (int i = 0; i < value.Length; i++)
 			{
 				System.Console.ForegroundColor = (ConsoleColor) (i%15+1);
 				System.Console.Out.Write(value[i]);
+
 			}
+			System.Console.ForegroundColor = color;
 		}
 
 		/// <summary>
