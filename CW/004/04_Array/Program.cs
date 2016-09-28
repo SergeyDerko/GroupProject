@@ -6,18 +6,14 @@ namespace _04_Array
 	{
 		static void Main()
 		{
-			try
-			{
-				var strings = new string[3];
-				if (strings[0] == null)
-				{
-					((string)null).Split(' ');
-				}
-			}
-			catch (Exception e)
-			{
-				Console.WriteLine("NullReferenceException" + e);
-			}
+			var ints = new int[7];
+			var c = new char[7];
+
+			var value = (int)c[0];
+			var value1 = c[0].ToString();
+			var str = "12345" + value1 + "67890";
+
+			Console.WriteLine(str);
 		}
 	}
 }
