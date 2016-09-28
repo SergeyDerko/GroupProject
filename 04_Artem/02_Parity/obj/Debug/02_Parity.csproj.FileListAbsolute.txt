@@ -1,0 +1,6 @@
+C:\Users\Mr_Reese\Documents\Visual Studio 2015\Projects\Prg01\02_Parity\bin\Debug\02_Parity.exe.config
+C:\Users\Mr_Reese\Documents\Visual Studio 2015\Projects\Prg01\02_Parity\bin\Debug\02_Parity.exe
+C:\Users\Mr_Reese\Documents\Visual Studio 2015\Projects\Prg01\02_Parity\bin\Debug\02_Parity.pdb
+C:\Users\Mr_Reese\Documents\Visual Studio 2015\Projects\Prg01\02_Parity\obj\Debug\02_Parity.csprojResolveAssemblyReference.cache
+C:\Users\Mr_Reese\Documents\Visual Studio 2015\Projects\Prg01\02_Parity\obj\Debug\02_Parity.exe
+C:\Users\Mr_Reese\Documents\Visual Studio 2015\Projects\Prg01\02_Parity\obj\Debug\02_Parity.pdb
