@@ -6,7 +6,7 @@ namespace _03_Rectangle
 	{
 		static void Line(int x)
 		{
-			var count = 0;
+			var count = 0; 
 			while (count++ < x)
 			{
 				Console.Write("*");
