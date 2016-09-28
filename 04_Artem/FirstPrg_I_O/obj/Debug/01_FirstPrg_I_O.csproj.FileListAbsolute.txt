@@ -1,0 +1,3 @@
+C:\Users\Mr_Reese\Documents\Visual Studio 2015\Projects\Prg01\FirstPrg_I_O\bin\Debug\FirstPrg_I_O.exe.config
+C:\Users\Mr_Reese\Documents\Visual Studio 2015\Projects\Prg01\FirstPrg_I_O\obj\Debug\FirstPrg_I_O.exe
+C:\Users\Mr_Reese\Documents\Visual Studio 2015\Projects\Prg01\FirstPrg_I_O\obj\Debug\FirstPrg_I_O.pdb
