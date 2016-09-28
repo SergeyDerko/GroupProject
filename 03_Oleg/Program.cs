@@ -4,73 +4,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace less
+namespace calc
 {
     class Program
     {
+        /*public void doid()
+        {
+            char plus = '+';
+            char minus = '-';
+            char mult = '*';
+            char dec = '/';
+        }*/
         static void Main(string[] args)
         {
-            string yesNo = "n";
-            do
+            int a = 0, b = 0;
+            char doit = '+';
+            Console.WriteLine("Enter first number of 1 to 10");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("First number is: {0}. Okey now enter second number of 1 to 10", a);
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("We have first number: {0} and second number {1} \nNow chose operation you whant to do... chose: '+', '-', '*', '/'", a, b);
+            doit = Convert.ToChar(Console.ReadLine());
+            switch (doit)
             {
-                int i, n, k, m;
-                Console.WriteLine("Please enter any firs number of 2 to 100");
-                i = Convert.ToInt32(Console.ReadLine());
-                while (i < 2 || i > 100)
-                {
-                    Console.WriteLine("Try again!");
-                    i = Convert.ToInt32(Console.ReadLine());
-                }
-                Console.WriteLine("Please enter any second number of 2 to 100");
-                n = Convert.ToInt32(Console.ReadLine());
-                while (n < 2 || n > 100)
-                {
-                    Console.WriteLine("Try again!");
-                    n = Convert.ToInt32(Console.ReadLine());
-                }
-                k = i;
-                m = n;
-                if (i < n)
-                {
-                    Console.Write("All even numbers: ");
-                    for (; i <= n; i++)
+                case '+':
                     {
-                        if ((i % 2) == 0)
-                        {
-                            Console.Write("{0} ", i);
-                        }
+                        Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
+                        break;
                     }
-                    Console.Write("\nAll odd numbers: ");
-                    for (; k <= n; k++)
+                case '-':
                     {
-                        if ((k % 2) != 0)
-                        {
-                            Console.Write("{0} ", k);
-                        }
+                        Console.WriteLine("{0} - {1} = {2}", a, b, a - b);
+                        break;
                     }
-                }
-                else
-                {
-                    Console.Write("All even numbers: ");
-                    for (; n <= i; n++)
+                case '*':
                     {
-                        if ((n % 2) == 0)
-                        {
-                            Console.Write("{0} ", n);
-                        }
+                        Console.WriteLine("{0} * {1} = {2}", a, b, a * b);
+                        break;
                     }
-                    Console.WriteLine("All odd numbers: ");
-                    for (; m <= i; m++)
+                case '/':
                     {
-                        if ((m % 2) != 0)
-                        {
-                            Console.Write("{0} ", m);
-                        }
+                        Console.WriteLine("{0} / {1} = {2}", a, b, a / b);
+                        break;
                     }
-                }
-                Console.WriteLine("Contine in promgam? world 'y' - contine");
-                yesNo = Console.ReadLine();
-            } while (yesNo == "y");
+                default:
+                    Console.WriteLine("Somthing wrong?");
+                    break;
+            }
             Console.ReadLine();
         }
     }
