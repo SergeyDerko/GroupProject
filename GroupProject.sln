@@ -85,6 +85,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calc", "Calc\Calc.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_Array", "CW\004\04_Array\04_Array.csproj", "{D7B397F6-A632-4B16-95C0-56B75FFDCF44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_AutoShop", "CW\004\04_AutoShop\04_AutoShop.csproj", "{09019C77-ABFA-4ACB-8A9E-2342FE2ADD61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10_KDMEugene", "10_KDMEugene", "{C18DF581-CF94-4066-9690-9ECF7C25F300}"
+	ProjectSection(SolutionItems) = preProject
+		10_KDMEugene\readMe.txt = 10_KDMEugene\readMe.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -155,6 +162,10 @@ Global
 		{D7B397F6-A632-4B16-95C0-56B75FFDCF44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7B397F6-A632-4B16-95C0-56B75FFDCF44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7B397F6-A632-4B16-95C0-56B75FFDCF44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09019C77-ABFA-4ACB-8A9E-2342FE2ADD61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09019C77-ABFA-4ACB-8A9E-2342FE2ADD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09019C77-ABFA-4ACB-8A9E-2342FE2ADD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09019C77-ABFA-4ACB-8A9E-2342FE2ADD61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -180,5 +191,6 @@ Global
 		{0C4F5E8F-B2DC-40CB-8466-7839B5EB9385} = {B6BBBCF5-5DEE-426F-9BC1-3043FCE8CDDE}
 		{A5BEF718-97AC-403E-9752-C1DD29B761AB} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 		{D7B397F6-A632-4B16-95C0-56B75FFDCF44} = {B6BBBCF5-5DEE-426F-9BC1-3043FCE8CDDE}
+		{09019C77-ABFA-4ACB-8A9E-2342FE2ADD61} = {B6BBBCF5-5DEE-426F-9BC1-3043FCE8CDDE}
 	EndGlobalSection
 EndGlobal
