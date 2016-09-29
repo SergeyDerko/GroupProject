@@ -34,7 +34,7 @@ namespace tree
             }
             else
             {
-
+                Console.WriteLine("Вы ввели некоректное значение!");
             }
             Console.ReadKey();
 
