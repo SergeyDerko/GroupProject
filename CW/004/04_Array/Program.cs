@@ -9,6 +9,9 @@ namespace _04_Array
 		static void Main()
 		{
 			var users = Users();
+			ShowUsers(users);
+			users.Sort();
+			ShowUsers(users);
 
 			var list = new List<User>
 			{
@@ -22,36 +25,25 @@ namespace _04_Array
 
 			list.AddRange(users);
 
-			var array = users.ToList();
-			array.AddRange(list);
+			ShowUsers(list);
+			list.Sort();
+			ShowUsers(list);
 
-			ShowUsers(users);
-			foreach (var u in users)
+			foreach (var u in list)
 			{
 				if (u.Age == 33)
 				{
 					Test(u);
 				}
 			}
-			ShowUsers(users);
+			ShowUsers(list);
+			Console.ReadKey();
 		}
 
-		private static User[] Users()
+		private static List<User> Users()
 		{
-			return new[]
+			return new List<User>()
 			{
-				new User
-				{
-					Name = "John",
-					SName = "",
-					Age = 11
-				},
-				new User
-				{
-					Name = "John",
-					SName = "",
-					Age = 22
-				},
 				new User
 				{
 					Name = "John",
@@ -64,21 +56,33 @@ namespace _04_Array
 					SName = "",
 					Age = 44
 				},
+				new User
+				{
+					Name = "John",
+					SName = "",
+					Age = 11
+				},
+				new User
+				{
+					Name = "John",
+					SName = "",
+					Age = 22
+				},
 			};
 		}
 
-		private static void ShowUsers(User[] users)
+		private static void ShowUsers(List<User> users)
 		{
 			foreach (var user in users)
 			{
 				Console.WriteLine(user);
 			}
+			Console.WriteLine("----------------");
 		}
 
-		private static User Test(User user)
+		private static void Test(User user)
 		{
-			user.Age += 2;
-			return user;
+			user.Age = 8;
 		}
 
 		private static int Test(ref int a)
