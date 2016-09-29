@@ -9,13 +9,14 @@ using System.Threading.Tasks;
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("введите первое число");
+			//нет заголовка -1
+            Console.WriteLine("введите первое число");// -1
             double x = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("введите второе число");
-            double y = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("введите оператор");
+            Console.WriteLine("введите второе число");// -1
+			double y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("введите оператор");// -1
             string i = Console.ReadLine();
-            double xy = 0;
+            double xy = 0;//-0.5
             if (i == "+")
             {
                 xy = x + y;
@@ -37,6 +38,7 @@ using System.Threading.Tasks;
                 Console.WriteLine("что то пошло не так");
             }
             Console.WriteLine(value: xy);
+			// нет задержки -0.5
             //Console.File
         }
     }
