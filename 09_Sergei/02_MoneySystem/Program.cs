@@ -17,7 +17,7 @@ namespace MoneySystem
                 var pens = Console.ReadLine();
                 if (!CheckMoney(pound) || !CheckMoney(shilling) || !CheckMoney(pens)) continue;
                 var moneySystem = new OldMoneySystem(decimal.Parse(pound), decimal.Parse(shilling),
-                    decimal.Parse(pens));
+                    decimal.Parse(pens)); //resharper требует проверку на null, но мой метод ее уже проводит, поэтому я его игнорирую.
                 Console.WriteLine("Old UK money system: " + pound + '.' + shilling + '.' + pens);
                 moneySystem.GetNewSystemMoney();
                 finish = true;
