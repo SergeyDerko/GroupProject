@@ -10,6 +10,7 @@ namespace _02_calc
 	{
 		static void Main(string[] args)
 		{
+
 		}
 	}
 }
