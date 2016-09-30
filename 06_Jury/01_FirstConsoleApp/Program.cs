@@ -1,23 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _01_FirstConsoleApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-
             Console.Write("\n Welcome! It's your first console application! ");
             Console.Write("\n Введите имя: ");
             var name = Console.ReadLine();
-            var newArr = name.ToCharArray();
             var randomcolor = new Random();
             if (!string.IsNullOrEmpty(name))
             {
+                var newArr = name.ToCharArray();
                 Console.Write(" Имя: ");
                 foreach (var letter in newArr)
                 {
@@ -39,7 +34,6 @@ namespace _01_FirstConsoleApp
                 Console.WriteLine("\n Введены данные:\n");
                 Console.WriteLine($"   Имя: {name}\n   Возраст: {age}\n   Пол: {sex}");
                 Console.Write("\n Press any key to exit...");
-
             }
             else
             {

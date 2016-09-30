@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -67,7 +67,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_FirstConsoleApp", "06_Ju
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_christmasTree", "08_Danila\03_christmasTree\03_christmasTree.csproj", "{D8493A00-36BF-4817-A9F5-2799F72E9D57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Task6_(Task list)", "06_Jury\03_Task6_(Task list)\03_Task6_(Task list).csproj", "{1309A919-AE01-4AF7-974A-246AADD2D892}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_Task6_(Task list)", "06_Jury\03_Task6_(Task list)\04_Task6_(Task list).csproj", "{1309A919-AE01-4AF7-974A-246AADD2D892}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Rect", "06_Jury\04_DrawingShapes\Rect\03_Rect.csproj", "{E3263167-A675-47FC-857D-4B7342A1236D}"
 EndProject
@@ -93,6 +93,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calc", "05_Eugene\Calc\Calc.csproj", "{A5BEF718-97AC-403E-9752-C1DD29B761AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_calc", "10_KDMEugene\02_calc\02_calc.csproj", "{C5C444E2-3FD9-4B10-B9B2-D1974D74C088}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_tree", "06_Jury\04_DrawingShapes\tree\05_tree.csproj", "{1EB0CF14-7D0D-42A1-B553-4EA2A5002C72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_parityNumber", "09_Sergei\01_parityNumber\01_parityNumber.csproj", "{48B2F972-22E2-4A10-8174-8E6A878AB2A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_ColorsInWord", "09_Sergei\03_ColorsInWord\03_ColorsInWord.csproj", "{C2B225B5-6FB5-40C4-B8E6-55445302BA91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_GeneretionOfExamples", "09_Sergei\04_GeneretionOfExamples\04_GeneretionOfExamples.csproj", "{206F1F78-306F-48E3-98F9-51AA35F050A8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "005", "005", "{D436D319-0693-4AED-ACC9-2DF30B92D799}"
 EndProject
@@ -176,10 +184,6 @@ Global
 		{C5C444E2-3FD9-4B10-B9B2-D1974D74C088}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5C444E2-3FD9-4B10-B9B2-D1974D74C088}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5C444E2-3FD9-4B10-B9B2-D1974D74C088}.Release|Any CPU.Build.0 = Release|Any CPU
-		{944EDE31-38EB-4A4C-B8A3-4FAEF98C9ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{944EDE31-38EB-4A4C-B8A3-4FAEF98C9ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{944EDE31-38EB-4A4C-B8A3-4FAEF98C9ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{944EDE31-38EB-4A4C-B8A3-4FAEF98C9ECA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -207,7 +211,5 @@ Global
 		{09019C77-ABFA-4ACB-8A9E-2342FE2ADD61} = {B6BBBCF5-5DEE-426F-9BC1-3043FCE8CDDE}
 		{A5BEF718-97AC-403E-9752-C1DD29B761AB} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 		{C5C444E2-3FD9-4B10-B9B2-D1974D74C088} = {C18DF581-CF94-4066-9690-9ECF7C25F300}
-		{D436D319-0693-4AED-ACC9-2DF30B92D799} = {7768E47D-6065-4302-B586-26014DD0EA0B}
-		{944EDE31-38EB-4A4C-B8A3-4FAEF98C9ECA} = {D436D319-0693-4AED-ACC9-2DF30B92D799}
 	EndGlobalSection
 EndGlobal
