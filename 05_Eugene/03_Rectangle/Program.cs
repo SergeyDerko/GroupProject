@@ -6,12 +6,18 @@ namespace _03_Rectangle
 	{
 		static void Line(int x)
 		{
-			var count = 0;
+			var count = 0; 
+			var format = "*";
+			Line(x, count, format);
+			Console.WriteLine();
+		}
+
+		private static void Line(int x, int count, string str)
+		{
 			while (count++ < x)
 			{
-				Console.Write("*");
+				Console.Write(str);
 			}
-			Console.WriteLine();
 		}
 
 		static void Main(string[] args)
@@ -30,12 +36,9 @@ namespace _03_Rectangle
 				int count1 = 2;
 				while (count1++ < y)
 				{
-					var count = 2;
 					Console.Write("*");
-					while (count++ < x)
-					{
-						Console.Write(" ");
-					}
+					var count = 2;
+					Line(x, count, " ");
 					Console.Write("*");
 					Console.WriteLine();
 				}
