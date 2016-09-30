@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -77,8 +77,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_prg", "02_Igor\02_prg\02
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Calc", "03_Oleg\03_Calc\03_Calc.csproj", "{93ECD0FC-BB38-4BAF-8D54-486840040089}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Task_MoneySystem", "09_Sergei\MoneySystem_Task10\02_Task_MoneySystem.csproj", "{E3DBB56D-DD13-4145-8441-EE8937DA0431}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,10 +135,6 @@ Global
 		{93ECD0FC-BB38-4BAF-8D54-486840040089}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93ECD0FC-BB38-4BAF-8D54-486840040089}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93ECD0FC-BB38-4BAF-8D54-486840040089}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E3DBB56D-DD13-4145-8441-EE8937DA0431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E3DBB56D-DD13-4145-8441-EE8937DA0431}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E3DBB56D-DD13-4145-8441-EE8937DA0431}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E3DBB56D-DD13-4145-8441-EE8937DA0431}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -162,6 +156,5 @@ Global
 		{B9AD3527-94CD-412D-AE7C-B9C51BC06C4A} = {1680F505-0533-4DF0-9A62-B617A5D6FAF0}
 		{97F391CB-3451-4EB4-BB3E-D4E4115C5B7F} = {1680F505-0533-4DF0-9A62-B617A5D6FAF0}
 		{93ECD0FC-BB38-4BAF-8D54-486840040089} = {1E5F935B-DC63-439B-BFE0-A5154DB54DBA}
-		{E3DBB56D-DD13-4145-8441-EE8937DA0431} = {E4CE2450-2BB1-4440-9BBF-34FEE661A092}
 	EndGlobalSection
 EndGlobal
