@@ -6,21 +6,21 @@ namespace _01_parityNumber
     {
         public static void Main()
         {
-            bool finish = false;
+            var finish = false;
             while (!finish)
                 try
                 {
-                    Console.WriteLine("Entering number for check: ");
+                    Console.WriteLine("Введите число для проверки: ");
                     var number = Console.ReadLine();
                     if (!string.IsNullOrEmpty(number) && IsNum(number))
                     {
-                        var result = int.Parse(number) % 2 == 0 ? "is even" : "is odd";
-                        Console.WriteLine(result);
+                        var result = int.Parse(number) % 2 == 0 ? "Четное!" : "Не четное!";
+                        Console.WriteLine("Число "+number+'-'+result);
                         finish = true;
                     }
                     else
                     {
-                        Console.WriteLine("Entering only number! Try again.");
+                        Console.WriteLine("Нужно вводить только цифры! Попробуйте еще раз!");
                     }
                 }
                 catch (Exception ex)
