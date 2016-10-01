@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -101,8 +101,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_ColorsInWord", "09_Sergei\03_ColorsInWord\03_ColorsInWord.csproj", "{C2B225B5-6FB5-40C4-B8E6-55445302BA91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_GeneretionOfExamples", "09_Sergei\04_GeneretionOfExamples\04_GeneretionOfExamples.csproj", "{206F1F78-306F-48E3-98F9-51AA35F050A8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "005", "005", "{D436D319-0693-4AED-ACC9-2DF30B92D799}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_prg", "CW\005\05_prg\05_prg.csproj", "{944EDE31-38EB-4A4C-B8A3-4FAEF98C9ECA}"
 EndProject
