@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -92,7 +92,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10_KDMEugene", "10_KDMEugen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calc", "05_Eugene\Calc\Calc.csproj", "{A5BEF718-97AC-403E-9752-C1DD29B761AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_calc", "10_KDMEugene\02_calc\02_calc.csproj", "{C5C444E2-3FD9-4B10-B9B2-D1974D74C088}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_10_Calc", "10_KDMEugene\02_calc\02_10_Calc.csproj", "{C5C444E2-3FD9-4B10-B9B2-D1974D74C088}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_10_Rect", "10_KDMEugene\03_10_Rect\03_10_Rect.csproj", "{1D7F64A3-8D61-4747-A525-41F00CC743C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -172,6 +174,10 @@ Global
 		{C5C444E2-3FD9-4B10-B9B2-D1974D74C088}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5C444E2-3FD9-4B10-B9B2-D1974D74C088}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5C444E2-3FD9-4B10-B9B2-D1974D74C088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D7F64A3-8D61-4747-A525-41F00CC743C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D7F64A3-8D61-4747-A525-41F00CC743C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D7F64A3-8D61-4747-A525-41F00CC743C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D7F64A3-8D61-4747-A525-41F00CC743C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -199,5 +205,6 @@ Global
 		{09019C77-ABFA-4ACB-8A9E-2342FE2ADD61} = {B6BBBCF5-5DEE-426F-9BC1-3043FCE8CDDE}
 		{A5BEF718-97AC-403E-9752-C1DD29B761AB} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 		{C5C444E2-3FD9-4B10-B9B2-D1974D74C088} = {C18DF581-CF94-4066-9690-9ECF7C25F300}
+		{1D7F64A3-8D61-4747-A525-41F00CC743C9} = {C18DF581-CF94-4066-9690-9ECF7C25F300}
 	EndGlobalSection
 EndGlobal
