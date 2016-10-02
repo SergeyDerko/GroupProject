@@ -24,7 +24,7 @@ namespace _03_10_Rect
             var length = int.Parse(args[1]);
             if (length <= 0 || height <= 0)
             {
-                Console.WriteLine("Soryan, pryamougolnika ne budet");
+                Console.WriteLine("Soryan, pryamougolnika ne budet ");
                 Console.ReadKey();
             }
             else
