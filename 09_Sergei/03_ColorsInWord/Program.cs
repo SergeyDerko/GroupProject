@@ -15,14 +15,35 @@ namespace ColorsInWord
                 var letters = word.ToCharArray();
                 for (var i = 0; i <= letters.Length - 1; i++)
                 {
-                    Console.ForegroundColor = (ConsoleColor)rand.Next(15) + 1;
-                    Console.Write(letters[i]);
-                    Thread.Sleep(500);
+                    if (i == 0)
+                    {
+                        Console.ForegroundColor = (ConsoleColor)rand.Next(15)+1;
+                        Console.Write(letters[i]);
+                        Thread.Sleep(100);
+                    }
+                    else
+                    {
+                        var color = letters.Length % i;
+                        if (color < 16)
+                        {
+                            Console.ForegroundColor = (ConsoleColor)color;
+                            Console.Write(letters[i]);
+                            Thread.Sleep(100);
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = (ConsoleColor)rand.Next(15) + 1;
+                            Console.Write(letters[i]);
+                            Thread.Sleep(100);
+                        }
+                    }
                 }
             }
-            Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.White;
             Console.ReadLine();
         }
     }
 }
+
+
+
