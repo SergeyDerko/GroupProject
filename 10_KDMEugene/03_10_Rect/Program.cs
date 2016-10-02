@@ -1,19 +1,30 @@
 ﻿using System;
 
-namespace _03_rectanglee
+namespace _03_10_Rect
 {
-    class Program
+    public class Program
     {
-        private static void Main()
-        {
-            Console.WriteLine("Height: ");
-            var height = int.Parse(Console.ReadLine());
+        // для возврата ввода вручную
+        // private static void Main()
+        static void Main(string[] args)
 
-            Console.WriteLine("Length: ");
-            var length = int.Parse(Console.ReadLine());
+
+        {
+            do
+            {
+                
+      
+            Console.WriteLine("Height: " + args[0]);
+            // для возврата ввода вручную
+            // var height = int.Parse(Console.ReadLine());
+            var height = int.Parse(args[0]);
+            Console.WriteLine("Length: " + args[1]);
+            // для возврата ввода вручную
+            //  var length = int.Parse(Console.ReadLine());
+            var length = int.Parse(args[1]);
             if (length <= 0 || height <= 0)
             {
-                Console.WriteLine("Soryan, pryamougolnika ne budet ");
+                Console.WriteLine("Soryan, pryamougolnika ne budet");
                 Console.ReadKey();
             }
             else
@@ -34,6 +45,7 @@ namespace _03_rectanglee
                 }
                 Console.ReadKey();
             }
+            } while(Console.ReadKey().Key == ConsoleKey.Escape);
         }
     }
 }
