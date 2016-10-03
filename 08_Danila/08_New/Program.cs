@@ -11,14 +11,17 @@ namespace _08_New
     {
         static void Main(string[] args)
         {
-       int[,] ar = new int[7,7];
+            Console.WriteLine("enter first number");
+            int x = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("enter second number");
+            int y = Int32.Parse(Console.ReadLine());
+            int[,] ar = new int[x,y];
             Random r = new Random();
-
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < x; i++)
             {
-                for (int j = 0; j < 7; j++)
+                for (int j = 0; j < y; j++)
                 {
-                    ar[i,j] = r.Next(1, 49);
+                    ar[i, j] = r.Next(1, 49);
                     Console.Write("{0}\t", ar[i,j]);
                 }
                 Console.WriteLine();
