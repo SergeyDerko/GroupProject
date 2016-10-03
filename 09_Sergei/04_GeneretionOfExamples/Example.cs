@@ -46,6 +46,9 @@ namespace _04_GeneretionOfExamples
                     result = Number1/Number2;
                     Console.WriteLine("Action division: " + result);
                     break;
+                default:
+                    
+                    break;
             }
         }
     }
