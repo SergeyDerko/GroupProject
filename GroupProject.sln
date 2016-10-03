@@ -118,6 +118,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_Flag", "08_Danila\04_Fla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_prg", "01_Vladimir\01_prg\01_prg.csproj", "{3D585759-1716-49D9-9379-5491238785DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elka", "07_Roman\Elka\Elka.csproj", "{75E2AA77-2533-4BFE-9A71-9C5FF015F740}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "triangle", "07_Roman\triangle\triangle.csproj", "{5EBCB432-B2F8-4D5C-A0D3-FDF02239D0BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_New", "08_Danila\08_New\08_New.csproj", "{08C6F6E1-F01F-4FF3-8932-515ADE7F4C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_06_10_Random2dArray", "10_KDMEugene\_06_10_Random2dArray\_06_10_Random2dArray.csproj", "{DFD0208C-3CBB-437D-A898-1E10EBDEAB54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
