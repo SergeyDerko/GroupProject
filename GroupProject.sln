@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -119,6 +119,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_tree", "02_Igor\03_tree\03_tree.csproj", "{E88B5184-44DE-4D94-8F5F-FCD8BAEEC37B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_calc_01", "02_Igor\03_calc_01\03_calc_01.csproj", "{68C3FF31-45F3-47F1-89AB-7E0BC3C1A07A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_Array_SortBubblesMethod", "C:\Users\admin\Documents\Visual Studio 2015\Projects\07_Array_SortBubblesMethod\07_Array_SortBubblesMethod.csproj", "{3ACCF9B2-2FAE-4C9F-B8CE-75556E4D0E0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -246,6 +248,10 @@ Global
 		{68C3FF31-45F3-47F1-89AB-7E0BC3C1A07A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68C3FF31-45F3-47F1-89AB-7E0BC3C1A07A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68C3FF31-45F3-47F1-89AB-7E0BC3C1A07A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ACCF9B2-2FAE-4C9F-B8CE-75556E4D0E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ACCF9B2-2FAE-4C9F-B8CE-75556E4D0E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ACCF9B2-2FAE-4C9F-B8CE-75556E4D0E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ACCF9B2-2FAE-4C9F-B8CE-75556E4D0E0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -286,5 +292,6 @@ Global
 		{A37E0788-2DC2-4C01-9710-21E873C6E434} = {DDF8AE58-88FE-4DB5-AB48-D78BE93969F1}
 		{E88B5184-44DE-4D94-8F5F-FCD8BAEEC37B} = {1680F505-0533-4DF0-9A62-B617A5D6FAF0}
 		{68C3FF31-45F3-47F1-89AB-7E0BC3C1A07A} = {1680F505-0533-4DF0-9A62-B617A5D6FAF0}
+		{3ACCF9B2-2FAE-4C9F-B8CE-75556E4D0E0F} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
 	EndGlobalSection
 EndGlobal
