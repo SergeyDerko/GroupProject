@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("05_Array_Sort2dim")]
+[assembly: AssemblyTitle("08_Array_Sort2dim")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("05_Array_Sort2dim")]
+[assembly: AssemblyProduct("08_Array_Sort2dim")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4cca9b3f-2b6f-4281-9626-2587d1ada494")]
+[assembly: Guid("8c90a9aa-eac8-4ba5-afaa-a8d5fd0d19ef")]
 
 // Version information for an assembly consists of the following four values:
 //
