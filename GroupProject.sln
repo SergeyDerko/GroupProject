@@ -124,7 +124,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "triangle", "07_Roman\triang
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_New", "08_Danila\08_New\08_New.csproj", "{08C6F6E1-F01F-4FF3-8932-515ADE7F4C19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_06_10_Random2dArray", "10_KDMEugene\_06_10_Random2dArray\_06_10_Random2dArray.csproj", "{DFD0208C-3CBB-437D-A898-1E10EBDEAB54}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_10_Random2dArray", "10_KDMEugene\_06_10_Random2dArray\06_10_Random2dArray.csproj", "{DFD0208C-3CBB-437D-A898-1E10EBDEAB54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
