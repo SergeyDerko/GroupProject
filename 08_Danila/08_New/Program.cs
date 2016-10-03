@@ -11,20 +11,26 @@ namespace _08_New
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("enter first number");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Привет Arr!");
+            Console.Write("Введите высоту:");
             int x = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("enter second number");
-            int y = Int32.Parse(Console.ReadLine());
-            int[,] ar = new int[x,y];
+          Console.WriteLine(" ");
+            Console.ForegroundColor = ConsoleColor.Red ;
+            int y = 10;
+            var arr = new int[x, y];
             Random r = new Random();
+            Random ra = new Random();
             for (int i = 0; i < x; i++)
             {
+                y = ra.Next(1, 10);    
                 for (int j = 0; j < y; j++)
                 {
-                    ar[i, j] = r.Next(1, 49);
-                    Console.Write("{0}\t", ar[i,j]);
+                    arr[i, j] = r.Next(1, 10);
+                    Console.Write("{0}\t", arr[i,j]);
                 }
                 Console.WriteLine();
+
             }
             Console.ReadLine();
         }
