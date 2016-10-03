@@ -25,7 +25,7 @@ namespace _02_HappyMoney
             var x = 14; // Начальные координаты
             var y = 3;
             ConsoleKeyInfo k; //управлять курсором (добавил Решарпер)
-            Console.CursorVisible = false; //скрыть курсор
+            Console.CursorVisible = true; //скрыть курсор
             do
             {
                 Console.SetCursorPosition(x, top: y); //Позиция курсора

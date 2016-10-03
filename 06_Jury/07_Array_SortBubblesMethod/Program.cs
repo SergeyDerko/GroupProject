@@ -6,11 +6,11 @@ namespace _07_Array_SortBubblesMethod
     {
         static void Main()
         {
-            var randomnumber = new Random();
+            var random = new Random();
             var arr = new int[10];
             for (var i = 0; i < arr.Length; i++)
             {
-                arr[i] = randomnumber.Next(1, 100);
+                arr[i] = random.Next(1, 100);
             }
             Console.WriteLine(" Массив рандомных чисел от 1 до 100: \n");
             Output(arr);
