@@ -9,7 +9,8 @@ using System.Threading.Tasks;
     {
         static void Main(string[] args)
         {
-			//нет заголовка -1
+            Console.WriteLine("КАЛЬКУЛЯТОР"); //нет заголовка -1
+            
             Console.WriteLine("введите первое число");// -1
             double x = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("введите второе число");// -1
