@@ -1,0 +1,33 @@
+﻿using System;
+
+namespace _06_Array
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Enter length column: ");
+            int a = Int32.Parse(Console.ReadLine()); //Ввод длины столбца
+            //Console.Write("Enter length line: ");
+            Random im = new Random();
+            //Ввод длины строки
+            Console.WriteLine();
+            int b = 10;
+            int[,] ar = new int[a, b]; //Обявление массива
+            Random un = new Random(); //Создание радомного оператора
+            for (int x = 0; x < a; x++) //цикл, количество столбцов
+            {
+                b = im.Next(1, 10); //случайное (рандомное) значение длины строки 
+                for (int y = 0; y < b; y++) //цикл, количество строк
+                {
+                    {
+                        ar[x, y] = un.Next(1, 10); //случайное (рандомное) значение ячейки массива
+                        Console.Write("{0}\t", ar[x, y]);
+                    }
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+    }
+}
