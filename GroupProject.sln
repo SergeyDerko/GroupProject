@@ -96,7 +96,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_10_Calc", "10_KDMEugene\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_10_Rect", "10_KDMEugene\03_10_Rect\03_10_Rect.csproj", "{1D7F64A3-8D61-4747-A525-41F00CC743C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_tree", "06_Jury\04_DrawingShapes\tree\05_tree.csproj", "{1EB0CF14-7D0D-42A1-B553-4EA2A5002C72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_tree", "06_Jury\04_DrawingShapes\tree\03_tree.csproj", "{1EB0CF14-7D0D-42A1-B553-4EA2A5002C72}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_parityNumber", "09_Sergei\01_parityNumber\01_parityNumber.csproj", "{48B2F972-22E2-4A10-8174-8E6A878AB2A0}"
 EndProject
