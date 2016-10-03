@@ -17,30 +17,33 @@ namespace ColorsInWord
                 {
                     if (i == 0)
                     {
-                        Console.ForegroundColor = (ConsoleColor)rand.Next(15)+1;
-                        Console.Write(letters[i]);
-                        Thread.Sleep(100);
+                        RandomColor(rand, letters, i);
                     }
                     else
                     {
                         var color = letters.Length % i;
                         if (color < 16)
                         {
-                            Console.ForegroundColor = (ConsoleColor)color;
+                            Console.ForegroundColor = (ConsoleColor) color;
                             Console.Write(letters[i]);
                             Thread.Sleep(100);
                         }
                         else
                         {
-                            Console.ForegroundColor = (ConsoleColor)rand.Next(15) + 1;
-                            Console.Write(letters[i]);
-                            Thread.Sleep(100);
+                            RandomColor(rand, letters, i);
                         }
                     }
                 }
             }
             Console.ForegroundColor = ConsoleColor.White;
             Console.ReadLine();
+        }
+
+        private static void RandomColor(Random rand, char[] letters, int i)
+        {
+            Console.ForegroundColor = (ConsoleColor)rand.Next(15) + 1;
+            Console.Write(letters[i]);
+            Thread.Sleep(100);
         }
     }
 }
