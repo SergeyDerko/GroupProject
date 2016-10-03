@@ -13,8 +13,10 @@ namespace massGitVo
     {
         static void Main(string[] args)
         {
-            int hight = 10;
-            int lenght = 5;
+            Console.Write("Введите высоту:");
+            int hight = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите длину:");
+            int lenght = Convert.ToInt32(Console.ReadLine());
             int[][] arrey = new int[hight][];
             for (int i = 0; i < arrey.Length; i++)
             {
@@ -33,7 +35,10 @@ namespace massGitVo
                 }
                 Console.WriteLine();
             }
-        }
+        } 
+
+        
     }
 }
+                   
 
