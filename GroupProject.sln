@@ -104,7 +104,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_ColorsInWord", "09_Serge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_GeneretionOfExamples", "09_Sergei\04_GeneretionOfExamples\04_GeneretionOfExamples.csproj", "{206F1F78-306F-48E3-98F9-51AA35F050A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectangle_06", "..\..\..\Documents\Visual Studio 2015\Projects\Rectangle_06\Rectangle_06\Rectangle_06.csproj", "{C6854A9A-81F0-4542-A603-CF284860E9D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Rectangle", "09_Sergei\06_Rectangle\06_Rectangle.csproj", "{C6854A9A-81F0-4542-A603-CF284860E9D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
