@@ -4,3 +4,6 @@ C:\Users\Mr_Reese\documents\visual studio 2015\Projects\Prg01\07_tornArray\bin\D
 C:\Users\Mr_Reese\documents\visual studio 2015\Projects\Prg01\07_tornArray\obj\Debug\07_tornArray.exe
 C:\Users\Mr_Reese\documents\visual studio 2015\Projects\Prg01\07_tornArray\obj\Debug\07_tornArray.pdb
 C:\Users\Mr_Reese\documents\visual studio 2015\Projects\Prg01\07_tornArray\obj\Debug\07_tornArray.csprojResolveAssemblyReference.cache
+W:\work\project\Git\GroupProject\04_Artem\07_tornArray\bin\Debug\07_tornArray.exe.config
+W:\work\project\Git\GroupProject\04_Artem\07_tornArray\obj\Debug\07_tornArray.exe
+W:\work\project\Git\GroupProject\04_Artem\07_tornArray\obj\Debug\07_tornArray.pdb
