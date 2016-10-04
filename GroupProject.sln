@@ -164,8 +164,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_Array_Sort2dim", "06_Jur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_Array_SortBubblesMethod", "06_Jury\05_Array_SortBubblesMethod\05_Array_SortBubblesMethod.csproj", "{27ADABFA-11D9-4D2F-B2F7-A5DB0F97C15D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_parnost", "02_parnost\02_parnost.csproj", "{39D48539-F344-4C29-AF3D-0BEF277C1578}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -380,10 +378,6 @@ Global
 		{27ADABFA-11D9-4D2F-B2F7-A5DB0F97C15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27ADABFA-11D9-4D2F-B2F7-A5DB0F97C15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27ADABFA-11D9-4D2F-B2F7-A5DB0F97C15D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39D48539-F344-4C29-AF3D-0BEF277C1578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39D48539-F344-4C29-AF3D-0BEF277C1578}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39D48539-F344-4C29-AF3D-0BEF277C1578}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39D48539-F344-4C29-AF3D-0BEF277C1578}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -446,6 +440,5 @@ Global
 		{E3DBB56D-DD13-4145-8441-EE8937DA0431} = {E4CE2450-2BB1-4440-9BBF-34FEE661A092}
 		{4CCA9B3F-2B6F-4281-9626-2587D1ADA494} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
 		{27ADABFA-11D9-4D2F-B2F7-A5DB0F97C15D} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
-		{39D48539-F344-4C29-AF3D-0BEF277C1578} = {EC9A435A-03FF-4A1C-B66A-5643A572C7C6}
 	EndGlobalSection
 EndGlobal
