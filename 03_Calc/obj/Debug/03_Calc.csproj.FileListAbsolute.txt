@@ -1,6 +1,0 @@
-C:\Users\Mr_Reese\documents\visual studio 2015\Projects\Prg01\03_Calc\bin\Debug\03_Calc.exe.config
-C:\Users\Mr_Reese\documents\visual studio 2015\Projects\Prg01\03_Calc\bin\Debug\03_Calc.exe
-C:\Users\Mr_Reese\documents\visual studio 2015\Projects\Prg01\03_Calc\bin\Debug\03_Calc.pdb
-C:\Users\Mr_Reese\documents\visual studio 2015\Projects\Prg01\03_Calc\obj\Debug\03_Calc.csprojResolveAssemblyReference.cache
-C:\Users\Mr_Reese\documents\visual studio 2015\Projects\Prg01\03_Calc\obj\Debug\03_Calc.exe
-C:\Users\Mr_Reese\documents\visual studio 2015\Projects\Prg01\03_Calc\obj\Debug\03_Calc.pdb
