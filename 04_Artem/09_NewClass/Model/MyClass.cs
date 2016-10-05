@@ -2,8 +2,9 @@
 
 namespace _09_NewClass.Model
 {
-    internal class MyClass: BaseClass
+    internal class MyClass: BaseClass: IMyInterface
     {
         public string Name { get; set; }
     }
+
 }
