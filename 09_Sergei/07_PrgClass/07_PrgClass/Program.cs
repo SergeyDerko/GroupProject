@@ -1,9 +1,11 @@
-﻿namespace _09_NewClass
+﻿
+namespace _07_PrgClass
 {
     class Program
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
