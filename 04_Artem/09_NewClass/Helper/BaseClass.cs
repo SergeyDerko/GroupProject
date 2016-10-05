@@ -1,6 +1,6 @@
 ﻿namespace _09_NewClass.Helper
 {
-    public class BaseClass
+    public class BaseClass: BaseInterface
    
     {
         public string Name { get; set; }
