@@ -10,6 +10,18 @@ namespace _07_prg
     {
         static void Main(string[] args)
         {
+           
+
+
+
+
+
         }
+
+        
+
     }
+
+    
+
 }
