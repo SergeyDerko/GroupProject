@@ -7,8 +7,8 @@ namespace _06_10_Random2dArray
     {
         static void Main(string[] args)
         {
-            var h = 5;
-            var l = 10;
+            var h = 500;
+            var l = 100;
             int[][] array = new int[h][];
             for (int i = 0; i < h; i++)
             {
@@ -22,7 +22,7 @@ namespace _06_10_Random2dArray
             {
                 for (int j = 0; j < array[i].Length; j++)
                 {
-                    System.Threading.Thread.Sleep(100);
+                    System.Threading.Thread.Sleep(5);
                     array[i][j] = new Random().Next(0, 9);
                     Console.Write("\t{0}", array[i][j]);
 
