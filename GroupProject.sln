@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -121,6 +121,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree_vo", "05_Eugene\Tree_vo\Tree_vo.csproj", "{E5C47852-DFBF-43FB-B454-3B91A2401188}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mass", "01_Vladimir\Mass\Mass.csproj", "{D1DDEC54-9B11-4EF2-AC4B-F87A3F8C0940}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "my Class", "05_Eugene\my Class\my Class.csproj", "{6B2B243A-2B0F-445B-A9A4-2C3EA28C7563}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -252,6 +254,10 @@ Global
 		{D1DDEC54-9B11-4EF2-AC4B-F87A3F8C0940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1DDEC54-9B11-4EF2-AC4B-F87A3F8C0940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1DDEC54-9B11-4EF2-AC4B-F87A3F8C0940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B2B243A-2B0F-445B-A9A4-2C3EA28C7563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B2B243A-2B0F-445B-A9A4-2C3EA28C7563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B2B243A-2B0F-445B-A9A4-2C3EA28C7563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B2B243A-2B0F-445B-A9A4-2C3EA28C7563}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -293,5 +299,6 @@ Global
 		{FD8C1AA4-8756-4D3B-A32E-4EC39C79A275} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 		{E5C47852-DFBF-43FB-B454-3B91A2401188} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 		{D1DDEC54-9B11-4EF2-AC4B-F87A3F8C0940} = {2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}
+		{6B2B243A-2B0F-445B-A9A4-2C3EA28C7563} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 	EndGlobalSection
 EndGlobal
