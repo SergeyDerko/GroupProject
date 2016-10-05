@@ -1,10 +1,8 @@
-﻿namespace Class.Model
+﻿using Class.Helper;
+
+namespace Class.Model
 {
-    public class MyClass
-    {
-        public string  Name { get; set; }
-        
-
+    public class MyClass : BaseClass
+    { 
     }
-
-    }
+}
