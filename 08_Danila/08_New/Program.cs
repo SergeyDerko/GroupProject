@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace _08_New
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Привет Arr!");
+            Console.WriteLine(" ");
+            Console.WriteLine("Привет Рванный Arr!");
+            Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("Введите высоту:");
             int x = Int32.Parse(Console.ReadLine());
           Console.WriteLine(" ");
