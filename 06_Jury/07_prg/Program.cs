@@ -1,4 +1,5 @@
 ﻿using System;
+using _07_prg.modal;
 
 namespace _07_prg
 {
@@ -6,6 +7,8 @@ namespace _07_prg
     {
         static void Main()
         {
+            var age = 29;
+            var myClass = new MyClass {Age = age};
         }
     }
 }

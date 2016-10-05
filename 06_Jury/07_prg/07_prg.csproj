@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="helper\BaseClass.cs" />
+    <Compile Include="helper\IBaseClass.cs" />
     <Compile Include="modal\MyClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,6 +1,8 @@
-﻿namespace _07_prg.modal
+﻿using _07_prg.helper;
+
+namespace _07_prg.modal
 {
-    class MyClass
+    class MyClass:BaseClass
     {
         
     }
