@@ -1,6 +1,8 @@
 ﻿namespace Class.Helper
 {
-    public class BaseClass
+    public class BaseClass : IInterface
+    
+
     {
         public string Name { get; set; }
         public string SName { get; set; }
