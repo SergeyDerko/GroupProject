@@ -1,7 +1,8 @@
-﻿namespace _09_NewClass.Helper
+﻿using System.Security.AccessControl;
+
+namespace _09_NewClass.Helper
 {
-    interface BaseInterface
+   public interface BaseInterface
     {
-        
+             
     }
-}
