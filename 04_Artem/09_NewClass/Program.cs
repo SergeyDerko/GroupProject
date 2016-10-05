@@ -6,9 +6,4 @@
         {
         }
     }
-
-    class MyClass
-    {
-        
-    }
 }
