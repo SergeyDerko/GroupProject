@@ -1,4 +1,4 @@
-﻿namespace _09_NewClass
+﻿namespace _09_NewClass.Model1
 {
     internal class MyClass
     {
