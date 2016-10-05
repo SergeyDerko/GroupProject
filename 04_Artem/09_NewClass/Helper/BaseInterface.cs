@@ -2,7 +2,8 @@
 
 namespace _09_NewClass.Helper
 {
-   public interface BaseInterface
+    public interface BaseInterface
     {
-             
+        string Show();
     }
+}

@@ -1,6 +1,6 @@
 ﻿namespace _09_NewClass.Model
 {
-    public interface MyInterface:
+    public interface IMyInterface:
         
     {
     string Show();

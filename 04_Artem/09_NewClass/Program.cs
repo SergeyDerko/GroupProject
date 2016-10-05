@@ -1,4 +1,6 @@
-﻿using _09_NewClass.Model;
+﻿using System;
+using _09_NewClass.Helper;
+using _09_NewClass.Model;
 
 namespace _09_NewClass
 {
@@ -7,7 +9,12 @@ namespace _09_NewClass
         static void Main(string[] args)
         {
             var myClass = new MyClass();
-            myClass.Name = 
+            myClass.Name = "Vasya";
+            myClass.SName = "Pupkin";
+            myClass.Age = "13";
+
+            Console.WriteLine(BaseClass.Show());
+            Console.ReadLine();
         }
     }
 }
