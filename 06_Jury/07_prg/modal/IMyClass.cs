@@ -2,7 +2,7 @@
 {
     internal interface IMyClass
     {
-        string show();
+        string Show();
 
 
 
