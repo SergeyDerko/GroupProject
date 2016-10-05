@@ -4,4 +4,9 @@
     {
         
     }
+
+    interface IInterface
+    {
+        
+    }
 }

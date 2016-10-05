@@ -1,0 +1,7 @@
+﻿namespace Class
+{
+    interface IBaseInterface
+    {
+        
+    }
+}
