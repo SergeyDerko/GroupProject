@@ -6,7 +6,7 @@ namespace _09_NewClass
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var myClass = new MyClass();
             myClass.Name = "Vasya";
