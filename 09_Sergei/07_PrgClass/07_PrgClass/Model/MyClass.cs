@@ -1,6 +1,6 @@
 ﻿
 
-namespace _07_PrgClass
+namespace _07_PrgClass.Model
 {
     internal class MyClass
     {
