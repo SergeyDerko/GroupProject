@@ -1,9 +1,7 @@
-﻿namespace _07_prg.modal
+﻿namespace _07_prg
 {
     class MyClass
     {
-        public string Name { get; set; }
-
-
+        
     }
 }
