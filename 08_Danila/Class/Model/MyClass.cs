@@ -1,10 +1,10 @@
 ﻿namespace Class.Model
 {
-    class MyClass
+    public class MyClass
     {
+        public string  Name { get; set; }
+        
 
     }
 
-
-
-}
+    }

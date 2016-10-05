@@ -2,11 +2,16 @@
 
 namespace _07_PrgClass.Helper
 {
-    class BaseClass
+    internal class BaseClass
     {
-        public override string ToString()
+        public  string ToString()
         {
             return base.ToString();
         }
+    }
+
+    internal interface IBaseInterface
+    {
+        
     }
 }
