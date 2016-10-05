@@ -1,7 +1,7 @@
 ﻿namespace _09_NewClass
 {
-    class MyClass
+    internal class MyClass
     {
-        
+        public string Name { get; set; }
     }
 }
