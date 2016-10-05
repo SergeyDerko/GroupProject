@@ -9,21 +9,21 @@ namespace _05_Array_Sort2dim
         {
             Console.Write("\n Вывод двумерного массива, его наполнение и сортировка" +
                               "\n Задайте размерность массива!\n" +
-                              "\n Введите количество столбцов: ");
-            var column = Console.ReadLine();
-            Console.Write(" Введите количество строк: ");
+                              "\n Введите количество строк: ");
             var row = Console.ReadLine();
+            Console.Write(" Введите длину строки: ");
+            var column = Console.ReadLine();
             int verify;
-            if (int.TryParse(column, out verify) && int.TryParse(row, out verify)&&!string.IsNullOrEmpty(column)&& !string.IsNullOrEmpty(row))
+            if (int.TryParse(column, out verify) && int.TryParse(row, out verify) && !string.IsNullOrEmpty(column) && !string.IsNullOrEmpty(row))
             {
-                var x = int.Parse(column);
-                var y = int.Parse(row);
-                var arr = new int[y, x];
+                var x = int.Parse(row);
+                var y = int.Parse(column);
+                var arr = new int[x, y];
                 var random = new Random();
-                Console.WriteLine($"\n Двумерный массив рандомных чисел от 1 до 100 размерность, {y}х{x}: \n");
-                for (var i = 0; i < y; i++)
+                Console.WriteLine($"\n Двумерный массив рандомных чисел от 1 до 100 размерность, {x}х{y}: \n");
+                for (var i = 0; i < x; i++)
                 {
-                    for (var j = 0; j < x; j++)
+                    for (var j = 0; j < y; j++)
                     {
                         arr[i, j] = random.Next(1, 100);
                     }
@@ -32,10 +32,10 @@ namespace _05_Array_Sort2dim
                 Output(x, y, arr);
 
                 Console.WriteLine("\n Отсортированый по строкам двумерный массив: \n");
-                for (var i = 0; i < y; i++)
-                    for (var j = 0; j < x - 1; j++)
+                for (var i = 0; i < x; i++)
+                    for (var j = 0; j < y - 1; j++)
                     {
-                        for (var k = j; k < x; k++)
+                        for (var k = j; k < y; k++)
                         {
                             if (arr[i, j] > arr[i, k])
                             {
@@ -50,9 +50,9 @@ namespace _05_Array_Sort2dim
 
                 Console.WriteLine("\n Отсортированый по столбцам двумерный массив: \n");
 
-                for (var j = 0; j < x; j++)
-                    for (var i = 0; i < y - 1; i++)
-                        for (var k = i; k < y; k++)
+                for (var j = 0; j < y; j++)
+                    for (var i = 0; i < x - 1; i++)
+                        for (var k = i; k < x; k++)
                             if (arr[i, j] > arr[k, j])
                             {
                                 var tmp = arr[i, j];
@@ -66,16 +66,16 @@ namespace _05_Array_Sort2dim
             {
                 Console.WriteLine(" Вы ввели некоректное значение!");
             }
-        
+
             Console.ReadKey();
 
-            
+
         }
         private static void Output(int x, int y, int[,] arr)
         {
-            for (var i = 0; i < y; i++)
+            for (var i = 0; i < x; i++)
             {
-                for (var j = 0; j < x; j++)
+                for (var j = 0; j < y; j++)
                 {
                     Console.Write($"\t {arr[i, j]}");
                 }

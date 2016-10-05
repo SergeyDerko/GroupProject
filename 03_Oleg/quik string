@@ -1,0 +1,19 @@
+//Бегущая строка
+        static void Main(string[] args)
+        {
+            //Console.WindowWidth - ширина консоли
+            for (int i = 0; i < Console.WindowWidth; i++) /*цикл для прорисовки и удаления
+                (сдвига) строки + задаем время для лучшего восприятия*/ 
+            {
+                for (int k = 0; k < i; k++) //цикл для отступа для смищения выводимой строки
+                {
+                    //Console.Write("_"); //отступ (проверка)
+                    Console.Write(" "); //отступ 
+                }
+                Console.ForegroundColor = ConsoleColor.Green; //цвет строки
+                Console.Write(">>>"); //выводимая строка строка
+                Thread.Sleep(80); //задержка для норм восприятия
+                Console.Clear(); //Очистка консоли 
+            }
+            Console.ReadKey();
+        }
