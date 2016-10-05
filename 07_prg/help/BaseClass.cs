@@ -1,7 +1,9 @@
-﻿namespace _07_prg.modal
+﻿namespace _07_prg.help
 {
     class BaseClass
     {
         
+        
+
     }
 }
