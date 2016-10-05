@@ -1,6 +1,6 @@
 ﻿namespace _09_NewClass
 {
-    class BaseClass
+    public class BaseClass
     {
         
     }
