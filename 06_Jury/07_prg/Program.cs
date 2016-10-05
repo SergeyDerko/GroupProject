@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using _07_prg.modal;
 
 namespace _07_prg
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            var age = 29;
+            var myClass = new MyClass {Age = age};
         }
     }
 }
