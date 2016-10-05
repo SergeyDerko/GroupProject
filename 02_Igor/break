@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           //В даному циклі виведуться всі числа від 1 до 5 замість 100
+		for (i = 1; i < 100; i++)
+		   if (i<=5)
+		      Console.WriteLine(i);
+		   else break;
+		   
+		 Console.ReadLine();
+		}
+	}	
+ }

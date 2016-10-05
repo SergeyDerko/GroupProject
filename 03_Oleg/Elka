@@ -1,0 +1,49 @@
+// Елка :)
+        static void Main(string[] args)
+        {
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.Clear();
+            string chose = ""; //выход из программы или продолджить
+            do
+            {
+                Console.Write("Enter any number: ");
+                int n; // переменная, которое принимает значение пользователя
+                while (!Int32.TryParse(Console.ReadLine(), out n) || n <= 0)
+                {   //проверка на ввод значения типа int или 0
+                    Console.Write("Enter any number: ");
+                    Int32.TryParse(Console.ReadLine(), out n);
+                }
+                for (int i = 0; i < n; i++) // количестов проходов
+                {
+                    for (int j = 0; j < i + 2; j++) //количество рядов за 1 проход
+                    {
+                        Console.Write("\t");
+                        for (int k = 0; k < n - j; k++) //цикл отступ
+                        {
+                            Console.Write(" "); // отступ для симетричной елки 
+                        }
+                        for (int y = 0; y < 2 * j + 1; y++) //прорисовки
+                        {
+                            Console.Write("*"); // прорисовка елки
+                        }
+                        Console.WriteLine(); //переход на новую ступень 
+                    }
+                }
+                Console.ForegroundColor = ConsoleColor.Black;
+                for (int m = 0; m < n/2; m++) // цикл для количества прорисовок ствола
+                {
+                        Console.Write("\t");
+                        for (int k = 0; k < n -1 ; k++) //цикл для отступа
+                        {
+                            Console.Write(" "); // отступ для ствола
+                        }
+                        for (int y = 0; y < n; y+=n) // цикл для ствола
+                        {
+                            Console.Write("***"); // прорисовка ствола
+                        }
+                        Console.WriteLine(); //переход на новую ступень
+                }
+                Console.WriteLine("Press key 'y' to contine!");
+                chose = Console.ReadLine();
+            } while (chose == "y");
