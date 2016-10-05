@@ -1,6 +1,6 @@
 ﻿namespace Class
 {
-    public class BaseClass
+    internal interface IInterface
     {
         
     }
