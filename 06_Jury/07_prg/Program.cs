@@ -11,7 +11,8 @@ namespace _07_prg
             var age = 29;
             var myClass = new MyClass {Age = age};
 
-          
+         
+            
 
         }
     }
