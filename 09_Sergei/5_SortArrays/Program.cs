@@ -34,11 +34,11 @@ namespace _5_SortArrays
                     }
                     Console.WriteLine(
                         "------------------------------------------------------------------------------------------------------------");
-                    //Sorting an array by columns
+                    //Sorting an array by columns and lines
                     for (var i = 0; i < columns; i++)
                     {
                         for (var j = 0; j < lines; j++)
-                        {
+                        {   //Sorting an array by columns
                             for (var x = 0; x < columns - 1; x++)
                             {
                                 if (array[x, j] <= array[x + 1, j]) continue;
@@ -46,13 +46,7 @@ namespace _5_SortArrays
                                 array[x + 1, j] = array[x, j];
                                 array[x, j] = temp;
                             }
-                        }
-                    }
-                    //Sorting an array by lines
-                    for (var i = 0; i < columns; i++)
-                    {
-                        for (var j = 0; j < lines; j++)
-                        {
+                            //Sorting an array by lines
                             for (var x = 0; x < columns - 1; x++)
                             {
                                 if (array[i, x] <= array[i, x + 1]) continue;
@@ -61,7 +55,7 @@ namespace _5_SortArrays
                                 array[i, x] = temp;
                             }
                         }
-                    }
+                    }                 
                     //The output of array in console after sorting.
                     Console.WriteLine("After sorting.");
                     for (var i = 0; i < columns; i++)
@@ -88,26 +82,6 @@ namespace _5_SortArrays
         {
             Console.Write("                                       " + title);
             Console.WriteLine();
-        }
-
-        public static bool IsNum(int number)
-        {
-            var anyString = number.ToString().ToCharArray();
-            for (var i = 0; i <= anyString.Length - 1; i++)
-            {
-                if (char.IsDigit(anyString[i]))
-                {
-                }
-                else if (anyString[i] == anyString.Length - 1)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            return true;
         }
     }
 }

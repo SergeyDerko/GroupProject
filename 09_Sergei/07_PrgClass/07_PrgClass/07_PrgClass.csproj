@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Helper\BaseClass.cs" />
     <Compile Include="Helper\IBaseInterface.cs" />
+    <Compile Include="Model\IMyClass.cs" />
     <Compile Include="Model\MyClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

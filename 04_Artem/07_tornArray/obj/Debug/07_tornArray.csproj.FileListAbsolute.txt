@@ -16,3 +16,9 @@ C:\Users\romak\Source\Repos\GroupProject\04_Artem\07_tornArray\bin\Debug\07_torn
 C:\Users\romak\Source\Repos\GroupProject\04_Artem\07_tornArray\obj\Debug\07_tornArray.csprojResolveAssemblyReference.cache
 C:\Users\romak\Source\Repos\GroupProject\04_Artem\07_tornArray\obj\Debug\07_tornArray.exe
 C:\Users\romak\Source\Repos\GroupProject\04_Artem\07_tornArray\obj\Debug\07_tornArray.pdb
+D:\Gitprojects\GroupProject\04_Artem\07_tornArray\bin\Debug\07_tornArray.exe.config
+D:\Gitprojects\GroupProject\04_Artem\07_tornArray\bin\Debug\07_tornArray.exe
+D:\Gitprojects\GroupProject\04_Artem\07_tornArray\bin\Debug\07_tornArray.pdb
+D:\Gitprojects\GroupProject\04_Artem\07_tornArray\obj\Debug\07_tornArray.csprojResolveAssemblyReference.cache
+D:\Gitprojects\GroupProject\04_Artem\07_tornArray\obj\Debug\07_tornArray.exe
+D:\Gitprojects\GroupProject\04_Artem\07_tornArray\obj\Debug\07_tornArray.pdb
