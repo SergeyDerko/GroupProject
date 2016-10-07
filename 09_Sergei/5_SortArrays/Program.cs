@@ -87,7 +87,7 @@ namespace _5_SortArrays
             }
         }
 
-        private static void Title(string title)
+        public static void Title(string title)
         {
             Console.Write("                                       " + title);
             Console.WriteLine();
