@@ -12,7 +12,7 @@ namespace _03_tree
             {
                 for (int j = width - i; j < width; j++)
                 {
-                    Console.Write(" ");
+                    Console.Write(" "); 
                 }
                 for (int j = 0; j < width - i; j++)
                 {
