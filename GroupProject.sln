@@ -196,6 +196,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleAnimation", "Console
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animation", "ConsoleAnimation\Animation\Animation.csproj", "{E11346DA-5B36-40B5-8750-B91C9DAD175C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "ConsoleAnimation\Common\Common.csproj", "{D617A7ED-9B03-49AF-B96E-A03C28C55073}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -466,6 +468,10 @@ Global
 		{E11346DA-5B36-40B5-8750-B91C9DAD175C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E11346DA-5B36-40B5-8750-B91C9DAD175C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E11346DA-5B36-40B5-8750-B91C9DAD175C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D617A7ED-9B03-49AF-B96E-A03C28C55073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D617A7ED-9B03-49AF-B96E-A03C28C55073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D617A7ED-9B03-49AF-B96E-A03C28C55073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D617A7ED-9B03-49AF-B96E-A03C28C55073}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -543,5 +549,6 @@ Global
 		{46B8B1AB-DF19-4332-81F4-829A4C7615AE} = {C18DF581-CF94-4066-9690-9ECF7C25F300}
 		{50FDA905-9809-46AD-AD34-2C6A5B99A8EE} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 		{E11346DA-5B36-40B5-8750-B91C9DAD175C} = {B9F038CC-250A-4176-A005-2173F2945B9B}
+		{D617A7ED-9B03-49AF-B96E-A03C28C55073} = {B9F038CC-250A-4176-A005-2173F2945B9B}
 	EndGlobalSection
 EndGlobal
