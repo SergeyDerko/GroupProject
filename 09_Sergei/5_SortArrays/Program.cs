@@ -15,10 +15,12 @@ namespace _5_SortArrays
                 try
                 {
                     // Entering values columns and lines 
-                    Console.WriteLine("Enter count of columns : ");
+                    Console.Write("Enter count of columns : ");
                     var columns = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Enter count of lines: ");
+                    Console.WriteLine();
+                    Console.Write("Enter count of lines: ");
                     var lines = int.Parse(Console.ReadLine());
+                    Console.WriteLine();
                     //Creating and initializing two-dimensional array
                     var array = new int[columns, lines];
                     //Filling an array randomly and output before sorting.
@@ -29,9 +31,12 @@ namespace _5_SortArrays
                         {
                             array[i, j] = rand.Next(100);
                             Console.Write("{0}\t", array[i, j]);
+                            Console.ForegroundColor = (ConsoleColor) rand.Next(1, 15);
+
                         }
                         Console.WriteLine();
                     }
+                    Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine(
                         "------------------------------------------------------------------------------------------------------------");
                     //Sorting an array by columns
@@ -61,7 +66,6 @@ namespace _5_SortArrays
                                 array[i, x + 1] = array[i, x];
                                 array[i, x] = temp;
                             }
-
                         }
                     }
 
@@ -72,9 +76,11 @@ namespace _5_SortArrays
                         for (var j = 0; j < lines; j++)
                         {
                             Console.Write("{0}\t", array[i, j]);
+                            Console.ForegroundColor = (ConsoleColor)rand.Next(1, 15);
                         }
                         Console.WriteLine();
                     }
+                    Console.ForegroundColor = ConsoleColor.Gray;
                     finished = true;
                 }
                 catch (Exception)
