@@ -1,10 +1,14 @@
-﻿
+﻿using System;
+using _09_10_Class.Helper;
+
 namespace _09_10_Class
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            var superInstance = new Base();
+          
         }
    
     }
