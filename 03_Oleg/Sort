@@ -1,0 +1,55 @@
+//сортировка - массивов 
+            Console.Write("Enter length column: ");
+            int a = Int32.Parse(Console.ReadLine()); //Ввод длины столбца
+            Console.Write("Enter length line: ");
+            int b = Int32.Parse(Console.ReadLine());
+            Random im = new Random();
+            //Ввод длины строки
+            Console.WriteLine();
+            int[,] ar = new int[a, b]; //Обявление массива
+            for (int x = 0; x < a; x++) //цикл, количество столбцов
+            {
+                for (int y = 0; y < b; y++) //цикл, количество строк
+                {
+                        ar[x, y] = im.Next(1, 10); //случайное (рандомное) значение ячейки массива
+                        Console.Write("{0}\t", ar[x, y]);
+                }
+                Console.WriteLine();
+            }
+            for (var i = 0; i < a; i++) //цикл проход по столбцам
+            {
+                for (var j = 0; j < b; j++) //цикл проход по строкам
+                {   //самый большой елемент будет 
+                    for (var x = 0; x < a - 1; x++) /*создания цикла для изменения первого
+                        индекса (столбца), второй индекс не трогаем - пузирьковая сортировка */
+                        //a - 1 количество шагов уменьшается с каждым проходом на - 1 
+                    {
+                        if (ar[x, j] <= ar[x + 1, j]) continue;
+                        var temp = ar[x + 1, j];
+                        ar[x + 1, j] = ar[x, j];
+                        ar[x, j] = temp;
+                    }
+                    for (var y = 0; y < b - 1; y++) /*создания цикла для изменения первого
+                        индекса (строки), первый индекс не трогаем - пузирьковая сортировка */
+                        //b - 1 количество шагов уменьшается с каждым проходом на - 1
+                    {
+                        if (ar[i, y] <= ar[i, y + 1]) continue;
+                        var temp2 = ar[i, y + 1];
+                        ar[i, y + 1] = ar[i, y];
+                        ar[i, y] = temp2;
+                    }
+                }
+            }
+            //Вывод  нового массива (отсортированого)
+            Console.WriteLine();
+            Console.WriteLine("After sorting:");
+            Console.WriteLine();
+            for (var x = 0; x < a; x++)
+            {
+                for (var y = 0; y < b; y++)
+                {
+                    Console.Write("{0}\t", ar[x, y]);
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();

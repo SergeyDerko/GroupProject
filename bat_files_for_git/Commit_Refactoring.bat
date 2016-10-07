@@ -1,4 +1,4 @@
-cd /D D:\Gitproject\firstproject
+cd /D D:\Gitproject\GroupProject
 git commit -a -m"Refactoring"
 git push
 git status
