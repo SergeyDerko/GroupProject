@@ -6,64 +6,59 @@ namespace _07_SortArrays
     {
         private static void Main()
         {
+            Title("Sorting array.");
             var rand = new Random();
             //Creating variable type bool, which will be a determinant criteria of finish a program.
             var finished = false;
             while (!finished)
             {
-                //Entering value of length for array
-                Console.WriteLine("Enter number: ");
-                var num = Console.ReadLine();
-                if (IsNum(num))
-                {   
-                    var array = new int[num.Length];
-                    for (var i = 0; i < array.Length; i++)
-                    {
+                try
+                {
+                    //Entering value of length for array
+                    Console.Write("Enter number: ");
+                    var num = int.Parse(Console.ReadLine());
 
+                    var array = new int[num];
+                    for (var i = 0; i < num; i++)
+                    {
                         array[i] = rand.Next(100);
                         Console.Write(" " + array[i]);
                     }
+                    Console.WriteLine();
                     Console.WriteLine(
                         "--------------------------------------------------------------------------------------------------------");
-                    for (var i = 0; i < array.Length; i++)
+                    for (var i = 0; i < num; i++)
                     {
-                        for (var j = 0; j < array.Length - 1; j++)
+                        for (var j = 0; j < num - 1; j++)
                         {
                             if (array[j] > array[j + 1])
                             {
                                 var temp = array[j + 1];
-                                array[j] = array[j + 1];
-                                array[j + 1] = temp;
+                                array[j + 1] = array[j];
+                                array[j] = temp;
                             }
+                            
                         }
                     }
-
-                    for (var i = 0; i < array.Length; i++)
+                    for (int i = 0; i < num; i++)
                     {
-                        Console.Write("{0}\t" + array[i]);
+                        Console.Write(" " + array[i]);
                     }
+                    Console.WriteLine();
                     finished = true;
                 }
-                else
+                catch (Exception)
                 {
-                    Console.WriteLine("Enter a numeric value, please!");
+                    Console.WriteLine("Something wrong! Please, enter a numeric value.");
                 }
             }
-            
         }
-        //Checking string on the numeric value.
-        public static bool IsNum(string number)
+        private static void Title(string title)
         {
-            var anyString = number.ToCharArray();
-            for (var i = 0; i <= anyString.Length - 1; i++)
-            {
-                if (char.IsDigit(anyString[i]))
-                {
-                    continue;
-                }
-                return anyString[i] == anyString.Length - 1;
-            }
-            return true;
+            Console.Write("                                       " + title);
+            Console.WriteLine();
         }
     }
 }
+
+

@@ -6,6 +6,7 @@ namespace _07_prg_OOP
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Trying to make a conflict");
             Console.WriteLine("Hello");
         }
     }
