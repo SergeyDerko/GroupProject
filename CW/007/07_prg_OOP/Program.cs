@@ -6,7 +6,7 @@ namespace _07_prg_OOP
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("");
+            Console.WriteLine("Hello");
         }
     }
 }
