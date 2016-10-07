@@ -2,8 +2,10 @@
 
 namespace _09_NewClass.Helper
 {
-    public interface BaseInterface
+    public interface IBaseInterface
     {
-
+        string Name { get; set; }
+        string SName { get; set; }
+        int Age { get; set; }
     }
 }

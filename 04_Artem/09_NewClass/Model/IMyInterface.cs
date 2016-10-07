@@ -1,8 +1,8 @@
 ﻿namespace _09_NewClass.Model
 {
-    public interface IMyInterface:
+    public interface IMyInterface
         
     {
-    string Show();
+        string Show();
     }
 }

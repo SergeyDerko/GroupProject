@@ -5,6 +5,6 @@ namespace _07_PrgClass.Helper
     {
         string Name { get; set; }
         string SName { get; set; }
-        string Age { get; set; }
+        int Age { get; set; }
     }
 }

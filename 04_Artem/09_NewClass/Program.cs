@@ -4,16 +4,16 @@ using _09_NewClass.Model;
 
 namespace _09_NewClass
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
             var myClass = new MyClass();
             myClass.Name = "Vasya";
             myClass.SName = "Pupkin";
-            myClass.Age = "13";
+            myClass.Age = 13;
 
-            Console.WriteLine(BaseClass.Show());
+            Console.WriteLine(myClass.Show());
             Console.ReadLine();
         }
     }
