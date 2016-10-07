@@ -38,23 +38,23 @@ namespace _5_SortArrays
                     for (var i = 0; i < columns; i++)
                     {
                         for (var j = 0; j < lines; j++)
-                        {   
-                            for (var x = 0; x < array.Length - 1; x++)
+                        {
+                            for (var x = 0; x < columns - 1; x++)
                             {
                                 if (array[x, j] < array[x + 1, j]) continue;
                                 var temp = array[x + 1, j];
                                 array[x + 1, j] = array[x, j];
                                 array[x, j] = temp;
                             }
-                            
+
                         }
                     }
                     //Sorting an array by lines
                     for (var i = 0; i < columns; i++)
                     {
                         for (var j = 0; j < lines; j++)
-                        {   
-                            for (var x = 0; x < array.Length - 1; x++)
+                        {
+                            for (var x = 0; x < lines - 1; x++)
                             {
                                 if (array[i, x] < array[i, x + 1]) continue;
                                 var temp = array[i, x + 1];
@@ -64,7 +64,7 @@ namespace _5_SortArrays
 
                         }
                     }
-                    
+
                     //The output of array in console after sorting.
                     Console.WriteLine("After sorting.");
                     for (var i = 0; i < columns; i++)
