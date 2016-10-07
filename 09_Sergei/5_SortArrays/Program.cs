@@ -39,7 +39,7 @@ namespace _5_SortArrays
                     Console.ForegroundColor = ConsoleColor.Gray;
                     Console.WriteLine(
                         "------------------------------------------------------------------------------------------------------------");
-                    //Sorting an array by columns
+                    //Sorting an array by columns and lines
                     for (var i = 0; i < columns; i++)
                     {
                         for (var j = 0; j < lines; j++)
@@ -51,14 +51,6 @@ namespace _5_SortArrays
                                 array[x + 1, j] = array[x, j];
                                 array[x, j] = temp;
                             }
-
-                        }
-                    }
-                    //Sorting an array by lines
-                    for (var i = 0; i < columns; i++)
-                    {
-                        for (var j = 0; j < lines; j++)
-                        {
                             for (var x = 0; x < lines - 1; x++)
                             {
                                 if (array[i, x] < array[i, x + 1]) continue;
@@ -66,9 +58,9 @@ namespace _5_SortArrays
                                 array[i, x + 1] = array[i, x];
                                 array[i, x] = temp;
                             }
+
                         }
                     }
-
                     //The output of array in console after sorting.
                     Console.WriteLine("After sorting.");
                     for (var i = 0; i < columns; i++)
