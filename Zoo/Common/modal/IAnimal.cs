@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Common.modal
+﻿namespace Common.modal
 {
     internal interface IAnimal
     {
@@ -14,15 +12,15 @@ namespace Common.modal
     
     internal enum TypeAnimal
     {
-        Birds,
-        Mammals,
-        Reptiles
+        Mammals = 1,
+        Birds = 2,
+        Reptiles = 3
     }
     internal enum Sex
     {
-        Male,
-        Female,
-        It
+        None = 0,
+        Male = 1,
+        Female = 2,
     }
 
 }
