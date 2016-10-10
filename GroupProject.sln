@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -126,7 +126,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_jaggedArray", "06_Jury\0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Calc", "08_Danila\03_Calc\03_Calc\03_Calc.csproj", "{3166FE79-4A48-49C2-8C07-C4BF9A4063A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_Arrays", "09_Sergei\09_Arrays\09_Arrays.csproj", "{C6C53632-D5F1-41BE-B4B6-3EA7C5362E75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_Arrays", "09_Sergei\09_Arrays\05_Arrays.csproj", "{C6C53632-D5F1-41BE-B4B6-3EA7C5362E75}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Calc", "09_Sergei\03_Calc\03_Calc.csproj", "{E8D44CCC-54E9-4BAD-A726-D9D2A5A13250}"
 EndProject
