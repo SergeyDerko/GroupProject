@@ -13,6 +13,7 @@ namespace _07_PrgClass
             myClass.SName = "Smith";
             myClass.Age = 30;
             Console.WriteLine(myClass.Show());
+            Console.ReadKey();
 
         }
     }
