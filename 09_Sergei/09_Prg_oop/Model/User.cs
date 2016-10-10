@@ -1,10 +1,10 @@
-﻿namespace _09_Prg_oop
+﻿namespace _09_Prg_oop.Model
 {
     internal class User
     {
-        public string Name { get; set; }
-        public string SName { get; set; }
-        public int Age { get; set; }
+         string Name { get; set; }
+         string SName { get; set; }
+         int Age { get; set; }
 
         public User(string name, string sname, int age)
         {
