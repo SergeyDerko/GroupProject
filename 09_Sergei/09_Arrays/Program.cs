@@ -53,6 +53,7 @@ namespace _07_SortArrays
                     Console.WriteLine("Something wrong! Please, enter a numeric value.");
                 }
             }
+            Console.ReadKey();
         }
         private static void Title(string title)
         {

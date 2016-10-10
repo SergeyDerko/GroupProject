@@ -83,6 +83,7 @@ namespace _5_SortArrays
                     Console.ForegroundColor = ConsoleColor.Gray;
                 }
             }
+            Console.ReadKey();
         }
 
         public static void Title(string title)
