@@ -1,6 +1,4 @@
-﻿using System.Security.AccessControl;
-
-namespace _09_NewClass.Helper
+﻿namespace _09_NewClass.Helper
 {
     public interface IBaseInterface
     {
