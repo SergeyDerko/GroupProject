@@ -218,6 +218,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_zoo", "04_Artem\08_zoo\0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_Hierarchy1", "04_Artem\09_NewClass\07_Hierarchy1.csproj", "{F69CF749-8769-4351-8434-4BB8E84F3428}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Прямокутник", "02_Igor\Прямокутник\Прямокутник\Прямокутник.csproj", "{97299D39-A18D-44CD-A7DD-4C6FA05E4F41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -524,6 +526,10 @@ Global
 		{F69CF749-8769-4351-8434-4BB8E84F3428}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F69CF749-8769-4351-8434-4BB8E84F3428}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F69CF749-8769-4351-8434-4BB8E84F3428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97299D39-A18D-44CD-A7DD-4C6FA05E4F41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97299D39-A18D-44CD-A7DD-4C6FA05E4F41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97299D39-A18D-44CD-A7DD-4C6FA05E4F41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97299D39-A18D-44CD-A7DD-4C6FA05E4F41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -610,5 +616,6 @@ Global
 		{386628DF-443C-4C40-9842-2556E5D2BF28} = {B52353BC-F389-4825-BADA-5C5D97B1DB72}
 		{EFD034B8-C81F-441C-B790-50E9D2C5895D} = {B52353BC-F389-4825-BADA-5C5D97B1DB72}
 		{F69CF749-8769-4351-8434-4BB8E84F3428} = {B52353BC-F389-4825-BADA-5C5D97B1DB72}
+		{97299D39-A18D-44CD-A7DD-4C6FA05E4F41} = {1680F505-0533-4DF0-9A62-B617A5D6FAF0}
 	EndGlobalSection
 EndGlobal
