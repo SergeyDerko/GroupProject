@@ -16,8 +16,9 @@ namespace _09_Prg_oop
 
             
             var json = JsonConvert.SerializeObject(arrObjs);
+            
             var path = "out.json";
-            var conf = "out.config";
+           // var conf = "out.config";
             File.WriteAllText(path, json);
             Console.WriteLine(File.ReadAllText(path));
         }
