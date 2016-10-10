@@ -2,10 +2,23 @@
 {
     internal interface IAnimal
     {
-       string Kind { get; set; }
-       
-
-
+        string Name { get; set; }
+        TypeAnimal Type { get; set; }
+        Sex Sex { get; set; }
 
     }
+
+    internal enum TypeAnimal
+    {
+        Birds,
+        Mammals,
+        Reptiles
+    }
+    internal enum Sex
+    {
+        Male,
+        Female,
+        It
+    }
+
 }
