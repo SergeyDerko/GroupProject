@@ -1,13 +1,17 @@
-﻿namespace Common.modal
+﻿using System.Collections.Generic;
+
+namespace Common.modal
 {
     internal interface IAnimal
     {
-        string Name { get; set; }
+        string Id { get; set; }
         TypeAnimal Type { get; set; }
+        string Nickname { get; set; }
+        int Age { get; set; }
         Sex Sex { get; set; }
-
+       
     }
-
+    
     internal enum TypeAnimal
     {
         Birds,
