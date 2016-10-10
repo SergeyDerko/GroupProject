@@ -1,5 +1,4 @@
-﻿using System;
-using _09_NewClass.Helper;
+﻿using _09_NewClass.Helper;
 
 namespace _09_NewClass.Model
 {

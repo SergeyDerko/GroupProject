@@ -1,8 +1,4 @@
-﻿using System;
-using _09_NewClass.Helper;
-using _09_NewClass.Model;
-
-namespace _09_NewClass
+﻿namespace 07_Hierarchy
 {
     internal class Program
     {
@@ -15,6 +11,7 @@ namespace _09_NewClass
 
             Console.WriteLine(myClass.Show());
             Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
