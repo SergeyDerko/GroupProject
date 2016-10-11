@@ -1,25 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Common.modal
+﻿namespace Common.modal
 {
     class Birds: IAnimal
     {
-        BirdsRace Birdsrace { get; set; }
+        public BirdsRace Birdsrace { get; set; }
         public string Id { get; set; }
         public TypeAnimal Type { get; set; }
         public string Nickname { get; set; }
         public int Age { get; set; }
         public Sex Sex { get; set; }
 
-        private enum BirdsRace
+     internal enum BirdsRace
         {
-           Raven,
-           Dove,
-           Falcon
+           Raven = 1,
+           Dove =2,
+           Falcon = 3,
+           Owl = 4,
+           Parrot = 5,
+           Penguin = 6,
+           Eagle = 7,
+           Woodpecker = 8,
+           Flamingo = 9,
+           Chicken = 10
         }
     }
 }

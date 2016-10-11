@@ -14,8 +14,10 @@
     {
         Mammals = 1,
         Birds = 2,
-        Reptiles = 3
-    }
+        Reptiles = 3,
+        Fish = 4,
+        Amphibians = 5,
+     }
     internal enum Sex
     {
         None = 0,

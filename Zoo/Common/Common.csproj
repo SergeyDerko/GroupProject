@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="modal\Amphibian.cs" />
     <Compile Include="modal\Birds.cs" />
+    <Compile Include="modal\Fish.cs" />
     <Compile Include="modal\IAnimal.cs" />
     <Compile Include="modal\Mammals.cs" />
+    <Compile Include="modal\Reptiles.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
