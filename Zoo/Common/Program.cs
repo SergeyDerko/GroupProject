@@ -12,7 +12,7 @@ namespace Common
             {
                 typeof(TypeAnimal),
                 typeof(MammalsRace),
-                typeof(Birds.BirdsRace),
+                typeof(BirdsRace),
                 typeof(FishRace),
                 typeof(ReptilesRace),
                 typeof(AmphibianRace)
