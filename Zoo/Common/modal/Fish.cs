@@ -2,9 +2,9 @@
 {
     class Fish:IAnimal
     {
-        public FishRace FishRace { get; set; }
-        public string Id { get; set; }
+       public int Id { get; set; }
         public TypeAnimal Type { get; set; }
+        public FishRace FishRace { get; set; }
         public string Nickname { get; set; }
         public int Age { get; set; }
         public Sex Sex { get; set; }

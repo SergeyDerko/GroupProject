@@ -2,7 +2,7 @@
 {
     internal interface IAnimal
     {
-        string Id { get; set; }
+        int Id { get; set; }
         TypeAnimal Type { get; set; }
         string Nickname { get; set; }
         int Age { get; set; }
