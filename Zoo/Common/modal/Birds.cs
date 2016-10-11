@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public TypeAnimal Type { get; set; }
-        public BirdsRace Birdsrace { get; set; }
+        public BirdsRace BirdsRace1 { get; set; }
         public string Nickname { get; set; }
         public int Age { get; set; }
         public Sex Sex { get; set; }
