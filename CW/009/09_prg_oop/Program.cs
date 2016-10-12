@@ -10,6 +10,7 @@ namespace _09_prg_oop
         {
             var json = JsonConvert.SerializeObject(new User());
             //var json = JsonConvert.SerializeObject(new User());File.WriteAllText("out.json", json); 
+            var r = "11";
             File.WriteAllText("out.json", json); 
         }
     }
