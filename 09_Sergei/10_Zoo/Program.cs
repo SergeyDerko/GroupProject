@@ -1,20 +1,15 @@
-﻿using System.Collections.Generic;
-using Common.modal;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace _10_Zoo
 {
-    internal class Program
+    class Program
     {
-        public static void Main()
+        static void Main(string[] args)
         {
-            var animals = new List<IAnimal>
-            {
-                new Mammals(),
-                new Birds(),
-                new Amphibian(),
-                new Reptiles(),
-                new Fish()
-            };
         }
     }
 }
