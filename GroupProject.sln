@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -208,6 +208,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "009", "009", "{722F2E4E-4B1E-4EC6-837F-4B00FFFC5D2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_prg_oop", "CW\009\09_prg_oop\09_prg_oop.csproj", "{CBE8A5C3-EBDD-45CE-BCF7-5489443E2FE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Zoo_vo", "05_Eugene\_Zoo_vo\_Zoo_vo.csproj", "{E45EEC7F-53CA-4762-898A-1024BA00E519}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -503,6 +505,10 @@ Global
 		{CBE8A5C3-EBDD-45CE-BCF7-5489443E2FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBE8A5C3-EBDD-45CE-BCF7-5489443E2FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBE8A5C3-EBDD-45CE-BCF7-5489443E2FE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E45EEC7F-53CA-4762-898A-1024BA00E519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E45EEC7F-53CA-4762-898A-1024BA00E519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E45EEC7F-53CA-4762-898A-1024BA00E519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E45EEC7F-53CA-4762-898A-1024BA00E519}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -585,5 +591,6 @@ Global
 		{97299D39-A18D-44CD-A7DD-4C6FA05E4F41} = {1680F505-0533-4DF0-9A62-B617A5D6FAF0}
 		{722F2E4E-4B1E-4EC6-837F-4B00FFFC5D2E} = {7768E47D-6065-4302-B586-26014DD0EA0B}
 		{CBE8A5C3-EBDD-45CE-BCF7-5489443E2FE0} = {722F2E4E-4B1E-4EC6-837F-4B00FFFC5D2E}
+		{E45EEC7F-53CA-4762-898A-1024BA00E519} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 	EndGlobalSection
 EndGlobal
