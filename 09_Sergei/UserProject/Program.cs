@@ -11,17 +11,12 @@ namespace UserProject
             var r = new Recruit() {Exp = 1000};
             r.LevelUp();
             
-            var character = r.SelectClass();
+            var character = r.SelectClass() == new Rogue() ? new Rogue() : r.SelectClass();
+            
             Console.WriteLine(character);
             Console.ReadKey();
-            /*if (character == new Rogue())
-            {
-                character = new Rogue();
-                
-                Console.WriteLine(character);  
-            }*/
-
-
         }
+
+
     }
 }
