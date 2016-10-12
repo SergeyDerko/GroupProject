@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using UserProject.Interfaces;
-
-namespace UserProject.Characters
+﻿namespace UserProject.Characters
 {
     internal  class Recruit : Character, IUser
     {
