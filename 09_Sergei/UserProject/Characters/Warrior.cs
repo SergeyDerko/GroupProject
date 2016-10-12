@@ -1,9 +1,14 @@
-﻿using System;
+﻿using UserProject.Interfaces;
 
-namespace UserProject
+namespace UserProject.Characters
 {
     internal class Warrior : IUser, IWarrior, IRecruit
     {
+
+        public string Surname { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+
         public int Str { get; set; }
         public int Agi { get; set; }
         public int Int { get; set; }
@@ -11,49 +16,13 @@ namespace UserProject
         public int Exp { get; set; }
         public int Lvl { get; set; }
 
-        public string Surname
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public int Age
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        
 
         public int LevelUp()
         {
             throw new System.NotImplementedException();
         }
-
     }
 }

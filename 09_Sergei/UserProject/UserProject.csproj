@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Characters\Character.cs" />
     <Compile Include="Interfaces\IMage.cs" />
-    <Compile Include="Interfaces\IRecruit.cs" />
     <Compile Include="Interfaces\IRogue.cs" />
     <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="Interfaces\IWarrior.cs" />
@@ -53,12 +53,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Characters\Recruit.cs" />
     <Compile Include="Characters\Rogue.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Profiles\User.cs" />
     <Compile Include="Characters\Warrior.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,6 +1,7 @@
 ﻿using System;
+using UserProject.Interfaces;
 
-namespace UserProject
+namespace UserProject.Characters
 {
     internal class Rogue :IUser, IRogue, IRecruit
     {
