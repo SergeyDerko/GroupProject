@@ -7,12 +7,14 @@ namespace _10_zoo
     {
         static void Main(string[] args)
         {
-            var animals = new List<IAnimal>();
-            animals.Add(new Mammals());
-            animals.Add(new Birds());
-            animals.Add(new Reptiles());
-            animals.Add(new Fish());
-            animals.Add(new Amphibian());
+            var animals = new List<IAnimal>
+            {
+                new Mammals(),
+                new Birds(),
+                new Reptiles(),
+                new Fish(),
+                new Amphibian()
+            };
         }
     }
 }
