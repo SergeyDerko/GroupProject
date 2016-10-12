@@ -2,7 +2,7 @@
 
 namespace Common.modal
 {
-    class Reptiles:IAnimal
+    public class Reptiles:IAnimal
     {
         public int Id { get; set; }
         public TypeAnimal Type { get; set; }
