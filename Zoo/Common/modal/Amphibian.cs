@@ -1,4 +1,6 @@
-﻿namespace Common.modal
+﻿using System;
+
+namespace Common.modal
 {
     class Amphibian:IAnimal
     {
@@ -6,7 +8,7 @@
         public TypeAnimal Type { get; set; }
         public AmphibianRace AmphibianRace { get; set; }
         public string Nickname { get; set; }
-        public int Age { get; set; }
+        public DateTime Birthday { get; set; }
         public Sex Sex { get; set; }
     }
     internal enum AmphibianRace
