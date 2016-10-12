@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -220,17 +220,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_Hierarchy1", "04_Artem\0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Прямокутник", "02_Igor\Прямокутник\Прямокутник\Прямокутник.csproj", "{97299D39-A18D-44CD-A7DD-4C6FA05E4F41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08_zoo", "06_Jury\08_zoo\08_zoo.csproj", "{C1557215-463C-4BE5-9F1F-C22FCE786F7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Прямокутник (незаповнений)", "02_Igor\Прямокутник (незаповнений)\Прямокутник (незаповнений)\Прямокутник (незаповнений).csproj", "{7E35E1CC-B18A-46F1-9579-B66397EEE62A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_Serialization", "06_Jury\09_Serialization\09_Serialization.csproj", "{8BBB89EB-1482-4466-AEFA-6E01A720B7AD}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kill", "kill", "{C97AD181-7AF8-4785-96DB-03A994D997C8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "killapp1", "kill\killapp1\killapp1.csproj", "{990DD74D-96E8-49DF-AD26-1B1C34E0AB8A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "killapp2", "killapp2\killapp2.csproj", "{902DFB7F-8AA2-4D96-A4A9-8D2D1C252903}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kilapp3", "kilapp3\kilapp3.csproj", "{F3040A70-03F6-4B51-BAD9-E91E67AB5D21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimeBrainWars", "08_Danila\AnimeBrainWars\AnimeBrainWars.csproj", "{8FFC924D-A0D0-4495-8DE2-231C68B34C21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -550,18 +542,6 @@ Global
 		{8BBB89EB-1482-4466-AEFA-6E01A720B7AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BBB89EB-1482-4466-AEFA-6E01A720B7AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BBB89EB-1482-4466-AEFA-6E01A720B7AD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{990DD74D-96E8-49DF-AD26-1B1C34E0AB8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{990DD74D-96E8-49DF-AD26-1B1C34E0AB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{990DD74D-96E8-49DF-AD26-1B1C34E0AB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{990DD74D-96E8-49DF-AD26-1B1C34E0AB8A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{902DFB7F-8AA2-4D96-A4A9-8D2D1C252903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{902DFB7F-8AA2-4D96-A4A9-8D2D1C252903}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{902DFB7F-8AA2-4D96-A4A9-8D2D1C252903}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{902DFB7F-8AA2-4D96-A4A9-8D2D1C252903}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F3040A70-03F6-4B51-BAD9-E91E67AB5D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3040A70-03F6-4B51-BAD9-E91E67AB5D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3040A70-03F6-4B51-BAD9-E91E67AB5D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3040A70-03F6-4B51-BAD9-E91E67AB5D21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -651,8 +631,5 @@ Global
 		{97299D39-A18D-44CD-A7DD-4C6FA05E4F41} = {1680F505-0533-4DF0-9A62-B617A5D6FAF0}
 		{C1557215-463C-4BE5-9F1F-C22FCE786F7C} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
 		{8BBB89EB-1482-4466-AEFA-6E01A720B7AD} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
-		{990DD74D-96E8-49DF-AD26-1B1C34E0AB8A} = {C97AD181-7AF8-4785-96DB-03A994D997C8}
-		{902DFB7F-8AA2-4D96-A4A9-8D2D1C252903} = {C97AD181-7AF8-4785-96DB-03A994D997C8}
-		{F3040A70-03F6-4B51-BAD9-E91E67AB5D21} = {C97AD181-7AF8-4785-96DB-03A994D997C8}
 	EndGlobalSection
 EndGlobal
