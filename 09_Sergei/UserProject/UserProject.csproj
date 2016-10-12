@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Characters\Character.cs" />
     <Compile Include="Interfaces\IMage.cs" />
-    <Compile Include="Interfaces\IRecruit.cs" />
     <Compile Include="Interfaces\IRogue.cs" />
     <Compile Include="Interfaces\IUser.cs" />
     <Compile Include="Interfaces\IWarrior.cs" />
