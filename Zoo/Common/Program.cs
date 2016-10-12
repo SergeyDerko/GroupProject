@@ -42,7 +42,5 @@ namespace Common
              }
             Console.WriteLine("\n" + new string('-', 47));
         }
-
-
     }
 }
