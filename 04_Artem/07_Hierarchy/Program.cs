@@ -8,12 +8,13 @@ namespace _07_Hierarchy
         static void Main()
         {
             var user = new Class();
-
-            user.Name = "Basil";
-            user.Surname = "Pupkin";
-            user.Age = 20;
-            Console.WriteLine(user.Show());
-            Console.ReadKey();
+ 
+             user.Name = "Basil";
+             user.Surname = "Pupkin";
+             user.Age = 20;
+             Console.WriteLine(user.Show());
+             Console.ReadKey();
+            
 
         }
     }
