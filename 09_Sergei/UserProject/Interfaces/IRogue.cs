@@ -2,6 +2,8 @@
 {
     internal interface IRogue
     {
-        int UsedTricks();
+        int Mutilate();
+        int DeadlyPoison();
+        int Stealth();
     }
 }

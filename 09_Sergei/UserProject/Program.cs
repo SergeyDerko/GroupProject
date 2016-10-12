@@ -14,9 +14,11 @@ namespace UserProject
             var character = r.SelectClass();
             Console.WriteLine(character);
             Console.ReadKey();
-           /* if (character == new Warrior())
+            /*if (character == new Rogue())
             {
-                character = new Warrior();  
+                character = new Rogue();
+                
+                Console.WriteLine(character);  
             }*/
 
 

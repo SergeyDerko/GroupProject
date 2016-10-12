@@ -5,26 +5,32 @@ namespace UserProject.Characters
 {
     internal abstract class Character
     {
-        protected internal int Str { get; set; }
-        protected internal int Agi { get; set; }
-        protected internal int Int { get; set; }
-        protected internal int Health { get; set; }
-        protected internal int Exp { get; set; }
-        protected internal int Lvl { get; set; }
+         internal int Str { get; set; }
+         internal int Agi { get; set; }
+         internal int Int { get; set; }
+         internal int Health { get; set; }
+         internal int Mana { get; set; }
+         internal int Exp { get; set; }
+         internal int Lvl { get; set; }
 
-        protected Character()
+         internal int Attack { get; set; }
+         internal int Defence { get; set; }
+
+        internal Character()
         {
-            Str = 5;
-            Agi = 5;
-            Int = 5;
-            Health = 100;
+            Str = 4;
+            Agi = 4;
+            Int = 1;
+            Health = Str*50;
+            Mana = Int*50;
             Exp = 0;
             Lvl = 0;
         }
 
-        protected internal int LevelUp()
+        internal int LevelUp()
         {
-            var newLvl = Exp > 1000 * Lvl ? Lvl++ : Lvl;
+            Lvl = Lvl == 0 ? Lvl++ : Lvl;
+            var newLvl = Exp >= 1000 * Lvl ? Lvl++ : Lvl;
             if (newLvl == 1)
             {
                 SelectClass();
@@ -32,7 +38,7 @@ namespace UserProject.Characters
             return newLvl;
         }
 
-        protected internal object SelectClass()
+        internal object SelectClass()
         {
 
             Console.Write("Select class: \n" +

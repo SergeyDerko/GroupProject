@@ -2,62 +2,40 @@
 
 namespace UserProject.Characters
 {
-    internal class Rogue :IUser, IRogue
+    internal class Rogue : Character, IUser, IRogue
     {
-        public int Str { get; set; }
-        public int Agi { get; set; }
-        public int Int { get; set; }
-        public int Health { get; set; }
-        public int Exp { get; set; }
-        public int Lvl { get; set; }
+        public string Surname { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
 
-        public string Surname
+        
+
+        internal Rogue()
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
+            Str += 3;
+            Agi += 5;
+            Int += 2;
+            Health = Str*50;
+            Mana = Int*50;
+            Exp = 1000;
+            Lvl = 1;
+            Attack *= Str*3;
+            Defence *= Agi*3;
         }
 
-        public string Name
+        public int Mutilate()
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
+            throw new NotImplementedException();
         }
 
-        public int Age
+        public int DeadlyPoison()
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
+            throw new NotImplementedException();
         }
 
-        public int LevelUp()
+        public int Stealth()
         {
-            throw new System.NotImplementedException();
-        }
-
-        public int UsedTricks()
-        {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }
