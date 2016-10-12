@@ -13,6 +13,7 @@ namespace _09_prg_oop
             var r = "11";
             var t = 11;
             File.WriteAllText("out.json", json); 
+            var s = new string('-', 10);
         }
     }
 }
