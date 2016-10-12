@@ -2,7 +2,7 @@
 
 namespace Common.modal
 {
-    internal interface IAnimal
+    public interface IAnimal
     {
         int Id { get; set; }
         TypeAnimal Type { get; set; }
@@ -11,8 +11,8 @@ namespace Common.modal
         Sex Sex { get; set; }
        
     }
-    
-    internal enum TypeAnimal
+
+    public enum TypeAnimal
     {
         Mammals = 1,
         Birds = 2,
@@ -20,7 +20,8 @@ namespace Common.modal
         Fish = 4,
         Amphibians = 5,
      }
-    internal enum Sex
+
+    public enum Sex
     {
         None = 0,
         Male = 1,
