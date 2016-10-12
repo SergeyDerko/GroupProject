@@ -49,12 +49,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\Zoo\Common\Common.csproj">
-      <Project>{1901aa3f-0b22-4e0c-8bca-81ddca118a5e}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
+    <Folder Include="modal\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

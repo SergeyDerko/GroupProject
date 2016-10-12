@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ED56484E-C77E-4083-8C4D-61FD2ED9053E}</ProjectGuid>
+    <ProjectGuid>{4EB4CFE0-6E5C-49C6-9138-A65E35F32DF9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_10_zoo</RootNamespace>
-    <AssemblyName>10_zoo</AssemblyName>
+    <AssemblyName>_10_zoo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
