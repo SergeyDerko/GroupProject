@@ -1,11 +1,14 @@
 ﻿using System;
-using System.ComponentModel;
+using UserProject.Interfaces;
 
-namespace UserProject
+namespace UserProject.Characters
 {
     internal class Mage :IUser, IMage, IRecruit
     {
-        
+
+        public string Surname { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
 
         public int Str { get; set; }
         public int Agi { get; set; }
@@ -14,44 +17,7 @@ namespace UserProject
         public int Exp { get; set; }
         public int Lvl { get; set; }
 
-        public string Surname
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public int Age
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        
 
         public int LevelUp()
         {
@@ -62,5 +28,6 @@ namespace UserProject
         {
             throw new NotImplementedException();
         }
+
     }
 }
