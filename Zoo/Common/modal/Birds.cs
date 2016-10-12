@@ -13,7 +13,8 @@ namespace Common.modal
 
      
     }
-    internal enum BirdsRace
+
+    public enum BirdsRace
     {
         Raven = 1,
         Dove = 2,
