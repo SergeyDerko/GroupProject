@@ -10,7 +10,6 @@ namespace _10_Zoo
     {
         static void Main(string[] args)
         {
-
         }
     }
 }
