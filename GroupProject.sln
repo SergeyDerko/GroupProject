@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -220,6 +220,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Calc", "04_Artem\03_Calc\03_Calc.csproj", "{3E81629E-7B40-4467-BFF8-8F3853F0E5DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_zoo", "02_Igor\10_zoo\10_zoo\10_zoo.csproj", "{4EB4CFE0-6E5C-49C6-9138-A65E35F32DF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_Zoo", "03_Oleg\10_Zoo\10_Zoo.csproj", "{008B6422-AB61-4238-8264-F51409F6DC83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -531,6 +533,10 @@ Global
 		{4EB4CFE0-6E5C-49C6-9138-A65E35F32DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EB4CFE0-6E5C-49C6-9138-A65E35F32DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EB4CFE0-6E5C-49C6-9138-A65E35F32DF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{008B6422-AB61-4238-8264-F51409F6DC83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{008B6422-AB61-4238-8264-F51409F6DC83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{008B6422-AB61-4238-8264-F51409F6DC83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{008B6422-AB61-4238-8264-F51409F6DC83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -618,5 +624,6 @@ Global
 		{8B73982D-3376-4762-8A5A-15A13DFF4F47} = {E4CE2450-2BB1-4440-9BBF-34FEE661A092}
 		{3E81629E-7B40-4467-BFF8-8F3853F0E5DF} = {29F49349-C713-4D13-A2FC-F542E79C0ACB}
 		{4EB4CFE0-6E5C-49C6-9138-A65E35F32DF9} = {1680F505-0533-4DF0-9A62-B617A5D6FAF0}
+		{008B6422-AB61-4238-8264-F51409F6DC83} = {1E5F935B-DC63-439B-BFE0-A5154DB54DBA}
 	EndGlobalSection
 EndGlobal
