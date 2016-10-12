@@ -1,8 +1,6 @@
-﻿using UserProject.Interfaces;
-
-namespace UserProject.Characters
+﻿namespace UserProject.Characters
 {
-    internal class Warrior : IUser, IWarrior, IRecruit
+    internal class Warrior : IUser, IWarrior
     {
 
         public string Surname { get; set; }
