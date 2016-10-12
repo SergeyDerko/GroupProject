@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("10_Zoo_")]
+[assembly: AssemblyTitle("08_zoo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("10_Zoo_")]
+[assembly: AssemblyProduct("08_zoo")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a1becf41-2a4b-47cc-a172-83df76eb968d")]
+[assembly: Guid("c1557215-463c-4be5-9f1f-c22fce786f7c")]
 
 // Version information for an assembly consists of the following four values:
 //
