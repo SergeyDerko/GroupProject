@@ -1,11 +1,13 @@
-﻿namespace Common.modal
+﻿using System;
+
+namespace Common.modal
 {
     internal interface IAnimal
     {
         int Id { get; set; }
         TypeAnimal Type { get; set; }
         string Nickname { get; set; }
-        int Age { get; set; }
+        DateTime Birthday { get; set; }
         Sex Sex { get; set; }
        
     }
