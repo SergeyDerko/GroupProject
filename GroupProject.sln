@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -215,6 +215,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "009", "009", "{78556DEE-33FF-4203-91AB-B7218E743292}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_prg_oop", "CW\009\09_prg_oop\09_prg_oop.csproj", "{CBE8A5C3-EBDD-45CE-BCF7-5489443E2FE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_Json", "08_Danila\09_Json\09_Json.csproj", "{04BA2B5A-0A03-4ED7-BE17-4152A77C1979}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -518,6 +520,10 @@ Global
 		{CBE8A5C3-EBDD-45CE-BCF7-5489443E2FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBE8A5C3-EBDD-45CE-BCF7-5489443E2FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBE8A5C3-EBDD-45CE-BCF7-5489443E2FE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04BA2B5A-0A03-4ED7-BE17-4152A77C1979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BA2B5A-0A03-4ED7-BE17-4152A77C1979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BA2B5A-0A03-4ED7-BE17-4152A77C1979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BA2B5A-0A03-4ED7-BE17-4152A77C1979}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -604,5 +610,6 @@ Global
 		{65D69F58-98D9-40BF-AF2A-286A83C873C2} = {E4CE2450-2BB1-4440-9BBF-34FEE661A092}
 		{78556DEE-33FF-4203-91AB-B7218E743292} = {7768E47D-6065-4302-B586-26014DD0EA0B}
 		{CBE8A5C3-EBDD-45CE-BCF7-5489443E2FE0} = {78556DEE-33FF-4203-91AB-B7218E743292}
+		{04BA2B5A-0A03-4ED7-BE17-4152A77C1979} = {DDF8AE58-88FE-4DB5-AB48-D78BE93969F1}
 	EndGlobalSection
 EndGlobal

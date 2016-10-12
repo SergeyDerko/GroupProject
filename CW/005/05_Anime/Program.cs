@@ -13,14 +13,31 @@ namespace _05_Anime
 				{
 					Console.Write(" ");
 				}
-				Console.Write("**");
+				Console.Write("Фалафель");
 				Console.WriteLine();
 				for (int k = 0; k < i; k++)
 				{
 					Console.Write(" ");
 				}
-				Console.Write("**");
-				Thread.Sleep(100);
+				Console.Write("*Фалафель");
+                Console.WriteLine();
+                for (int k = 0; k < i; k++)
+                {
+                    Console.Write(" ");
+                }
+                Console.Write("**Фалафель");
+                Console.WriteLine();
+                for (int k = 0; k < i; k++)
+                {
+                    Console.Write(" ");
+                }
+                Console.Write("***Фалафель");
+                Console.WriteLine();
+                for (int k = 0; k < i; k++)
+                {
+                    Console.Write(" ");
+                }
+                Thread.Sleep(100);
 				Console.Clear();
 			}
 			Console.ReadKey();
