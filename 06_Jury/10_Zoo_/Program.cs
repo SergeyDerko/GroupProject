@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Common.modal;
-
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace _10_Zoo_
 {
@@ -9,12 +10,6 @@ namespace _10_Zoo_
     {
         static void Main(string[] args)
         {
-
-            var animal1 = new Mammals {Id = 1, MammalsRace };
-
-
-
-
         }
     }
 }
