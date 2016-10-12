@@ -11,7 +11,8 @@ namespace Common.modal
         public DateTime Birthday { get; set; }
         public Sex Sex { get; set; }
     }
-    internal enum FishRace
+
+    public enum FishRace
     {
         Shark = 1,
         Skate = 2,
