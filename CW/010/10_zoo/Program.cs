@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Common.modal;
 
 namespace _10_zoo
 {
@@ -6,8 +7,14 @@ namespace _10_zoo
     {
         static void Main(string[] args)
         {
-            new List<IAnimal>()
-
+            var animals = new List<IAnimal>
+            {
+                new Mammals(),
+                new Birds(),
+                new Reptiles(),
+                new Fish(),
+                new Amphibian()
+            };
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Common.modal
 {
-    class Amphibian:IAnimal
+    public class Amphibian:IAnimal
     {
         public int Id { get; set; }
         public TypeAnimal Type { get; set; }
@@ -11,7 +11,8 @@ namespace Common.modal
         public DateTime Birthday { get; set; }
         public Sex Sex { get; set; }
     }
-    internal enum AmphibianRace
+
+    public enum AmphibianRace
     {
         Frog = 1,
         Toad = 2,
