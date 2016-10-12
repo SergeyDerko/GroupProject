@@ -1,12 +1,14 @@
-﻿namespace Common.modal
+﻿using System;
+
+namespace Common.modal
 {
-    class Mammals: IAnimal
+    public class Mammals: IAnimal
     {
        public int Id { get; set; }
         public TypeAnimal Type { get; set; }
         public MammalsRace MammalsRace { get; set; }
         public string Nickname { get; set; }
-        public int Age { get; set; }
+        public DateTime Birthday { get; set; }
         public Sex Sex { get; set; }
     }
     internal enum MammalsRace
