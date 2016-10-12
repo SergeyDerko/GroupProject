@@ -12,7 +12,7 @@ namespace _09_prg_oop
             //var json = JsonConvert.SerializeObject(new User());File.WriteAllText("out.json", json); 
             var r = "11";
             var t = 11;
-            var str = new string('*', 20);
+            var str = new string('*', 23);
             File.WriteAllText("out.json", json); 
             var s = new string('-', 22);
         }
