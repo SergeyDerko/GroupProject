@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace UserProject
+namespace UserProject.Characters
 {
-    internal class Rogue :IUser, IRogue, IRecruit
+    internal class Rogue :IUser, IRogue
     {
         public int Str { get; set; }
         public int Agi { get; set; }

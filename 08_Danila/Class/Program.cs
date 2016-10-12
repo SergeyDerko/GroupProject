@@ -11,9 +11,18 @@ namespace Class
     {
         static void Main(string[] args)
         {
-            var myClass = new MyClass();
-            myClass.Name = 
+            var myClass = new MyClass {Name = "Dan"};
+            myClass.Age = "12";
+            myClass.SName = "Ako";
+            Console.WriteLine(myClass.Show());
+            Console.WriteLine();
+            myClass.Age = "45";
+            myClass.SName = "Ky";
+            myClass.Name = "Fedor";     
+            myClass.Show();
+            Console.WriteLine(myClass.Show());
+            Console.ReadLine();
         }
-    }
+        }
 } 
 

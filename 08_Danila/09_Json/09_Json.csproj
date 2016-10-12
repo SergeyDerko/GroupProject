@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{65D69F58-98D9-40BF-AF2A-286A83C873C2}</ProjectGuid>
+    <ProjectGuid>{04BA2B5A-0A03-4ED7-BE17-4152A77C1979}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UserProject</RootNamespace>
-    <AssemblyName>UserProject</AssemblyName>
+    <RootNamespace>_09_Json</RootNamespace>
+    <AssemblyName>09_Json</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PainlessHttp, Version=0.10.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PainlessHttp.0.11.2\lib\net451\PainlessHttp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PainlessHttp.Serializer.JsonNet, Version=0.10.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Painless.Serializer.JsonNet.0.11.1\lib\net451\PainlessHttp.Serializer.JsonNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,23 +55,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Characters\Character.cs" />
-    <Compile Include="Interfaces\IMage.cs" />
-    <Compile Include="Interfaces\IRogue.cs" />
-    <Compile Include="Interfaces\IUser.cs" />
-    <Compile Include="Interfaces\IWarrior.cs" />
-    <Compile Include="Characters\Mage.cs" />
+    <Compile Include="Model\usr.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Characters\Recruit.cs" />
-    <Compile Include="Characters\Rogue.cs" />
-    <Compile Include="Profiles\User.cs" />
-    <Compile Include="Characters\Warrior.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

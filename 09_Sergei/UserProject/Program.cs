@@ -1,14 +1,25 @@
 ﻿
+using System;
+using UserProject.Characters;
+
 namespace UserProject
 {
     internal class Program
     {
         private static void Main()
         {
-            var r = new Recruit {Exp = 100};
+            var r = new Recruit() {Exp = 1000};
             r.LevelUp();
-            r.SelectClass();
-            //Программа еще не доделана ☺
+            
+            var character = r.SelectClass();
+            Console.WriteLine(character);
+            Console.ReadKey();
+           /* if (character == new Warrior())
+            {
+                character = new Warrior();  
+            }*/
+
+
         }
     }
 }

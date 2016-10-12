@@ -6,17 +6,11 @@ namespace _07_home
     {
         static void Main()
         {
-            var gamer = new IGamer(){ Name = "Rex"};
-            var school = new ISchool() { Name = "John" };
-            var student = new IStudent() { Name = "Den" };
-            var worker = new IWorker() { Name = "Nik" };
+            char[] chars = System.Text.Encoding.ASCII.GetChars(new byte[] { 45, 67, 78 });
 
-            Console.WriteLine($"I am {gamer.Name}. {gamer.WhatIdo()}");
-            Console.WriteLine($"I am {school.Name}. {school.WhatIdo()}");
-            Console.WriteLine($"I am {student.Name}. {student.WhatIdo()}");
-            Console.WriteLine($"I am {worker.Name}. {worker.WhatIdo()}");
 
-            
+
+
             Console.ReadLine();
         }
     }

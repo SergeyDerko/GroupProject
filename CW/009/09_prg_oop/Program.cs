@@ -9,6 +9,7 @@ namespace _09_prg_oop
         static void Main()
         {
             var json = JsonConvert.SerializeObject(new User());
+            //var json = JsonConvert.SerializeObject(new User());File.WriteAllText("out.json", json); 
             File.WriteAllText("out.json", json); 
         }
     }
