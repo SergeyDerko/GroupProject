@@ -1,4 +1,4 @@
-﻿namespace UserProject
+﻿namespace UserProject.Interfaces
 {
     internal interface IUser
     {

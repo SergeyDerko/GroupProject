@@ -1,6 +1,6 @@
-﻿namespace UserProject
+﻿namespace UserProject.Interfaces
 {
-    internal interface IRogue
+    internal interface IRogue : IUser
     {
         int Mutilate();
         int DeadlyPoison();

@@ -8,21 +8,26 @@ namespace _10_Zoo
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
 
-            var animals = new List<IAnimal>
+            /*var animals = new List<IAnimal>
             {
                 new Reptiles(),
                 new Amphibian(),
                 new Birds(),
                 new Fish(),
                 new Mammals()
-            };
-            var json = JsonConvert.SerializeObject(animals);
-            var path = "out.json";
+            };*/
+
+
+
+          //  var json = JsonConvert.SerializeObject(animals);
+            /*var path = "animals.json";
             File.WriteAllText(path, json);
-            Console.WriteLine(File.ReadAllText(path));
+            Console.WriteLine(File.ReadAllText(path));*/
+            AncientBirds r = new AncientBirds();
         }
+
     }
 }

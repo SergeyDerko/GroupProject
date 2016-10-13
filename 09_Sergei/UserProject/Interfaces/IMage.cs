@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace UserProject
+﻿namespace UserProject.Interfaces
 {
-    internal interface IMage
+    internal interface IMage : IUser
     {
         int CastSpell();
     }
