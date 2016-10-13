@@ -1,14 +1,15 @@
 ﻿using System;
+using UserProject.Interfaces;
 
 namespace UserProject.Characters
 {
-    internal class Mage : Character, IUser, IMage
+    internal class Mage : Character, IMage
     {
+
         public string Surname { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
-        
-    
+
         internal Mage()
         {
             Str += 1;
@@ -27,5 +28,6 @@ namespace UserProject.Characters
         {
             throw new NotImplementedException();
         }
+
     }
 }

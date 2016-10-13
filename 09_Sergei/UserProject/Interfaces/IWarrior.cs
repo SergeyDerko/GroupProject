@@ -1,6 +1,6 @@
-﻿namespace UserProject
+﻿namespace UserProject.Interfaces
 {
-    internal interface IWarrior
+    internal interface IWarrior : IUser
     {
       
     }

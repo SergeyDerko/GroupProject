@@ -1,8 +1,9 @@
 ﻿using System;
+using UserProject.Interfaces;
 
 namespace UserProject.Characters
 {
-    internal class Rogue : Character, IUser, IRogue
+    internal class Rogue : Character, IRogue
     {
         public string Surname { get; set; }
         public string Name { get; set; }

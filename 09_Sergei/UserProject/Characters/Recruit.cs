@@ -1,4 +1,6 @@
-﻿namespace UserProject.Characters
+﻿using UserProject.Interfaces;
+
+namespace UserProject.Characters
 {
     internal  class Recruit : Character, IUser
     {
