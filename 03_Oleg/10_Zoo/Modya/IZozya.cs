@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _10_Zoo_
+namespace _10_Zoo.Modya
 {
-    class Program
+    interface IZozya
     {
-        static void Main(string[] args)
-        {
-        }
+        
     }
 }
