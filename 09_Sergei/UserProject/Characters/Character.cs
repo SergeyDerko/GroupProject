@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace UserProject.Characters
 {
@@ -18,29 +19,34 @@ namespace UserProject.Characters
 
         internal Character()
         {
-            Str = 4;
-            Agi = 4;
-            Int = 1;
+            Str = 2;
+            Agi = 2;
+            Int = 2;
             Health = Str*50;
             Mana = Int*50;
             Exp = 0;
             Lvl = 0;
         }
 
-        internal int LevelUp()
+        internal virtual int LevelUp()
         {
-            Lvl = Lvl == 0 ? Lvl++ : Lvl;
+
+            
+            Lvl++;
             var newLvl = Exp >= 1000 * Lvl ? Lvl++ : Lvl;
             if (newLvl == 1)
             {
                 SelectClass();
             }
+            
+            
+
             return newLvl;
         }
 
         internal object SelectClass()
         {
-
+            
             Console.Write("Select class: \n" +
                       "1.Warrior \n" +
                       "2.Rogue \n" +
@@ -54,7 +60,7 @@ namespace UserProject.Characters
                 {ConsoleKey.D3, new Mage()}
             };
             object outCharacter;
-            return map.TryGetValue(Console.ReadKey().Key, out outCharacter) ? outCharacter : new Recruit();
+            return map.TryGetValue(Console.ReadKey().Key, out outCharacter) ? outCharacter : new Recruit() ;
         }
     }
 }
