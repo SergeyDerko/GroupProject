@@ -10,10 +10,11 @@ namespace UserProject
         {
             var r = new Recruit();
             Console.WriteLine("Recruit Lvl is: "+r.Lvl+"\n"+"Recruit Exp: "+r.Exp);
+            Console.WriteLine();
             
-
             var w = new Warrior {Exp = 200};
             w.LevelUp();
+            
             Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8}",
                 "Str is: " + w.Str + "\n",
                 "Agi is: " + w.Agi + "\n",
