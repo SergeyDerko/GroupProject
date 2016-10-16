@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace _10_Zoo.Modya
 {
-    class ZombyLand
+    class ZombyLand: IZozya
     {
-
+        public brain Eatbrain { get; set; }
+        public goo Depature { get; set; }
     }
 }

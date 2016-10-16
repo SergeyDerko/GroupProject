@@ -18,10 +18,6 @@ namespace _10_Zoo_
 
 
             };
-
-           
-
-
             Console.ReadKey();
         }
     }
