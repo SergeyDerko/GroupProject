@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 
 namespace UserProject.Characters
 {
-    internal abstract class Character
+    internal abstract class Character 
     {
          internal int Str { get; set; }
          internal int Agi { get; set; }
@@ -25,35 +24,30 @@ namespace UserProject.Characters
             Health = Str*50;
             Mana = Int*50;
             Exp = 0;
-            Lvl = 0;
+            Lvl = 1;
         }
 
         internal virtual int LevelUp()
-        {
-
-            
-            Lvl++;
-            var newLvl = Exp >= 1000 * Lvl ? Lvl++ : Lvl;
-            if (newLvl == 1)
+        {     
+            var newLvl = Exp >= 100 * Lvl ? Lvl++ : Lvl;
+            if (newLvl == 2)
             {
                 SelectClass();
             }
-            
-            
+            newLvl = Exp >= newLvl*100 ? LevelUp() : newLvl;
 
             return newLvl;
         }
 
         internal object SelectClass()
         {
-            
             Console.Write("Select class: \n" +
                       "1.Warrior \n" +
                       "2.Rogue \n" +
                       "3.Mage \n");
             Console.WriteLine();
 
-            var map = new Dictionary<ConsoleKey, object>()
+            var map = new Dictionary<ConsoleKey, object>
             {
                 {ConsoleKey.D1, new Warrior()},
                 {ConsoleKey.D2, new Rogue()},
