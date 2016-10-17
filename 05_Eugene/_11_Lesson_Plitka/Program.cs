@@ -12,10 +12,10 @@ namespace _11_Lesson_Plitka
             Console.Write("Введите ширину стены в см:");
             double l = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите высоту плитки в см:");
-            double plh = Convert.ToDouble(Console.ReadLine());
+            double hp = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите ширину плитки в см:");
-            double pll = Convert.ToDouble(Console.ReadLine());
-            double result = (h * l) / (plh * pll);
+            double lp = Convert.ToDouble(Console.ReadLine());
+            double result = (h * l) / (hp * lp);
             Console.WriteLine(result);
             Console.ReadLine();
 
