@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace killapp2
+namespace _10_Zoo.Modya
 {
-    class Program
+    class ZombyLand
     {
-        static void Main(string[] args)
-        {
-        }
+
     }
 }

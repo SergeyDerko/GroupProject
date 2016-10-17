@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace killapp1
+namespace _10_Zoo.Modya
 {
-    class Program
+    interface IZozya
     {
-        static void Main(string[] args)
-        {
-        }
+        
     }
 }

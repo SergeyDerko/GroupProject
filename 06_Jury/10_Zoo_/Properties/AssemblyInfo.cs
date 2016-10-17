@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("killapp1")]
+[assembly: AssemblyTitle("10_Zoo_")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("killapp1")]
+[assembly: AssemblyProduct("10_Zoo_")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("990dd74d-96e8-49df-ad26-1b1c34e0ab8a")]
+[assembly: Guid("f99c6674-6dd3-494b-845f-1c74715ab8e8")]
 
 // Version information for an assembly consists of the following four values:
 //

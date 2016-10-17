@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Common.modal;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using Common.modal;
 using Newtonsoft.Json;
 
-namespace _10_zoo
+
+namespace _10_Zoo
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             var animals = new List<IAnimal>
             {
@@ -18,7 +19,6 @@ namespace _10_zoo
                 new Fish(),
                 new Amphibian()
             };
-
             var jsonE = JsonConvert.SerializeObject(animals);
             var path = "out.json";
             File.WriteAllText(path, null);
