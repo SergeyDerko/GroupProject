@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -199,8 +199,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Zoo", "Zoo", "{99C6DAC1-1ED
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Прямокутник", "02_Igor\Прямокутник\Прямокутник\Прямокутник.csproj", "{97299D39-A18D-44CD-A7DD-4C6FA05E4F41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Прямокутник (незаповнений)", "02_Igor\Прямокутник (незаповнений)\Прямокутник (незаповнений)\Прямокутник (незаповнений).csproj", "{7E35E1CC-B18A-46F1-9579-B66397EEE62A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimeBrainWars", "08_Danila\AnimeBrainWars\AnimeBrainWars.csproj", "{8FFC924D-A0D0-4495-8DE2-231C68B34C21}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "010", "010", "{F63BC395-CE98-4805-8393-3CC77A3F3D24}"
@@ -234,6 +232,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demok", "Demok\Demok.csproj", "{8956603B-9F2E-4758-BF16-62135FB6E2F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_calc_func", "06_Jury\10_calc_func\10_calc_func.csproj", "{5F07F05D-78EB-4BE8-9CDF-D120CAD1120C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Прямокутник (незаповнений)", "02_Igor\Прямокутник (незаповнений)\Прямокутник (незаповнений)\Прямокутник (незаповнений).csproj", "{7E35E1CC-B18A-46F1-9579-B66397EEE62A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -513,10 +513,6 @@ Global
 		{97299D39-A18D-44CD-A7DD-4C6FA05E4F41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97299D39-A18D-44CD-A7DD-4C6FA05E4F41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97299D39-A18D-44CD-A7DD-4C6FA05E4F41}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E35E1CC-B18A-46F1-9579-B66397EEE62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E35E1CC-B18A-46F1-9579-B66397EEE62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E35E1CC-B18A-46F1-9579-B66397EEE62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E35E1CC-B18A-46F1-9579-B66397EEE62A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8FFC924D-A0D0-4495-8DE2-231C68B34C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8FFC924D-A0D0-4495-8DE2-231C68B34C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FFC924D-A0D0-4495-8DE2-231C68B34C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -569,6 +565,10 @@ Global
 		{5F07F05D-78EB-4BE8-9CDF-D120CAD1120C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F07F05D-78EB-4BE8-9CDF-D120CAD1120C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F07F05D-78EB-4BE8-9CDF-D120CAD1120C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E35E1CC-B18A-46F1-9579-B66397EEE62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E35E1CC-B18A-46F1-9579-B66397EEE62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E35E1CC-B18A-46F1-9579-B66397EEE62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E35E1CC-B18A-46F1-9579-B66397EEE62A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -663,5 +663,6 @@ Global
 		{5067D3A8-1664-4CF4-A672-A426893E90E5} = {1E5F935B-DC63-439B-BFE0-A5154DB54DBA}
 		{8956603B-9F2E-4758-BF16-62135FB6E2F5} = {5067D3A8-1664-4CF4-A672-A426893E90E5}
 		{5F07F05D-78EB-4BE8-9CDF-D120CAD1120C} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
+		{7E35E1CC-B18A-46F1-9579-B66397EEE62A} = {1680F505-0533-4DF0-9A62-B617A5D6FAF0}
 	EndGlobalSection
 EndGlobal
