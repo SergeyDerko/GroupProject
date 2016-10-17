@@ -235,6 +235,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_calc_func", "06_Jury\10_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Прямокутник (незаповнений)", "02_Igor\Прямокутник (незаповнений)\Прямокутник (незаповнений)\Прямокутник (незаповнений).csproj", "{7E35E1CC-B18A-46F1-9579-B66397EEE62A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prog_2x2", "02_Igor\prog_2x2\prog_2x2\prog_2x2.csproj", "{11503C7F-7C8F-42E4-A6FF-A4F77010D208}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -569,6 +571,10 @@ Global
 		{7E35E1CC-B18A-46F1-9579-B66397EEE62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E35E1CC-B18A-46F1-9579-B66397EEE62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E35E1CC-B18A-46F1-9579-B66397EEE62A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11503C7F-7C8F-42E4-A6FF-A4F77010D208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11503C7F-7C8F-42E4-A6FF-A4F77010D208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11503C7F-7C8F-42E4-A6FF-A4F77010D208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11503C7F-7C8F-42E4-A6FF-A4F77010D208}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -664,5 +670,6 @@ Global
 		{8956603B-9F2E-4758-BF16-62135FB6E2F5} = {5067D3A8-1664-4CF4-A672-A426893E90E5}
 		{5F07F05D-78EB-4BE8-9CDF-D120CAD1120C} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
 		{7E35E1CC-B18A-46F1-9579-B66397EEE62A} = {1680F505-0533-4DF0-9A62-B617A5D6FAF0}
+		{11503C7F-7C8F-42E4-A6FF-A4F77010D208} = {1680F505-0533-4DF0-9A62-B617A5D6FAF0}
 	EndGlobalSection
 EndGlobal
