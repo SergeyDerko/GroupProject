@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -236,6 +236,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_calc_func", "06_Jury\10_calc_func\10_calc_func.csproj", "{5F07F05D-78EB-4BE8-9CDF-D120CAD1120C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_BuildWalls", "09_Sergei\11_BuildWalls\11_BuildWalls.csproj", "{9739FF55-CEB5-4B9A-A505-D17BABA40D3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "12_Plit", "12_Plit", "{7336E05C-E420-4BC5-80D1-A1DE24539888}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plitochnik", "Plitochnik\Plitochnik.csproj", "{351C54FB-86BF-4E97-A61E-AD476F915DD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -575,6 +579,10 @@ Global
 		{9739FF55-CEB5-4B9A-A505-D17BABA40D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9739FF55-CEB5-4B9A-A505-D17BABA40D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9739FF55-CEB5-4B9A-A505-D17BABA40D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{351C54FB-86BF-4E97-A61E-AD476F915DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{351C54FB-86BF-4E97-A61E-AD476F915DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{351C54FB-86BF-4E97-A61E-AD476F915DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{351C54FB-86BF-4E97-A61E-AD476F915DD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -670,5 +678,7 @@ Global
 		{8956603B-9F2E-4758-BF16-62135FB6E2F5} = {5067D3A8-1664-4CF4-A672-A426893E90E5}
 		{5F07F05D-78EB-4BE8-9CDF-D120CAD1120C} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
 		{9739FF55-CEB5-4B9A-A505-D17BABA40D3D} = {E4CE2450-2BB1-4440-9BBF-34FEE661A092}
+		{7336E05C-E420-4BC5-80D1-A1DE24539888} = {1E5F935B-DC63-439B-BFE0-A5154DB54DBA}
+		{351C54FB-86BF-4E97-A61E-AD476F915DD2} = {7336E05C-E420-4BC5-80D1-A1DE24539888}
 	EndGlobalSection
 EndGlobal
