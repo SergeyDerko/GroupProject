@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _11_Lesson_Plitka
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("ПЛИТКА");
             Console.Write("Введите высоту стены в см:");
@@ -23,7 +18,6 @@ namespace _11_Lesson_Plitka
             double result = (h * l) / (plh * pll);
             Console.WriteLine(result);
             Console.ReadLine();
-            
 
         }
     }
