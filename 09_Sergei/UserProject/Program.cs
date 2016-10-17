@@ -1,6 +1,5 @@
 ﻿
 using System;
-using System.ComponentModel;
 using UserProject.Characters;
 
 namespace UserProject
