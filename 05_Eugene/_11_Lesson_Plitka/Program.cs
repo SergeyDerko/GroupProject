@@ -12,24 +12,18 @@ namespace _11_Lesson_Plitka
         static void Main(string[] args)
         {
             Console.WriteLine("ПЛИТКА");
-            Console.WriteLine("Введите высоту стены в см");
+            Console.Write("Введите высоту стены в см:");
             double h = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите ширину стены в см");
+            Console.Write("Введите ширину стены в см:");
             double l = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите высоту плитки в см");
+            Console.Write("Введите высоту плитки в см:");
             double plh = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите ширину плитки в см");
+            Console.Write("Введите ширину плитки в см:");
             double pll = Convert.ToDouble(Console.ReadLine());
-            double sqwall = h*l;
-            double sqpl = plh*pll;
-            double result = sqwall/sqpl;
+            double result = (h * l) / (plh * pll);
             Console.WriteLine(result);
             Console.ReadLine();
-
-
-
-
-
+            
 
         }
     }
