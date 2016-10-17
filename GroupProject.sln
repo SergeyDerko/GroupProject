@@ -239,6 +239,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_11_lesson", "05_Eugene\_11
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_Serialization", "06_Jury\09_Serialization\09_Serialization.csproj", "{8BBB89EB-1482-4466-AEFA-6E01A720B7AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_tile_and_wall", "06_Jury\11_tile_and_wall\11_tile_and_wall.csproj", "{470A0256-81E2-49A8-99EC-DED77F7336BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -581,6 +583,10 @@ Global
 		{8BBB89EB-1482-4466-AEFA-6E01A720B7AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BBB89EB-1482-4466-AEFA-6E01A720B7AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BBB89EB-1482-4466-AEFA-6E01A720B7AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{470A0256-81E2-49A8-99EC-DED77F7336BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{470A0256-81E2-49A8-99EC-DED77F7336BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{470A0256-81E2-49A8-99EC-DED77F7336BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{470A0256-81E2-49A8-99EC-DED77F7336BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -679,5 +685,6 @@ Global
 		{11503C7F-7C8F-42E4-A6FF-A4F77010D208} = {1680F505-0533-4DF0-9A62-B617A5D6FAF0}
 		{BDC4FE0C-6422-4EF2-A9FE-CA57AD2744A1} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 		{8BBB89EB-1482-4466-AEFA-6E01A720B7AD} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
+		{470A0256-81E2-49A8-99EC-DED77F7336BE} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
 	EndGlobalSection
 EndGlobal
