@@ -10,8 +10,9 @@ namespace Tree_vo
     {
         static void Main(string[] args)
         {
+            Console.SetWindowSize(120, 30);
 
-            for (var i = 0; i < 50; i++)
+            for (var i = 0; i < 60; i++)
             {
                 Console.Write(" ");
             }
