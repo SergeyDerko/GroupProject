@@ -18,6 +18,7 @@ namespace _10_zoo
                 new Fish(),
                 new Amphibian()
             };
+
             var jsonE = JsonConvert.SerializeObject(animals);
             var path = "out.json";
             File.WriteAllText(path, null);

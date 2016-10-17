@@ -1,4 +1,6 @@
-﻿namespace UserProject.Profiles
+﻿using UserProject.Interfaces;
+
+namespace UserProject.Profiles
 {
     internal class User : IUser
     {

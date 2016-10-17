@@ -1,26 +1,19 @@
 ﻿using System;
+using UserProject.Interfaces;
 
 namespace UserProject.Characters
 {
-    internal class Rogue : Character, IUser, IRogue
+    internal class Rogue : Character, IRogue
     {
         public string Surname { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
 
-        
 
-        internal Rogue()
+        internal override int LevelUp()
         {
-            Str += 3;
-            Agi += 5;
-            Int += 2;
-            Health = Str*50;
-            Mana = Int*50;
-            Exp = 1000;
-            Lvl = 1;
-            Attack *= Str*3;
-            Defence *= Agi*3;
+            Agi++;
+            return base.LevelUp();
         }
 
         public int Mutilate()

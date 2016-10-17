@@ -18,8 +18,8 @@ namespace _10_zoo
                 new Reptiles(),
                 new fishr(),
                 new Amphihian()*/
-            };
-
         }
     }
+
 }
+ 

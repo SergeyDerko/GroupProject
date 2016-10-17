@@ -1,31 +1,25 @@
 ﻿using System;
+using UserProject.Interfaces;
 
 namespace UserProject.Characters
 {
-    internal class Mage : Character, IUser, IMage
+    internal class Mage : Character, IMage
     {
+
         public string Surname { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
-        public int Mana { get; set; }
-    
-        internal Mage()
-        {
-            Str += 1;
-            Agi += 1;
-            Int += 5;
-            Health = Str*50;
-            Mana = Int*50;
-            Exp = 1000;
-            Lvl = 1;
-            Attack = Str*3;
-            Defence = Agi*3;
-        }
 
+        internal override int LevelUp()
+        {
+            Int++;
+            return base.LevelUp();
+        }
 
         public int CastSpell()
         {
             throw new NotImplementedException();
         }
+
     }
 }

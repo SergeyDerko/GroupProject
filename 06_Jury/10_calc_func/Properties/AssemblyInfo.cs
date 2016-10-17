@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("09_prg_oop")]
+[assembly: AssemblyTitle("10_calc_func")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("09_prg_oop")]
+[assembly: AssemblyProduct("10_calc_func")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a4e69f8d-d8ef-40ce-b2f1-105eb7eddd97")]
+[assembly: Guid("5f07f05d-78eb-4be8-9cdf-d120cad1120c")]
 
 // Version information for an assembly consists of the following four values:
 //

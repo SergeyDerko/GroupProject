@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace killapp2
+namespace _10_Zoo_
 {
-    class Program
+    class Class1
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
