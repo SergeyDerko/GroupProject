@@ -1,33 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Collections.Specialized;
 using Common.modal;
-using Newtonsoft.Json;
 
 namespace _10_Zoo
 {
-    class Program
+    internal class Program
     {
         private static void Main()
         {
 
-            /*var animals = new List<IAnimal>
-            {
-                new Reptiles(),
-                new Amphibian(),
-                new Birds(),
-                new Fish(),
-                new Mammals()
-            };*/
+           // var newType = new List<IAnimal>().Add(item: new AncientBirds());
 
 
 
-          //  var json = JsonConvert.SerializeObject(animals);
+            //  var json = JsonConvert.SerializeObject(animals);
             /*var path = "animals.json";
             File.WriteAllText(path, json);
             Console.WriteLine(File.ReadAllText(path));*/
-            AncientBirds r = new AncientBirds();
+
         }
+
 
     }
 }
