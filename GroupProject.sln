@@ -81,9 +81,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_AutoShop", "CW\004\04_AutoShop\04_AutoShop.csproj", "{09019C77-ABFA-4ACB-8A9E-2342FE2ADD61}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10_KDMEugene", "10_KDMEugene", "{C18DF581-CF94-4066-9690-9ECF7C25F300}"
-	ProjectSection(SolutionItems) = preProject
-		10_KDMEugene\readMe.txt = 10_KDMEugene\readMe.txt
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calc", "05_Eugene\Calc\Calc.csproj", "{A5BEF718-97AC-403E-9752-C1DD29B761AB}"
 EndProject
@@ -252,6 +249,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_11_Lesson_Plitka", "05_Eugene\_11_Lesson_Plitka\_11_Lesson_Plitka.csproj", "{7DC2E25D-5699-4787-9469-1F082C7907C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_Plitka", "08_Danila\11_Plitka\11_Plitka.csproj", "{EF4BCFC0-915B-4B29-9829-2254B767A4D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_10_Plitochka", "..\Гитуля3\10_KDMEugene\11_10_Plitochka\11_10_Plitochka.csproj", "{44DBDF05-C6BA-4349-A83B-6D395BAD3223}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -619,6 +618,10 @@ Global
 		{EF4BCFC0-915B-4B29-9829-2254B767A4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF4BCFC0-915B-4B29-9829-2254B767A4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF4BCFC0-915B-4B29-9829-2254B767A4D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44DBDF05-C6BA-4349-A83B-6D395BAD3223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44DBDF05-C6BA-4349-A83B-6D395BAD3223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44DBDF05-C6BA-4349-A83B-6D395BAD3223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44DBDF05-C6BA-4349-A83B-6D395BAD3223}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -724,5 +727,6 @@ Global
 		{855201AA-DA7A-4F00-B0E6-B756291AEB2E} = {29F49349-C713-4D13-A2FC-F542E79C0ACB}
 		{7DC2E25D-5699-4787-9469-1F082C7907C2} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 		{EF4BCFC0-915B-4B29-9829-2254B767A4D0} = {DDF8AE58-88FE-4DB5-AB48-D78BE93969F1}
+		{44DBDF05-C6BA-4349-A83B-6D395BAD3223} = {C18DF581-CF94-4066-9690-9ECF7C25F300}
 	EndGlobalSection
 EndGlobal
