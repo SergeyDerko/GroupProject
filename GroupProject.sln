@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -252,6 +252,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_11_Lesson_Plitka", "05_Eugene\_11_Lesson_Plitka\_11_Lesson_Plitka.csproj", "{7DC2E25D-5699-4787-9469-1F082C7907C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_BuildWalls", "09_Sergei\11_BuildWalls\11_BuildWalls.csproj", "{9739FF55-CEB5-4B9A-A505-D17BABA40D3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stena", "03_Oleg\Stena\Stena\Stena.csproj", "{8B899256-5C02-4C52-9FB6-823E4351F457}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -619,6 +621,10 @@ Global
 		{9739FF55-CEB5-4B9A-A505-D17BABA40D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9739FF55-CEB5-4B9A-A505-D17BABA40D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9739FF55-CEB5-4B9A-A505-D17BABA40D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B899256-5C02-4C52-9FB6-823E4351F457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B899256-5C02-4C52-9FB6-823E4351F457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B899256-5C02-4C52-9FB6-823E4351F457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B899256-5C02-4C52-9FB6-823E4351F457}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -724,5 +730,6 @@ Global
 		{855201AA-DA7A-4F00-B0E6-B756291AEB2E} = {29F49349-C713-4D13-A2FC-F542E79C0ACB}
 		{7DC2E25D-5699-4787-9469-1F082C7907C2} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 		{9739FF55-CEB5-4B9A-A505-D17BABA40D3D} = {E4CE2450-2BB1-4440-9BBF-34FEE661A092}
+		{8B899256-5C02-4C52-9FB6-823E4351F457} = {1E5F935B-DC63-439B-BFE0-A5154DB54DBA}
 	EndGlobalSection
 EndGlobal
