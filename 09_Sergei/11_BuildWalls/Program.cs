@@ -21,7 +21,7 @@ namespace _11_BuildWalls
             var sqrTile = heightTile * widthTile;
             var sqrWall = heightWall * widthWall;
             var result = sqrWall / sqrTile;
-            Console.WriteLine(result);
+            Console.WriteLine("Нужно"+ result+"плиток.");
             //   Console.Write(GeTCountTills(heightWall, heightTile, widthWall, widthTile););
 
             /*var wall = new Wall(heightWall, widthWall);  
