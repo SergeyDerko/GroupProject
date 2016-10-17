@@ -16,7 +16,7 @@ namespace _11_Lesson_Plitka
             Console.Write("Введите ширину плитки в см:");
             double lp = Convert.ToDouble(Console.ReadLine());
             double result = (h * l) / (hp * lp);
-            Console.WriteLine(result);
+            Console.WriteLine("Нужно"+" "+result+" "+"плиток");
             Console.ReadLine();
 
         }
