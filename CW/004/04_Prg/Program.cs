@@ -8,7 +8,7 @@ namespace _04_Prg
 		{
 			try
 			{
-				throw new NullReferenceException();
+				//throw new NullReferenceException();
 				Console.WriteLine("Test");
 			}
 			catch (Exception)

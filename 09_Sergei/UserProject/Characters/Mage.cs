@@ -10,19 +10,11 @@ namespace UserProject.Characters
         public string Name { get; set; }
         public int Age { get; set; }
 
-        internal Mage()
+        internal override int LevelUp()
         {
-            Str += 1;
-            Agi += 1;
-            Int += 5;
-            Health = Str*50;
-            Mana = Int*50;
-            Exp = 1000;
-            Lvl = 1;
-            Attack = Str*3;
-            Defence = Agi*3;
+            Int++;
+            return base.LevelUp();
         }
-
 
         public int CastSpell()
         {
