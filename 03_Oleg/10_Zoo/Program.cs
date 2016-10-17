@@ -28,7 +28,7 @@ namespace _10_Zoo
                 var text = File.ReadAllText(path);
                 Console.WriteLine(text);*/
                 {
-                    new Birds() {Id = 1, BirdsRace = BirdsRace.Dove,Birthday = DateTime.Today,Nickname = "First", Sex = Sex.Male, Eatbrain = brain.want}
+                    new Birds() {Id = 1, BirdsRace = BirdsRace.Dove,Birthday = DateTime.Today,Nickname = "First", Sex = Sex.Male, /*Eatbrain = brain.want*/}
                 };
 
             Console.ReadLine();
