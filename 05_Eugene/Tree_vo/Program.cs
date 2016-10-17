@@ -17,7 +17,24 @@ namespace Tree_vo
             }
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("*");
-            Console.ReadKey();
+            Console.WriteLine();
+            
+            for (var i = 0; i < 49; i++)
+            {
+                Console.Write(" ");
+            }
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("***");
+            Console.WriteLine();
+
+            for (var i = 0; i < 48; i++)
+            {
+                Console.Write(" ");
+            }
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("*****");
+            Console.WriteLine();
+
         }
     }
 }
