@@ -32,9 +32,8 @@ namespace _11_Plitka
             Console.WriteLine("==========================");
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("Необходимое кол-во плитки:"+n);
-            Console.ReadKey();
-            Console.Write("Стоймость одной плитки в (грн):");
-            var c = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Стоймость одной плитки в (грн) тько целое число :");
+            int c = Convert.ToInt32(Console.ReadLine());
             int cash = n*c;
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("Вам понадобится:"+cash+"грн");
