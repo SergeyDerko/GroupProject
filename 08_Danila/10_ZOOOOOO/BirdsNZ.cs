@@ -9,7 +9,7 @@ using Common.modal;
 namespace _10_ZOOOOOO
 {
     class DoveDove :Birds , IDoveDove
-    {T
+    {
         public override string ToString()
         {
             return base.ToString();
