@@ -10,7 +10,7 @@ namespace _10_calc_func
             Console.WriteLine(new string('-', 10) + "Калькулятор решения примеров с файла" + new string('-', 10) +
                               "\n Файл с примерами для решения: Examples.txt\n Файл с решением примеров: Output.txt\n\n" +
                               new string('-', 56) + "\n Решение примеров:");
-            var pathInput = @"Examples.txt";
+            var pathInput = @"../../Examples.txt";
             var pathOutput = @"Output.txt";
             if (File.Exists(pathOutput))//удаляем старый файл
                 File.Delete(pathOutput);
