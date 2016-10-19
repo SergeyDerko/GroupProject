@@ -5,10 +5,11 @@ namespace _10_Calc_Modul
 {
     internal class Program
     {
-        private static void Main(/*string[] args*/)
+        private static void Main( /*string[] args*/)
         {
             StartProgram();
         }
+
         #region StartProgram
 
         private static void StartProgram()
@@ -40,7 +41,8 @@ namespace _10_Calc_Modul
                     case ConsoleKey.D3:
                     {
                         Console.Clear();
-                        Console.Write(str + "Эта программа была сделана для решения матиматических выражений. Версия 0.8");
+                        Console.Write(str +
+                                      "Эта программа была сделана для решения матиматических выражений. Версия 0.8");
                         Console.ReadKey();
                         break;
                     }
@@ -58,14 +60,16 @@ namespace _10_Calc_Modul
         }
 
         #endregion
+
         #region MethodStart
+
         private static void MethodStart()
         {
             var calc = new Calculator();
-            string[] args = { "21 + 22 * 6 =", "23 - 7 =", "5 + 5 =", "30 / 5 =" };
+            string[] args = {"21 + 22 * 6 =", "23 - 7 =", "5 + 5 =", "30 / 5 ="};
             calc.Calc(args);
         }
+
         #endregion
     }
-
 }

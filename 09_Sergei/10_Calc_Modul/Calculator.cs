@@ -17,20 +17,19 @@ namespace _10_Calc_Modul
                     {
                         throw new ArgumentNullException(nameof(args));
                     }
+
                     foreach (var arg in args)
                     {
                         var tArg = "";
-                        var temp = arg.ToCharArray();
+                        var str = arg;
+                        str = str.Replace(" ", string.Empty);
+                        var temp = str.ToCharArray();
                         foreach (var t in temp)
                         {
                             tArg += t.ToString();
                             if (Regex.IsMatch(t.ToString(), @"(\d+)"))
-                            {
-                                if (Regex.IsMatch(tArg, @"(\d+)\s+([*/+-])\s+(\d+)"))
-                                {
-                                    pattern = @"(\d+)\s+([*/+-])\s+(\d+)";
-                                }
-                                else if (pattern.Contains(@"\d+") || !pattern.Contains(@"([*/+-])"))
+                            {   
+                                if (pattern.Contains(@"\d+") || !pattern.Contains(@"([*/+-])"))
                                 {
                                     pattern = @"(\d+)";
                                 }
@@ -39,15 +38,11 @@ namespace _10_Calc_Modul
                                     pattern += @"(\d+)";
                                 }
                             }
-                            if (Regex.IsMatch(tArg, @"(\d+)\s+([*/+-])\s+(\d+)\s+"))
+                            if (Regex.IsMatch(tArg, @"(\d+)([*/+-])(\d+)"))
                             {
                                 var res = GetResult(pattern, tArg);
                                 tArg = res.ToString();
                                 pattern = @"(\d+)";
-                            }
-                            else if (Regex.IsMatch(t.ToString(), @"\s+"))
-                            {
-                                pattern += @"\s+";
                             }
                             else if (Regex.IsMatch(t.ToString(), @"([*/+-])"))
                             {
@@ -72,9 +67,8 @@ namespace _10_Calc_Modul
             }
         }
 
-        private int GetResult(string pattern, string arg)
+        private static int GetResult(string pattern, string arg)
         {
-
             var result = 0;
             foreach (Match c in Regex.Matches(arg, pattern))
             {
