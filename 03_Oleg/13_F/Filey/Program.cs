@@ -11,7 +11,7 @@ namespace Filey
     {
         static void Main(string[] args)
         {
-            string text = System.IO.File.ReadAllText(@"C: \Users\OLEG\Desktop\new\WriteText.txt");
+            string text = System.IO.File.ReadAllText(@"C: \Users\OLEG\Desktop\new\WriteText1.txt");
 
             System.Console.WriteLine(" \t \n{0}", text);
             var s = new StringBuilder();
@@ -33,7 +33,7 @@ namespace Filey
                 }
             }
             Console.WriteLine(s.ToString() + n + w);
-            File.WriteAllText(@"C: \Users\OLEG\Desktop\new\WriteText.txt", s.ToString() + n + w);
+            File.WriteAllText(@"C: \Users\OLEG\Desktop\new\WriteText2.txt", s.ToString() + n + w);
 
             Console.ReadLine();
         }
