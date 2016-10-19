@@ -10,6 +10,7 @@ namespace _10_Calc_Modul
             var pattern = @"";
             try
             {
+                Console.WriteLine("Press any key.");
                 while (Console.ReadKey().Key != ConsoleKey.Escape)
                 {
                     if (string.IsNullOrEmpty(args.ToString()))
@@ -40,9 +41,8 @@ namespace _10_Calc_Modul
                             }
                             if (Regex.IsMatch(tArg, @"(\d+)\s+([*/+-])\s+(\d+)\s+"))
                             {
-                                var res = NewMethod(pattern, tArg);
+                                var res = GetResult(pattern, tArg);
                                 tArg = res.ToString();
-                                Console.ReadKey();
                                 pattern = @"(\d+)";
                             }
                             else if (Regex.IsMatch(t.ToString(), @"\s+"))
@@ -61,9 +61,9 @@ namespace _10_Calc_Modul
                         }
                     }
                     pattern = @"";
-                    //Console.ReadKey();
-                    Console.WriteLine("If you want close program press Esc.");
+                    Console.WriteLine("If you want close program press Esc. / Для закрытия программы нажмите Esc");
                 }
+                Console.Clear();
             }
             catch (FormatException ex)
             {
@@ -72,7 +72,7 @@ namespace _10_Calc_Modul
             }
         }
 
-        private static int NewMethod(string pattern, string arg)
+        private int GetResult(string pattern, string arg)
         {
 
             var result = 0;
