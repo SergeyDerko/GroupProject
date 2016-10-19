@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 
 namespace _012_try
 {
@@ -6,10 +8,35 @@ namespace _012_try
     {
         static void Main()
         {
+            GroupPrg();
             UncheckedPrg();
             StructPrg();
             // Создадим делегат
             DelegatePrg();
+        }
+
+        private static void GroupPrg()
+        {
+            var text = File.ReadAllText(@"in.txt");
+            var symbol = new StringBuilder();
+            var number = new StringBuilder();
+            var letter = new StringBuilder();
+            foreach (var s in text)
+            {
+                if (char.IsSymbol(s))
+                {
+                    symbol.Append(s);
+                }
+                else if (char.IsNumber(s))
+                {
+                    number.Append(s);
+                }
+                else if (char.IsLetter(s))
+                {
+                    letter.Append(s);
+                }
+            }
+            File.WriteAllText(@"out.txt", symbol.ToString() + number + letter);
         }
 
         private static void DelegatePrg()
