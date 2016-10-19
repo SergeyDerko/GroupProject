@@ -29,7 +29,7 @@ namespace _03_calc
                     res = per/dr;
                     break;
             }
-            Console.WriteLine("{0}+{1}={2}",per,dr,res);
+            Console.WriteLine("{0}{1}{2}={3}",per,zn,dr,res);
         }
     }
 }
