@@ -29,7 +29,6 @@ namespace _11_BuildWalls
             
             wall.
             */
-
         }
 
         
