@@ -16,20 +16,29 @@ namespace _11_BuildWalls
             Console.WriteLine("Введите высоту плитки: ");
             double heightTile = Convert.ToDouble(Console.ReadLine());
 
+
+
+            var sqrTile = heightTile * widthTile;
+            var sqrWall = heightWall * widthWall;
+            var result = sqrWall / sqrTile;
+            Console.WriteLine("Нужно"+ result+"плиток.");
+            //   Console.Write(GeTCountTills(heightWall, heightTile, widthWall, widthTile););
+
             /*var wall = new Wall(heightWall, widthWall);  
             var tile = new Tile(heightTile, widthTile);  
             
             wall.
             */
-
         }
 
         
 
         
 
-        public double GetCountTiles(double sqrWall, double sqrTile)
-        {           
+        public static double GetCountTiles(double heightWall, double heightTile, double widthWall, double widthTile)
+        {
+            var sqrTile = heightTile*widthTile;
+            var sqrWall = heightWall*widthWall;        
             var result = sqrWall/sqrTile;
             return result;
         }
