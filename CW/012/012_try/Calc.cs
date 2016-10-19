@@ -25,6 +25,7 @@
                     _operDelegate += Min;
                     _operDelegate += Prz;
                     _operDelegate += Del;
+                    _operDelegate -= (x, y) => { return Sum(x, y); };
                     break;
             }
         }
