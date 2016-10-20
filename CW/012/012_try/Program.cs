@@ -8,9 +8,9 @@ namespace _012_try
     {
         static void Main()
         {
-            GroupPrg();
-            UncheckedPrg();
-            StructPrg();
+            //GroupPrg();
+            //UncheckedPrg();
+            //StructPrg();
             // Создадим делегат
             DelegatePrg();
         }

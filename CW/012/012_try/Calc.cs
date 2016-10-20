@@ -10,7 +10,7 @@
 
     internal class Calc
     {
-        private OperDelegate _operDelegate;
+        private readonly OperDelegate _operDelegate;
 
         private delegate int OperDelegate(int a, int b);
         public Calc(Operation operation)
@@ -18,16 +18,14 @@
             switch (operation)
             {
                 case Operation.Sum:
-                    _operDelegate = Sum;
-                    break;
                 case Operation.Min:
-                    _operDelegate = Min;
-                    break;
                 case Operation.Prz:
-                    _operDelegate = Prz;
-                    break;
                 case Operation.Del:
-                    _operDelegate = Del;
+                    _operDelegate = (x, y) => { return Sum(x, y); };
+                    _operDelegate += Min;
+                    _operDelegate += Prz;
+                    _operDelegate += Del;
+                    _operDelegate -= (x, y) => { return Sum(x, y); };
                     break;
             }
         }
