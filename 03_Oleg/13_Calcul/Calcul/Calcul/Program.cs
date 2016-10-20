@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 class TMain
 {
@@ -137,13 +138,15 @@ class TMain
     {
         Info(); //показать инструкцию
         Console.Write("Введите выражение: ");
-        exp = '(' + Console.ReadLine().Replace(" ", "") + ')';
+        exp = '(' + System.IO.File.ReadAllText(@"C: \Users\OLEG\Desktop\new\WriteText1.txt").Replace(" ", "") + ')';
+        //exp = System.IO.File.ReadAllText(@"C: \Users\OLEG\Desktop\new\WriteText1.txt");
         int o; //здесь будет храниться номер символа начиная с которого извлеклись скобки
         while (FindBrackets(out o)) //извлечь самые глубокие скобки в строку InBrackets
         {
             Calc(); //посчитать, чему равно выражение в самых глубоких скобках
             exp = exp.Insert(o, InBrackets); //вставить посчитанное выражение в исходную строку, там где раньше стояли скобки
         }
+        File.WriteAllText(@"C: \Users\OLEG\Desktop\new\WriteText2.txt", exp);
         Console.WriteLine("Ответ: " + exp);
         Console.ReadKey();
     }
