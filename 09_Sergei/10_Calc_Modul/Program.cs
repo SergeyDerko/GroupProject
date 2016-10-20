@@ -8,9 +8,8 @@ namespace _10_Calc_Modul
     {
         private static void Main( /*string[] args*/)
         {
-
-            
             //StartProgram();
+
             MethodStart();
         }
 
@@ -69,9 +68,8 @@ namespace _10_Calc_Modul
 
         private static void MethodStart()
         {
-            var calc = new Calculator();
-            string[] args = { "21 + 22 * 6 =", "23 - 7 =", "5 + 5 =", "30 / 5 =" };
-            calc.Calc(args);
+            var scan = new ScanDirectory();
+            scan.Scan();
         }
 
         #endregion

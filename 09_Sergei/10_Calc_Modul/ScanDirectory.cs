@@ -8,8 +8,13 @@ namespace _10_Calc_Modul
     internal class ScanDirectory : Calculator, IScanDirectory
     {
         public string PathDir { get; set; }
-        
+
         #region Constructor
+        internal ScanDirectory()
+        {
+            PathDir = @"../../Test";
+        }
+
         internal ScanDirectory(string pathDir)
         {
             PathDir = pathDir;
@@ -19,9 +24,10 @@ namespace _10_Calc_Modul
         #region MethodScan
         public string Scan(string pathDirectory)
         {
+            var input = @"../../input.txt";
             var str = "";
             var files = Directory.GetFiles(pathDirectory);
-            var pathFiles = pathDirectory + files;
+            //var pathFiles = pathDirectory + files;
             foreach (var fileName in files)
             {
                 if (fileName.IndexOfAny(Path.GetInvalidFileNameChars()) != -1)
@@ -29,9 +35,9 @@ namespace _10_Calc_Modul
                     File.Delete(pathDirectory + fileName);
                 }
                 str = File.ReadAllText(fileName);
-                GetRes(str);
+                var result = GetRes(str);
+
             }
-            
             return str;
         }
         #endregion
