@@ -49,11 +49,11 @@ namespace _10_Calc_Modul
         }
 
 
-        internal void ReplaceExp(int i, double ToThis)
+       /* internal void ReplaceExp(int i, double ToThis)
         {
             var fromI = 0;
             var toI = 
-        }
+        }*/
     }
 }
 
