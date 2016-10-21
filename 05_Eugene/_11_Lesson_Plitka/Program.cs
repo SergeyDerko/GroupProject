@@ -18,7 +18,7 @@ namespace _11_Lesson_Plitka
             double result = (h * l) / (hp * lp);
             Console.WriteLine("Нужно"+" "+result+" "+"плиток");
             Console.ReadLine();
-
         }
     }
-}
+  }  
+   
