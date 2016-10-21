@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Common.modal.Amphibian" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIDAAAAAAAABAAAAAAAAAAAAAAIAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>modal\Amphibian.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Common.modal.Birds" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAARAAAAAAAAAAAAAAIAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>modal\Birds.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Common.modal.Fish" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAABAAAAAAAAAAAAAAIgAAAAQAAAAAAAAA=</HashCode>
+      <FileName>modal\Fish.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Common.modal.Mammals" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAABAAAAAAAAACAAAAIAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>modal\Mammals.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Common.modal.Reptiles" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAABAAAAAAAAAAAAAAYAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>modal\Reptiles.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Common.Program" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Common.modal.IAnimal" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAABAAAAAAAAAAAAAAIAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>modal\IAnimal.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Common.modal.AmphibianRace" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAIAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>modal\Amphibian.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Common.modal.BirdsRace" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADAAAAAAAAAAAAAAIIAAAAAAAAAAAAQMAAQUAAAAAA=</HashCode>
+      <FileName>modal\Birds.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Common.modal.FishRace" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAIAAABAAgIAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>modal\Fish.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Common.modal.TypeAnimal" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAACAAAAAAAEAAACEAAA=</HashCode>
+      <FileName>modal\IAnimal.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Common.modal.Sex" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAA=</HashCode>
+      <FileName>modal\IAnimal.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Common.modal.MammalsRace" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAAAAAAAAAQAAAAAAAQAAMIAAAgAAAAAAAAAgEAAA=</HashCode>
+      <FileName>modal\Mammals.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Common.modal.ReptilesRace" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAIAAAAAAAAQAAAAQA=</HashCode>
+      <FileName>modal\Reptiles.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
