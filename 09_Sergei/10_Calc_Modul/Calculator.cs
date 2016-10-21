@@ -6,12 +6,9 @@ namespace _10_Calc_Modul
     internal class Calculator 
     {
 
-        public void Calc(string args)
-        {
         
-        }
-
-        protected  int GetResult(string pattern, string arg)
+        
+        protected  int Calc(string pattern, string arg)
         {
             var result = 0;
             foreach (Match c in Regex.Matches(arg, pattern))
@@ -47,7 +44,15 @@ namespace _10_Calc_Modul
                         }
                 }
             }
+
             return result;
+        }
+
+
+        internal void ReplaceExp(int i, double ToThis)
+        {
+            var fromI = 0;
+            var toI = 
         }
     }
 }
