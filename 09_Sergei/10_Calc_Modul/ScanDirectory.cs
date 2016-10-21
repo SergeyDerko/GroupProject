@@ -10,34 +10,34 @@ namespace _10_Calc_Modul
         public string PathDir { get; set; }
 
         #region Constructor
+        //конструктор по умолчанию
         internal ScanDirectory()
         {
-            PathDir = @"../../Test";
+            PathDir = @"../../Test"; // путь к директории по умолчанию
         }
-
+        //конструктор по желанию:)
         internal ScanDirectory(string pathDir)
         {
-            PathDir = pathDir;
+            PathDir = pathDir; // путь к директории который можно указать в конструкторе при инстанцировании класса
         }
         #endregion
 
         #region MethodScan
-        public string Scan(string pathDirectory)
+        //Сканирует директорию
+        public void Scan(string pathDirectory)
         {
-            var input = @"../../input.txt";
-            var str = "";
-            var files = Directory.GetFiles(pathDirectory);
-            foreach (var fileName in files)
+            var input = @"../../input.txt"; // путь к файлу куда, в будущем:), будут записываться результаты
+            var files = Directory.GetFiles(pathDirectory); // считываем все файлы с указанной директории
+            foreach (var fileName in files) //проходим по каждому файлу отдельно
             {
                 /*if (fileName.IndexOfAny(Path.GetInvalidFileNameChars()) == -1)
                 {
                     File.Delete(pathDirectory + fileName);
-                }*/
-                str = File.ReadAllText(fileName);
-               // var result = GetResult(str);
-               File.WriteAllText(input,str);
+                }*/ //это будущая проверка на корректное название файла, реализую чуть позже
+                var str = File.ReadAllText(fileName); // считываем данные с файла
+                var result = GetResult(str); //обрабатаваем данные в методе GetResult(str)
+                File.WriteAllText(input, str); //записываем обработанные данные
             }
-            return str;
         }
         #endregion
 
