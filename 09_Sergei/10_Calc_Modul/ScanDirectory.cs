@@ -27,22 +27,21 @@ namespace _10_Calc_Modul
             var input = @"../../input.txt";
             var str = "";
             var files = Directory.GetFiles(pathDirectory);
-            //var pathFiles = pathDirectory + files;
             foreach (var fileName in files)
             {
-                if (fileName.IndexOfAny(Path.GetInvalidFileNameChars()) != -1)
+                /*if (fileName.IndexOfAny(Path.GetInvalidFileNameChars()) == -1)
                 {
                     File.Delete(pathDirectory + fileName);
-                }
+                }*/
                 str = File.ReadAllText(fileName);
-                var result = GetRes(str);
-
+               // var result = GetResult(str);
+               File.WriteAllText(input,str);
             }
             return str;
         }
         #endregion
 
-        public string GetRes(string str)
+        public string GetResult(string str)
         {
             var pattern = "";
             var tempStr = str.ToCharArray();

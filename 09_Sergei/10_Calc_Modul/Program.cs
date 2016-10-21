@@ -68,8 +68,8 @@ namespace _10_Calc_Modul
 
         private static void MethodStart()
         {
-            var scan = new ScanDirectory();
-            scan.Scan();
+            var s = new ScanDirectory();
+            s.Scan(s.PathDir);
         }
 
         #endregion
