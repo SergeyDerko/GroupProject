@@ -15,13 +15,38 @@ namespace _402_Advanced_programming
 
         private static void Employee()
         {
-            var employee = new Employee();
+            var employee = new Employee {
+                Birthday = DateTime.Now,
+                Name = "Name",
+                SName = "Sname",
+                EmployeeId = Guid.NewGuid().ToString("N").ToUpper(),
+                Login = "Login",
+                Password = "Password"
+            };
             Person person = null;
             if (employee is Person)
             {
                 person = (Person) employee;
             }
 
+            var @equals = employee.Equals(person);
+
+            var person1 = new Person
+            {
+                Birthday = DateTime.Now,
+                Name = "Name",
+                SName = "Sname",
+            };
+            var employee1 = new Employee();
+            if (person1 is Employee)
+            {
+                employee1 = (Employee) person1;
+            }
+            Employee person2 = person1 as Employee;
+            if (person2 == null)
+            {
+                
+            }
             var e = person as Employee;
             var b = e.Equals(employee);
             b.ToString();
@@ -29,6 +54,7 @@ namespace _402_Advanced_programming
 
         private static void Points()
         {
+            Point point = new Point();
             Point point1 = new Point(1, 12, -4);
             Point point2 = new Point(0, -3, 18);
             Console.WriteLine("Координаты первой точки: " +

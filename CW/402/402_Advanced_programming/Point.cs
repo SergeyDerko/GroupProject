@@ -27,7 +27,7 @@
         }
 
         // Координаты точки в трехмерном пространстве
-        public int x, y, z;
+        internal int x, y, z;
 
         public Point(int x = 0, int y = 0, int z = 0)
         {
