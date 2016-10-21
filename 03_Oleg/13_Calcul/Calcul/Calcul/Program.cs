@@ -5,20 +5,7 @@ class TMain
 {
     static string exp; //здесь хранится исходное выражение, которое ввел пользователь
     static string InBrackets; //здесь будут хранится выражения в скобках
-
-    //метод показывает инструкцию
-    static void Info()
-    {
-        Console.WriteLine("--------------------------------------------------------------------------------");
-        Console.WriteLine("\t\t\tКОНСОЛЬНЫЙ КАЛЬКУЛЯТОР");
-        Console.WriteLine("--------------------------------------------------------------------------------");
-        Console.WriteLine("Поддерживаются операции сложения, вычитания, умножения и деления.");
-        Console.WriteLine("Приоритеты можно изменять с помощью скобок.");
-        Console.WriteLine("Дробная часть отделяется запятой.");
-        Console.WriteLine("Пример использования: введите, например, (2+8)*2-100/25 и нажмите Enter");
-        Console.WriteLine("--------------------------------------------------------------------------------");
-    }
-
+    
     //true если символ под номером j в строке InBrackets является оператором + - * или /
     static bool NotOperator(int j)
     {
@@ -136,17 +123,15 @@ class TMain
     //точка входа в программу
     static void Main()
     {
-        Info(); //показать инструкцию
-        Console.Write("Введите выражение: ");
-        exp = '(' + System.IO.File.ReadAllText(@"C: \Users\OLEG\Desktop\new\WriteText1.txt").Replace(" ", "") + ')';
-        //exp = System.IO.File.ReadAllText(@"C: \Users\OLEG\Desktop\new\WriteText1.txt");
+        exp = '(' + File.ReadAllText(@"C: \Users\OLEG\Desktop\new\Set.txt").Replace(" ", "") + ')';
+        Console.Write("Выражение: {0}\n", exp);
         int o; //здесь будет храниться номер символа начиная с которого извлеклись скобки
         while (FindBrackets(out o)) //извлечь самые глубокие скобки в строку InBrackets
         {
             Calc(); //посчитать, чему равно выражение в самых глубоких скобках
             exp = exp.Insert(o, InBrackets); //вставить посчитанное выражение в исходную строку, там где раньше стояли скобки
         }
-        File.WriteAllText(@"C: \Users\OLEG\Desktop\new\WriteText2.txt", exp);
+        File.WriteAllText(@"C: \Users\OLEG\Desktop\new\Get.txt", exp);
         Console.WriteLine("Ответ: " + exp);
         Console.ReadKey();
     }
