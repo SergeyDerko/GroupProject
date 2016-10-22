@@ -1,77 +1,108 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace lesson11
 {
-    class Separator
+    internal class Separator
     {
-        private readonly string str;
+        private readonly string _str;
         public Separator(string x)
         {
-            str = x;
-            while (OperatorFainder(str) != -1)//Поиск арифметического знака
+            _str = x;
+            while (OperatorFainder(_str) != -1)//Поиск арифметического знака
             {
-                var index = OperatorFainder(str);
-                var indexRight = index + 1;
-                var indexLeft = index - 1;
+                var index = OperatorFainder(_str);
                 //Число слева от знака
-                var leftNumber = LeftNumber(index, ref indexLeft);
+                var leftNumber = LeftNumber(index);
                 //Число справа от знака
-                var rightNumber = RightNumber(index, ref indexRight);
+                var rightNumber = RightNumber(index);
                 //Считаем результат операции
-                var multiplication = new Calculation(leftNumber, rightNumber, '*');
+                var multiplication = new Calculation(leftNumber, rightNumber, "*");
                 //Заменяем 
-                var newstr = new StringBuilder(str);
+                var newstr = new StringBuilder(_str);
                 newstr.Replace(leftNumber + "*" + rightNumber, multiplication.Result.ToString());
-                str = newstr.ToString();
+                _str = newstr.ToString();
+                Console.WriteLine(_str);
+            }
+           
 
+
+            while (OperatorFainder2(_str) != -1)//Поиск арифметического знака
+            {
+                var index = OperatorFainder2(_str);
+                //Число слева от знака
+                var leftNumber = LeftNumber(index);
+                //Число справа от знака
+                var rightNumber = RightNumber(index);
+                //Считаем результат операции
+                var multiplication = new Calculation(leftNumber, rightNumber, "+");
+                //Заменяем 
+                var newstr = new StringBuilder(_str);
+                newstr.Replace(leftNumber + "+" + rightNumber, multiplication.Result.ToString());
+                _str = newstr.ToString();
+                Console.WriteLine(_str);
             }
 
+           
         }
 
-        private int RightNumber(int index, ref int indexRight)
+        private int RightNumber(int index)
         {
-            for (var i = indexRight; i < str.Length; i++)
+            var indexRight = index + 1;
+            for (var i = indexRight; i < _str.Length; i++)
             {
-                if (char.IsDigit(str[i])) continue;
-                else indexRight = i - 1; break;
+                if (char.IsDigit(_str[i]))
+                {
+                    indexRight = i;
+                }
+                else
+                {
+                    indexRight = i - 1; break;
+                }
             }
-            var rightNumber = int.Parse(str.Substring(index + 1, indexRight - index));
+            var rightNumber = int.Parse(_str.Substring(index + 1, indexRight - index));
             return rightNumber;
         }
 
-        private int LeftNumber(int index, ref int indexLeft)
+        private int LeftNumber(int index)
         {
-            for (var i = indexLeft; i > 0; i--)
+            var indexLeft = index - 1;
+            for (var i = indexLeft; i >= 0; i--)
             {
-                if (char.IsDigit(str[i])) continue;
-                else indexLeft = i + 1; break;
+                if (char.IsDigit(_str[i]))
+                {
+                    indexLeft = i;
+                }
+                else
+                {
+                    indexLeft = i + 1; break;
+                }
             }
-            var leftNumber = int.Parse(str.Substring(indexLeft, index - indexLeft));
+            var leftNumber = int.Parse(_str.Substring(indexLeft, index - indexLeft));
             return leftNumber;
         }
 
         public void ShowSeparate()
         {
-            Console.WriteLine($"Промежуточный результат: {str}");
+            Console.WriteLine($"Промежуточный результат: {_str}");
         }
         public string WriteOutSeparator()
         {
-            return $"Промежуточный результат: {str}";
+            return $"{_str}";
         }
-
-
 
         private static int OperatorFainder(string str)
         {
             var index = str.IndexOf("*", StringComparison.Ordinal);
             return index;
         }
-
-
+        private static int OperatorFainder2(string str)
+        {
+            var index = str.IndexOf("+", StringComparison.Ordinal);
+            return index;
+        }
+        
 
     }
 }
