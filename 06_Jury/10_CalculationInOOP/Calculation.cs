@@ -10,35 +10,29 @@ namespace lesson11
     
     class Calculation
     {
-        private int x;
-        private int y;
-        private char operation;
         public readonly int Result;
-        
-        public Calculation(int number1, int number2, char operation)
+
+        public Calculation(int x, int y, string operation)
         {
-            x = number1;
-            y = number2;
-            this.operation = operation;
             switch (operation)
             {
-                case '+':
+                case "+":
                     Result = x + y;
                     break;
-                case '-':
+                case "-":
                     Result = x - y;
                     break;
-                case '/':
+                case "/":
                     Result = x / y;
                     break;
-                case '*':
+                case "*":
                     Result = x * y;
                     break;
                 default:
                     Console.WriteLine("Неправильный оператор");
                     break;
             }
-            
+
         }
 
     }
