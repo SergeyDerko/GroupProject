@@ -1,4 +1,7 @@
-﻿namespace _10_Calc_Modul
+﻿using System;
+using System.Threading;
+
+namespace _10_Calc_Modul
 {
     internal class Program
     {
@@ -64,8 +67,13 @@
 
         private static void MethodStart()
         {
-            var s = new ScanDirectory();
-            s.Scan(s.PathDir);
+            while(Console.ReadKey().Key != ConsoleKey.Escape)
+            {
+                Thread.Sleep(30000);
+                var s = new ScanDirectory();
+                s.Scan(s.PathDir);
+            }
+            
         }
 
         #endregion

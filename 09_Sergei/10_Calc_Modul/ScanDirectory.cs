@@ -41,7 +41,9 @@ namespace _10_Calc_Modul
                 var _result = DataProcessing(_str); //обрабатаваем данные в методе DataProcessing(str)
                 var _strResult = _result.Replace("=", string.Empty);
                 //File.AppendAllText(PathInput,'\n'+"сверху промежуточные результаты" + '\n'+"Снизу общие результаты каждого посчитаного выражения"+'\n'+_strResult);
+                File.Delete(fileName);
             }
+            
         }
         #endregion
         //Обработка полученных данных и возвращение результата обработки
