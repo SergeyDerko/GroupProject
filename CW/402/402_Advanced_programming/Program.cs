@@ -8,9 +8,39 @@ namespace _402_Advanced_programming
     {
         static void Main()
         {
+            var str = "22222+ 22222 *222212";
+            var s = str.Replace(" ", "");
+            var index = s.IndexOf("*");
+            var exp = SearchExp(index, s);
+            //s.Replace(exp, Calc(exp).ToString());
+
             Employee();
             Additions();
             Points();
+        }
+
+        private static string SearchExp(int index, string s)
+        {
+            var indexEnd = index;
+            var indexStart = index;
+            //var substring = s.Substring(i, s.Length - i);
+            for (int i = index + 1; i < s.Length; i++)
+            {
+                if (!char.IsDigit(s[i]))
+                {
+                    break;
+                }
+                indexEnd = i;
+            }
+            for (int i = index - 1; i > 0; i--)
+            {
+                if (!char.IsDigit(s[i]))
+                {
+                    break;
+                }
+                indexStart = i;
+            }
+            return s.Substring(indexStart, indexEnd - indexStart + 1);
         }
 
         private static void Employee()
