@@ -36,10 +36,11 @@ namespace _10_Calc_Modul
             var files = Directory.GetFiles(pathDirectory); // считываем все файлы с указанной директории
             foreach (var fileName in files) //проходим по каждому файлу отдельно
             {
-                var str = File.ReadAllText(fileName); // считываем данные с файла
-                var result = DataProcessing(str); //обрабатаваем данные в методе DataProcessing(str)
-
-                File.AppendAllText(PathInput, '\n'+result);
+                var _str = File.ReadAllText(fileName); // считываем данные с файла
+                File.AppendAllText(PathInput, '\n' + "математические выражения на входе" + _str +'\n');
+                var _result = DataProcessing(_str); //обрабатаваем данные в методе DataProcessing(str)
+                var _strResult = _result.Replace("=", string.Empty);
+                //File.AppendAllText(PathInput,'\n'+"сверху промежуточные результаты" + '\n'+"Снизу общие результаты каждого посчитаного выражения"+'\n'+_strResult);
             }
         }
         #endregion
@@ -103,25 +104,22 @@ namespace _10_Calc_Modul
         //метод получения левого значения от оператора
         internal string GetLeftValue(string _str, int _index)
         {
-            var valueLeft = "";
-            for (int i = _index - 1; i > 0; i--)
+
+            var _valueLeft = "";
+            var _indexLeft = _index - 1;
+            for (var i = _indexLeft; i >= 0; i--)
             {
                 if (char.IsDigit(_str[i]))
                 {
-                    valueLeft += _str[i];
+                    _indexLeft = i;
                 }
                 else
-                    break;
+                {
+                    _indexLeft = i + 1; break;
+                }
             }
-            var _valueLeft = valueLeft.ToCharArray();
-            for(int i = 1; i<_valueLeft.Length/2; i++)
-            {
-                var temp = _valueLeft[i];
-                _valueLeft[i] = _valueLeft[_valueLeft.Length + 1 - i];
-                _valueLeft[_valueLeft.Length + 1 - i] = temp;
-            }
-            valueLeft = _valueLeft.ToString();
-            return valueLeft;
+            _valueLeft = _str.Substring(_indexLeft, _index - _indexLeft);
+            return _valueLeft;
         }
         //метод получения правого значения от оператора
         internal string GetRightValue(string _str, int index)

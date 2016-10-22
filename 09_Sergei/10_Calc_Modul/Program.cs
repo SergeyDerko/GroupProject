@@ -1,8 +1,4 @@
-﻿using System;
-using System.Data;
-using System.IO;
-
-namespace _10_Calc_Modul
+﻿namespace _10_Calc_Modul
 {
     internal class Program
     {
