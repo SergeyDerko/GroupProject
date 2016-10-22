@@ -3,20 +3,17 @@ using System.Text.RegularExpressions;
 
 namespace _10_Calc_Modul
 {
-    internal class Calculator 
+    internal class Calculator
     {
-
-        
-        
-        protected  int Calc(string pattern, string arg)
+        protected int Calc(string pattern, string _expression)
         {
             var result = 0;
-            foreach (Match c in Regex.Matches(arg, pattern))
+            foreach (Match c in Regex.Matches(_expression, pattern))
             {
                 var value1 = int.Parse(c.Groups[1].Value);
                 var value2 = int.Parse(c.Groups[3].Value);
-                var action = c.Groups[2];
-                switch (action.Value)
+                var action = c.Groups[2].Value;
+                switch (action)
                 {
                     case "*":
                         {
@@ -44,16 +41,8 @@ namespace _10_Calc_Modul
                         }
                 }
             }
-
             return result;
-        }
-
-
-       /* internal void ReplaceExp(int i, double ToThis)
-        {
-            var fromI = 0;
-            var toI = 
-        }*/
+        }   
     }
 }
 

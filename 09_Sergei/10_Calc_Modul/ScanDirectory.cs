@@ -7,19 +7,25 @@ namespace _10_Calc_Modul
     internal class ScanDirectory : Calculator, IScanDirectory
     {
         public string PathDir { get; set; }
-        public string Input { get; set; }
+        public string PathInput { get; set; }
         #region Constructor
         //конструктор по умолчанию
         internal ScanDirectory()
         {
             PathDir = @"../../Test"; // путь к директории по умолчанию
-            Input = @"../../input.txt"; // путь к файлу куда, в будущем:), будут записываться результаты
+            PathInput = @"../../input.txt"; // путь к файлу куда, будут записываться результаты
         }
-        //конструктор по желанию:)
+        //конструктор по желанию №1:)
         internal ScanDirectory(string pathDir)
         {
-            PathDir = pathDir; // путь к директории который можно указать в конструкторе при инстанцировании класса
-            Input = @"../../input.txt"; // путь к файлу куда, в будущем:), будут записываться результаты
+            PathDir = pathDir; // путь к директории который указывается при инстанцировании обьекта класса, которую будет сканировать программа
+            PathInput = @"../../input.txt"; // путь к файлу по умолчанию, куда будут записываться результаты вычеслений
+        }
+        //конструктор по желанию №2
+        internal ScanDirectory(string pathDir, string pathInput)
+        {
+            PathDir = pathDir; // путь к директории который указывается при инстанцировании обьекта класса, которую будет сканировать программа
+            PathInput = pathInput; // путь к файлу который указывается при инстанцировании обьекта класса, куда будут записываться результаты вычеслений
         }
         #endregion
 
@@ -27,51 +33,110 @@ namespace _10_Calc_Modul
         //Сканирует директорию
         public void Scan(string pathDirectory)
         {
-            
             var files = Directory.GetFiles(pathDirectory); // считываем все файлы с указанной директории
             foreach (var fileName in files) //проходим по каждому файлу отдельно
             {
-                //здесь будет проверка на корректное расшерение файла, реализую чуть позже
                 var str = File.ReadAllText(fileName); // считываем данные с файла
                 var result = DataProcessing(str); //обрабатаваем данные в методе DataProcessing(str)
+
+                File.AppendAllText(PathInput, '\n'+result);
             }
         }
         #endregion
         //Обработка полученных данных и возвращение результата обработки
-        public string DataProcessing(string str)
+        public string DataProcessing(string _str)
         {
-            var result = 0;
-            var pattern = "";//pattern - переменная которая будет хранить в себе модель регулярных выражений, оно будет генерироваться по мере прохождения  цикла foreach
-            var expression = "";//exppression - переменна которая будет хранить в себе матиматическое выражение, оно будет генерироваться по мере прохождения  цикла foreach 
-            var tempStr = str.ToCharArray();//разбиваем полученную строку для того что бы можно было пройтись по каждому елементу.
-            int i;//Итератор
-            for (i = 0; i < tempStr.Length; i++)
+            //var result = 0;
+            var _pattern = @"(\d+)([*/+-])(\d+)";//pattern - переменная которая хранит модель регулярного выражения математических операций.
+            var _reStr = _str.Replace(" ", string.Empty);//удаляем все пробелы в строке что бы не мешали:)
+            var _expression = GetExpression(_reStr);//находим в строке приоритетное простое выражение совпадающее с паттерном выражений и записываем его в переменную _expression
+            if (Regex.IsMatch(_expression, _pattern))//проверяем корректность выражения
             {
-                if (!Regex.IsMatch(tempStr[i].ToString(), @"\d+") && !Regex.IsMatch(tempStr[i].ToString(), @"[*/+-=]"))
-                    continue; //работаем только с интересуещими нас елементами, числа и мат. операторы .
-                if (!Regex.IsMatch(tempStr[0].ToString(), @"\d+")) continue;
-                expression += tempStr.ToString(); //после того как прошли проверки записываем елемент в наше выражение
-                if (Regex.IsMatch(tempStr[i].ToString(), @"(\d+)")) //проверяем являеться ли елемент числом.
-                {
-                    pattern += @"(\d+)"; //если да добавляем в нашу модель регулярных выражения (\d+) - число типа decimal
-                }
-                if (Regex.IsMatch(expression, pattern))//если наше выражение похоже на собранную модель регулярных выражений
-                {
-                    result = Calc(pattern, expression);//считаем и получаем результат
-                    //tempStr[i] = result.ToString();//заменяем наше выражение на результат наш результат
-                    pattern = @"(\d+)";
-                }
-                else if (Regex.IsMatch(tempStr[i].ToString(), @"([*/+-])"))
-                {
-                    pattern += @"([*/+-])";
-                }
-                else if (Regex.IsMatch(tempStr[i].ToString(), @"[=]"))
-                {
-                    pattern = " ";//Обнуляем модель регулярных выражений
-                    File.WriteAllText(Input, result.ToString()); //записываем результаты посчитанного выражения которе нашли в файле.
-                }
+                //если матиматическое выражение прошло проверку, начинаем считать его с помощью метода Calc из класса Calculator, после чего сохраняем результат в переменную _expressionResult
+                var _expressionResult = Calc(_pattern, _expression).ToString();
+                //заменяем уже посчитаное выражение в строке на его результат
+                var _newStr = _reStr.Replace(_expression, _expressionResult.ToString());
+                return DataProcessing(_newStr); //делаем рекурсию 
             }
-            return expression;
+            return _str;//когда все выражения в строке посчитаны,выводим ее из метода.
+        }
+
+        //Метод получения выражения
+        internal string GetExpression(string _str)
+        {
+            
+            var _exp = string.Empty;//сохдаем переменную в которую будем записывать свое выражение
+           //Блок кода связка ветвлений, которая определяет приоритетность операторов
+            #region  
+            if (_str.Contains("*"))//есть строка содержит знак умножения
+            {
+                var _indexM = _str.IndexOf("*");//определяем индекс
+                var _valueLeft = GetLeftValue(_str, _indexM);//получаем значения слева от оператора
+                var _valueRight = GetRightValue(_str, _indexM);//получаем значения справа от оператора
+                _exp = _valueLeft + "*" + _valueRight;//сохраняем выражение
+            }
+            //дальше по аналогии с другими операторами
+            else if (_str.Contains("/"))
+            {
+                var _indexPM = _str.IndexOf("/");
+                var _valueLeft = GetLeftValue(_str, _indexPM);
+                var _valueRight = GetRightValue(_str, _indexPM);
+                _exp = _valueLeft + "/" + _valueRight;
+            }
+            else if (_str.Contains("+"))
+            {
+                var _indexPM = _str.IndexOf("+");
+                var _valueLeft = GetLeftValue(_str, _indexPM);
+                var _valueRight = GetRightValue(_str, _indexPM);
+                _exp = _valueLeft + "+" + _valueRight;
+            }
+            else if (_str.Contains("-"))
+            {
+                var _indexPM = _str.IndexOf("-");
+                var _valueLeft = GetLeftValue(_str, _indexPM);
+                var _valueRight = GetRightValue(_str, _indexPM);
+                _exp = _valueLeft + "-" + _valueRight;
+            }
+            return _exp;//возвращаем считаное выражение
+        }
+        #endregion
+        //метод получения левого значения от оператора
+        internal string GetLeftValue(string _str, int _index)
+        {
+            var valueLeft = "";
+            for (int i = _index - 1; i > 0; i--)
+            {
+                if (char.IsDigit(_str[i]))
+                {
+                    valueLeft += _str[i];
+                }
+                else
+                    break;
+            }
+            var _valueLeft = valueLeft.ToCharArray();
+            for(int i = 1; i<_valueLeft.Length/2; i++)
+            {
+                var temp = _valueLeft[i];
+                _valueLeft[i] = _valueLeft[_valueLeft.Length + 1 - i];
+                _valueLeft[_valueLeft.Length + 1 - i] = temp;
+            }
+            valueLeft = _valueLeft.ToString();
+            return valueLeft;
+        }
+        //метод получения правого значения от оператора
+        internal string GetRightValue(string _str, int index)
+        {
+            var valueRight = "";
+            for (int i = index + 1; i < _str.Length; i++)
+            {
+                if (char.IsDigit(_str[i]))
+                {
+                    valueRight += _str[i];
+                }
+                else
+                    break;
+            }
+            return valueRight;
         }
     }
 }
