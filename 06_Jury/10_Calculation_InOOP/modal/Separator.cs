@@ -9,7 +9,7 @@ namespace _10_Calculation_InOOP.modal
         public Separator(string x)
         {
             Str = x;
-            Console.WriteLine(new string('-', 30) + "\n Сначала выполняем по порядку(слева направо) умножение и деление: ");
+            Console.WriteLine(new string('-', 30) + "\n Сначала выполняем по порядку(слева направо) умножение и деление:\n");
             while (MultiplicationFinder(Str) != DivisionFinder(Str))
             {
                 if (MultiplicationFinder(Str) < DivisionFinder(Str))
@@ -25,7 +25,7 @@ namespace _10_Calculation_InOOP.modal
                     var newstr = new StringBuilder(Str);
                     newstr.Replace(leftNumber + "*" + rightNumber, multiplication.Result.ToString());
                     Str = newstr.ToString();
-                    Console.WriteLine($" {Str}");
+                    Console.WriteLine($" {leftNumber}*{rightNumber}={multiplication.Result} --> {Str}");
                 }
                 else
                 {
@@ -40,10 +40,10 @@ namespace _10_Calculation_InOOP.modal
                     var newstr = new StringBuilder(Str);
                     newstr.Replace(leftNumber + "/" + rightNumber, multiplication.Result.ToString());
                     Str = newstr.ToString();
-                    Console.WriteLine($" {Str}");
+                    Console.WriteLine($" {leftNumber}/{rightNumber}={multiplication.Result} --> {Str}");
                 }
             }
-            Console.WriteLine(" Выполняем по порядку(слева направо) сложение и вычитание: ");
+            Console.WriteLine("\n Выполняем по порядку(слева направо) сложение и вычитание:\n");
             while (AdditionFinder(Str) != SubtractionFinder(Str))
             {
                 if (AdditionFinder(Str) < SubtractionFinder(Str))
@@ -59,7 +59,7 @@ namespace _10_Calculation_InOOP.modal
                     var newstr = new StringBuilder(Str);
                     newstr.Replace(leftNumber + "+" + rightNumber, multiplication.Result.ToString());
                     Str = newstr.ToString();
-                    Console.WriteLine($" {Str}");
+                    Console.WriteLine($" {leftNumber}+{rightNumber}={multiplication.Result} --> {Str}");
                 }
                 else
                 {
@@ -74,7 +74,7 @@ namespace _10_Calculation_InOOP.modal
                     var newstr = new StringBuilder(Str);
                     newstr.Replace(leftNumber + "-" + rightNumber, multiplication.Result.ToString());
                     Str = newstr.ToString();
-                    Console.WriteLine($" {Str}");
+                    Console.WriteLine($" {leftNumber}-{rightNumber}={multiplication.Result} --> {Str}");
                 }
             }
 
