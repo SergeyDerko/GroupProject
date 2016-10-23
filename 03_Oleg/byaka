@@ -1,0 +1,39 @@
+using System;
+
+namespace golov
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 0; i <= 999; i++)
+            {
+                if (i%2 == 0)
+                {
+                    string str = Convert.ToString(i);
+                    switch (str.Length)
+                    {
+                        case 2:
+
+                            int n1 = Convert.ToInt32(str.Substring(0, 1));
+                            int n2 = Convert.ToInt32(str.Substring(1, 1));
+                            if ((n1 + n2) == 15)
+                            {
+                                Console.WriteLine("{0}{1}", n1, n2);
+                            }
+                            break;
+                        case 3:
+                            int n3 = Convert.ToInt32(str.Substring(0, 1));
+                            int n4 = Convert.ToInt32(str.Substring(1));
+                            int n5 = Convert.ToInt32(str.Substring(1, 2));
+                            if ((n3 + n4 + n5) == 15)
+                            {
+                                Console.WriteLine("{0}{1}{2}", n3, n4, n5);
+                            }
+                            break;
+                    }
+                }
+            }
+        }
+    }
+}
