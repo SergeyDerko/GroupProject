@@ -22,7 +22,10 @@ namespace _10_Calculation_InOOP.modal
         //вывод в консоль считаных с файла данных
         public void Show()
         {
-            Console.WriteLine($"\n Выражение считанное с файла: {Document}");
+            Console.Write("\n Выражение считанное с файла: ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{Document}");
+            Console.ResetColor();
         }
         //Запись в файл принятого от сепаратора результата
         public FileInOut(string x, string y)
@@ -33,7 +36,10 @@ namespace _10_Calculation_InOOP.modal
         //Вывод в консоль резутат выражения
         public void  ShowResult(string x)
         {
-           Console.WriteLine(new string('-', 30)+"\n" + $" Результат: {x} = {Result}");
+            Console.Write(new string('-', 30) + "\n" + " Результат: ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{x} = {Result}");
+            Console.ResetColor();
         }
         //Отправка в сеператор для решения
         public string WriteToSeparator()

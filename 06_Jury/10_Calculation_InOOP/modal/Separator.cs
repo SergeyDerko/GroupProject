@@ -25,7 +25,7 @@ namespace _10_Calculation_InOOP.modal
                     var newstr = new StringBuilder(Str);
                     newstr.Replace(leftNumber + "*" + rightNumber, multiplication.Result.ToString());
                     Str = newstr.ToString();
-                    Console.WriteLine(Str);
+                    Console.WriteLine($" {Str}");
                 }
                 else
                 {
@@ -40,7 +40,7 @@ namespace _10_Calculation_InOOP.modal
                     var newstr = new StringBuilder(Str);
                     newstr.Replace(leftNumber + "/" + rightNumber, multiplication.Result.ToString());
                     Str = newstr.ToString();
-                    Console.WriteLine(Str);
+                    Console.WriteLine($" {Str}");
                 }
             }
             Console.WriteLine(" Выполняем по порядку(слева направо) сложение и вычитание: ");
@@ -59,7 +59,7 @@ namespace _10_Calculation_InOOP.modal
                     var newstr = new StringBuilder(Str);
                     newstr.Replace(leftNumber + "+" + rightNumber, multiplication.Result.ToString());
                     Str = newstr.ToString();
-                    Console.WriteLine(Str);
+                    Console.WriteLine($" {Str}");
                 }
                 else
                 {
@@ -74,13 +74,11 @@ namespace _10_Calculation_InOOP.modal
                     var newstr = new StringBuilder(Str);
                     newstr.Replace(leftNumber + "-" + rightNumber, multiplication.Result.ToString());
                     Str = newstr.ToString();
-                    Console.WriteLine(Str);
+                    Console.WriteLine($" {Str}");
                 }
             }
 
         }
-
-
         private int RightNumber(int index)
         {
             var indexRight = index + 1;
@@ -125,34 +123,26 @@ namespace _10_Calculation_InOOP.modal
         private static int MultiplicationFinder(string x)
         {
             var index = x.IndexOf("*", StringComparison.Ordinal);
-            if (index == -1)
-            {
-                return x.Length + 1;
-            }
-            return index;
+            return Verifyindex(x, index);
         }
         private static int DivisionFinder(string x)
         {
             var index = x.IndexOf("/", StringComparison.Ordinal);
-            if (index == -1)
-            {
-                return x.Length + 1;
-            }
-            return index;
+            return Verifyindex(x, index);
         }
         private static int AdditionFinder(string x)
         {
             var index = x.IndexOf("+", StringComparison.Ordinal);
-            if (index == -1)
-            {
-                return x.Length + 1;
-            }
-            return index;
+            return Verifyindex(x, index);
         }
         private static int SubtractionFinder(string x)
         {
             var index = x.IndexOf("-", StringComparison.Ordinal);
-            if (index == -1)
+            return Verifyindex(x, index);
+        }
+        private static int Verifyindex(string x, int index)
+        {
+            if (index == -1 || index == 0)
             {
                 return x.Length + 1;
             }
