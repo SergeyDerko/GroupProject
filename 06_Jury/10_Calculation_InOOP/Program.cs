@@ -23,7 +23,7 @@ namespace _10_Calculation_InOOP
             //Запись в файл
             var outfile = new FileInOut(@"../../files/Output.txt", result);
             //Вывод на консоль
-            outfile.ShowResult();
+            outfile.ShowResult(example);
 
             Console.ReadKey();
         }

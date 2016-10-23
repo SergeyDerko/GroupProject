@@ -31,9 +31,9 @@ namespace _10_Calculation_InOOP.modal
             File.WriteAllText(x, y);
         }
         //Вывод в консоль резутат выражения
-        public void ShowResult()
+        public void  ShowResult(string x)
         {
-            Console.WriteLine($"Результат: {Result}");
+           Console.WriteLine(new string('-', 30)+"\n" + $" Результат: {x} = {Result}");
         }
         //Отправка в сеператор для решения
         public string WriteToSeparator()
