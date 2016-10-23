@@ -5,7 +5,7 @@ namespace _10_Calculation_InOOP.modal
 {
     internal class Separator
     {
-        private string Str { get;}
+        private string Str { get; set; }
         public Separator(string x)
         {
             Str = x;
@@ -20,12 +20,8 @@ namespace _10_Calculation_InOOP.modal
                     //Число справа от знака
                     var rightNumber = RightNumber(index);
                     //Считаем результат операции
-                    var multiplication = new Calculation(leftNumber, rightNumber, "*");
-                    //Заменяем 
-                    var newstr = new StringBuilder(Str);
-                    newstr.Replace(leftNumber + "*" + rightNumber, multiplication.Result.ToString());
-                    Str = newstr.ToString();
-                    Console.WriteLine($" {leftNumber}*{rightNumber}={multiplication.Result} --> {Str}");
+                    ToCalculation(leftNumber, rightNumber, Str, "*");
+
                 }
                 else
                 {
@@ -35,12 +31,7 @@ namespace _10_Calculation_InOOP.modal
                     //Число справа от знака
                     var rightNumber = RightNumber(index);
                     //Считаем результат операции
-                    var multiplication = new Calculation(leftNumber, rightNumber, "/");
-                    //Заменяем 
-                    var newstr = new StringBuilder(Str);
-                    newstr.Replace(leftNumber + "/" + rightNumber, multiplication.Result.ToString());
-                    Str = newstr.ToString();
-                    Console.WriteLine($" {leftNumber}/{rightNumber}={multiplication.Result} --> {Str}");
+                    ToCalculation(leftNumber, rightNumber, Str, "/");
                 }
             }
             Console.WriteLine("\n Выполняем по порядку(слева направо) сложение и вычитание:\n");
@@ -54,12 +45,7 @@ namespace _10_Calculation_InOOP.modal
                     //Число справа от знака
                     var rightNumber = RightNumber(index);
                     //Считаем результат операции
-                    var multiplication = new Calculation(leftNumber, rightNumber, "+");
-                    //Заменяем 
-                    var newstr = new StringBuilder(Str);
-                    newstr.Replace(leftNumber + "+" + rightNumber, multiplication.Result.ToString());
-                    Str = newstr.ToString();
-                    Console.WriteLine($" {leftNumber}+{rightNumber}={multiplication.Result} --> {Str}");
+                    ToCalculation(leftNumber, rightNumber, Str, "+");
                 }
                 else
                 {
@@ -69,16 +55,14 @@ namespace _10_Calculation_InOOP.modal
                     //Число справа от знака
                     var rightNumber = RightNumber(index);
                     //Считаем результат операции
-                    var multiplication = new Calculation(leftNumber, rightNumber, "-");
-                    //Заменяем 
-                    var newstr = new StringBuilder(Str);
-                    newstr.Replace(leftNumber + "-" + rightNumber, multiplication.Result.ToString());
-                    Str = newstr.ToString();
-                    Console.WriteLine($" {leftNumber}-{rightNumber}={multiplication.Result} --> {Str}");
+                    ToCalculation(leftNumber, rightNumber, Str, "-");
                 }
             }
 
         }
+
+        
+
         private int RightNumber(int index)
         {
             var indexRight = index + 1;
@@ -114,12 +98,16 @@ namespace _10_Calculation_InOOP.modal
             var leftNumber = int.Parse(Str.Substring(indexLeft, index - indexLeft));
             return leftNumber;
         }
-
-        public string WriteOutSeparator()
+        private void ToCalculation(int leftNumber, int rightNumber, string x, string operation)
         {
-            return $"{Str}";
+            Str = x;
+            var result = new Calculation(leftNumber, rightNumber, operation);
+            //Заменяем 
+            var newstr = new StringBuilder(Str);
+            newstr.Replace(leftNumber + operation + rightNumber, result.Result.ToString());
+            Str = newstr.ToString();
+            Console.WriteLine($" {leftNumber}{operation}{rightNumber}={result.Result} --> {Str}");
         }
-
         private static int MultiplicationFinder(string x)
         {
             var index = x.IndexOf("*", StringComparison.Ordinal);
@@ -148,7 +136,10 @@ namespace _10_Calculation_InOOP.modal
             }
             return index;
         }
-
+        public string WriteOutSeparator()
+        {
+            return $"{Str}";
+        }
 
     }
 }
