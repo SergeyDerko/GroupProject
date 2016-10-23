@@ -1,118 +1,58 @@
 ﻿using System;
+using System.IO;
 using System.Text.RegularExpressions;
 
 namespace _10_Calc_Modul
 {
-    internal class Calculator 
+    internal class Calculator
     {
-
-        public void Calc(string[] args)
-        {
-        //    var pattern = @"";
-        //    try
-        //    {
-        //        Console.WriteLine("Press any key.");
-        //        while (Console.ReadKey().Key != ConsoleKey.Escape)
-        //        {
-        //            if (string.IsNullOrEmpty(args.ToString()))
-        //            {
-        //                throw new ArgumentNullException(nameof(args));
-        //            }
-
-        //            foreach (var arg in args)
-        //            {
-        //                var tArg = "";
-        //                var str = arg;
-        //                str = str.Replace(" ", string.Empty);
-        //                var temp = str.ToCharArray();
-        //                foreach (var t in temp)
-        //                {
-        //                    if (Regex.IsMatch(t.ToString(), @"\d") || Regex.IsMatch(t.ToString(), @"\s") || Regex.IsMatch(t.ToString(), @"[*/+-=]"))
-        //                    {
-        //                        tArg += t.ToString();
-        //                        if (Regex.IsMatch(t.ToString(), @"(\d+)"))
-        //                        {
-        //                            if (pattern.Contains(@"\d+") || !pattern.Contains(@"([*/+-])"))
-        //                            {
-        //                                pattern = @"(\d+)";
-        //                            }
-        //                            else
-        //                            {
-        //                                pattern += @"(\d+)";
-        //                            }
-        //                        }
-        //                        if (Regex.IsMatch(tArg, @"(\d+)([*/+-])(\d+)"))
-        //                        {
-        //                            var res = GetResult(pattern, tArg);
-        //                            tArg = res.ToString();
-        //                            pattern = @"(\d+)";
-        //                        }
-        //                        else if (Regex.IsMatch(t.ToString(), @"([*/+-])"))
-        //                        {
-        //                            pattern += @"([*/+-])";
-        //                        }
-        //                        else if (Regex.IsMatch(t.ToString(), @"[=]"))
-        //                        {
-        //                            pattern += @"[=]";
-        //                            break;
-        //                        }
-        //                    }
-        //                    else
-        //                    {
-                                
-        //                    }
-        //                }
-        //            }
-        //            pattern = @"";
-        //            Console.WriteLine("If you want close program press Esc. / Для закрытия программы нажмите Esc");
-        //        }
-        //        Console.Clear();
-        //    }
-        //    catch (FormatException ex)
-        //    {
-        //        Console.Write("Format exception: " + ex);
-        //        Console.ReadKey();
-        //    }
-        }
-
-        protected  int GetResult(string pattern, string arg)
+        
+        protected internal int Calc(string pattern, string _expression)
         {
             var result = 0;
-            foreach (Match c in Regex.Matches(arg, pattern))
+            foreach (Match c in Regex.Matches(_expression, pattern))
             {
                 var value1 = int.Parse(c.Groups[1].Value);
                 var value2 = int.Parse(c.Groups[3].Value);
-                var action = c.Groups[2];
-                switch (action.Value)
+                var action = c.Groups[2].Value;
+                switch (action)
                 {
                     case "*":
                         {
+                            var f = new ScanDirectory();
                             Console.WriteLine("{0}" + "=" + "{1}", c.Value, value1 * value2);
                             result = value1 * value2;
+                            File.AppendAllText(f.PathInput,"\n"+value1 + "*" + value2 + "=" + result);
                             break;
                         }
                     case "/":
                         {
+                            var f = new ScanDirectory();
                             Console.WriteLine("{0}" + "=" + " {1:N2}", c.Value, value1 / value2);
                             result = value1 / value2;
+                            File.AppendAllText(f.PathInput, "\n" + value1 + "/" + value2 + "=" + result);
                             break;
                         }
                     case "+":
                         {
+                            var f = new ScanDirectory();
                             Console.WriteLine("{0} " + "=" + " {1}", c.Value, value1 + value2);
                             result = value1 + value2;
+                            File.AppendAllText(f.PathInput, "\n" + value1 + "+" + value2 + "=" + result);
                             break;
                         }
                     case "-":
                         {
+                            var f = new ScanDirectory();
                             Console.WriteLine("{0} " + "=" + " {1}", c.Value, value1 - value2);
                             result = value1 - value2;
+                            File.AppendAllText(f.PathInput, "\n" + value1 + "-" + value2 + "=" + result);
                             break;
                         }
                 }
             }
             return result;
-        }
+        }   
     }
 }
 

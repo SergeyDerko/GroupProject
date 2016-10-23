@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Data;
-using System.IO;
+using System.Threading;
 
 namespace _10_Calc_Modul
 {
@@ -8,9 +7,8 @@ namespace _10_Calc_Modul
     {
         private static void Main( /*string[] args*/)
         {
-
-            
             //StartProgram();
+
             MethodStart();
         }
 
@@ -69,9 +67,13 @@ namespace _10_Calc_Modul
 
         private static void MethodStart()
         {
-            var calc = new Calculator();
-            string[] args = { "21 + 22 * 6 =", "23 - 7 =", "5 + 5 =", "30 / 5 =" };
-            calc.Calc(args);
+            while(Console.ReadKey().Key != ConsoleKey.Escape)
+            {
+                Thread.Sleep(30000);
+                var s = new ScanDirectory();
+                s.Scan(s.PathDir);
+            }
+            
         }
 
         #endregion
