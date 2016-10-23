@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace lesson11
+namespace _10_Calculation_InOOP.modal
 {
     internal class Calculation
     {

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text;
 
-namespace lesson11
+namespace _10_Calculation_InOOP.modal
 {
     public class FileInOut
     {

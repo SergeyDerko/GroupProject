@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Text;
 
-
-namespace lesson11
+namespace _10_Calculation_InOOP.modal
 {
     internal class Separator
     {
-        private string Str { get; set; }
+        private string Str { get;}
         public Separator(string x)
         {
             Str = x;
-            Console.WriteLine(" Сначала выполняем по порядку(слева направо) умножение и деление: ");
+            Console.WriteLine(new string('-', 30) + "\n Сначала выполняем по порядку(слева направо) умножение и деление: ");
             while (MultiplicationFinder(Str) != DivisionFinder(Str))
             {
                 if (MultiplicationFinder(Str) < DivisionFinder(Str))
@@ -126,22 +125,38 @@ namespace lesson11
         private static int MultiplicationFinder(string x)
         {
             var index = x.IndexOf("*", StringComparison.Ordinal);
-            return index == -1 ? 0 : index;
+            if (index == -1)
+            {
+                return x.Length + 1;
+            }
+            return index;
         }
         private static int DivisionFinder(string x)
         {
             var index = x.IndexOf("/", StringComparison.Ordinal);
-            return index == -1 ? 0 : index;
+            if (index == -1)
+            {
+                return x.Length + 1;
+            }
+            return index;
         }
-        private static int AdditionFinder(string str)
+        private static int AdditionFinder(string x)
         {
-            var index = str.IndexOf("+", StringComparison.Ordinal);
-            return index == -1 ? 0 : index;
+            var index = x.IndexOf("+", StringComparison.Ordinal);
+            if (index == -1)
+            {
+                return x.Length + 1;
+            }
+            return index;
         }
-        private static int SubtractionFinder(string str)
+        private static int SubtractionFinder(string x)
         {
-            var index = str.IndexOf("-", StringComparison.Ordinal);
-            return index == -1 ? 0 : index;
+            var index = x.IndexOf("-", StringComparison.Ordinal);
+            if (index == -1)
+            {
+                return x.Length + 1;
+            }
+            return index;
         }
 
 
