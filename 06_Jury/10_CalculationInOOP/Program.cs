@@ -6,18 +6,20 @@ namespace lesson11
     {
         static void Main()
         {
-            //Читаем файл
+            Console.WriteLine("\n" + new string('-', 20) + "Калькулятор арифметических выражений" + new string('-', 20));
+            //Чтение файла
             var file = new FileInOut(@"../../Input.txt");
-            //Вывод в консоль результат чтения
+            //Вывод результата чтения в консоль 
             file.Show();
-            //Отправляем в сепаратор для решения
+            //Приведение  в формат для сепаратора
             var example = file.WriteToSeparator();
+            //Отправка в сепаратор для решения
             var separator = new Separator(example);
-            //Вывод промежуточного результата
-            separator.ShowSeparate();
-            //отправляем на запись в файл и выводим на консоль
+            //Приведение формат для записи в файл 
             var result = separator.WriteOutSeparator();
+            //Запись в файл
             var outfile = new FileInOut(@"../../Output.txt", result);
+            //Вывод на консоль
             outfile.ShowResult();
 
             Console.ReadKey();

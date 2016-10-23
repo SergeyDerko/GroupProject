@@ -6,39 +6,39 @@ namespace lesson11
 {
     public class FileInOut
     {
-        private readonly string _file;
-        private readonly string _result;
-        //Чтение с файла и передача в поле
+        private string Document { get; }
+        private string Result { get; }
+        //Чтение с файла и передача в свойство
         public FileInOut(string x)
         {
-            _file = x;
+            Document = x;
             var strInfile = new StringBuilder();
-            foreach (var i in File.ReadLines(_file))
+            foreach (var i in File.ReadLines(Document))
             {
                 strInfile.Append(i);
             }
-            _file = strInfile.ToString();
+            Document = strInfile.ToString();
         }
         //вывод в консоль считаных с файла данных
         public void Show()
         {
-            Console.WriteLine($"Выражение считанное с файла: {_file}");
+            Console.WriteLine($"\n Выражение считанное с файла: {Document}");
         }
         //Запись в файл принятого от сепаратора результата
         public FileInOut(string x, string y)
         {
-            _result = y;
+            Result = y;
             File.WriteAllText(x, y);
         }
         //Вывод в консоль резутат выражения
         public void ShowResult()
         {
-            Console.WriteLine($"Результат: {_result}");
+            Console.WriteLine($"Результат: {Result}");
         }
         //Отправка в сеператор для решения
         public string WriteToSeparator()
         {
-            return $"{_file}";
+            return $"{Document}";
         }
     }
 }
