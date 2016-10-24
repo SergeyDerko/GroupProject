@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Text.RegularExpressions;
 using _10_Calc_Modul.Interfaces;
 
@@ -57,7 +56,8 @@ namespace _10_Calc_Modul
             var _expression = GetExpression(_reStr);//находим в строке приоритетное простое выражение совпадающее с паттерном выражений и записываем его в переменную _expression
             if (Regex.IsMatch(_expression, _pattern))//проверяем корректность выражения
             {
-                //если матиматическое выражение прошло проверку, начинаем считать его с помощью метода Calc из класса Calculator, после чего сохраняем результат в переменную _expressionResult
+                //если матиматическое выражение прошло проверку, начинаем считать его с помощью метода Calculation из класса Calculator,
+                //после чего сохраняем результат в переменную _expressionResult
                 var _expressionResult = Calculation(_pattern, _expression).ToString();
                 //заменяем уже посчитаное выражение в строке на его результат
                 var _newStr = _reStr.Replace(_expression, _expressionResult.ToString());

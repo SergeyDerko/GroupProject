@@ -5,7 +5,7 @@ namespace _10_Calc_Modul
 {
     internal class Program
     {
-        private static void Main( /*string[] args*/)
+        private static void Main()
         {
             Start();
         }
