@@ -3,8 +3,8 @@
     internal interface IScanDirectory
     {
         string PathDir { get; set; }
-        string PathInput { get; set;}
-        void Scan(string pathFile);
-        
+        string PathResult { get; set;}
+        void Scan(string _pathDirectory);
+        string DataProcessing(string _str);
     }
 }
