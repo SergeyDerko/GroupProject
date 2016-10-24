@@ -4,7 +4,7 @@ namespace _402_Advanced_programming
 {
     class MyArray
     {
-        readonly int[] _arr;
+        private readonly int[] _arr;
         public int Length;
 
         public MyArray(int size)

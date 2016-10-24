@@ -6,6 +6,18 @@ namespace lesson11
     {
         static void Main()
         {
+
+            string name, lastname;
+            int age;
+            Console.WriteLine("Введiть iм'я");
+            name = Console.ReadLine();
+
+            Console.WriteLine("Введiть прiзвище");
+            lastname = Console.ReadLine();
+
+            Console.WriteLine("Введiть вiк");
+            age = Convert.ToInt32(Console.ReadLine());
+
             //Читаем файл
             var file = new FileInOut(@"../../Input.txt");
             //Вывод в консоль результат чтения

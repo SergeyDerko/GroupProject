@@ -1,11 +1,10 @@
 ﻿using System;
 
-namespace lesson11
+namespace _10_Calculation_InOOP.modal
 {
     internal class Calculation
     {
-        public readonly int Result;
-
+        public int Result { get; private set; }
         public Calculation(int x, int y, string operation)
         {
             switch (operation)
