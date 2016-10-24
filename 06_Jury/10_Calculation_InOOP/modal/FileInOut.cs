@@ -27,6 +27,11 @@ namespace _10_Calculation_InOOP.modal
             Console.WriteLine($"{Document}");
             Console.ResetColor();
         }
+        //Отправка в сеператор для решения
+        public string WriteToSeparator()
+        {
+            return $"{Document}";
+        }
         //Запись в файл принятого от сепаратора результата
         public FileInOut(string x, string y)
         {
@@ -41,10 +46,6 @@ namespace _10_Calculation_InOOP.modal
             Console.WriteLine($"{x} = {Result}");
             Console.ResetColor();
         }
-        //Отправка в сеператор для решения
-        public string WriteToSeparator()
-        {
-            return $"{Document}";
-        }
+        
     }
 }
