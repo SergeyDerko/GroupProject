@@ -47,6 +47,7 @@ namespace _10_Calc_Modul
             switch (Console.ReadKey().Key)
             {
                 case ConsoleKey.D1:
+                    Console.Clear();
                     Start();//Метод старт программы        
                     break;
                 case ConsoleKey.D2:
