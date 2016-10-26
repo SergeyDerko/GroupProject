@@ -1,46 +1,57 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
+namespace Calc
+{
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("КАЛЬКУЛЯТОР"); //нет заголовка -1
             
-            Console.WriteLine("введите первое число");// -1
+            Console.Write("Введите первое число:");// -1
             double x = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("введите второе число");// -1
-			double y = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("введите оператор");// -1
+            Console.Write("Введите второе число:");// -1
+            double y = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите оператор:");// -1
             string i = Console.ReadLine();
-            double xy = 0;//-0.5
+            double result = 0;//-0.5
             if (i == "+")
             {
-                xy = x + y;
+                result = x + y;
             }
             else if (i == "-")
             {
-                xy = x - y;
+                result = x - y;
             }
             else if (i == "*")
             {
-                xy = x * y;
+                result = x * y;
             }
             else if (i == "/")
             {
-                xy = x/y;
+                result = x/y;
             }
             else
             {
                 Console.WriteLine("что то пошло не так");
             }
-            Console.WriteLine(value: xy);
-			// нет задержки -0.5
-            //Console.File
+            Console.WriteLine(value: result);
+            Console.ReadKey();
+            // нет задержки -0.5
+            /*Console.
+             * 
+             * 
+             * 
+             * 
+             * 
+             * 
+             * 
+             * 
+             * 
+             * File*/
+
         }
+        
     }
+}
 

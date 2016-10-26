@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 
 namespace _403_Hashtable
 {
@@ -9,9 +10,32 @@ namespace _403_Hashtable
     {
         static void Main(string[] args)
         {
+            ClassWork();
             HashtableMethod();
             SordedListMethod();
             BitArrayMethod();
+        }
+
+        private static void ClassWork()
+        {
+            int count = 10;
+            string pathDir = "Out";
+            if (!Directory.Exists(pathDir))
+            {
+                Directory.CreateDirectory(pathDir);
+            }
+            string fileName = "file_";
+            for (int i = 0; i < count; i++)
+            {
+                var pathFile = Path.Combine(pathDir, fileName) + i;
+                File.WriteAllText(pathFile + ".txt", fileName + i);
+            }
+
+            var directoryInfo = new DirectoryInfo(pathDir);
+            foreach (FileInfo fileInfo in directoryInfo.GetFiles())
+            {
+                var creationTime = fileInfo.CreationTime;
+            }
         }
 
         private static void BitArrayMethod()
