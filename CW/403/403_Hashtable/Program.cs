@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace _403_Hashtable
 {
@@ -24,17 +25,26 @@ namespace _403_Hashtable
             {
                 Directory.CreateDirectory(pathDir);
             }
-            string fileName = "file_";
             for (int i = 0; i < count; i++)
             {
-                var pathFile = Path.Combine(pathDir, fileName) + i;
-                File.WriteAllText(pathFile + ".txt", fileName + i);
+                string fileName = Guid.NewGuid().ToString("N").ToUpper();
+                var pathFile = Path.Combine(pathDir, fileName);
+                File.WriteAllText(pathFile + ".txt", fileName);
             }
 
             var directoryInfo = new DirectoryInfo(pathDir);
-            foreach (FileInfo fileInfo in directoryInfo.GetFiles())
+            List<FileInfo> fileInfos = directoryInfo.GetFiles().ToList();
+            var infos = fileInfos.OrderBy(x => x.CreationTime).ToList();
+            Delete(infos);
+        }
+
+        private static void Delete(List<FileInfo> infos)
+        {
+            var l = 5;
+            for (int i = 0; i < l && infos.Count > l; i++)
             {
-                var creationTime = fileInfo.CreationTime;
+                var path = infos[i].FullName;
+                File.Delete(path);
             }
         }
 
