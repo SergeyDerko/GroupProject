@@ -1,9 +1,12 @@
 ﻿//пример взят с сайта http://professorweb.ru
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Threading;
 
 namespace _403_Hashtable
 {
@@ -11,10 +14,37 @@ namespace _403_Hashtable
     {
         static void Main(string[] args)
         {
-            ClassWork();
-            HashtableMethod();
-            SordedListMethod();
-            BitArrayMethod();
+            //ClassWork();
+            //HashtableMethod();
+            //SordedListMethod();
+            //BitArrayMethod();
+            var user = new User();
+            user.ChangeWork += UserOnChangeWork();
+            user.ChangeWork += x => { Console.WriteLine("x2: " + x); };
+
+            ThreadPool.QueueUserWorkItem(CallBack);
+            Thread.Sleep(100);
+            ThreadPool.QueueUserWorkItem(CallBack);
+            Thread.Sleep(100);
+            user.OnChangeWork("111");
+
+            Console.ReadKey();
+        }
+
+        private static Action<string> UserOnChangeWork()
+        {
+            return x => { Console.WriteLine("x1: " + x); };
+        }
+
+        private static void CallBack(object o)
+        {
+            var color = new Random().Next(1, 15);
+            for (int i = 0; i < 10; i++)
+            {
+                Thread.Sleep(500);
+                Console.ForegroundColor = (ConsoleColor) color;
+                Console.WriteLine("111");
+            }
         }
 
         private static void ClassWork()
@@ -84,7 +114,6 @@ namespace _403_Hashtable
 
         private static void HashtableMethod()
         {
-            // Создаем хеш-таблицу
             Hashtable ht = new Hashtable();
 
             // Добавим несколько записей
@@ -92,7 +121,7 @@ namespace _403_Hashtable
             ht.Add("fg230404", "12ldsd");
             ht.Add("I_best_user", "12349");
 
-            // Считаем коллекцию ключей
+            // Считаем коллекцию ключей 
             ICollection keys = ht.Keys;
 
             foreach (string s in keys)
