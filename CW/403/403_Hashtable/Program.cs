@@ -12,23 +12,30 @@ namespace _403_Hashtable
 {
     class Program
     {
+        private static User _user;
+
         static void Main(string[] args)
         {
             //ClassWork();
             //HashtableMethod();
             //SordedListMethod();
             //BitArrayMethod();
-            var user = new User();
-            user.ChangeWork += UserOnChangeWork();
-            user.ChangeWork += x => { Console.WriteLine("x2: " + x); };
+            _user = new User();
+            _user.ChangeWork += UserOnChangeWork();
+            _user.ChangeWork += x => { Console.WriteLine("x2: " + x); };
+            _user.ChangeWork += Action;
 
-            ThreadPool.QueueUserWorkItem(CallBack);
+            ThreadPool.QueueUserWorkItem(CallBack, ConsoleColor.Red);
             Thread.Sleep(100);
-            ThreadPool.QueueUserWorkItem(CallBack);
+            ThreadPool.QueueUserWorkItem(CallBack, ConsoleColor.Green);
             Thread.Sleep(100);
-            user.OnChangeWork("111");
 
             Console.ReadKey();
+        }
+
+        private static void Action(string obj)
+        {
+            Console.WriteLine("x3: " + obj);
         }
 
         private static Action<string> UserOnChangeWork()
@@ -38,12 +45,12 @@ namespace _403_Hashtable
 
         private static void CallBack(object o)
         {
-            var color = new Random().Next(1, 15);
             for (int i = 0; i < 10; i++)
             {
                 Thread.Sleep(500);
-                Console.ForegroundColor = (ConsoleColor) color;
-                Console.WriteLine("111");
+                ConsoleColor color = (ConsoleColor) o;
+                Console.ForegroundColor = color;
+                _user.OnChangeWork(Enum.GetName(typeof(ConsoleColor), color));
             }
         }
 
