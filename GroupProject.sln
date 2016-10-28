@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -323,6 +323,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "501", "501", "{1CE3155E-A340-4C54-8F62-A1A7667DABB9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "501_srv", "CW\501\501_srv\501_srv.csproj", "{51BF7F0A-CD9F-4470-B09A-F56ECA0890C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Creation", "..\MyProg\Creation\Creation\Creation.csproj", "{A574E077-DF39-4BAE-AFF3-B84DBA657696}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1244,6 +1246,14 @@ Global
 		{51BF7F0A-CD9F-4470-B09A-F56ECA0890C3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{51BF7F0A-CD9F-4470-B09A-F56ECA0890C3}.Release|x86.ActiveCfg = Release|Any CPU
 		{51BF7F0A-CD9F-4470-B09A-F56ECA0890C3}.Release|x86.Build.0 = Release|Any CPU
+		{A574E077-DF39-4BAE-AFF3-B84DBA657696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A574E077-DF39-4BAE-AFF3-B84DBA657696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A574E077-DF39-4BAE-AFF3-B84DBA657696}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A574E077-DF39-4BAE-AFF3-B84DBA657696}.Debug|x86.Build.0 = Debug|Any CPU
+		{A574E077-DF39-4BAE-AFF3-B84DBA657696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A574E077-DF39-4BAE-AFF3-B84DBA657696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A574E077-DF39-4BAE-AFF3-B84DBA657696}.Release|x86.ActiveCfg = Release|Any CPU
+		{A574E077-DF39-4BAE-AFF3-B84DBA657696}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1382,5 +1392,6 @@ Global
 		{8E99C886-3C95-4B6F-A92C-12995CB43319} = {DF3B6BDC-1017-4986-8ED1-2E2E172CF95B}
 		{1CE3155E-A340-4C54-8F62-A1A7667DABB9} = {7768E47D-6065-4302-B586-26014DD0EA0B}
 		{51BF7F0A-CD9F-4470-B09A-F56ECA0890C3} = {1CE3155E-A340-4C54-8F62-A1A7667DABB9}
+		{A574E077-DF39-4BAE-AFF3-B84DBA657696} = {DDF8AE58-88FE-4DB5-AB48-D78BE93969F1}
 	EndGlobalSection
 EndGlobal
