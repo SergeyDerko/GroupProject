@@ -14,7 +14,7 @@ namespace Calc
             double y = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите оператор:");// -1
             string i = Console.ReadLine();
-            double result = 0;//-0.5
+            double result = 0;//-0.5 
             if (i == "+")
             {
                 result = x + y;
