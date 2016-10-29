@@ -1,17 +1,88 @@
 ﻿//пример взят с сайта http://professorweb.ru
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Threading;
 
 namespace _403_Hashtable
 {
     class Program
     {
+        private static User _user;
+
         static void Main(string[] args)
         {
-            HashtableMethod();
-            SordedListMethod();
-            BitArrayMethod();
+            //ClassWork();
+            //HashtableMethod();
+            //SordedListMethod();
+            //BitArrayMethod();
+            _user = new User();
+            _user.ChangeWork += UserOnChangeWork();
+            _user.ChangeWork += x => { Console.WriteLine("x2: " + x); };
+            _user.ChangeWork += Action;
+
+            ThreadPool.QueueUserWorkItem(CallBack, ConsoleColor.Red);
+            Thread.Sleep(100);
+            ThreadPool.QueueUserWorkItem(CallBack, ConsoleColor.Green);
+            Thread.Sleep(100);
+
+            Console.ReadKey();
+        }
+
+        private static void Action(string obj)
+        {
+            Console.WriteLine("x3: " + obj);
+        }
+
+        private static Action<string> UserOnChangeWork()
+        {
+            return x => { Console.WriteLine("x1: " + x); };
+        }
+
+        private static void CallBack(object o)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Thread.Sleep(500);
+                ConsoleColor color = (ConsoleColor) o;
+                Console.ForegroundColor = color;
+                _user.OnChangeWork(Enum.GetName(typeof(ConsoleColor), color));
+            }
+        }
+
+        private static void ClassWork()
+        {
+            int count = 10;
+            string pathDir = "Out";
+            if (!Directory.Exists(pathDir))
+            {
+                Directory.CreateDirectory(pathDir);
+            }
+            for (int i = 0; i < count; i++)
+            {
+                string fileName = Guid.NewGuid().ToString("N").ToUpper();
+                var pathFile = Path.Combine(pathDir, fileName);
+                File.WriteAllText(pathFile + ".txt", fileName);
+            }
+
+            var directoryInfo = new DirectoryInfo(pathDir);
+            List<FileInfo> fileInfos = directoryInfo.GetFiles().ToList();
+            var infos = fileInfos.OrderBy(x => x.CreationTime).ToList();
+            Delete(infos);
+        }
+
+        private static void Delete(List<FileInfo> infos)
+        {
+            var l = 5;
+            for (int i = 0; i < l && infos.Count > l; i++)
+            {
+                var path = infos[i].FullName;
+                File.Delete(path);
+            }
         }
 
         private static void BitArrayMethod()
@@ -50,7 +121,6 @@ namespace _403_Hashtable
 
         private static void HashtableMethod()
         {
-            // Создаем хеш-таблицу
             Hashtable ht = new Hashtable();
 
             // Добавим несколько записей
@@ -58,7 +128,7 @@ namespace _403_Hashtable
             ht.Add("fg230404", "12ldsd");
             ht.Add("I_best_user", "12349");
 
-            // Считаем коллекцию ключей
+            // Считаем коллекцию ключей 
             ICollection keys = ht.Keys;
 
             foreach (string s in keys)

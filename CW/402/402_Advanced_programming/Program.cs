@@ -125,18 +125,18 @@ namespace _402_Advanced_programming
 
         private static void Additions()
         {
-            MyArray arr = new MyArray(5)
-            {
-                [0] = 5,
-                [1.235] = 12,
-                [2] = 3,
-                [3.045] = 18,
-                [3.9] = 1
-            };
+            Calendar arr = new Calendar(2016);
+            arr.Add("1", 30);
+            arr.Add("2", 28);
+            arr.Add("3", 30);
+            arr.Add("4", 30);
+            arr.Add("5", 30);
+            arr.Add("6", 30);
+            arr.Add("7", 30);
 
             Console.WriteLine("Получившийся массив: ");
-            for (int i = 0; i < arr.Length; i++)
-                Console.Write("{0}\t", arr[i]);
+            for (int i = 1; i < arr.Length + 1; i++)
+                Console.Write("{0}\t", arr[i.ToString()]);
 
             Console.ReadLine();
         }
