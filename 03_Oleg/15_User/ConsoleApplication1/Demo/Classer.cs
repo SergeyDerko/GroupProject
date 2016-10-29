@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Jaysone.Model
+namespace ConsoleApplication1.Demo
 {
-    interface IUser
+    class Classer
     {
-        //сам не знаю что это
     }
 }

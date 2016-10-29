@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Jaysone.Model
+namespace Clee.Model
 {
-    interface IUser
+    class Calca
     {
-        //сам не знаю что это
     }
 }

@@ -5,7 +5,7 @@ class TMain
 {
     static string exp; //здесь хранится исходное выражение, которое ввел пользователь
     static string InBrackets; //здесь будут хранится выражения в скобках
-    
+  
     //true если символ под номером j в строке InBrackets является оператором + - * или /
     static bool NotOperator(int j)
     {

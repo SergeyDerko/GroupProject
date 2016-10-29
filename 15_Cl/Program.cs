@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Jaysone.Model
+namespace _15_Cl
 {
-    interface IUser
+    class Program
     {
-        //сам не знаю что это
+        static void Main(string[] args)
+        {
+        }
     }
 }

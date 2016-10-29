@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Jaysone.Model
+namespace ConsoleApplication1.Demo
 {
-    interface IUser
+    interface INter
     {
-        //сам не знаю что это
+        string asser()
+        {
+
+        }
     }
 }
