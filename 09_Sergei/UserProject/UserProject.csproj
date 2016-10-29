@@ -51,7 +51,6 @@
     <Compile Include="Characters\Mage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Characters\Recruit.cs" />
     <Compile Include="Characters\Rogue.cs" />
     <Compile Include="Profiles\User.cs" />
     <Compile Include="Characters\Warrior.cs" />
