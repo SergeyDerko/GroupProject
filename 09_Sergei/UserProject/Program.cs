@@ -8,8 +8,7 @@ namespace UserProject
     {
         private static void Main()
         {
-            var r = new Recruit {Exp = 100};
-            Console.WriteLine("Recruit Lvl: "+r.Lvl+"\n"+"Recruit Exp: "+r.Exp);
+           /* Console.WriteLine("Recruit Lvl: "+r.Lvl+"\n"+"Recruit Exp: "+r.Exp);
             Console.WriteLine();
             r.LevelUp();
             Console.ReadKey();
@@ -27,7 +26,7 @@ namespace UserProject
                 "Defence: " + w.Defence+"\n",
                 "Exp: " + w.Exp + "\n",
                 "Lvl: " + w.Lvl);
-            Console.ReadKey();
+            Console.ReadKey();*/
         }
     }
 }
