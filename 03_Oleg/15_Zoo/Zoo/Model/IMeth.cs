@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Zoo
 {
-    interface IMeth
+    public interface IMeth
     {
+        string GetDescription();
+        string ItemProperty { get; }
     }
 }
