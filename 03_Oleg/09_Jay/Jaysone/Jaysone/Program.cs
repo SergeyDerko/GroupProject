@@ -57,6 +57,7 @@ namespace Jaysone
             File.WriteAllText(pathFin, Final);
             var finnal = File.ReadAllText(pathFin);
             Console.WriteLine("\n " + finnal);
+
             Console.ReadLine();
         }
     }

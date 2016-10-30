@@ -22,6 +22,7 @@ namespace Files
                 var pathFile = Path.Combine(path, fileName) + i;
                 File.WriteAllText(pathFile + n + ".txt", fileName + i);
             }
+
             /*
             var directoryinfo = new DirectoryInfo(path);
             foreach(FileInfo fileInfo in directoryinfo.GetFiles())
