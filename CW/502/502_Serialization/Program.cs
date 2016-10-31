@@ -14,7 +14,8 @@ namespace _502_Serialization
         public double DoubleData { get; set; }
         public string StringData { get; set; }
 
-        [NonSerialized] public string IdDataSerialization;
+        [NonSerialized]
+        public string IdDataSerialization;
     }
 
     [Serializable]
