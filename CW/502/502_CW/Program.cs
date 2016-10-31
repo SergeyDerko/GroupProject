@@ -18,12 +18,12 @@ namespace _502_CW
         static void Main(string[] args)
         {
             //FirstSample();
-            var stack = new Stack<User>();
-            stack.Push(new User());
-            stack.Push(new User());
-            stack.Push(new User());
-            stack.Push(new User());
-            Queue<string> numbers = new Queue<string>();
+            var stack = new Stack<string>();
+            stack.Push("one");
+            stack.Push("two");
+            stack.Push("three");
+            stack.Push("four");
+            Queue <string> numbers = new Queue<string>();
             numbers.Enqueue("one");
             numbers.Enqueue("two");
             numbers.Enqueue("three");
