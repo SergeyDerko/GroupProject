@@ -8,5 +8,6 @@ namespace Jaysone.Model
 {
     interface IUser
     {
+        //сам не знаю что это
     }
 }

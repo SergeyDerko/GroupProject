@@ -4,7 +4,7 @@ using _10_Calc_Modul.Interfaces;
 
 namespace _10_Calc_Modul
 {
-    internal class ScanDirectory : Calculator, IScanDirectory
+    internal class ScanDirectory : IScanDirectory
     {
         public string PathDir { get; set; }
         public string PathResult { get; set; }
@@ -28,7 +28,7 @@ namespace _10_Calc_Modul
             PathResult = _pathResult; // путь к файлу который указывается при инстанцировании обьекта класса, куда будут записываться результаты вычеслений
         }
         #endregion
-
+        
         #region Сканирования директории
         //Сканирует директорию
         public void Scan(string _pathDirectory)
@@ -36,6 +36,7 @@ namespace _10_Calc_Modul
             var files = Directory.GetFiles(_pathDirectory); // считываем все файлы с указанной директории
             foreach (var fileName in files) //проходим по каждому файлу отдельно
             {
+                
                 var _str = File.ReadAllText(fileName); // считываем данные с файла
                 File.AppendAllText(PathResult, '\n' + "математические выражения на входе" + _str +'\n');
                 var _result = DataProcessing(_str); //обрабатаваем данные в методе DataProcessing(str)
@@ -54,11 +55,12 @@ namespace _10_Calc_Modul
             var _pattern = @"(\d+)([*/+-])(\d+)";//pattern - переменная которая хранит модель регулярного выражения математических операций.
             var _reStr = _str.Replace(" ", string.Empty);//удаляем все пробелы в строке что бы не мешали:)
             var _expression = GetExpression(_reStr);//находим в строке приоритетное простое выражение совпадающее с паттерном выражений и записываем его в переменную _expression
+            var Calculator = new Calculator();//
             if (Regex.IsMatch(_expression, _pattern))//проверяем корректность выражения
             {
                 //если матиматическое выражение прошло проверку, начинаем считать его с помощью метода Calculation из класса Calculator,
                 //после чего сохраняем результат в переменную _expressionResult
-                var _expressionResult = Calculation(_pattern, _expression).ToString();
+                var _expressionResult = Calculator.Calculation(_pattern, _expression).ToString();
                 //заменяем уже посчитаное выражение в строке на его результат
                 var _newStr = _reStr.Replace(_expression, _expressionResult.ToString());
                 return DataProcessing(_newStr); //делаем рекурсию 
@@ -71,7 +73,7 @@ namespace _10_Calc_Modul
         internal string GetExpression(string _str)
         {
             
-            var _exp = string.Empty;//сохдаем переменную в которую будем записывать свое выражение
+            var _exp = string.Empty;//создаем переменную в которую будем записывать свое выражение
            //Блок кода связка ветвлений, которая определяет приоритетность операторов 
             if (_str.Contains("*"))//есть строка содержит знак умножения
             {

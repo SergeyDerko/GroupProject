@@ -24,7 +24,7 @@ namespace UserProject.Characters
             Health = Str*50;
             Mana = Int*50;
             Exp = 100;
-            Lvl = 2;
+            Lvl = 1;
             
 
             Attack += Str*5;
