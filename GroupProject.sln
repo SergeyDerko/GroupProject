@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -336,6 +336,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Rect", "06_Jury\03_Rect\03_Rect.csproj", "{E3263167-A675-47FC-857D-4B7342A1236D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_tree", "06_Jury\03_tree\03_tree.csproj", "{1EB0CF14-7D0D-42A1-B553-4EA2A5002C72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "502", "502", "{A76C4146-B6B9-4701-9813-BABDE67174C4}"
+	ProjectSection(SolutionItems) = preProject
+		CW\502\502_RegularExpressions\502_RegularExpressions.csproj = CW\502\502_RegularExpressions\502_RegularExpressions.csproj
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1467,5 +1472,6 @@ Global
 		{C06731CF-06A0-46FA-BC65-C09467F4C278} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
 		{E3263167-A675-47FC-857D-4B7342A1236D} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
 		{1EB0CF14-7D0D-42A1-B553-4EA2A5002C72} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
+		{A76C4146-B6B9-4701-9813-BABDE67174C4} = {7768E47D-6065-4302-B586-26014DD0EA0B}
 	EndGlobalSection
 EndGlobal
