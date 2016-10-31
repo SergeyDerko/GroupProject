@@ -1,6 +1,7 @@
 ﻿//пример взят из http://professorweb.ru/
 
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace _502_RegularExpressions
@@ -15,9 +16,41 @@ namespace _502_RegularExpressions
             Console.Clear();
             MatchesSample();
             Console.Clear();
-            Console.Clear();
-            Console.Clear();
-            Console.Clear();
+            LmsSample();
+            Console.ReadKey();
+        }
+
+        private static void LmsSample()
+        {
+            string[] values = {"000-111-22-33", "00-111-22-33"};
+            string pattern = @"^\d{3}-\d{3}-\d{2}-\d{2}$";
+            foreach (string value in values)
+            {
+                Console.WriteLine(Regex.IsMatch(value, pattern) ? "{0} is a valid phone number." : "{0}:Invalid", value);
+            }
+
+
+            var input = "There is is some text about about regular expression";
+            pattern = @"\b(\w+)\W+(\1)\b";
+            foreach (Match match in Regex.Matches(input, pattern))
+            {
+                Console.WriteLine("Duplicate'{0}' found at position {1}.", match.Groups[1].Value, match.Groups[2].Index);
+            }
+
+            List<string> results = new List<string>();
+            List<int> matchPosition = new List<int>();
+            Regex r = new Regex("text");
+            var matches = r.Matches("There is text about regular expression.Text include several words \"text\"");
+            foreach (Match match in matches)
+            {
+                results.Add(match.Value);
+                matchPosition.Add(match.Index);
+            }
+            for (int index = 0; index < results.Count; index++)
+            {
+                Console.WriteLine("'{0}' found at position {1}.", results[index], matchPosition[index]);
+            }
+
         }
 
         private static void MatchesSample()
@@ -31,11 +64,16 @@ namespace _502_RegularExpressions
 
             Console.WriteLine("Все вхождения строки \"{0}\" в исходной строке: ", myReg);
             foreach (Match i in myMatch)
+            {
                 Console.Write("\t" + i.Index);
+            }
 
             // Усложним шаблон регулярного выражения
             // введя в него специальные метасимволы
-
+            // \w	Любой текстовый символ, не являющийся пробелом, символом табуляции и т.п.
+            // \W Любой символ, не являющийся текстовым символом
+            // \b	Соответствует границе слова, т.е. соответствует позиции между символом \w и символом \W или между символом \w и началом или концом строки.
+            // \S	Любой непробельный символ из набора Unicode. Обратите внимание, что символы \w и \S - это не одно и то же
             const string myReg1 = @"\b[с,д]\S*ериализац\S*";
             MatchCollection match1 = Regex.Matches(myText, myReg1, RegexOptions.IgnoreCase);
             FindMyText(myText, match1);
@@ -66,7 +104,6 @@ namespace _502_RegularExpressions
                 }
                 Console.Write(text[i]);
             }
-
         }
 
         private static void ReplaceSample()
@@ -81,6 +118,10 @@ namespace _502_RegularExpressions
             Console.WriteLine("Исходная строка:\n {0}", input);
 
             // В шаблоне используются 2 группы
+            // \w	Любой текстовый символ, не являющийся пробелом, символом табуляции и т.п.
+            // \W Любой символ, не являющийся текстовым символом
+            // \b	Соответствует границе слова, т.е. соответствует позиции между символом \w и символом \W или между символом \w и 
+            // началом или концом строки.
             string pattern = @"\b(\d+)\W?(руб.)";
 
             // Строка замены "руб." на "$"
