@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 
 namespace _501_Factorial
 {
@@ -7,29 +6,27 @@ namespace _501_Factorial
     {
         static void Main(string[] args)
         {
-            Console.Title = "Пока что считает только до факториала числа 20.";
+            Console.Title = "Пока что считает только до факториала числа 27.";
             Console.CursorVisible = false;
             Console.Write("For get factorial enter a numeric value, please: \n");
-            var value = Console.ReadLine();
+            var value = decimal.Parse(Console.ReadLine());
             Console.WriteLine("Factorial of a number " + value + " is " + GetFactorial(value));
-            ulong f = 1;
-            for(ulong i = 1; i<=20;i++)
+            decimal f = 1;
+            for(decimal i = 1; i<=27;i++)
             {
                 f *= i;
                 Console.WriteLine(i+": "+f);
             }
              
         }
-        internal static string GetFactorial(string value)
+        internal static decimal  GetFactorial(decimal value)
         {
-            var r = "1";
-            ulong factorial = 1;
-            for (ulong i = 1; i <= ulong.Parse(value); i++)
+            decimal factorial = 1;
+            for (decimal i = 1; i <= value; i++)
             {
-               r = (factorial * i).ToString();
-               factorial = ulong.Parse(r);
+               factorial *= i;
             }
-            return r.ToString();
+            return factorial;
         }
     }
 }
