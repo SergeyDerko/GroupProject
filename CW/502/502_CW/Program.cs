@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace _502_CW
 {
@@ -15,18 +17,19 @@ namespace _502_CW
         static void Main(string[] args)
         {
             //FirstSample();
+            var stack = new Stack<string>();
+            stack.Push("one");
+            stack.Push("two");
+            stack.Push("three");
+            stack.Push("four");
+            Queue <string> numbers = new Queue<string>();
+            numbers.Enqueue("one");
+            numbers.Enqueue("two");
+            numbers.Enqueue("three");
+            numbers.Enqueue("four");
+            numbers.Enqueue("five");
+
         }
 
-        private static void FirstSample()
-        {
-            Console.WriteLine((int) MyEnum.Black);
-            Console.WriteLine((int) MyEnum.DarkBlue);
-            Console.WriteLine((int) MyEnum.DarkGreen);
-            Console.WriteLine((int) MyEnum.DarkCyan);
-            Console.WriteLine((int) MyEnum.DarkRed);
-            Console.WriteLine(Enum.GetName(typeof(MyEnum), MyEnum.DarkBlue));
-            Console.WriteLine(sizeof(ulong));
-            Console.ReadKey();
-        }
     }
 }
