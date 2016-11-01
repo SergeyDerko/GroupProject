@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.ServiceProcess;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace _08_AscII_vo
+namespace _501_Service
 {
     class Program
     {
@@ -23,11 +27,10 @@ namespace _08_AscII_vo
                 ServiceBase.Run(svc);
             }
         }
-
         private static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs args)
         {
             const string method = "UnhandledExceptionHandler";
-            var ex = (Exception) args.ExceptionObject;
+            var ex = (Exception)args.ExceptionObject;
             Console.WriteLine(ex == null ? "Error!" : $"{method}\n{ex}");
         }
     }

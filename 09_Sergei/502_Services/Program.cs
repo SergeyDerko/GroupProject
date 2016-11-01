@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _10_Zoo_
+namespace _502_Services
 {
-    class Class1
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }
