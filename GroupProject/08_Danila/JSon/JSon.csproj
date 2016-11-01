@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1D67FA68-0BA1-494E-95EC-6AC706FE9EE9}</ProjectGuid>
+    <ProjectGuid>{EB08CE93-1263-4415-A006-DF65A2C2004E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Rect</RootNamespace>
-    <AssemblyName>Rect</AssemblyName>
+    <RootNamespace>JSon</RootNamespace>
+    <AssemblyName>JSon</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

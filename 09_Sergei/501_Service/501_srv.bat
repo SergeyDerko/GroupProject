@@ -1,0 +1,1 @@
+sc create TestService binPath="D:\Gitprojects\GroupProject\09_Sergei\501_Service\501_Service.exe" DisplayName= "TestServiceDisplayName"

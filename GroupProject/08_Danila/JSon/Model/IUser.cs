@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _502_Services
+namespace Jaysone.Model
 {
-    class Program
+    interface IUser
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
