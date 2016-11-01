@@ -244,3 +244,5 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 /04_Artem/10_zoo
+# project work folder
+/06_Jury/10_Calculation_ScanDirectory/files/
