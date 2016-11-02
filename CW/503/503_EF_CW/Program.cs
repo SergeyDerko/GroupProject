@@ -8,26 +8,32 @@ namespace _503_EF_CW
     {
         static void Main()
         {
-            var user = new User();
-            user.IdUser = 0;
-            user.Name = Guid.NewGuid().ToString("N").ToUpper();
-            user.SName = Guid.NewGuid().ToString("N").ToUpper();
-            user.Age = 25;
-
-            using (new EFContext())
+            var user = new User
             {
-                
+                Name = Guid.NewGuid().ToString("N").ToUpper(),
+                SName = Guid.NewGuid().ToString("N").ToUpper(),
+                Age = 25
+            };
+
+            using (var context = new EfContext())
+            {
+                context.Users.Add(user);
+                foreach (var contextUser in context.Users)
+                {
+                    var t = contextUser;
+                }
+                context.SaveChanges();
             }
         }
     }
 
-    internal class EFContext : DbContext, IDisposable
+    internal class EfContext : DbContext//, IDisposable
     {
         public DbSet<User> Users { get; set; }
 
-        public void Dispose()
-        {
-            Console.WriteLine("Освобождение не управляемых русурсов");
-        }
+        //public void Dispose()
+        //{
+        //    Console.WriteLine("Освобождение не управляемых русурсов");
+        //}
     }
 }
