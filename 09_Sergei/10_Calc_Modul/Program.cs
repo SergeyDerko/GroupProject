@@ -1,25 +1,37 @@
 ﻿using System;
+using System.ServiceProcess;
 using System.Threading;
 
 namespace _10_Calc_Modul
 {
-    internal class Program
+    public class Program
     {
         private static void Main()
         {
-            StartMenu();
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += UnhandledExceptionHandler;
+
+            var svc = new MainService();
+            ServiceBase.Run(svc);
         }
-        #region Start
+        
+            
+    
+    private static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs args)
+    {
+        const string method = "UnhandledExceptionHandler";
+        var ex = (Exception)args.ExceptionObject;
+        Console.WriteLine(ex == null ? "Error!" : $"{method}\n{ex}");
+    }
+    #region Start
 
 
-        private static void Start()
+    internal static void Start()
         {
-
-            do
+            var s = new ScanDirectory();//интанцируем обьект класса ScanDirectory
+            s.Scan(s.PathDir);//Сканирует директорию/папку, обрабатывает файлы и т.д.:)
+            /*do
             {
-                var s = new ScanDirectory();//интанцируем обьект класса ScanDirectory
-                s.Scan(s.PathDir);//Сканирует директорию/папку, обрабатывает файлы и т.д.:)
-                
                 var time = 10000;
                 var count = time/1000;
                 while (count!=0)
@@ -29,11 +41,11 @@ namespace _10_Calc_Modul
                     Console.WriteLine("Loading  " + count);
                 }
             }
-            while (Console.ReadKey().Key != ConsoleKey.Escape);//Для выхода из программы нужно нажать Esc
+            while (Console.ReadKey().Key != ConsoleKey.Escape);//Для выхода из программы нужно нажать Esc*/
         }
         #endregion
         #region Options 
-        private static void StartMenu()
+        internal static void StartMenu()
         {
             string tab2 = new string('\t', 2);
             string tab5 = new string('\t', 5);
