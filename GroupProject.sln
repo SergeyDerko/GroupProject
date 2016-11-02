@@ -362,6 +362,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tank", "08_Danila\tank\tank
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_CalculationService", "06_Jury\14_CalculationService\14_CalculationService.csproj", "{27664558-83A0-45C8-A735-C80DCCC0729C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "503_factorial", "05_Eugene\503_factorial\503_factorial.csproj", "{4F0BBC9F-10C3-42DB-9D64-D1217EAC5F3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1410,6 +1412,14 @@ Global
 		{27664558-83A0-45C8-A735-C80DCCC0729C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{27664558-83A0-45C8-A735-C80DCCC0729C}.Release|x86.ActiveCfg = Release|Any CPU
 		{27664558-83A0-45C8-A735-C80DCCC0729C}.Release|x86.Build.0 = Release|Any CPU
+		{4F0BBC9F-10C3-42DB-9D64-D1217EAC5F3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F0BBC9F-10C3-42DB-9D64-D1217EAC5F3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F0BBC9F-10C3-42DB-9D64-D1217EAC5F3F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4F0BBC9F-10C3-42DB-9D64-D1217EAC5F3F}.Debug|x86.Build.0 = Debug|Any CPU
+		{4F0BBC9F-10C3-42DB-9D64-D1217EAC5F3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F0BBC9F-10C3-42DB-9D64-D1217EAC5F3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F0BBC9F-10C3-42DB-9D64-D1217EAC5F3F}.Release|x86.ActiveCfg = Release|Any CPU
+		{4F0BBC9F-10C3-42DB-9D64-D1217EAC5F3F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1567,5 +1577,6 @@ Global
 		{D3834787-49CB-4D3A-A026-8AB352936543} = {DDF8AE58-88FE-4DB5-AB48-D78BE93969F1}
 		{F3B2000F-AAA6-4A9F-B369-8892ADFFE0B3} = {DDF8AE58-88FE-4DB5-AB48-D78BE93969F1}
 		{27664558-83A0-45C8-A735-C80DCCC0729C} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
+		{4F0BBC9F-10C3-42DB-9D64-D1217EAC5F3F} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 	EndGlobalSection
 EndGlobal
