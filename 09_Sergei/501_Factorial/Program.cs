@@ -17,7 +17,8 @@ namespace _501_Factorial
                 f *= i;
                 Console.WriteLine(i+": "+f);
             }
-             
+            Console.ReadKey();//переделать не рекурсию
+
         }
         internal static decimal  GetFactorial(decimal value)
         {
