@@ -12,18 +12,19 @@ namespace _501_Factorial
             var value = decimal.Parse(Console.ReadLine());
             Console.WriteLine("Factorial of a number " + value + " is " + GetFactorial(value));
             decimal f = 1;
-            for(decimal i = 1; i<=value;i++)
+            for (decimal i = 1; i <= value; i++)
             {
                 f *= i;
-                Console.WriteLine(i+": "+f);
+                Console.WriteLine(i + ": " + f);
             }
             //переделать не рекурсию
         }
         //рукурсия
-        public static decimal  GetFactorial(decimal value)
+        public static decimal GetFactorial(decimal value)
         {
             if (value == 1) return 1;
+            else if (value > 27) value = 27;
             return GetFactorial(value - 1) * value;
-        } 
+        }
     }
 }

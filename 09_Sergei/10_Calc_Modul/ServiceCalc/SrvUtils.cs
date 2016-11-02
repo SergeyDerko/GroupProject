@@ -1,8 +1,8 @@
 ﻿using System.Threading;
 
-namespace _501_Service
+namespace _10_Calc_Modul
 {
-    public static class SrvUtils
+    internal class SrvUtils
     {
         /// <summary>
         /// Замедляет работу основного потока на указанное количество секунд.
