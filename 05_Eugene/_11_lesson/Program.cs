@@ -13,7 +13,7 @@ namespace _11_lesson
             var stack = new Stack<string>();
             stack.Push("one");
             stack.Push("two");
-            Console.WriteLine(stack.);
+            //Console.WriteLine(stack.);
             Console.ReadKey();
 
         }
