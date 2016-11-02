@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace EntityFramwork
 {
-    class Program
+    class User
     {
-        static void Main(string[] args)
-        {
-            User user = new User();
-
-        }
+        public string Name { get; set; }
+        public string SName { get; set; }
+        public int Age { get; set; }
     }
 }
