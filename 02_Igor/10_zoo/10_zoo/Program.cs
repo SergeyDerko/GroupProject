@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using Common.modal;
+using Newtonsoft.Json;
 
 namespace _10_zoo
 {
@@ -6,15 +10,24 @@ namespace _10_zoo
     {
         private static void Main(string[] args)
         {
-            //var animals = new List<IAnimal>();
+            var animals = new List<IAnimal>
 
-            //{
-            //    animals.Add(new Mammals);
-            //    animals.Add(new Birds);
-            //    animals.Add(new Reptiles);
-            //    animals.Add(new Fish);
-            //    animals.Add(new Amphibian);
-            //}
+            {
+                new Mammals(),
+                new Birds(),
+                new Reptiles(),
+                new Fish(),
+                new Amphibian()
+            };
+            var jsonE = JsonConvert.SerializeObject(animals);
+            var path = "out.json";
+            File.WriteAllText(path, jsonE);
+            File.AppendAllText(path, jsonE);
+
+            var text = File.ReadAllText(path);
+            Console.WriteLine(text);
+
+            Console.ReadLine();
         }
     }
 }
