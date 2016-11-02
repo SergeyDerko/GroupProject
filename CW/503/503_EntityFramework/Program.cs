@@ -25,6 +25,10 @@ namespace _503_EntityFramework
                 // Вставить объект в БД и сохранить изменения
                 context.Customers.Add(customer);
                 context.SaveChanges();
+                foreach (var contextCustomer in context.Customers)
+                {
+                    var t = contextCustomer;
+                }
             }
         }
     }
