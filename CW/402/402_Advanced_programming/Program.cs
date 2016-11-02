@@ -9,7 +9,7 @@ namespace _402_Advanced_programming
         static void Main()
         {
             var str = "22222+ 22222 *222212";
-            var s = str.Replace(" ", "");
+            var s = str.Replace(" ", ""); 
             var index = s.IndexOf("*");
             var exp = SearchExp(index, s);
             //s.Replace(exp, Calc(exp).ToString());
