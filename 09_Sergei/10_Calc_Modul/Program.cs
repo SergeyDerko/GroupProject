@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ServiceProcess;
-using System.Threading;
 
 namespace _10_Calc_Modul
 {
@@ -10,23 +9,19 @@ namespace _10_Calc_Modul
         {
             AppDomain currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += UnhandledExceptionHandler;
-
             var svc = new MainService();
             ServiceBase.Run(svc);
         }
-        
-            
-    
-    private static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs args)
-    {
-        const string method = "UnhandledExceptionHandler";
-        var ex = (Exception)args.ExceptionObject;
-        Console.WriteLine(ex == null ? "Error!" : $"{method}\n{ex}");
-    }
-    #region Start
+        private static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs args)
+        {
+            const string method = "UnhandledExceptionHandler";
+            var ex = (Exception)args.ExceptionObject;
+            Console.WriteLine(ex == null ? "Error!" : $"{method}\n{ex}");
+        }
+        #region Start
 
 
-    internal static void Start()
+        internal static void Start()
         {
             var s = new ScanDirectory();//интанцируем обьект класса ScanDirectory
             s.Scan(s.PathDir);//Сканирует директорию/папку, обрабатывает файлы и т.д.:)
