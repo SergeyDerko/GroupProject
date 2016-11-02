@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _11_lesson
+namespace _503_EF
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var stack = new Stack<string>();
-            stack.Push("one");
-            stack.Push("two");
-            Console.WriteLine();
-            Console.ReadKey();
+            var user = new User();
+            user.Name = Guid.NewGuid().ToString("N").ToUpper();
+            user.SName = Guid.NewGuid().ToString("N").ToUpper();
+
 
         }
     }
+
 }

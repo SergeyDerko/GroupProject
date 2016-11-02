@@ -4,18 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _11_lesson
+namespace _503_EF_Evgen
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var stack = new Stack<string>();
-            stack.Push("one");
-            stack.Push("two");
-            Console.WriteLine();
-            Console.ReadKey();
-
+            new User();
         }
+    }
+
+    internal class User
+    {
     }
 }
