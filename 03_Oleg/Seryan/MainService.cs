@@ -1,11 +1,11 @@
 ﻿using System.ServiceProcess;
 
-namespace _501_Service
+namespace Seryan
 {
     internal class MainService : ServiceBase
     {
 
-        private readonly TestService _testService = new TestService();
+        private readonly Tester _testService = new Tester();
 
         public void StartSvc()
         {

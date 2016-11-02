@@ -1,6 +1,6 @@
 ﻿using System.ServiceProcess;
 
-namespace _501_Service
+namespace _10_Calc_Modul
 {
     internal class MainService : ServiceBase
     {
@@ -30,3 +30,5 @@ namespace _501_Service
         }
     }
 }
+
+

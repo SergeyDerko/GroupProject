@@ -1,8 +1,12 @@
-﻿using System.Threading;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
 
-namespace _501_Service
+namespace Seryan
 {
-    public static class SrvUtils
+    class Unit
     {
         /// <summary>
         /// Замедляет работу основного потока на указанное количество секунд.
@@ -11,9 +15,9 @@ namespace _501_Service
         /// <param name="stop">ссылка на ключ остановки службы</param>
         public static bool Retarder(int seconds, ref bool stop)
         {
-            for (int i = 0; !stop && i < seconds * 1000 / Constants.TimeScanStopParam; i++)
+            for (int i = 0; !stop && i < seconds * 1000 / Galya.TimeScanStopParam; i++)
             {
-                Thread.Sleep(Constants.TimeScanStopParam);
+                Thread.Sleep(Galya.TimeScanStopParam);
             }
             return stop;
         }
