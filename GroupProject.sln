@@ -34,6 +34,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08_Danila", "08_Danila", "{
 	ProjectSection(SolutionItems) = preProject
 		08_Danila\01_prg.html = 08_Danila\01_prg.html
 		08_Danilo\readMe.txt = 08_Danilo\readMe.txt
+		08_Danila\tank\tank.sln = 08_Danila\tank\tank.sln
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "09_Sergei", "09_Sergei", "{E4CE2450-2BB1-4440-9BBF-34FEE661A092}"
@@ -355,6 +356,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "503_EntityFramework", "CW\503\503_EntityFramework\503_EntityFramework.csproj", "{8DDC8BF3-83AC-485E-A792-F2DE39567C0F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10_Calculation_ScanDirectory", "06_Jury\10_Calculation_ScanDirectory\10_Calculation_ScanDirectory.csproj", "{D1AD4054-F521-40B7-A8AF-359EAB3CE2EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "501_Faktorial", "GroupProject\08_Danila\501_Faktorial\501_Faktorial.csproj", "{D3834787-49CB-4D3A-A026-8AB352936543}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1380,6 +1383,14 @@ Global
 		{D1AD4054-F521-40B7-A8AF-359EAB3CE2EA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D1AD4054-F521-40B7-A8AF-359EAB3CE2EA}.Release|x86.ActiveCfg = Release|Any CPU
 		{D1AD4054-F521-40B7-A8AF-359EAB3CE2EA}.Release|x86.Build.0 = Release|Any CPU
+		{D3834787-49CB-4D3A-A026-8AB352936543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3834787-49CB-4D3A-A026-8AB352936543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3834787-49CB-4D3A-A026-8AB352936543}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D3834787-49CB-4D3A-A026-8AB352936543}.Debug|x86.Build.0 = Debug|Any CPU
+		{D3834787-49CB-4D3A-A026-8AB352936543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3834787-49CB-4D3A-A026-8AB352936543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3834787-49CB-4D3A-A026-8AB352936543}.Release|x86.ActiveCfg = Release|Any CPU
+		{D3834787-49CB-4D3A-A026-8AB352936543}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1534,5 +1545,6 @@ Global
 		{18EB547A-9396-4107-AE69-3F1D1C2B7B2C} = {7768E47D-6065-4302-B586-26014DD0EA0B}
 		{8DDC8BF3-83AC-485E-A792-F2DE39567C0F} = {18EB547A-9396-4107-AE69-3F1D1C2B7B2C}
 		{D1AD4054-F521-40B7-A8AF-359EAB3CE2EA} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
+		{D3834787-49CB-4D3A-A026-8AB352936543} = {DDF8AE58-88FE-4DB5-AB48-D78BE93969F1}
 	EndGlobalSection
 EndGlobal
