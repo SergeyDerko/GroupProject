@@ -1,0 +1,1 @@
+sc create CalculationService binPath="C:\Users\admin\Documents\Visual Studio 2015\Projects\14_CalculationService\bin\Debug\CalculationService.exe" DisplayName= "CalculationService"

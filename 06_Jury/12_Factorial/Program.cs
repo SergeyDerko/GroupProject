@@ -12,9 +12,9 @@ namespace _12_Factorial
             {
                 Console.Write("\n Введите число: ");
                 var number = Console.ReadLine();
-                int verify;
-                Console.WriteLine(int.TryParse(number, out verify)
-                        ? $" Результат: {number}! = {Factorial_x(int.Parse(number))}"
+                uint verify;
+                Console.WriteLine(uint.TryParse(number, out verify)
+                        ? $" Результат: {number}! = {Factorial(verify)}"//было лишние действие verify уже содержит значение
                         : " Введите положительное число");
 
                 Console.WriteLine(" Нажмите Escape для выхода или любую клавишу для продолжения...");
@@ -25,10 +25,10 @@ namespace _12_Factorial
         }
 
 
-        private static int Factorial_x(int x)
+        private static uint Factorial(uint x)//Factorial_x что за именование метода?
         {
-            if (x == 1 || x == 0) return 1;
-            var result = Factorial_x(x - 1)*x;
+            if (x < 1) return 1;
+            var result = Factorial(x - 1)*x;
             return result;
         }
     }

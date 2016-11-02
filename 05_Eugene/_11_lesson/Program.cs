@@ -10,6 +10,11 @@ namespace _11_lesson
     {
         static void Main(string[] args)
         {
+            var stack = new Stack<string>();
+            stack.Push("one");
+            stack.Push("two");
+            Console.WriteLine(stack.);
+            Console.ReadKey();
 
         }
     }
