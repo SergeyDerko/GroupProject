@@ -11,6 +11,7 @@ namespace _503_Factorial
     {
         static void Main(string[] args)
         {
+            Console.WriteLine();
         }
     }
 }
