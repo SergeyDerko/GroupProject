@@ -12,22 +12,18 @@ namespace _501_Factorial
             var value = decimal.Parse(Console.ReadLine());
             Console.WriteLine("Factorial of a number " + value + " is " + GetFactorial(value));
             decimal f = 1;
-            for(decimal i = 1; i<=27;i++)
+            for(decimal i = 1; i<=value;i++)
             {
                 f *= i;
                 Console.WriteLine(i+": "+f);
             }
-            Console.ReadKey();//переделать не рекурсию
-
+            //переделать не рекурсию
         }
-        internal static decimal  GetFactorial(decimal value)
+        //рукурсия
+        public static decimal  GetFactorial(decimal value)
         {
-            decimal factorial = 1;
-            for (decimal i = 1; i <= value; i++)
-            {
-               factorial *= i;
-            }
-            return factorial;
-        }
+            if (value == 1) return 1;
+            return GetFactorial(value - 1) * value;
+        } 
     }
 }
