@@ -3,10 +3,14 @@ using Common.modal;
 
 namespace Common
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
+
+
+
+
             Console.WriteLine("\n" + new string('*', 20) + "Our zoo" + new string('*', 20) + "\n\n Определены классами виды животных:");
             var output = new[]
             {

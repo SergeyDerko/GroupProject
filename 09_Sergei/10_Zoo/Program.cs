@@ -1,15 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Common.modal;
 
 namespace _10_Zoo
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
+            
+
+
+            //  var json = JsonConvert.SerializeObject(animals);
+            /*var path = "animals.json";
+            File.WriteAllText(path, json);
+            Console.WriteLine(File.ReadAllText(path));*/
+
         }
+
+
     }
 }
