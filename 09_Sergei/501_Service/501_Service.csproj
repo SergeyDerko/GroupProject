@@ -54,7 +54,6 @@
     <Compile Include="TestService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="501_srv.bat" />
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
