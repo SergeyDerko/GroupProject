@@ -25,6 +25,6 @@ namespace _503_EntityFramework.Model
         public DateTime PurchaseDate { get; set; }
 
         // Ссылка на покупателя
-        public Customer Customer { get; set; }
+        //public Customer Customer { get; set; }
     }
 }
