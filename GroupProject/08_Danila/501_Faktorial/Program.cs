@@ -6,7 +6,7 @@ namespace _501_Faktorial
     {
         static long Fact(uint x)//рекурсия
         {
-                if (x < 1)
+                if (x< 1)
                     return 1;
                 return x * Fact(x - 1);
             }
