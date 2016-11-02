@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -367,6 +367,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "503_factorial", "05_Eugene\503_factorial\503_factorial.csproj", "{4F0BBC9F-10C3-42DB-9D64-D1217EAC5F3F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "503_EF", "09_Sergei\503_EF\503_EF.csproj", "{03C0F590-0D2B-4FCE-895A-DFFD34B02AD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "03_Oleg\EntityFramework\EntityFramework.csproj", "{EF80FB23-8422-424B-B8D9-CC3BFAF693DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1440,6 +1442,14 @@ Global
 		{03C0F590-0D2B-4FCE-895A-DFFD34B02AD3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{03C0F590-0D2B-4FCE-895A-DFFD34B02AD3}.Release|x86.ActiveCfg = Release|Any CPU
 		{03C0F590-0D2B-4FCE-895A-DFFD34B02AD3}.Release|x86.Build.0 = Release|Any CPU
+		{EF80FB23-8422-424B-B8D9-CC3BFAF693DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF80FB23-8422-424B-B8D9-CC3BFAF693DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF80FB23-8422-424B-B8D9-CC3BFAF693DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EF80FB23-8422-424B-B8D9-CC3BFAF693DE}.Debug|x86.Build.0 = Debug|Any CPU
+		{EF80FB23-8422-424B-B8D9-CC3BFAF693DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF80FB23-8422-424B-B8D9-CC3BFAF693DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF80FB23-8422-424B-B8D9-CC3BFAF693DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{EF80FB23-8422-424B-B8D9-CC3BFAF693DE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1600,5 +1610,6 @@ Global
 		{27664558-83A0-45C8-A735-C80DCCC0729C} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
 		{4F0BBC9F-10C3-42DB-9D64-D1217EAC5F3F} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 		{03C0F590-0D2B-4FCE-895A-DFFD34B02AD3} = {E4CE2450-2BB1-4440-9BBF-34FEE661A092}
+		{EF80FB23-8422-424B-B8D9-CC3BFAF693DE} = {1E5F935B-DC63-439B-BFE0-A5154DB54DBA}
 	EndGlobalSection
 EndGlobal

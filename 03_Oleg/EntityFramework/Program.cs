@@ -1,9 +1,9 @@
 ﻿//материал взят с сайта http://professorweb.ru/my/entity-framework/6/level1/
 
 using System;
-using _503_EntityFramework.Model;
+using EntityFramework.Model;
 
-namespace _503_EntityFramework
+namespace EntityFramework
 {
     class Program
     {
@@ -23,8 +23,7 @@ namespace _503_EntityFramework
             {
                ProductName = "GALYA",
                Description = "MOLODAYA",
-               Quantity = 23,
-               PurchaseDate = DateTime.Now.AddDays(10)
+               Quantity = 23
             };
 
             // Создать объект контекста
