@@ -10,7 +10,6 @@ namespace EntityFramwork
     {
         static void Main(string[] args)
         {
-            User user = new User();
 
         }
     }

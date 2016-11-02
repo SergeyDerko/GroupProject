@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace _503_EntityFramework.Model
 {
-
     public class Customer
     {
         // Определить поля, которые используются в базе данных
@@ -15,7 +14,7 @@ namespace _503_EntityFramework.Model
         public string City { get; set; }
         public int Age { get; set; }
         public DateTime BirthDate { get; set; }
-        public virtual List<Order> Orders { get; set; }
+        //public virtual List<Order> Orders { get; set; }
     }
     public class Order
     {
