@@ -38,14 +38,14 @@ namespace EntityFramework
                 }
             }
 
-            using (var context = new SampleContext())
+            using (var oRcontext = new SampleContext())
             {
                 // Вставить объект в БД и сохранить изменения
-                context.Orders.Add(orderr);
-                context.SaveChanges();
-                foreach (var oderCustomer in context.Orders)
+                oRcontext.Orders.Add(orderr);
+                oRcontext.SaveChanges();
+                foreach (var oderCustomer in oRcontext.Orders)
                 {
-                    var t = oderCustomer;
+                    var p = oderCustomer;
                 }
             }
         }
