@@ -5,7 +5,7 @@ using System.Runtime.Remoting.Contexts;
 
 namespace EntityFramework
 {
-    public class SampleContext : Context
+    public class SampleContext : DbContext
     {
         public DbSet<Customer> Customers { get; set; }
 

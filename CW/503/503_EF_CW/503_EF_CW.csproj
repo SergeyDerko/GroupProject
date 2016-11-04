@@ -53,12 +53,12 @@
     <Compile Include="Customers.cs">
       <DependentUpon>ModelDBFirst.tt</DependentUpon>
     </Compile>
+    <Compile Include="CW\503\503_EF_CW\Customers.cs" />
     <Compile Include="ModelDBFirst.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelDBFirst.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelDBFirst.cs" />
     <Compile Include="ModelDBFirst.Designer.cs">
       <DependentUpon>ModelDBFirst.edmx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -92,6 +92,7 @@
       <DependentUpon>ModelDBFirst.edmx</DependentUpon>
       <LastGenOutput>ModelDBFirst.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="ModelDBFirst.edmx.sql" />
     <Content Include="ModelDBFirst.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelDBFirst.edmx</DependentUpon>
