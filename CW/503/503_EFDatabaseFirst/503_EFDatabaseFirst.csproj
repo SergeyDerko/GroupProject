@@ -53,6 +53,7 @@
     <Compile Include="Customers.cs">
       <DependentUpon>ModelTest.tt</DependentUpon>
     </Compile>
+    <Compile Include="CW\503\503_EFDatabaseFirst\Customers.cs" />
     <Compile Include="ModelTest.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

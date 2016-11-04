@@ -1,4 +1,6 @@
-﻿namespace _503_EFDatabaseFirst
+﻿using System;
+
+namespace _503_EFDatabaseFirst
 {
     class Program
     {
@@ -8,7 +10,7 @@
             {
                 foreach (var contextCustomer in context.Customers)
                 {
-                    var customers = contextCustomer;
+                    Console.WriteLine(contextCustomer);
                 }
             }
         }
