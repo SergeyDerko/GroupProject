@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
-using _503_EntityFramework.Model;
+using EntityFramework.Model;
 
-namespace _503_EntityFramework
+namespace EntityFramework
 {
     public class SampleContext : DbContext
     {

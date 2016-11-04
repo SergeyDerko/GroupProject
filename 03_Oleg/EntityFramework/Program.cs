@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//материал взят с сайта http://professorweb.ru/my/entity-framework/6/level1/
 
-namespace _503_EF
+using System;
+using EntityFramework.Model;
+
+namespace EntityFramework
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             // Создать объект для записи в БД
             var customer = new Customer
@@ -22,14 +21,13 @@ namespace _503_EF
 
             var orderr = new Order
             {
-                ProductName = "GALYA",
-                Description = "MOLODAYA",
-                Quantity = 23,
-                PurchaseDate = DateTime.Now.AddDays(10)
+               ProductName = "GALYA",
+               Description = "MOLODAYA",
+               Quantity = 23
             };
 
             // Создать объект контекста
-            using (var context = new Context())
+            using (var context = new SampleContext())
             {
                 // Вставить объект в БД и сохранить изменения
                 context.Customers.Add(customer);
@@ -38,21 +36,18 @@ namespace _503_EF
                 {
                     var t = contextCustomer;
                 }
-
             }
 
-            using (var context = new SContext())
+            using (var oRcontext = new SampleContext())
             {
                 // Вставить объект в БД и сохранить изменения
-                context.Orders.Add(orderr);
-                context.SaveChanges();
-                foreach (var oderCustomer in context.Orders)
+                oRcontext.Orders.Add(orderr);
+                oRcontext.SaveChanges();
+                foreach (var oderCustomer in oRcontext.Orders)
                 {
-                    var t = oderCustomer;
+                    var p = oderCustomer;
                 }
             }
-
         }
     }
-
 }
