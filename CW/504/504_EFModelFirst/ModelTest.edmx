@@ -13,6 +13,9 @@
       <PropertyRef Name="IdUser" />
     </Key>
     <Property Name="IdUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
   </EntityType>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -40,6 +43,9 @@
       <EntityTypeMapping TypeName="IsTypeOf(ModelTest.User)">
         <MappingFragment StoreEntitySet="User">
           <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SName" ColumnName="SName" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
