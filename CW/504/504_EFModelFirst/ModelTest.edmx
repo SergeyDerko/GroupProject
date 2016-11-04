@@ -6,9 +6,9 @@
     <edmx:StorageModels>
     <Schema Namespace="ModelTest.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="ModelTestStoreContainer">
-    <EntitySet Name="UserSet" EntityType="ModelTest.Store.UserSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="ModelTest.Store.User" store:Type="Tables" Schema="dbo" />
   </EntityContainer>
-  <EntityType Name="UserSet">
+  <EntityType Name="User">
     <Key>
       <PropertyRef Name="IdUser" />
     </Key>
@@ -26,6 +26,9 @@
             <PropertyRef Name="IdUser" />
           </Key>
           <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="SName" Type="String" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -35,7 +38,7 @@
   <EntityContainerMapping StorageEntityContainer="ModelTestStoreContainer" CdmEntityContainer="ModelTestContainer">
     <EntitySetMapping Name="User">
       <EntityTypeMapping TypeName="IsTypeOf(ModelTest.User)">
-        <MappingFragment StoreEntitySet="UserSet">
+        <MappingFragment StoreEntitySet="User">
           <ScalarProperty Name="IdUser" ColumnName="IdUser" />
         </MappingFragment>
       </EntityTypeMapping>
