@@ -4,6 +4,13 @@
     {
         static void Main(string[] args)
         {
+            using (var context = new Entities())
+            {
+                foreach (var contextCustomer in context.Customers)
+                {
+                    var customers = contextCustomer;
+                }
+            }
         }
     }
 }
