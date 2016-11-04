@@ -376,7 +376,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "503_EFDatabaseFirst", "CW\5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "504_EFModelFirst", "CW\504\504_EFModelFirst\504_EFModelFirst.csproj", "{574806A8-2275-41F7-B92E-C3FC61673DFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "503_EntityFramework", "06_Jury\15_EntityFramework\503_EntityFramework.csproj", "{B9F89829-8826-4893-A8C0-C68AB1CE2697}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15_EntityFramework", "06_Jury\15_EntityFramework\15_EntityFramework.csproj", "{B9F89829-8826-4893-A8C0-C68AB1CE2697}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
