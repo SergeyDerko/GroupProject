@@ -46,11 +46,6 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201611021841177_InitialCreate.cs" />
-    <Compile Include="Migrations\201611021841177_InitialCreate.Designer.cs">
-      <DependentUpon>201611021841177_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SampleContext.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Program.cs" />
@@ -62,9 +57,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611021841177_InitialCreate.resx">
-      <DependentUpon>201611021841177_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
