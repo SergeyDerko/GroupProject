@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("505_ConfigPrg")]
+[assembly: AssemblyTitle("NestedConfiguration")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("505_ConfigPrg")]
+[assembly: AssemblyProduct("NestedConfiguration")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8c406ecb-9b41-4688-b8bd-3c34a896f344")]
+[assembly: Guid("f526c2d7-f9d8-4fdb-aa4d-795d869e54d3")]
 
 // Version information for an assembly consists of the following four values:
 //
