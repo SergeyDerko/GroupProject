@@ -7,8 +7,8 @@
     <ProjectGuid>{F526C2D7-F9D8-4FDB-AA4D-795D869E54D3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NestedConfiguration</RootNamespace>
-    <AssemblyName>NestedConfiguration</AssemblyName>
+    <RootNamespace>AppConfiguration</RootNamespace>
+    <AssemblyName>AppConfiguration</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

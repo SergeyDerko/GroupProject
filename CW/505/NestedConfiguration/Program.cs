@@ -1,7 +1,9 @@
-﻿using System;
+﻿//http://code.dblock.org/2009/02/18/nesting-multiple-configurationelement-types-in-a-configurationelementcollection.html
+
+using System;
 using System.Configuration;
 
-namespace NestedConfiguration
+namespace AppConfiguration
 {
     class Program
     {
@@ -10,7 +12,7 @@ namespace NestedConfiguration
             try
             {
                 ExeConfigurationFileMap map = new ExeConfigurationFileMap();
-                map.ExeConfigFilename = "NestedConfiguration.exe.config";
+                map.ExeConfigFilename = "AppConfiguration.exe.config";
                 Configuration configuration = ConfigurationManager.OpenMappedExeConfiguration(map, ConfigurationUserLevel.None);
                 CollectionSection config = (CollectionSection)configuration.Sections[typeof(CollectionSection).Name];
                 Console.WriteLine("Nested configurations: {0}", config.Collection.Count);

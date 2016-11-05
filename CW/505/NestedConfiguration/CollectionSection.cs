@@ -2,7 +2,7 @@
 using System.Configuration;
 using System.Xml;
 
-namespace NestedConfiguration
+namespace AppConfiguration
 {
     public class CollectionSection : ConfigurationSection
     {
@@ -126,7 +126,7 @@ namespace NestedConfiguration
             return new Proxy();
         }
 
-        protected override Object GetElementKey(ConfigurationElement element)
+        protected override object GetElementKey(ConfigurationElement element)
         {
             return ((Proxy)element).Parent.Name;
         }

@@ -388,7 +388,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "504_CW", "CW\504\504_CW\504
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "505", "505", "{69A38598-2F97-4A13-94EC-AB5C81D001C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedConfiguration", "CW\505\NestedConfiguration\NestedConfiguration.csproj", "{F526C2D7-F9D8-4FDB-AA4D-795D869E54D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppConfiguration", "CW\505\NestedConfiguration\AppConfiguration.csproj", "{F526C2D7-F9D8-4FDB-AA4D-795D869E54D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
