@@ -2,6 +2,7 @@
 
 using System;
 using System.Configuration;
+using Common;
 
 namespace AppConfiguration
 {
@@ -9,21 +10,11 @@ namespace AppConfiguration
     {
         static void Main(string[] args)
         {
-            try
+            var section = Config.Instance.CollectionSection;
+            Console.WriteLine("Nested configurations: {0}", section.Collection.Count);
+            foreach (Proxy proxy in section.Collection)
             {
-                ExeConfigurationFileMap map = new ExeConfigurationFileMap();
-                map.ExeConfigFilename = "AppConfiguration.exe.config";
-                Configuration configuration = ConfigurationManager.OpenMappedExeConfiguration(map, ConfigurationUserLevel.None);
-                CollectionSection config = (CollectionSection)configuration.Sections[typeof(CollectionSection).Name];
-                Console.WriteLine("Nested configurations: {0}", config.Collection.Count);
-                foreach (Proxy proxy in config.Collection)
-                {
-                    Console.WriteLine("Type: {0}", proxy.Parent.GetType());
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Type: {0}", proxy.Parent.GetType());
             }
         }
     }
