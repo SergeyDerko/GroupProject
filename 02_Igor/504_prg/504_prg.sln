@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "504_prg", "504_prg\504_prg.csproj", "{CB6B2113-4D99-4196-8FD7-1813B747A44D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "503_EntityFramework", "..\..\CW\503\503_EntityFramework\503_EntityFramework.csproj", "{8DDC8BF3-83AC-485E-A792-F2DE39567C0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CB6B2113-4D99-4196-8FD7-1813B747A44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB6B2113-4D99-4196-8FD7-1813B747A44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB6B2113-4D99-4196-8FD7-1813B747A44D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DDC8BF3-83AC-485E-A792-F2DE39567C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDC8BF3-83AC-485E-A792-F2DE39567C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDC8BF3-83AC-485E-A792-F2DE39567C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDC8BF3-83AC-485E-A792-F2DE39567C0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

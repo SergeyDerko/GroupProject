@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _504_prg
+namespace _0611_prg
 {
     class Program
     {
         static void Main(string[] args)
         {
-            
         }
     }
 }
