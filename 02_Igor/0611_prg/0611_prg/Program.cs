@@ -10,6 +10,7 @@ namespace _0611_prg
     {
         static void Main(string[] args)
         {
+            Console.WriteLine();
         }
     }
 }
