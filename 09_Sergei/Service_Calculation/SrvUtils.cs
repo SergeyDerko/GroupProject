@@ -1,8 +1,8 @@
 ﻿using System.Threading;
 
-namespace FirstServise
+namespace Service_Calculation
 {
-    public static class SrvUtils
+    internal static class SrvUtils
     {
         /// <summary>
         /// Замедляет работу основного потока на указанное количество секунд.

@@ -1,1 +1,1 @@
-sc delete TestService binPath="D:\Gitprojects\GroupProject\09_Sergei\10_Calc_Modul\501_srv.exe" DisplayName= "TestServiceCalculation"
+sc create CalculationService binPath="D:\Gitprojects\GroupProject\09_Sergei\Service_Caltulation\bin\Debug\srv_calc.exe" DisplayName= "GitServiceCalculation"

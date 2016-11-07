@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FirstServise")]
+[assembly: AssemblyTitle("503_EF_CW")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FirstServise")]
+[assembly: AssemblyProduct("503_EF_CW")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("51bf7f0a-cd9f-4470-b09a-f56eca0890c3")]
+[assembly: Guid("fe21fe33-445c-4571-8563-3b6e1d7e335e")]
 
 // Version information for an assembly consists of the following four values:
 //

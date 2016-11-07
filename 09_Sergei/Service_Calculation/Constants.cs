@@ -1,6 +1,6 @@
-﻿namespace FirstServise
+﻿namespace Service_Calculation
 {
-    public static class Constants
+    internal class Constants
     {
         /// <summary>
         /// Интервал проверки флага завершения работы службы.

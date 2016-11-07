@@ -1,20 +1,21 @@
 ﻿using System.ServiceProcess;
 
-namespace FirstServise
+namespace Service_Calculation
 {
     internal class MainService : ServiceBase
     {
 
-        private readonly TestService _testService = new TestService();
+        private readonly
+        CalculationService _calcservice = new CalculationService();
 
-        public void StartSvc()
+        public  void StartSvc()
         {
-            _testService.Start();
+            _calcservice.Start();
         }
 
         public void StopSvc()
         {
-            _testService.Stop();
+            _calcservice.Stop();
         }
 
         protected override void OnStart(string[] args)

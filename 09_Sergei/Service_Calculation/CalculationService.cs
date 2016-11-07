@@ -1,12 +1,10 @@
-﻿using System;
+﻿
+using System;
 using System.Threading;
 
-namespace FirstServise
+namespace Service_Calculation
 {
-    /// <summary>
-    /// Основной код сервиса для формирования задач в ис-про
-    /// </summary>
-    class TestService
+    internal class CalculationService
     {
         private volatile bool _stopFlag;
         private Thread _thread;
@@ -14,13 +12,15 @@ namespace FirstServise
 
         public void Start()
         {
+
             _thread = new Thread(x =>
             {
                 do
                 {
+                    var start = new Separator();
                     for (int i = 0; i < 10000; i++)
                     {
-                        Console.WriteLine($"TestService: {i}");
+                        start.Scan(new Separator().PathDir);
                         SrvUtils.Retarder(1, ref _stopFlag);
                     }
                 } while (!SrvUtils.Retarder(30, ref _stopFlag));
