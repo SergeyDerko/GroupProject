@@ -7,8 +7,8 @@
     <ProjectGuid>{51BF7F0A-CD9F-4470-B09A-F56ECA0890C3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_501_srv</RootNamespace>
-    <AssemblyName>501_srv</AssemblyName>
+    <RootNamespace>FirstServise</RootNamespace>
+    <AssemblyName>FirstServise</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceProcess" />
@@ -54,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="MainService.cs">
       <SubType>Component</SubType>

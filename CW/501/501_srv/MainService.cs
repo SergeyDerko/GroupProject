@@ -1,6 +1,6 @@
 ﻿using System.ServiceProcess;
 
-namespace _501_srv
+namespace FirstServise
 {
     internal class MainService : ServiceBase
     {

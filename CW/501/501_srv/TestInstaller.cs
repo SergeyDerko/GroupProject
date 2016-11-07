@@ -3,12 +3,13 @@ http://www.csharp-examples.net/install-net-service/
 "c:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe" "c:\srv\501_srv.exe"
 "c:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe" /u "c:\srv\501_srv.exe"
 */
+
 using System.ComponentModel;
 using System.Configuration.Install;
 using System.IO;
 using System.ServiceProcess;
 
-namespace _501_srv
+namespace FirstServise
 {
     [RunInstaller(true)]
     public class TestInstaller : Installer
