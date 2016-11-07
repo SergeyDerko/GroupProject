@@ -1,5 +1,4 @@
-﻿using System.Data.Entity;
-using _503_EntityFramework.Model;
+﻿using _503_EntityFramework.Model;
 
 namespace _503_EntityFramework
 {
