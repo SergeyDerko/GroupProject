@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -397,6 +397,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR", "GroupProject\08_Danila\SR\SR.csproj", "{21A1D3FF-FD57-4735-ADE7-5A963DAA2DC8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExecuteCMDCommand", "CW\505\ExecuteCMDCommand\ExecuteCMDCommand.csproj", "{78FAD973-266C-4174-BAED-2D97C5F797B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PART1_EXAM_DIR_SRV", "05_Eugene\PART1_EXAM_DIR_SRV\PART1_EXAM_DIR_SRV.csproj", "{59EF9158-B1D9-49FD-B313-9F51397EC254}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1574,6 +1576,14 @@ Global
 		{78FAD973-266C-4174-BAED-2D97C5F797B2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{78FAD973-266C-4174-BAED-2D97C5F797B2}.Release|x86.ActiveCfg = Release|Any CPU
 		{78FAD973-266C-4174-BAED-2D97C5F797B2}.Release|x86.Build.0 = Release|Any CPU
+		{59EF9158-B1D9-49FD-B313-9F51397EC254}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59EF9158-B1D9-49FD-B313-9F51397EC254}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59EF9158-B1D9-49FD-B313-9F51397EC254}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{59EF9158-B1D9-49FD-B313-9F51397EC254}.Debug|x86.Build.0 = Debug|Any CPU
+		{59EF9158-B1D9-49FD-B313-9F51397EC254}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59EF9158-B1D9-49FD-B313-9F51397EC254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59EF9158-B1D9-49FD-B313-9F51397EC254}.Release|x86.ActiveCfg = Release|Any CPU
+		{59EF9158-B1D9-49FD-B313-9F51397EC254}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1749,5 +1759,6 @@ Global
 		{6BC4CFD0-0A69-41A8-91DC-EE998C7BB6F8} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 		{21A1D3FF-FD57-4735-ADE7-5A963DAA2DC8} = {DDF8AE58-88FE-4DB5-AB48-D78BE93969F1}
 		{78FAD973-266C-4174-BAED-2D97C5F797B2} = {69A38598-2F97-4A13-94EC-AB5C81D001C1}
+		{59EF9158-B1D9-49FD-B313-9F51397EC254} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 	EndGlobalSection
 EndGlobal
