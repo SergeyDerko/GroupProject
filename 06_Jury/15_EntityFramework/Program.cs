@@ -9,39 +9,43 @@ namespace _503_EntityFramework
     {
         static void Main()
         {
-            // Создать объект для записи в БД
-            var customer = new Customer
-            {
-                FirstName = "Henry",
-                LastName = "Second",
-                Age = 30,
-                City = "Odessa",
-                BirthDate = DateTime.Now.AddYears(-30)
-            };
-            var order = new Order
-            {
-                ProductName = "Cheese",
-                Description = "Swiss",
-                PurchaseDate = DateTime.Now.AddDays(-10),
-                Quantity = 2
-            };
+            //var customer = new Customer
+            //{
+            //    FirstName = "Henry",
+            //    LastName = "Second",
+            //    Age = 30,
+            //    City = "Odessa",
+            //    BirthDate = DateTime.Now.AddYears(-30)
+            //};
+            //var order = new Order
+            //{
+            //    ProductName = "Cheese",
+            //    Description = "Swiss",
+            //    PurchaseDate = DateTime.Now.AddDays(-10),
+            //    Quantity = 2
+            //};
             using (var context = new SampleContext())
             {
-                context.Customers.Add(customer);
-                context.Orders.Add(order);
-                context.SaveChanges();
+                //context.Customers.Add(customer);
+                //context.Orders.Add(order);
+                //context.SaveChanges();
+
+               
                 foreach (var contextCustomer in context.Customers)
                 {
-                    var t = contextCustomer;
-                    Console.WriteLine($"{t.FirstName}, {t.City}");
+                    Console.WriteLine(
+                        $" {contextCustomer.IdCustomer} {contextCustomer.FirstName} {contextCustomer.LastName} {contextCustomer.City} {contextCustomer.BirthDate}");
                 }
+                Console.WriteLine();
                 foreach (var contextOrder in context.Orders)
                 {
-                    var t = contextOrder;
-                    Console.WriteLine($"{t.ProductName}, {t.Description}");
+                    Console.WriteLine($" {contextOrder.OrderId} {contextOrder.ProductName} {contextOrder.Description} {contextOrder.PurchaseDate} {contextOrder.Quantity}");
                 }
+
+
+
             }
-            
+
 
             Console.ReadKey();
         }

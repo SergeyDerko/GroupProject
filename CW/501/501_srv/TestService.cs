@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace _501_srv
+namespace FirstServise
 {
     /// <summary>
     /// Основной код сервиса для формирования задач в ис-про

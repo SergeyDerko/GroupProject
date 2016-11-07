@@ -1,4 +1,4 @@
-﻿namespace _501_srv
+﻿namespace FirstServise
 {
     public static class Constants
     {
