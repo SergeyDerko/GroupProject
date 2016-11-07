@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.ServiceProcess;
+using Common;
 
 namespace _501_srv
 {
@@ -12,7 +14,7 @@ namespace _501_srv
         {
             AppDomain currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += UnhandledExceptionHandler;
-
+            Init();
             var svc = new MainService();
             if (Array.IndexOf(args, "console") != -1 || Array.IndexOf(args, "c") != -1)
             {
@@ -27,6 +29,33 @@ namespace _501_srv
             }
         }
 
+        private static void Init()
+        {
+            #region Инициализация логгера
+
+            Logger.Level = Level.Trace; //Config.Get.Log.Level;
+
+            // Определение пути доступа к журналу событий
+
+            try
+            {
+                //Logger.Dir = Config.Get.Log.Dir;
+                if (!Directory.Exists(Logger.Dir))
+                    Directory.CreateDirectory(Logger.Dir);
+            }
+            catch
+            {
+            }
+
+            //Logger.Prefix = Config.Get.Log.Prefix;
+            Logger.Start();
+
+            Logger.Write(Level.Info, "Старт сервера");
+
+            #endregion
+
+        }
+
         private static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs args)
         {
             const string method = "UnhandledExceptionHandler";
@@ -37,3 +66,4 @@ namespace _501_srv
         //sc create TestService binPath="w:\repos\GroupProject\CW\501\501_srv\bin\Debug\501_srv.exe" DisplayName= "TestServiceDisplayName"
     }
 }
+    
