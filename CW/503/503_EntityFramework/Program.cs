@@ -19,6 +19,14 @@ namespace _503_EntityFramework
                 BirthDate = DateTime.Now.AddYears(-27)
             };
 
+            var orderr = new Order
+            {
+               ProductName = "GALYA",
+               Description = "MOLODAYA",
+               Quantity = 23,
+               PurchaseDate = DateTime.Now.AddDays(10)
+            };
+
             // Создать объект контекста
             using (var context = new SampleContext())
             {
@@ -28,6 +36,17 @@ namespace _503_EntityFramework
                 foreach (var contextCustomer in context.Customers)
                 {
                     var t = contextCustomer;
+                }
+            }
+
+            using (var context = new SampleContext())
+            {
+                // Вставить объект в БД и сохранить изменения
+                context.Orders.Add(orderr);
+                context.SaveChanges();
+                foreach (var oderCustomer in context.Orders)
+                {
+                    var t = oderCustomer;
                 }
             }
         }
