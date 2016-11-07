@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFramwork
+namespace _DIR_FILE
 {
     class Program
     {
         static void Main(string[] args)
         {
-
         }
     }
 }

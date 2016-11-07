@@ -1,6 +1,4 @@
-﻿
-using System;
-using System.Data.Entity;
+﻿using System;
 
 namespace _503_EF_CW
 {
@@ -8,32 +6,14 @@ namespace _503_EF_CW
     {
         static void Main()
         {
-            var user = new User
+            using (var e = new Entities())
             {
-                Name = Guid.NewGuid().ToString("N").ToUpper(),
-                SName = Guid.NewGuid().ToString("N").ToUpper(),
-                Age = 25
-            };
-
-            using (var context = new EfContext())
-            {
-                context.Users.Add(user);
-                foreach (var contextUser in context.Users)
+                foreach (var customer in e.Customers)
                 {
-                    var t = contextUser;
+                    Console.WriteLine(customer);
                 }
-                context.SaveChanges();
             }
+            Console.ReadKey();
         }
-    }
-
-    internal class EfContext : DbContext//, IDisposable
-    {
-        public DbSet<User> Users { get; set; }
-
-        //public void Dispose()
-        //{
-        //    Console.WriteLine("Освобождение не управляемых русурсов");
-        //}
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using _503_EF.model;
+using System;
 
 namespace _503_EF
 {
@@ -17,7 +14,7 @@ namespace _503_EF
                 LastName = "Пупкин",
                 Age = 27,
                 City = "Москва",
-                BirthDate = DateTime.Now.AddYears(-27)
+                BirthDate = DateTime.Now.AddYears(27)
             };
 
             var orderr = new Order
@@ -38,12 +35,6 @@ namespace _503_EF
                 {
                     var t = contextCustomer;
                 }
-
-            }
-
-            using (var context = new SContext())
-            {
-                // Вставить объект в БД и сохранить изменения
                 context.Orders.Add(orderr);
                 context.SaveChanges();
                 foreach (var oderCustomer in context.Orders)
@@ -51,8 +42,7 @@ namespace _503_EF
                     var t = oderCustomer;
                 }
             }
-
+            
         }
     }
-
 }
