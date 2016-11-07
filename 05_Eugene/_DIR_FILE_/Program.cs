@@ -24,8 +24,6 @@ namespace _DIR_FILE_
                 var s = myFile[i].Substring((path.Length+1), myFile[i].Length -(path.Length+1)) + Environment.NewLine;
                 File.AppendAllText(@"c:\download\list.txt", s);
             }
-            
-
             Console.ReadKey();
         }
     }

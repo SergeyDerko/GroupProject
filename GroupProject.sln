@@ -390,7 +390,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "505", "505", "{69A38598-2F9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppConfiguration", "CW\505\NestedConfiguration\AppConfiguration.csproj", "{F526C2D7-F9D8-4FDB-AA4D-795D869E54D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_DIR_FILE_", "05_Eugene\_DIR_FILE_\_DIR_FILE_.csproj", "{6BC4CFD0-0A69-41A8-91DC-EE998C7BB6F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIR_FILE_", "05_Eugene\_DIR_FILE_\DIR_FILE_.csproj", "{6BC4CFD0-0A69-41A8-91DC-EE998C7BB6F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
