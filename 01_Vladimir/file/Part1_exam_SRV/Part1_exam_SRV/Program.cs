@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Part1_exam_SRV;
+using System;
 using System.ServiceProcess;
 
-namespace PART1_EXAM_DIR_SRV
+namespace FirstServise
 {
     class Program
     {
@@ -51,12 +52,13 @@ namespace PART1_EXAM_DIR_SRV
             //Logger.Write(Level.Info, "Старт сервера");
 
             //#endregion
+
         }
 
         private static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs args)
         {
             const string method = "UnhandledExceptionHandler";
-            var ex = (Exception) args.ExceptionObject;
+            var ex = (Exception)args.ExceptionObject;
             Console.WriteLine(ex == null ? "Error!" : $"{method}\n{ex}");
         }
 
