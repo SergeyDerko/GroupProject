@@ -1,11 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Text;
+﻿using System.IO;
 
 namespace CalculationServise.modal
 {
     internal static class Scan
     {
+        //ДЛЯ ЗАПУСКА СЛУЖБЫ НЕОБХОДИМО ПРОПИСАТЬ АБСОЛЮТНЫЙ (ПОЛНЫЙ) АДРЕС ПАПОК
         // папка для сканирования
         private const string FolderToScan =@"..\..\files\Tocount";
         // папка для записи результата
