@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace _14_CalculationService
+namespace CalculationServise.service
 {
     public static class SrvUtils
     {

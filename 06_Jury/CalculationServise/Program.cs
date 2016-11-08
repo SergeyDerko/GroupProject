@@ -1,7 +1,8 @@
 ﻿using System;
 using System.ServiceProcess;
+using CalculationServise.service;
 
-namespace _14_CalculationService
+namespace CalculationServise
 {
     class Program
     {
@@ -34,6 +35,6 @@ namespace _14_CalculationService
             Console.WriteLine(ex == null ? "Error!" : $"{method}\n{ex}");
         }
 
-        //sc create TestService binPath="w:\repos\GroupProject\CW\501\501_srv\bin\Debug\501_srv.exe" DisplayName= "TestServiceDisplayName"
+        
     }
 }

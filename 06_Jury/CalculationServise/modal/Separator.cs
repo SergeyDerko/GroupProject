@@ -1,66 +1,49 @@
 ﻿using System;
 using System.Text;
 
-
-namespace _14_CalculationService
+namespace CalculationServise.modal
 {
     internal class Separator
     {
         private string _exampleInFile;
 
-        public void StartSeparator(string x)
+        public  Separator(string x)
         {
             _exampleInFile = x;
-            Console.WriteLine(" Сначала выполняем по порядку(слева направо) умножение и деление:\n");
             while (MultiplicationFinder(_exampleInFile) != DivisionFinder(_exampleInFile))
             {
                 if (MultiplicationFinder(_exampleInFile) < DivisionFinder(_exampleInFile))
                 {
                     var index = MultiplicationFinder(_exampleInFile);
-                    //Число слева от знака
                     var leftNumber = LeftNumber(index);
-                    //Число справа от знака
                     var rightNumber = RightNumber(index);
-                    //Считаем результат операции
                     ToCalculation(leftNumber, rightNumber, _exampleInFile, "*");
                 }
                 else
                 {
                     var index = DivisionFinder(_exampleInFile);
-                    //Число слева от знака
                     var leftNumber = LeftNumber(index);
-                    //Число справа от знака
                     var rightNumber = RightNumber(index);
-                    //Считаем результат операции
                     ToCalculation(leftNumber, rightNumber, _exampleInFile, "/");
                 }
             }
-            Console.WriteLine("\n Выполняем по порядку(слева направо) сложение и вычитание:\n");
             while (AdditionFinder(_exampleInFile) != SubtractionFinder(_exampleInFile))
             {
                 if (AdditionFinder(_exampleInFile) < SubtractionFinder(_exampleInFile))
                 {
                     var index = AdditionFinder(_exampleInFile);
-                    //Число слева от знака
                     var leftNumber = LeftNumber(index);
-                    //Число справа от знака
                     var rightNumber = RightNumber(index);
-                    //Считаем результат операции
                     ToCalculation(leftNumber, rightNumber, _exampleInFile, "+");
                 }
                 else
                 {
                     var index = SubtractionFinder(_exampleInFile);
-                    //Число слева от знака
                     var leftNumber = LeftNumber(index);
-                    //Число справа от знака
                     var rightNumber = RightNumber(index);
-                    //Считаем результат операции
                     ToCalculation(leftNumber, rightNumber, _exampleInFile, "-");
                 }
             }
-            Console.Write("\n Результат: ");
-            Scan.Green($"{_exampleInFile}");
         }
 
         private int RightNumber(int index)
@@ -69,9 +52,7 @@ namespace _14_CalculationService
             for (var i = indexRight; i < _exampleInFile.Length; i++)
             {
                 if (char.IsDigit(_exampleInFile[i]))
-                {
                     indexRight = i;
-                }
                 else
                 {
                     indexRight = i - 1;
@@ -88,9 +69,7 @@ namespace _14_CalculationService
             for (var i = indexLeft; i >= 0; i--)
             {
                 if (char.IsDigit(_exampleInFile[i]))
-                {
                     indexLeft = i;
-                }
                 else
                 {
                     indexLeft = i + 1;
@@ -105,12 +84,9 @@ namespace _14_CalculationService
         {
             _exampleInFile = x;
             var result = new Calculation(leftNumber, rightNumber, operation);
-            //Заменяем 
             var newstr = new StringBuilder(_exampleInFile);
             newstr.Replace(leftNumber + operation + rightNumber, result.Result.ToString());
             _exampleInFile = newstr.ToString();
-            Console.WriteLine($" {leftNumber}{operation}{rightNumber}={result.Result} --> {_exampleInFile}");
-
         }
 
         private static int MultiplicationFinder(string x)
@@ -139,10 +115,7 @@ namespace _14_CalculationService
 
         private static int Verifyindex(string x, int index)
         {
-            if (index == -1 || index == 0)
-            {
-                return x.Length + 1;
-            }
+            if (index == -1 || index == 0) return x.Length + 1;
             return index;
         }
 

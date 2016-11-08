@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace _14_CalculationService
+namespace CalculationServise.modal
 {
     internal class Calculation
     {
-        public int Result { get; private set; }
+        internal readonly int Result;
         public Calculation(int x, int y, string operation)
         {
             switch (operation)
@@ -22,7 +22,6 @@ namespace _14_CalculationService
                     Result = x * y;
                     break;
                 default:
-                    Console.WriteLine("Неправильный оператор");
                     break;
             }
 

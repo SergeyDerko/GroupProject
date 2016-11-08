@@ -1,6 +1,7 @@
 ﻿using System.Threading;
+using CalculationServise.modal;
 
-namespace _14_CalculationService
+namespace CalculationServise.service
 {
     /// <summary>
     /// Основной код сервиса для формирования задач в ис-про
@@ -17,8 +18,9 @@ namespace _14_CalculationService
                 var stopFlag = _stopFlag;
                 do
                 {
-                  Scan.StartCalculation();
-                } while (!SrvUtils.Retarder(1, ref stopFlag));
+                    Scan.StartCalculation(); // старт
+
+                } while (!SrvUtils.Retarder(5, ref stopFlag));
             });
             _thread.Start();
         }
