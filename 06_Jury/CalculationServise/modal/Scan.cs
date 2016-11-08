@@ -7,16 +7,11 @@ namespace CalculationServise.modal
     internal static class Scan
     {
         // папка для сканирования
-        private const string FolderToScan =
-            @"C:\Users\admin\Documents\Visual Studio 2015\Projects\CalculationServise\files\Tocount";
-
+        private const string FolderToScan =@"..\..\files\Tocount";
         // папка для записи результата
-        private const string FolderResult =
-            @"C:\Users\admin\Documents\Visual Studio 2015\Projects\CalculationServise\files\Result\";
-
-        // папка для перемещения решенных примеров
-        private const string FolderCompleted =
-            @"C:\Users\admin\Documents\Visual Studio 2015\Projects\CalculationServise\files\Completed\";
+        private const string FolderResult =@"..\..\files\Result\";
+        // папка для перемещения файлов
+        private const string FolderCompleted = @"..\..\files\Completed\";
 
 
         public static void StartCalculation()
