@@ -1,10 +1,8 @@
-﻿
-using System;
-using System.Threading;
+﻿using System.Threading;
 
 namespace Service_Calculation
 {
-    internal class CalculationService
+    public class CalculationService
     {
         private volatile bool _stopFlag;
         private Thread _thread;
@@ -18,12 +16,8 @@ namespace Service_Calculation
                 do
                 {
                     var start = new Separator();
-                    for (int i = 0; i < 10000; i++)
-                    {
-                        start.Scan(new Separator().PathDir);
-                        SrvUtils.Retarder(1, ref _stopFlag);
-                    }
-                } while (!SrvUtils.Retarder(30, ref _stopFlag));
+                    start.Scan(start.PathDir);
+                } while (!SrvUtils.Retarder(1, ref _stopFlag));
             });
             _thread.Start();
         }

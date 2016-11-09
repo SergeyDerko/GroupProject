@@ -2,7 +2,7 @@
 
 namespace Service_Calculation
 {
-    internal class MainService : ServiceBase
+    public class MainService : ServiceBase
     {
 
         private readonly

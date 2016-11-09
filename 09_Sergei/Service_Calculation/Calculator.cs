@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace Service_Calculation
 {
-    class Calculator
+    public class Calculator
     {
         //Метод калькулятора расчет или  Calculation
         protected internal int Calculation(string pattern, string expression)//принимает паттерн регулярного выражение и выражение которое будем считать

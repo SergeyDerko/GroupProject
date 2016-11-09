@@ -6,7 +6,7 @@ using System.ServiceProcess;
 namespace Service_Calculation
 {
     [RunInstaller(true)]
-    internal class SrvInstaller : Installer
+    public class SrvInstaller : Installer
     {
         private readonly ServiceProcessInstaller _serviceProcessInstaller;
         private readonly ServiceInstaller _serviceInstaller;

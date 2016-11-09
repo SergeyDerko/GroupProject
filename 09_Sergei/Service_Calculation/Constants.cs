@@ -1,6 +1,6 @@
 ﻿namespace Service_Calculation
 {
-    internal class Constants
+    public class Constants
     {
         /// <summary>
         /// Интервал проверки флага завершения работы службы.

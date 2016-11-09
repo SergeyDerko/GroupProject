@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace Service_Calculation
 {
-    internal class Separator
+    public class Separator
     {
         public  string PathDir { get; set; }
         public  string PathResult { get; set; }
@@ -12,8 +12,8 @@ namespace Service_Calculation
         //конструктор по умолчанию
         internal Separator()
         {
-            PathDir = @"../../InputFiles"; // путь к директории по умолчанию
-            PathResult = @"../../result.txt"; // путь к файлу куда, будут записываться результаты
+            PathDir = @"D:/Gitprojects/GroupProject/09_Sergei/Files"; // путь к директории по умолчанию
+            PathResult = @"D:/Gitprojects/GroupProject/09_Sergei/result.txt"; // путь к файлу куда, будут записываться результаты
         }
         //конструктор по желанию №1:)
         internal Separator(string pathDir)
