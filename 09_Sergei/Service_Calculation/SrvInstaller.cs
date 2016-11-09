@@ -20,10 +20,11 @@ namespace Service_Calculation
 
             _serviceInstaller.ServiceName = Path.GetFileNameWithoutExtension(typeof(Program).Assembly.CodeBase);
             _serviceInstaller.DisplayName = Path.GetFileNameWithoutExtension(typeof(Program).Assembly.CodeBase);
-            _serviceInstaller.Description = "Калькулятор арифметических выражений считанных с файла";
+            _serviceInstaller.Description = "Service Calculation SRV";
             _serviceInstaller.StartType = ServiceStartMode.Automatic;
 
             Installers.AddRange(new Installer[] { _serviceProcessInstaller, _serviceInstaller });
+            
         }
     }
 }
