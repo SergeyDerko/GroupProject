@@ -13,7 +13,9 @@ namespace FirstServise
             get
             {
                 if (_instance == null)
-                    _instance = (Config)ConfigurationManager.GetSection("serviceConfig");
+                {
+                    _instance = ConfigurationManager.GetSection("serviceConfig") as Config;
+                }
                 return _instance;
             }
         }
