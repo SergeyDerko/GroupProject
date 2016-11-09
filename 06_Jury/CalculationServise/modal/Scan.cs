@@ -4,13 +4,20 @@ namespace CalculationServise.modal
 {
     internal static class Scan
     {
-        //ДЛЯ ЗАПУСКА СЛУЖБЫ НЕОБХОДИМО ПРОПИСАТЬ АБСОЛЮТНЫЙ (ПОЛНЫЙ) АДРЕС ПАПОК
         // папка для сканирования
-        private const string FolderToScan =@"..\..\files\Tocount";
+        private static readonly string FolderToScan =
+            Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
+            + @"..\..\..\files\Tocount";
+
         // папка для записи результата
-        private const string FolderResult =@"..\..\files\Result\";
-        // папка для перемещения файлов
-        private const string FolderCompleted = @"..\..\files\Completed\";
+        private static readonly string FolderResult =
+            Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
+            + @"..\..\..\files\Result\";
+
+        // папка для перемещения решенных примеров
+        private static readonly string FolderCompleted =
+            Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
+            + @"..\..\..\files\Completed\";
 
 
         public static void StartCalculation()

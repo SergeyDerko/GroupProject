@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace CalculationServise.modal
 {
     internal class Calculation

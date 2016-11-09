@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.IO;
 using Common;
 
@@ -18,6 +19,7 @@ namespace CalculationServise
                 }
                 return _instance;
             }
+
         }
 
         [ConfigurationProperty("log", IsRequired = false)]
@@ -26,6 +28,7 @@ namespace CalculationServise
             get { return (LogElement)this["log"]; }
         }
     }
+
     public class LogElement : ConfigurationElement
     {
         [ConfigurationProperty("dir", DefaultValue = "Log", IsRequired = false)]
@@ -62,5 +65,4 @@ namespace CalculationServise
             }
         }
     }
-
 }
