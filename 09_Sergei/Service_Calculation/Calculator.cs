@@ -7,10 +7,10 @@ namespace Service_Calculation
     class Calculator
     {
         //Метод калькулятора расчет или  Calculation
-        protected internal int Calculation(string _pattern, string _expression)//принимает паттерн регулярного выражение и выражение которое будем считать
+        protected internal int Calculation(string pattern, string expression)//принимает паттерн регулярного выражение и выражение которое будем считать
         {
             var result = 0;//переменная result будет хранить в себе полученный результат
-            foreach (Match c in Regex.Matches(_expression, _pattern))
+            foreach (Match c in Regex.Matches(expression, pattern))
             {
                 var value1 = int.Parse(c.Groups[1].Value);
                 var value2 = int.Parse(c.Groups[3].Value);

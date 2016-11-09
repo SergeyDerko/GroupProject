@@ -48,11 +48,11 @@ namespace Service_Calculation
         #endregion
         #region Парсинг данных с файла.
         //Обработка полученных данных и возвращение результата обработки
-        public string DataProcessing(string _str)
+        public string DataProcessing(string str)
         {
             //var result = 0;
             var pattern = @"(\d+)([*/+-])(\d+)";//pattern - переменная которая хранит модель регулярного выражения математических операций.
-            var reStr = _str.Replace(" ", string.Empty);//удаляем все пробелы в строке что бы не мешали:)
+            var reStr = str.Replace(" ", string.Empty);//удаляем все пробелы в строке что бы не мешали:)
             var expression = GetExpression(reStr);//находим в строке приоритетное простое выражение совпадающее с паттерном выражений и записываем его в переменную _expression
             var calculator = new Calculator();//
             if (Regex.IsMatch(expression, pattern))//проверяем корректность выражения
@@ -64,7 +64,7 @@ namespace Service_Calculation
                 var newStr = reStr.Replace(expression, expressionResult);
                 return DataProcessing(newStr); //делаем рекурсию 
             }
-            return _str;//когда все выражения в строке посчитаны,выводим ее из метода.
+            return str;//когда все выражения в строке посчитаны,выводим ее из метода.
         }
         #endregion
         #region Получаем из строки выражение
@@ -85,9 +85,9 @@ namespace Service_Calculation
             else if (str.Contains("/"))
             {
                 var indexPm = str.IndexOf("/", StringComparison.Ordinal);
-                var _valueLeft = GetLeftValue(str, indexPm);
-                var _valueRight = GetRightValue(str, indexPm);
-                exp = _valueLeft + "/" + _valueRight;
+                var valueLeft = GetLeftValue(str, indexPm);
+                var valueRight = GetRightValue(str, indexPm);
+                exp = valueLeft + "/" + valueRight;
             }
             else if (str.Contains("+"))
             {
