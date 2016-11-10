@@ -18,8 +18,8 @@ namespace CalculationServise.service
 
             _serviceProcessInstaller.Account = ServiceAccount.LocalSystem;
 
-            _serviceInstaller.ServiceName = "Part1_exam_srv" + Path.GetFileNameWithoutExtension(typeof(Program).Assembly.CodeBase);
-            _serviceInstaller.DisplayName = "Part1_exam_srv" + Path.GetFileNameWithoutExtension(typeof(Program).Assembly.CodeBase) + "Part1_exam_srv";
+            _serviceInstaller.ServiceName = "Part1_exam_srv_" + Path.GetFileNameWithoutExtension(typeof(Program).Assembly.CodeBase);
+            _serviceInstaller.DisplayName = "Part1_exam_srv_" + Path.GetFileNameWithoutExtension(typeof(Program).Assembly.CodeBase);
             _serviceInstaller.Description = "Часть 1. Основы C#. Cервис - Калькулятор арифметических выражений считанных с файла";
             _serviceInstaller.StartType = ServiceStartMode.Automatic;
 

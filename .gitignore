@@ -246,6 +246,5 @@ ModelManifest.xml
 /04_Artem/10_zoo
 
 # project work folder
-/06_Jury/CalculationServise/files/Completed
-/06_Jury/CalculationServise/files/Result
-/06_Jury/CalculationServise/files/Tocount
+06_Jury/CalculationServise/files/**/*.txt
+
