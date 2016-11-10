@@ -57,9 +57,8 @@ namespace CalculationServise
 
             Logger.Prefix = Config.Get.Log.Prefix;
             Logger.Start();
-
             Logger.Write(Level.Info, "Старт сервера");
-
+            
             #endregion
 
         }

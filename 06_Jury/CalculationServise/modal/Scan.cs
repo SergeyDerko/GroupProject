@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Common;
 
 namespace CalculationServise.modal
 {
@@ -27,8 +28,10 @@ namespace CalculationServise.modal
             {
                 // Получение имени файла для дальнейшей записи файла з результатом
                 var fileName = Path.GetFileName(pathfile);
+                Logger.Write(Level.Info, $"Файл {fileName}");
                 foreach (var textInFile in File.ReadLines(pathfile)) // цикл для считывания файла
                 {
+                    Logger.Write(Level.Info, $"Выражение: {textInFile}. Решение:");
                     var separator = new Separator(textInFile); // отправка в сепаратор для решения
                     var result = separator.WriteOut(); // результат 
                     // запись в папку FolderResult
@@ -45,6 +48,11 @@ namespace CalculationServise.modal
         {
             // поиск файлов с расширением txt
             var scanResult = Directory.GetFiles(FolderToScan, "*.txt");
+            Logger.Write(Level.Info,
+                scanResult.Length != 0
+                    ? $"Обнаружены файлы в рабочей папке. Найдено {scanResult.Length} файлов."
+                    : "В рабочей папке нет файлов.");
+
             return scanResult;
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using Common;
 
 namespace CalculationServise.modal
 {
@@ -7,7 +8,7 @@ namespace CalculationServise.modal
     {
         private string _exampleInFile;
 
-        public  Separator(string x)
+        public Separator(string x)
         {
             _exampleInFile = x;
             while (MultiplicationFinder(_exampleInFile) != DivisionFinder(_exampleInFile))
@@ -44,6 +45,7 @@ namespace CalculationServise.modal
                     ToCalculation(leftNumber, rightNumber, _exampleInFile, "-");
                 }
             }
+            Logger.Write(Level.Info, $"Результат: {_exampleInFile}");
         }
 
         private int RightNumber(int index)
@@ -87,6 +89,7 @@ namespace CalculationServise.modal
             var newstr = new StringBuilder(_exampleInFile);
             newstr.Replace(leftNumber + operation + rightNumber, result.Result.ToString());
             _exampleInFile = newstr.ToString();
+            Logger.Write(Level.Info, $"{leftNumber}{operation}{rightNumber}={result.Result} --> {_exampleInFile}");
         }
 
         private static int MultiplicationFinder(string x)
