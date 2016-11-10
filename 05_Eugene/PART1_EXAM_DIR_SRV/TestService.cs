@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using Common;
 
 namespace PART1_EXAM_DIR_SRV
 {
@@ -14,13 +15,16 @@ namespace PART1_EXAM_DIR_SRV
 
         public void Start()
         {
+            const string method = "Start";
             _thread = new Thread(x =>
             {
                 do
                 {
                     for (int i = 0; i < 10000; i++)
                     {
-                        Console.WriteLine($"TestService: {i}");
+                        var s = $"TestService: {i}";
+                        Logger.Trace(method, s);
+                        Console.WriteLine(s);
                         SrvUtils.Retarder(1, ref _stopFlag);
                     }
                 } while (!SrvUtils.Retarder(30, ref _stopFlag));

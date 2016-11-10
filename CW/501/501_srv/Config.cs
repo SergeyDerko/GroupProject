@@ -13,7 +13,9 @@ namespace FirstServise
             get
             {
                 if (_instance == null)
-                    _instance = (Config)ConfigurationManager.GetSection("serviceConfig");
+                {
+                    _instance = ConfigurationManager.GetSection("serviceConfig") as Config;
+                }
                 return _instance;
             }
         }
@@ -33,10 +35,11 @@ namespace FirstServise
             get
             {
                 string ret = (string)this["dir"] ?? string.Empty;
-
                 if (!Path.IsPathRooted(ret))
-                    ret = System.Reflection.Assembly.GetExecutingAssembly().Location;
-
+                {
+                    var name = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                    ret = Path.Combine(name, "Log");
+                }
                 return ret;
             }
         }

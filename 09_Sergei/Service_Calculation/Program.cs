@@ -3,7 +3,7 @@ using System.ServiceProcess;
 
 namespace Service_Calculation
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {

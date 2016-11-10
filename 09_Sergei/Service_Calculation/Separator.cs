@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace Service_Calculation
 {
-    internal class Separator
+    public class Separator
     {
         public  string PathDir { get; set; }
         public  string PathResult { get; set; }
@@ -12,14 +12,14 @@ namespace Service_Calculation
         //конструктор по умолчанию
         internal Separator()
         {
-            PathDir = @"../../InputFiles"; // путь к директории по умолчанию
-            PathResult = @"../../result.txt"; // путь к файлу куда, будут записываться результаты
+            PathDir = @"D:\Gitprojects\GroupProject\09_Sergei\Service_Calculation\Files"; // путь к директории по умолчанию
+            PathResult = @"D:\Gitprojects\GroupProject\09_Sergei\Service_Calculation\result.txt"; // путь к файлу куда, будут записываться результаты
         }
         //конструктор по желанию №1:)
         internal Separator(string pathDir)
         {
             PathDir = pathDir; // путь к директории который указывается при инстанцировании обьекта класса, которую будет сканировать программа
-            PathResult = @"../../result.txt"; // путь к файлу по умолчанию, куда будут записываться результаты вычеслений
+            PathResult = @"D:\Gitprojects\GroupProject\09_Sergei\Service_Calculation\result.txt"; // путь к файлу по умолчанию, куда будут записываться результаты вычеслений
         }
         //конструктор по желанию №2
         internal Separator(string pathDir, string pathResult)
@@ -40,19 +40,18 @@ namespace Service_Calculation
                 File.AppendAllText(PathResult, '\n' + "математические выражения на входе" + str + '\n');
                 var result = DataProcessing(str); //обрабатаваем данные в методе DataProcessing(str)
                 var strResult = result.Replace("=", string.Empty);
-                File.AppendAllText(PathResult,'\n'+"сверху промежуточные результаты" + '\n'+"Снизу общие результаты каждого посчитаного выражения"+'\n'+strResult);
+                File.AppendAllText(PathResult,"\n"+"сверху промежуточные результаты" + "\n"+"Снизу общие результаты каждого посчитаного выражения"+"\n"+strResult);
                 File.Delete(fileName);
             }
-
         }
         #endregion
         #region Парсинг данных с файла.
         //Обработка полученных данных и возвращение результата обработки
-        public string DataProcessing(string _str)
+        public string DataProcessing(string str)
         {
             //var result = 0;
             var pattern = @"(\d+)([*/+-])(\d+)";//pattern - переменная которая хранит модель регулярного выражения математических операций.
-            var reStr = _str.Replace(" ", string.Empty);//удаляем все пробелы в строке что бы не мешали:)
+            var reStr = str.Replace(" ", string.Empty);//удаляем все пробелы в строке что бы не мешали:)
             var expression = GetExpression(reStr);//находим в строке приоритетное простое выражение совпадающее с паттерном выражений и записываем его в переменную _expression
             var calculator = new Calculator();//
             if (Regex.IsMatch(expression, pattern))//проверяем корректность выражения
@@ -64,7 +63,7 @@ namespace Service_Calculation
                 var newStr = reStr.Replace(expression, expressionResult);
                 return DataProcessing(newStr); //делаем рекурсию 
             }
-            return _str;//когда все выражения в строке посчитаны,выводим ее из метода.
+            return str;//когда все выражения в строке посчитаны,выводим ее из метода.
         }
         #endregion
         #region Получаем из строки выражение
@@ -85,9 +84,9 @@ namespace Service_Calculation
             else if (str.Contains("/"))
             {
                 var indexPm = str.IndexOf("/", StringComparison.Ordinal);
-                var _valueLeft = GetLeftValue(str, indexPm);
-                var _valueRight = GetRightValue(str, indexPm);
-                exp = _valueLeft + "/" + _valueRight;
+                var valueLeft = GetLeftValue(str, indexPm);
+                var valueRight = GetRightValue(str, indexPm);
+                exp = valueLeft + "/" + valueRight;
             }
             else if (str.Contains("+"))
             {

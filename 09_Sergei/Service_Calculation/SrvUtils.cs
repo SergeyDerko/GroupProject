@@ -2,7 +2,7 @@
 
 namespace Service_Calculation
 {
-    internal static class SrvUtils
+    public static class SrvUtils
     {
         /// <summary>
         /// Замедляет работу основного потока на указанное количество секунд.
