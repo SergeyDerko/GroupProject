@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -401,6 +401,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Part1_ExamService", "06_Jury\CalculationServise\Part1_ExamService.csproj", "{EDEDC25E-FE56-4DDF-A7DF-30D6F6AA2C79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppProject", "09_Sergei\WebAppProject\WebAppProject.csproj", "{EFD5680A-BFD8-4063-867D-3D491F287305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Part1_exam_SRV", "03_Oleg\Part\Part1_exam_SRV\Part1_exam_SRV.csproj", "{1EF62659-AAA7-4AB7-936D-112A5102BC91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stacker", "03_Oleg\Stack\Stacker\Stacker.csproj", "{969E3593-DE6E-467F-89EA-81676D0E390C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1594,6 +1598,22 @@ Global
 		{EFD5680A-BFD8-4063-867D-3D491F287305}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EFD5680A-BFD8-4063-867D-3D491F287305}.Release|x86.ActiveCfg = Release|Any CPU
 		{EFD5680A-BFD8-4063-867D-3D491F287305}.Release|x86.Build.0 = Release|Any CPU
+		{1EF62659-AAA7-4AB7-936D-112A5102BC91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF62659-AAA7-4AB7-936D-112A5102BC91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF62659-AAA7-4AB7-936D-112A5102BC91}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1EF62659-AAA7-4AB7-936D-112A5102BC91}.Debug|x86.Build.0 = Debug|Any CPU
+		{1EF62659-AAA7-4AB7-936D-112A5102BC91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF62659-AAA7-4AB7-936D-112A5102BC91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF62659-AAA7-4AB7-936D-112A5102BC91}.Release|x86.ActiveCfg = Release|Any CPU
+		{1EF62659-AAA7-4AB7-936D-112A5102BC91}.Release|x86.Build.0 = Release|Any CPU
+		{969E3593-DE6E-467F-89EA-81676D0E390C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{969E3593-DE6E-467F-89EA-81676D0E390C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{969E3593-DE6E-467F-89EA-81676D0E390C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{969E3593-DE6E-467F-89EA-81676D0E390C}.Debug|x86.Build.0 = Debug|Any CPU
+		{969E3593-DE6E-467F-89EA-81676D0E390C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{969E3593-DE6E-467F-89EA-81676D0E390C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{969E3593-DE6E-467F-89EA-81676D0E390C}.Release|x86.ActiveCfg = Release|Any CPU
+		{969E3593-DE6E-467F-89EA-81676D0E390C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1771,5 +1791,7 @@ Global
 		{59EF9158-B1D9-49FD-B313-9F51397EC254} = {574D8AE2-3CF2-4AC5-B558-850669DA4184}
 		{EDEDC25E-FE56-4DDF-A7DF-30D6F6AA2C79} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
 		{EFD5680A-BFD8-4063-867D-3D491F287305} = {E4CE2450-2BB1-4440-9BBF-34FEE661A092}
+		{1EF62659-AAA7-4AB7-936D-112A5102BC91} = {1E5F935B-DC63-439B-BFE0-A5154DB54DBA}
+		{969E3593-DE6E-467F-89EA-81676D0E390C} = {1E5F935B-DC63-439B-BFE0-A5154DB54DBA}
 	EndGlobalSection
 EndGlobal
