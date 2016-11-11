@@ -31,28 +31,28 @@ namespace FirstServise
 
         private static void Init()
         {
-            //#region Инициализация логгера
+            #region Инициализация логгера
 
-            //Logger.Level = Config.Get.Log.Level;
+            Logger.Level = Config.Get.Log.Level;
 
-            //// Определение пути доступа к журналу событий
+            // Определение пути доступа к журналу событий
 
-            //try
-            //{
-            //    Logger.Dir = Config.Get.Log.Dir;
-            //    if (!Directory.Exists(Logger.Dir))
-            //        Directory.CreateDirectory(Logger.Dir);
-            //}
-            //catch
-            //{
-            //}
+            try
+            {
+                Logger.Dir = Config.Get.Log.Dir;
+                if (!Directory.Exists(Logger.Dir))
+                    Directory.CreateDirectory(Logger.Dir);
+            }
+            catch
+            {
+            }
 
-            //Logger.Prefix = Config.Get.Log.Prefix;
-            //Logger.Start();
+            Logger.Prefix = Config.Get.Log.Prefix;
+            Logger.Start();
 
-            //Logger.Write(Level.Info, "Старт сервера");
+            Logger.Write(Level.Info, "Старт сервера");
 
-            //#endregion
+            #endregion
 
         }
 
