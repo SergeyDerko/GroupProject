@@ -3,7 +3,7 @@ using System.Configuration.Install;
 using System.IO;
 using System.ServiceProcess;
 
-namespace Service_Calculation
+namespace Service_Calculation.Service
 {
     [RunInstaller(true)]
     public class SrvInstaller : Installer

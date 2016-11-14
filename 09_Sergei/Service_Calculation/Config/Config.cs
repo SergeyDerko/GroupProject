@@ -1,8 +1,7 @@
-﻿using Common;
-using System.Configuration;
+﻿using System.Configuration;
 using System.IO;
 
-namespace Service_Calculation
+namespace Service_Calculation.Config
 {
     public class Config : ConfigurationSection
     {

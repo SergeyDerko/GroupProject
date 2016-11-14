@@ -1,6 +1,6 @@
 ﻿using System.ServiceProcess;
 
-namespace Service_Calculation
+namespace Service_Calculation.Service
 {
     public class MainService : ServiceBase
     {

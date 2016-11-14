@@ -2,18 +2,18 @@
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace Service_Calculation
+namespace Service_Calculation.Modal
 {
     public class Calculator
     {
         //Метод калькулятора расчет или  Calculation
-        protected internal int Calculation(string pattern, string expression)//принимает паттерн регулярного выражение и выражение которое будем считать
+        protected internal double Calculation(string pattern, string expression)//принимает паттерн регулярного выражение и выражение которое будем считать
         {
-            var result = 0;//переменная result будет хранить в себе полученный результат
+            double result = 0;//переменная result будет хранить в себе полученный результат
             foreach (Match c in Regex.Matches(expression, pattern))
             {
-                var value1 = int.Parse(c.Groups[1].Value);
-                var value2 = int.Parse(c.Groups[3].Value);
+                var value1 = double.Parse(c.Groups[1].Value);
+                var value2 = double.Parse(c.Groups[3].Value);
                 var action = c.Groups[2].Value;
                 //проверяем какое действие нужно выполнить 
                 switch (action)

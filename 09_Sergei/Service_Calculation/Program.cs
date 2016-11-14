@@ -1,11 +1,12 @@
 ﻿using System;
 using System.ServiceProcess;
+using Service_Calculation.Service;
 
 namespace Service_Calculation
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             AppDomain currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += UnhandledExceptionHandler;

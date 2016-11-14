@@ -59,20 +59,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculationService.cs" />
-    <Compile Include="Calculator.cs" />
-    <Compile Include="Config.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="MainService.cs">
+    <Compile Include="Service\CalculationService.cs" />
+    <Compile Include="Modal\Calculator.cs" />
+    <Compile Include="Config\Config.cs" />
+    <Compile Include="Service\Constants.cs" />
+    <Compile Include="Config\Level.cs" />
+    <Compile Include="Config\Logger.cs" />
+    <Compile Include="Service\MainService.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Separator.cs" />
-    <Compile Include="SrvInstaller.cs">
+    <Compile Include="Modal\Separator.cs" />
+    <Compile Include="Service\SrvInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SrvUtils.cs" />
+    <Compile Include="Service\SrvUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

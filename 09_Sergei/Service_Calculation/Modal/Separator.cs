@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace Service_Calculation
+namespace Service_Calculation.Modal
 {
     public class Separator
     {
         public  string PathDir { get; set; }
         public  string PathResult { get; set; }
+
         #region Constructor
         //конструктор по умолчанию
         internal Separator()
@@ -49,22 +51,21 @@ namespace Service_Calculation
         //Обработка полученных данных и возвращение результата обработки
         public string DataProcessing(string str)
         {
-            //var result = 0;
-            var pattern = @"(\d+)([*/+-])(\d+)";//pattern - переменная которая хранит модель регулярного выражения математических операций.
-            var reStr = str.Replace(" ", string.Empty);//удаляем все пробелы в строке что бы не мешали:)
-            var expression = GetExpression(reStr);//находим в строке приоритетное простое выражение совпадающее с паттерном выражений и записываем его в переменную _expression
-            var calculator = new Calculator();//
-            if (Regex.IsMatch(expression, pattern))//проверяем корректность выражения
+            while (true)
             {
-                //если матиматическое выражение прошло проверку, начинаем считать его с помощью метода Calculation из класса Calculator,
-                //после чего сохраняем результат в переменную _expressionResult
-                var expressionResult = calculator.Calculation(pattern, expression).ToString();
-                //заменяем уже посчитаное выражение в строке на его результат
+                const string pattern = @"(\d+)([*/+-])(\d+)"; //pattern - переменная которая хранит модель регулярного выражения математических операций.
+                var reStr = str.Replace(" ", string.Empty); //удаляем все пробелы в строке что бы не мешали:)
+               // FindBrackers(reStr);
+                var expression = GetExpression(reStr); //находим в строке приоритетное простое выражение совпадающее с паттерном выражений и записываем его в переменную _expression
+                var calculator = new Calculator(); 
+                if (!Regex.IsMatch(expression, pattern))
+                    return str; 
+                var expressionResult = calculator.Calculation(pattern, expression).ToString(CultureInfo.InvariantCulture);
                 var newStr = reStr.Replace(expression, expressionResult);
-                return DataProcessing(newStr); //делаем рекурсию 
+                str = newStr;
             }
-            return str;//когда все выражения в строке посчитаны,выводим ее из метода.
         }
+        
         #endregion
         #region Получаем из строки выражение
         //Метод получения выражения
@@ -72,7 +73,8 @@ namespace Service_Calculation
         {
 
             var exp = string.Empty;//создаем переменную в которую будем записывать свое выражение
-                                    //Блок кода связка ветвлений, которая определяет приоритетность операторов 
+
+            //Блок кода связка ветвлений, которая определяет приоритетность операторов
             if (str.Contains("*"))//есть строка содержит знак умножения
             {
                 var indexM = str.IndexOf("*", StringComparison.Ordinal);//определяем индекс
