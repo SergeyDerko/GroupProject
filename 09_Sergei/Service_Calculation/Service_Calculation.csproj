@@ -64,7 +64,6 @@
     <Compile Include="Config\Config.cs" />
     <Compile Include="Service\Constants.cs" />
     <Compile Include="Config\Level.cs" />
-    <Compile Include="Config\Logger.cs" />
     <Compile Include="Service\MainService.cs">
       <SubType>Component</SubType>
     </Compile>

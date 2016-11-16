@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.IO;
 using System.Text.RegularExpressions;
+using Common;
 
 namespace Service_Calculation.Modal
 {
@@ -38,11 +39,13 @@ namespace Service_Calculation.Modal
             var files = Directory.GetFiles(pathDirectory); // считываем все файлы с указанной директории
             foreach (var fileName in files) //проходим по каждому файлу отдельно
             {
+                Logger.Write(Level.Info, $"Файл {fileName}");
                 var str = File.ReadAllText(fileName); // считываем данные с файла
-                File.AppendAllText(PathResult, '\n' + "математические выражения на входе" + str + '\n');
+                File.AppendAllText(PathResult, $"математические выражения на входе {str}. \n");
                 var result = DataProcessing(str); //обрабатаваем данные в методе DataProcessing(str)
+                Logger.Write(Level.Info, $"Результат: {result}.");
                 var strResult = result.Replace("=", string.Empty);
-                File.AppendAllText(PathResult,"\n"+"сверху промежуточные результаты" + "\n"+"Снизу общие результаты каждого посчитаного выражения"+"\n"+strResult);
+                File.WriteAllText(PathResult, $"Результаты посчитаных выражений: {str} = {strResult}");
                 File.Delete(fileName);
             }
         }
@@ -55,13 +58,15 @@ namespace Service_Calculation.Modal
             {
                 const string pattern = @"(\d+)([*/+-])(\d+)"; //pattern - переменная которая хранит модель регулярного выражения математических операций.
                 var reStr = str.Replace(" ", string.Empty); //удаляем все пробелы в строке что бы не мешали:)
-               // FindBrackers(reStr);
                 var expression = GetExpression(reStr); //находим в строке приоритетное простое выражение совпадающее с паттерном выражений и записываем его в переменную _expression
+                Logger.Write(Level.Info, $"Выражение: {expression} \n");
                 var calculator = new Calculator(); 
                 if (!Regex.IsMatch(expression, pattern))
                     return str; 
                 var expressionResult = calculator.Calculation(pattern, expression).ToString(CultureInfo.InvariantCulture);
+                Logger.Write(Level.Info, $"Промежуточный результат: {expressionResult} . \n");
                 var newStr = reStr.Replace(expression, expressionResult);
+                Logger.Write(Level.Info, $"Новое выражение с посчитаным промежуточным результатом: {newStr} . \n");
                 str = newStr;
             }
         }

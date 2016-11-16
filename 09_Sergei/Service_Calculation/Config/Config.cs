@@ -5,25 +5,12 @@ namespace Service_Calculation.Config
 {
     public class Config : ConfigurationSection
     {
-        static Config _instance;
+        private static Config _instance;
         
-        public static Config Get
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = ConfigurationManager.GetSection("serviceConfig") as Config;
-                }
-                return _instance;
-            }
-        }
+        public static Config Get => _instance ?? (_instance = ConfigurationManager.GetSection("serviceConfig") as Config);
 
         [ConfigurationProperty("log", IsRequired = false)]
-        public LogElement Log
-        {
-            get { return (LogElement)this["log"]; }
-        }
+        public LogElement Log => (LogElement)this["log"];
     }
 
     public class LogElement : ConfigurationElement
@@ -33,24 +20,18 @@ namespace Service_Calculation.Config
         {
             get
             {
-                string ret = (string)this["dir"] ?? string.Empty;
+                var ret = (string)this["dir"] ?? string.Empty;
                 if (!Path.IsPathRooted(ret))
                 {
                     var name = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-                    ret = Path.Combine(name, "Log");
+                    if (name != null) ret = Path.Combine(name, "Log");
                 }
                 return ret;
             }
         }
 
         [ConfigurationProperty("level", DefaultValue = Level.Trace, IsRequired = false)]
-        public Level Level
-        {
-            get
-            {
-                return (Level)this["level"];
-            }
-        }
+        public Level Level => (Level)this["level"];
 
         [ConfigurationProperty("prefix", DefaultValue = "", IsRequired = false)]
         public string Prefix
