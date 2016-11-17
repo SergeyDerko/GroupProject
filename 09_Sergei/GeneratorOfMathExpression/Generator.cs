@@ -13,7 +13,7 @@ namespace GeneratorOfMathExpression
         {
             var rand = new Random();
             var arr = new[] { '*', '/', '+', '-' };
-            const string outFile = @"C:\Users\Serhiy\Documents\visual studio 2015\Projects\GeneratorOfMathExpression\GeneratorOfMathExpression\OutFile.txt";
+            const string outFile = @"D:\Gitprojects\GroupProject\09_Sergei\GeneratorOfMathExpression\OutFile.txt";
             var expression = string.Empty;
             var lenght = rand.Next(3, 10);
             for (var i = 0; i <= lenght; i++)

@@ -408,6 +408,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stacker", "03_Oleg\WorkStac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstWebProject", "09_Sergei\FirstWebProject\FirstWebProject.csproj", "{639C46E3-6495-40E0-AADC-E58C4EA2288E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratorOfMathExpression", "09_Sergei\GeneratorOfMathExpression\GeneratorOfMathExpression.csproj", "{5B63EC23-D53A-49F4-A5DB-75B71B110C8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1624,6 +1626,14 @@ Global
 		{639C46E3-6495-40E0-AADC-E58C4EA2288E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{639C46E3-6495-40E0-AADC-E58C4EA2288E}.Release|x86.ActiveCfg = Release|Any CPU
 		{639C46E3-6495-40E0-AADC-E58C4EA2288E}.Release|x86.Build.0 = Release|Any CPU
+		{5B63EC23-D53A-49F4-A5DB-75B71B110C8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B63EC23-D53A-49F4-A5DB-75B71B110C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B63EC23-D53A-49F4-A5DB-75B71B110C8F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5B63EC23-D53A-49F4-A5DB-75B71B110C8F}.Debug|x86.Build.0 = Debug|Any CPU
+		{5B63EC23-D53A-49F4-A5DB-75B71B110C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B63EC23-D53A-49F4-A5DB-75B71B110C8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B63EC23-D53A-49F4-A5DB-75B71B110C8F}.Release|x86.ActiveCfg = Release|Any CPU
+		{5B63EC23-D53A-49F4-A5DB-75B71B110C8F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1804,5 +1814,6 @@ Global
 		{EB05525A-7F7C-4419-AAEC-762A649DF6AD} = {1E5F935B-DC63-439B-BFE0-A5154DB54DBA}
 		{969E3593-DE6E-467F-89EA-81676D0E390C} = {1E5F935B-DC63-439B-BFE0-A5154DB54DBA}
 		{639C46E3-6495-40E0-AADC-E58C4EA2288E} = {E4CE2450-2BB1-4440-9BBF-34FEE661A092}
+		{5B63EC23-D53A-49F4-A5DB-75B71B110C8F} = {E4CE2450-2BB1-4440-9BBF-34FEE661A092}
 	EndGlobalSection
 EndGlobal
