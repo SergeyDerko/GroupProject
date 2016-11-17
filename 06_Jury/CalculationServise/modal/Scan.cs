@@ -29,13 +29,19 @@ namespace CalculationServise.modal
                 // Получение имени файла для дальнейшей записи файла з результатом
                 var fileName = Path.GetFileName(pathfile);
                 Logger.Write(Level.Info, $"Файл {fileName}");
+                var count =1;
+
+                if (File.Exists(FolderResult + $"Result of {fileName}"))
+                    File.Delete(FolderResult + $"Result of {fileName}");
+
+
                 foreach (var textInFile in File.ReadLines(pathfile)) // цикл для считывания файла
                 {
-                    Logger.Write(Level.Info, $"Выражение: {textInFile}. Решение:");
+                    Logger.Write(Level.Info, $"Выражение {count++}: {textInFile}. Решение:");
                     var separator = new Separator(textInFile); // отправка в сепаратор для решения
                     var result = separator.WriteOut(); // результат 
                     // запись в папку FolderResult
-                    File.WriteAllText(FolderResult + $"Result of {fileName}", $"{textInFile} = {result}");
+                    File.AppendAllText(FolderResult + $"Result of {fileName}", $"\n {textInFile} = {result}");
                 }
                 // перемещение отработаных файлов в папку FolderCompleted
                 if (File.Exists(FolderCompleted + fileName))
