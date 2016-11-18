@@ -10,7 +10,7 @@ namespace GeneratorOfMathExpression
     {
         private static void Main()
         {
-            Generator.TextGerenator();
+            Generator.TextGerenator(5);
             Console.ReadKey();
         }
     }

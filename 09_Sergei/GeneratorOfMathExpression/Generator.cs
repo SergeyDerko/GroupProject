@@ -69,10 +69,10 @@ namespace GeneratorOfMathExpression
             t.Start();
         }
 
-        public static void TextGerenator()
+        public static void TextGerenator(int lenght)
         {
             var rand = new Random();
-            for (var i = 0; i < rand.Next(98,123); i++)
+            for (var i = 0; i < lenght; i++)
             {
                  Console.Write((char)rand.Next(98,123));
             }
