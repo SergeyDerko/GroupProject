@@ -84,6 +84,10 @@
       <Project>{BC8D6F7F-6CA9-443B-B472-BC8E18A87BB8}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GeneratorOfMathExpression\GeneratorOfMathExpression.csproj">
+      <Project>{5B63EC23-D53A-49F4-A5DB-75B71B110C8F}</Project>
+      <Name>GeneratorOfMathExpression</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
