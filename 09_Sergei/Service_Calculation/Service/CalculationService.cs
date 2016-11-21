@@ -1,7 +1,4 @@
-﻿
-using System.IO;
-using System.Threading;
-using GeneratorOfMathExpression;
+﻿using System.Threading;
 using Service_Calculation.Modal;
 
 namespace Service_Calculation.Service
@@ -18,13 +15,12 @@ namespace Service_Calculation.Service
         public void Start()
         {
             var stopFlag = _stopFlag;
-
             _threadGenerator = new Thread(x =>
             {
                 do
                 {
-                    Generator.FileGenerator(_start.PathDir);
-                } while (!SrvUtils.Retarder(5,ref stopFlag));
+                    _start.GenerateFTasks();
+                } while (!SrvUtils.Retarder(5, ref stopFlag));
             });
 
             _threadCalculation = new Thread(x =>
@@ -34,6 +30,8 @@ namespace Service_Calculation.Service
                   _start.Scan(_start.PathDir);
                 } while (!SrvUtils.Retarder(5, ref stopFlag));
             });
+
+            _threadGenerator.Start();
             _threadCalculation.Start();
         }
         

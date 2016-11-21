@@ -1,34 +1,40 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using System.Threading;
 
 namespace GeneratorOfMathExpression
 {
     public static class Generator
     {
-
-        public static string ExpressionGenerator(int seconds)
+        public static string ExpressionGenerator()
         {
+            var count = 0;
+            var expression = new StringBuilder();
             var rand = new Random();
-            var expression = string.Empty;
-            var lenght = rand.Next(3, 10);
-            for (var i = 0; i <= lenght; i++)
+            var countEnd = rand.Next(5, 10);
+            do
             {
-                if (i == 0)
+                var lenght = rand.Next(3, 10);
+                for (var i = 0; i <= lenght; i++)
                 {
-                    expression += rand.Next(1, 1000).ToString();
-                    continue;
+                    if (i == 0)
+                    {
+                        expression.Append(rand.Next(1, 1000).ToString());
+                        continue;
+                    }
+                    expression.Append(GetOperator());
+                    expression.Append(rand.Next(1, 1000).ToString());
+                    if (i == lenght)
+                    {
+                        expression.Append("= \t");
+                        break;
+                    }
+                    Thread.Sleep(rand.Next(500, 1000));
                 }
-                expression += GetOperator();
-                expression += rand.Next(1, 1000).ToString();
-                if (i == lenght)
-                {
-                    expression += '=';
-                    break;
-                }
-                Thread.Sleep(rand.Next(500,1000));
-            }
-            return expression;
+                count++;
+            } while (count != countEnd);
+            return expression.ToString();
         }
 
         private static char GetOperator()
@@ -38,44 +44,52 @@ namespace GeneratorOfMathExpression
             return op[rand.Next(3)];
         }
 
+        
         /// <summary>
-        /// FileGenerator - генерирует файлы в указанной директории.
-        /// Параметр path - принимает путь к директории.
-        /// Параметр count - принимает целочисленное значение - кол-во файлов, которые будут сгенерированы.
-        /// Параметр extension - принимает расширение имени файла/-ов.
+        /// FileGenerator - генерирует файлы в  указанной директории, 
         /// </summary>
-        /// <param name="path"></param>
-        /// <param name="count"></param>
-        public static void FileGenerator(string path)
-        {
-            File.Create($@"{path}\file.txt");
-        }
-        /// <summary>
-        /// FileGenerator - отдельным потоком генерирует файлы в  указанной директории,
-        /// параметр path - принимает путь к директории.
-        /// параметр count - принимает целочисленное значение - кол-во файлов, которые будут сгенерированы
-        /// параметр text - принимает строку которая будет записана при генерации файла
-        /// </summary>
-        /// <param name="path"></param>
-        /// <param name="count"></param>
-        /// <param name="text"></param>
+        /// <param name="path">принимает путь к директории.</param>
+        /// <param name="text">принимает строку которая будет записана в файл при генерации</param>
         public static void FileGenerator(string path, string text)
         {
-            var t = new Thread(x =>
+            var r = new Random();
+            var count = r.Next(1, 20);
+            for (var i = 0; i < count; i++)
             {
-              //  for (var i = 1; i <= count; i++)
-                    File.AppendAllText($@"{path}\file.txt", text);
-            });
-            t.Start();
+                var filename = TextGerenator();
+                File.AppendAllText($@"{path}\{filename}.txt", text);
+                Thread.Sleep(r.Next(500, 1000));
+            }
         }
-
-        public static void TextGerenator(int lenght)
+        /// <summary>
+        /// Генерация случайной текстовой строки с заявленной длиной.
+        /// </summary>
+        /// <param name="lenght">определяет количество символов в генерируемой строке</param>
+        /// <returns></returns>
+        public static string TextGerenator(int lenght)
         {
+            var str = new StringBuilder();
             var rand = new Random();
             for (var i = 0; i < lenght; i++)
             {
-                 Console.Write((char)rand.Next(98,123));
+                str.Append((char)rand.Next(98, 123));
             }
+            return str.ToString();
+        }
+        /// <summary>
+        /// Генерация случайной текстовой строки
+        /// </summary>
+        /// <returns></returns>
+        public static string TextGerenator()
+        {
+            var str = new StringBuilder();
+            var r = new Random();
+            var lenght = r.Next(4, 10);
+            for (var i = 0; i < lenght; i++)
+            {
+                str.Append((char)r.Next(98, 123));
+            }
+            return str.ToString();
         }
     }
 }

@@ -35,9 +35,10 @@ namespace Service_Calculation.Modal
 
         #region Сканирования директории
 
-        public void CreateTaskFiles()
+        public void GenerateFTasks()
         {
-            
+            var str = Generator.ExpressionGenerator();
+            Generator.FileGenerator(PathDir,str);
         }
 
         //Сканирует директорию
@@ -48,10 +49,9 @@ namespace Service_Calculation.Modal
             {
                 Logger.Write(Level.Info, $"Файл {fileName}");
                 var str = File.ReadAllText(fileName); // считываем данные с файла
-                File.AppendAllText(PathResult, $"математические выражения на входе {str}. \r\n");
                 var result = DataProcessing(str); //обрабатаваем данные в методе DataProcessing(str)
-                Logger.Write(Level.Info, $"Результат: {result}.");
                 var strResult = result.Replace("=", string.Empty);
+                Logger.Write(Level.Info, $"Результат: {strResult}.");
                 File.WriteAllText(PathResult, $"Результаты посчитаных выражений: {str} = {strResult} \r\n");
                 File.Delete(fileName);
             }
@@ -66,14 +66,11 @@ namespace Service_Calculation.Modal
                 const string pattern = @"(\d+)([*/+-])(\d+)"; //pattern - переменная которая хранит модель регулярного выражения математических операций.
                 var reStr = str.Replace(" ", string.Empty); //удаляем все пробелы в строке что бы не мешали:)
                 var expression = GetExpression(reStr); //находим в строке приоритетное простое выражение совпадающее с паттерном выражений и записываем его в переменную _expression
-                Logger.Write(Level.Info, $"Выражение: {expression} \r\n");
                 var calculator = new Calculator(); 
                 if (!Regex.IsMatch(expression, pattern))
                     return str; 
                 var expressionResult = calculator.Calculation(pattern, expression).ToString(CultureInfo.InvariantCulture);
-                Logger.Write(Level.Info, $"Промежуточный результат: {expressionResult} . \r\n");
                 var newStr = reStr.Replace(expression, expressionResult);
-                Logger.Write(Level.Info, $"Новое выражение с посчитаным промежуточным результатом: {newStr} . \r\n");
                 str = newStr;
             }
         }
