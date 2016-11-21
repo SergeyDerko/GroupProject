@@ -1,4 +1,9 @@
 ﻿using System.ServiceProcess;
+<<<<<<< HEAD
+=======
+using FirstServise;
+
+>>>>>>> 77945f625ef2bd4de286189ff6a3c9c533f35888
 namespace Part1_exam_srv
 {
     internal class MainService : ServiceBase
