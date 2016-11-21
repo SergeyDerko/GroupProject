@@ -1,4 +1,5 @@
-﻿namespace Part1_exam_srv
+﻿using System.ServiceProcess;
+namespace Part1_exam_srv
 {
     internal class MainService : ServiceBase
     {
