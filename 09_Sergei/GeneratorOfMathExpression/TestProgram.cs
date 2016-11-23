@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 
 namespace GeneratorOfMathExpression
@@ -14,18 +15,19 @@ namespace GeneratorOfMathExpression
                 Console.WriteLine(s);
                 Thread.Sleep(r.Next(500,1500));
             }*/
-            var str = Generator.TextGerenator();
-            Console.WriteLine(str);
-            /*var t1 = new Thread(x =>
-            {
-                var str = Generator.ExpressionGenerator();
-                Console.WriteLine(str);
-            });
-            t1.Start();*/
+            
+            /*var str = Generator.TextGerenator();
+            Console.WriteLine(str);*/
+            //var t1 = new Thread(x =>
+            //{
+            //    var str = Generator.ExpressionGenerator();
+            //    Console.WriteLine(str);
+            //});
+            
 
             //var t2 = new Thread(x =>
             //{
-            //    Generator.FileGenerator($@"D:\Gitprojects\GroupProject\09_Sergei\GeneratorOfMathExpression\test\", "text");
+            //    Generator.FileGenerator($@"D:\Gitprojects\GroupProject\09_Sergei\GeneratorOfMathExpression\test\", null);
             //});
             //t1.Start();
             //t2.Start();

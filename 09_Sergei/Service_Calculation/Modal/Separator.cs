@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
+using System.Text;
 using System.Text.RegularExpressions;
 using Common;
 using GeneratorOfMathExpression;
@@ -65,11 +66,10 @@ namespace Service_Calculation.Modal
             {
                 const string pattern = @"(\d+)([*/+-])(\d+)"; //pattern - переменная которая хранит модель регулярного выражения математических операций.
                 var reStr = str.Replace(" ", string.Empty); //удаляем все пробелы в строке что бы не мешали:)
-                var expression = GetExpression(reStr); //находим в строке приоритетное простое выражение совпадающее с паттерном выражений и записываем его в переменную _expression
-                var calculator = new Calculator(); 
+                var expression = GetExpression(reStr); //находим в строке приоритетное простое выражение совпадающее с паттерном выражений и записываем его в переменную _expression 
                 if (!Regex.IsMatch(expression, pattern))
                     return str; 
-                var expressionResult = calculator.Calculation(pattern, expression).ToString(CultureInfo.InvariantCulture);
+                var expressionResult = Calculator.Calculation(pattern, expression).ToString(CultureInfo.InvariantCulture);
                 var newStr = reStr.Replace(expression, expressionResult);
                 str = newStr;
             }
@@ -81,7 +81,8 @@ namespace Service_Calculation.Modal
         internal string GetExpression(string str)
         {
 
-            var exp = string.Empty;//создаем переменную в которую будем записывать свое выражение
+            var exp = new StringBuilder();//создаем переменную в которую будем записывать свое выражение
+
 
             //Блок кода связка ветвлений, которая определяет приоритетность операторов
             if (str.Contains("*"))//есть строка содержит знак умножения
@@ -89,7 +90,7 @@ namespace Service_Calculation.Modal
                 var indexM = str.IndexOf("*", StringComparison.Ordinal);//определяем индекс
                 var valueLeft = GetLeftValue(str, indexM);//получаем значение/операнд слева от оператора
                 var valueRight = GetRightValue(str, indexM);//получаем значение/операнд справа от оператора
-                exp = valueLeft + "*" + valueRight;//сохраняем выражение
+                exp = new StringBuilder($"{valueLeft}*{valueRight}");//сохраняем выражение
             }
             //если предыдущий не нашли, то ищем остальные по аналогии
             else if (str.Contains("/"))
@@ -97,23 +98,23 @@ namespace Service_Calculation.Modal
                 var indexPm = str.IndexOf("/", StringComparison.Ordinal);
                 var valueLeft = GetLeftValue(str, indexPm);
                 var valueRight = GetRightValue(str, indexPm);
-                exp = valueLeft + "/" + valueRight;
+                exp = new StringBuilder($"{valueLeft}/{valueRight}");
             }
             else if (str.Contains("+"))
             {
                 var indexPm = str.IndexOf("+", StringComparison.Ordinal);
                 var valueLeft = GetLeftValue(str, indexPm);
                 var valueRight = GetRightValue(str, indexPm);
-                exp = valueLeft + "+" + valueRight;
+                exp = new StringBuilder($"{valueLeft}+{valueRight}");
             }
             else if (str.Contains("-"))
             {
                 var indexPm = str.IndexOf("-", StringComparison.Ordinal);
                 var valueLeft = GetLeftValue(str, indexPm);
                 var valueRight = GetRightValue(str, indexPm);
-                exp = valueLeft + "-" + valueRight;
+                exp = new StringBuilder($"{valueLeft}-{valueRight}");
             }
-            return exp;//возвращаем  выражение
+            return exp.ToString();//возвращаем  выражение
         }
         #endregion
         #region Получение левого значения от найденого оператора
@@ -143,19 +144,19 @@ namespace Service_Calculation.Modal
         //метод получения правого значения от оператора
         internal string GetRightValue(string str, int index)
         {
-            var valueRight = "";//сострока в которую запишем 
+            var valueRight = new StringBuilder();//сострока в которую запишем 
             //for(начинаем идти по циклу с индекса знака + 1; идем до тех пор пока индекс меньше длины строки, после каждой итерации индекс увеличивается на единицу)
-            for (int i = index + 1; i < str.Length; i++)
+            for (var i = index + 1; i < str.Length; i++)
             {
                 //делаем проверку (являеться ли елемент цифрой)
                 if (char.IsDigit(str[i]))
                 {
-                    valueRight += str[i];//если является, довляем елемент в строку, таким образом формируем правое значение/операнд от оператора.
+                    valueRight.Append(str[i]);//если является, довляем елемент в строку, таким образом формируем правое значение/операнд от оператора.
                 }
                 else
                     break;//если елемент не является цифрой, выходим из цикла
             }
-            return valueRight;//возвращаем правое значение/операнд
+            return valueRight.ToString();//возвращаем правое значение/операнд
         }
         #endregion
     }

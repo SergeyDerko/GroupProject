@@ -20,7 +20,7 @@ namespace Service_Calculation.Service
                 do
                 {
                     _start.GenerateFTasks();
-                } while (!SrvUtils.Retarder(5, ref stopFlag));
+                } while (!SrvUtils.Retarder(10, ref stopFlag));
             });
 
             _threadCalculation = new Thread(x =>
@@ -28,7 +28,7 @@ namespace Service_Calculation.Service
                 do
                 {
                   _start.Scan(_start.PathDir);
-                } while (!SrvUtils.Retarder(5, ref stopFlag));
+                } while (!SrvUtils.Retarder(20, ref stopFlag));
             });
 
             _threadGenerator.Start();

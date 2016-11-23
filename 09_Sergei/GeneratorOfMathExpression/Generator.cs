@@ -27,7 +27,7 @@ namespace GeneratorOfMathExpression
                     expression.Append(rand.Next(1, 1000).ToString());
                     if (i == lenght)
                     {
-                        expression.Append("= \t");
+                        expression.Append("= \r\n");
                         break;
                     }
                     Thread.Sleep(rand.Next(500, 1000));
