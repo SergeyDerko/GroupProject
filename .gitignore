@@ -249,3 +249,5 @@ ModelManifest.xml
 /06_Jury/CalculationServise/files
 06_Jury/CalculationServise/files/**/*.txt
 
+/CW/02Module/201/MultiFilesAssembly/*.dll
+/CW/02Module/201/MultiFilesAssembly/*.netmodule

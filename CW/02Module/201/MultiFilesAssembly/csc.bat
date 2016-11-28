@@ -1,1 +1,1 @@
-C:\Program Files (x86)\MSBuild\14.0\Bin\csc.exe /t:module auto.cs
+"C:\Program Files (x86)\MSBuild\14.0\Bin\csc.exe" /t:module auto.cs
