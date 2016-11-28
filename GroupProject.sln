@@ -438,9 +438,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib2", "CW\02Module\201\Lib
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MultiFilesAssembly", "MultiFilesAssembly", "{B60838CE-7AD7-4ACF-BDCC-2AD848CC687A}"
 	ProjectSection(SolutionItems) = preProject
-		CW\02Module\201\MultiFilesAssembli\Auto.cs = CW\02Module\201\MultiFilesAssembli\Auto.cs
-		CW\02Module\201\MultiFilesAssembli\csc.bat = CW\02Module\201\MultiFilesAssembli\csc.bat
-		CW\02Module\201\MultiFilesAssembli\info.txt = CW\02Module\201\MultiFilesAssembli\info.txt
+		CW\02Module\201\MultiFilesAssembly\Auto.cs = CW\02Module\201\MultiFilesAssembly\Auto.cs
+		CW\02Module\201\MultiFilesAssembly\csc.bat = CW\02Module\201\MultiFilesAssembly\csc.bat
+		CW\02Module\201\MultiFilesAssembly\info.txt = CW\02Module\201\MultiFilesAssembly\info.txt
 	EndProjectSection
 EndProject
 Global

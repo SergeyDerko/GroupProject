@@ -1,4 +1,5 @@
 ﻿using System;
+using Car;
 using Lib1User = Lib1.User;
 using Lib2User = Lib2.User;
 
@@ -8,6 +9,8 @@ namespace Assembly
     {
         static void Main()
         {
+            var auto = new Auto();
+            var sportCar = new SportCar();
             var user1 = new Lib1User {Name = NewGuid(), SName = NewGuid(), Age = NewRandom()};
             var user2 = new Lib2User {Name = NewGuid(), SName = NewGuid(), Age = NewRandom()};
             Console.WriteLine(GetInstanceInformation(user1));
