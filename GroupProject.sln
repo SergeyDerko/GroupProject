@@ -436,6 +436,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib1", "CW\02Module\201\Lib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib2", "CW\02Module\201\Lib2\Lib2.csproj", "{27A3CE42-53BA-4DC0-A733-4A241A71555E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MultiFilesAssembly", "MultiFilesAssembly", "{B60838CE-7AD7-4ACF-BDCC-2AD848CC687A}"
+	ProjectSection(SolutionItems) = preProject
+		CW\02Module\201\MultiFilesAssembli\Auto.cs = CW\02Module\201\MultiFilesAssembli\Auto.cs
+		CW\02Module\201\MultiFilesAssembli\csc.bat = CW\02Module\201\MultiFilesAssembli\csc.bat
+		CW\02Module\201\MultiFilesAssembli\info.txt = CW\02Module\201\MultiFilesAssembli\info.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1951,5 +1958,6 @@ Global
 		{F311A59A-EBFE-46F2-8A94-D661D7DCE906} = {7768E47D-6065-4302-B586-26014DD0EA0B}
 		{5D517755-1D23-4EA8-BAAC-E5734BEDF289} = {F311A59A-EBFE-46F2-8A94-D661D7DCE906}
 		{27A3CE42-53BA-4DC0-A733-4A241A71555E} = {F311A59A-EBFE-46F2-8A94-D661D7DCE906}
+		{B60838CE-7AD7-4ACF-BDCC-2AD848CC687A} = {F311A59A-EBFE-46F2-8A94-D661D7DCE906}
 	EndGlobalSection
 EndGlobal
