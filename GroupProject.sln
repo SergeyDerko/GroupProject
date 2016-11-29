@@ -440,7 +440,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MultiFilesAssembly", "Multi
 	ProjectSection(SolutionItems) = preProject
 		CW\02Module\201\MultiFilesAssembly\Auto.cs = CW\02Module\201\MultiFilesAssembly\Auto.cs
 		CW\02Module\201\MultiFilesAssembly\csc.bat = CW\02Module\201\MultiFilesAssembly\csc.bat
+		CW\02Module\201\MultiFilesAssembly\cscSorrtCar.bat = CW\02Module\201\MultiFilesAssembly\cscSorrtCar.bat
 		CW\02Module\201\MultiFilesAssembly\info.txt = CW\02Module\201\MultiFilesAssembly\info.txt
+		CW\02Module\201\MultiFilesAssembly\SportCar.cs = CW\02Module\201\MultiFilesAssembly\SportCar.cs
 	EndProjectSection
 EndProject
 Global
