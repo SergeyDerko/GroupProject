@@ -8,39 +8,43 @@ namespace Bobik
 {
     class Program
     {
+    // Приложение принимает от пользователя значения считает полощадь и объем параллелепипеда
         static void Main(string[] args)
         {
-            int valueHeight, valueWidth, valueDepth;
-            string stepOne, stepTwo, stepTree;
-            bool choseOne, choseTwo, choseTree;
-            Console.WriteLine("Hello the human!\n" +
-            "This program calculat area of parallelepiped. Good luck");
+            int valueHeight, valueWidth, valueDepth, valueFour; // в переменных будут хранится значения - разметы сторон фигуры и коэффициент 
+            bool choseOne, choseTwo, choseTree, choseFour; // будут хранится ответы на проверку корректность вводимых значений
+            Console.WriteLine("Hello the human!\n" + // Вывод на консоль привествия приложения
+            "This program calculat area of parallelepiped. Good luck"); // продолжение сообщения
             do // Это тока проверка на кривость рук пользователя 
-            {
-                Console.WriteLine("Enter height number of 1 to 100");
-                YaHZ height = new YaHZ();                         
-                stepOne = Console.ReadLine();
-                choseOne = height.Trenner(stepOne, out valueHeight);
-                YaHZ width = new YaHZ();
-                Console.WriteLine("Enter width number of 1 to 100");
-                stepTwo = Console.ReadLine();
-                choseTwo = width.Trenner(stepTwo, out valueWidth);
-                YaHZ depth = new YaHZ();
-                Console.WriteLine("Enter depth number of 1 to 100");
-                stepTree = Console.ReadLine();
-                choseTree = depth.Trenner(stepTree, out valueDepth);
-                Console.WriteLine("Now we have: height {0}, width {1}, depth {2}", valueHeight, valueWidth, valueDepth);
-            }
-            while (!choseOne || (valueHeight < 1) || (valueHeight > 100) || !choseTwo ||
+            { // в цикле пользователь вводит значения. если хоть один из воодимых значений будет не правльным, цикл повторит проход 
+                Console.WriteLine("Enter height number of 1 to 100: "); // спрашиваем у пользователя размер (высоту) фигуры
+                YaHZ height = new YaHZ(); // предварительно мы создали класс YaHZ, объявим объект height типа YaHZ для дальнейшего использования     
+                choseOne = height.Trenner(Console.ReadLine(), out valueHeight); // пользователь вводит значение если значение целочисленное на -
+                // - выходе будет переменная choseOne = true и valueHeight типа int примет преобразованное значение котое было типа string 
+                Console.WriteLine("Enter width number of 1 to 100: "); // спрашиваем у пользователя размер (ширину) фигуры
+                YaHZ width = new YaHZ(); // объявим объект width типа YaHZ для дальнейшего использования
+                choseTwo = width.Trenner(Console.ReadLine(), out valueWidth); // преобразовали ширину фигуры из типа string в тип integer
+                Console.WriteLine("Enter depth number of 1 to 100: "); // спрашиваем у пользователя размер (глубину) фигуры
+                YaHZ depth = new YaHZ(); // объявим объект depth типа YaHZ для дальнейшего использования
+                choseTree = depth.Trenner(Console.ReadLine(), out valueDepth); // преобразовали глубину фигуры из типа string в тип integer 
+            } // условиие цикла, если пользователь ввел не корректное одно из значений фигуры цикл повторится  
+            while (!choseOne || (valueHeight < 1) || (valueHeight > 100) || !choseTwo || // условие цикла
                  (valueWidth < 1) || (valueWidth > 100) || !choseTree || (valueDepth < 1) || (valueDepth > 100));
             // И только после проверки будет написа код расчета нашего кубика 
-            Calc obj = new Calc(valueHeight, valueWidth, valueDepth);
-            // Площадь:
-            Console.WriteLine("Area of cube: {0}", obj.Area());
-            // Объем:
-            Console.WriteLine("Capacity of cube: {0}", obj.Capacity());
-
-            Console.ReadLine();
+            Calc obj = new Calc(valueHeight, valueWidth, valueDepth); // теперь все значения (размеры) фигуры отправим в класс Calc  
+            obj.Show(); // после можно вывести расчет площади и объема фигуры
+            do // что б жизнь скучно не казалась введем еще один подсчет 
+            { // увеличивает нашу фигуру на коэффициент 
+                Console.WriteLine("Now we can enter factor to uplift size cube!"); 
+                Console.WriteLine("Enter factor of 2 to 10: "); // Сообщаем что надо ввести еще одно значение 
+                YaHZ factor = new YaHZ(); // проверим введеное значение от пользователя "правильность"
+                choseFour = factor.Trenner(Console.ReadLine(), out valueFour); // успешно посылаем значение на проверку, если все ок -
+            }  // - будет у нас целочисленное значение 
+            while (!choseFour || (valueFour < 1) || (valueFour > 10)); // еще одна проверка на кривость рук пользователя
+            Calc NewSize = obj.More(valueFour); // объект NewSize типа Calc, объект примет значения объекта obj -
+            Console.Write("You enter factor: {0}\t", valueFour); // - после чего метод More позвидет изминения значения, у фигуры будет новый размер
+            NewSize.Show(); // вывод новой фигуры
+            Console.ReadLine(); // пауза
         }
     }
 }

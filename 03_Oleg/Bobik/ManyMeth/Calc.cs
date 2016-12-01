@@ -27,5 +27,13 @@ namespace Bobik.ManyMeth
         {
             return new Calc(height * factor, width * factor, depth * factor);
         }
+        public void Show()
+        {
+            Console.WriteLine("Now we have: height {0}, width {1}, depth {2}", height, width, depth);
+            // Площадь:
+            Console.WriteLine("Area of cube: {0}", Area());
+            // Объем:
+            Console.WriteLine("Capacity of cube: {0}", Capacity());
+        }
     }
 }
