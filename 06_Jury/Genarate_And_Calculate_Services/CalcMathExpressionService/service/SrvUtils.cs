@@ -13,7 +13,7 @@ namespace CalcMathExpressionService.service
         {
             for (var i = 0; !stop && i < seconds * 1000 / Constants.TimeScanStopParam; i++)
             {
-                Thread.Sleep(500);
+                Thread.Sleep(Constants.TimeScanStopParam);
             }
             return stop;
         }
