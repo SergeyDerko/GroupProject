@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GenerateMathExpressionService.modal;
 
 namespace GenerateMathExpressionService
 {
@@ -10,6 +11,7 @@ namespace GenerateMathExpressionService
     {
         static void Main(string[] args)
         {
+            var test = new Generator();
         }
     }
 }
