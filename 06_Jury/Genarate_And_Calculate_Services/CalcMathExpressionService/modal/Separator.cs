@@ -16,16 +16,12 @@ namespace CalcMathExpressionService.modal
                 if (MultiplicationFinder(_exampleInFile) < DivisionFinder(_exampleInFile))
                 {
                     var index = MultiplicationFinder(_exampleInFile);
-                    var leftNumber = LeftNumber(index);
-                    var rightNumber = RightNumber(index);
-                    ToCalculation(leftNumber, rightNumber, _exampleInFile, "*");
+                    ToCalculation(index, "*");
                 }
                 else
                 {
                     var index = DivisionFinder(_exampleInFile);
-                    var leftNumber = LeftNumber(index);
-                    var rightNumber = RightNumber(index);
-                    ToCalculation(leftNumber, rightNumber, _exampleInFile, "/");
+                    ToCalculation(index, "/");
                 }
             }
             while (AdditionFinder(_exampleInFile) != SubtractionFinder(_exampleInFile))
@@ -33,16 +29,12 @@ namespace CalcMathExpressionService.modal
                 if (AdditionFinder(_exampleInFile) < SubtractionFinder(_exampleInFile))
                 {
                     var index = AdditionFinder(_exampleInFile);
-                    var leftNumber = LeftNumber(index);
-                    var rightNumber = RightNumber(index);
-                    ToCalculation(leftNumber, rightNumber, _exampleInFile, "+");
+                    ToCalculation(index, "+");
                 }
                 else
                 {
                     var index = SubtractionFinder(_exampleInFile);
-                    var leftNumber = LeftNumber(index);
-                    var rightNumber = RightNumber(index);
-                    ToCalculation(leftNumber, rightNumber, _exampleInFile, "-");
+                    ToCalculation(index, "-");
                 }
             }
             Logger.Write(Level.Info, $"Результат: {_exampleInFile}");
@@ -82,9 +74,10 @@ namespace CalcMathExpressionService.modal
             return leftNumber;
         }
 
-        private void ToCalculation(int leftNumber, int rightNumber, string x, string operation)
+        private void ToCalculation(int index, string operation)
         {
-            _exampleInFile = x;
+            var leftNumber = LeftNumber(index);
+            var rightNumber = RightNumber(index);
             var result = new Calculation(leftNumber, rightNumber, operation);
             var newstr = new StringBuilder(_exampleInFile);
             newstr.Replace(leftNumber + operation + rightNumber, result.Result.ToString());
