@@ -63,10 +63,11 @@ namespace CalcMathExpressionService.modal
         {
             // поиск файлов с расширением txt
             var scanResult = Directory.GetFiles(FolderToScan, "*.txt");
-            Logger.Write(Level.Error,
-                scanResult.Length != 0
-                    ? $"Обнаружены файлы в рабочей папке. Найдено {scanResult.Length} файлов."
-                    : "В рабочей папке нет файлов.");
+            if (scanResult.Length != 0)
+            {
+                Logger.Write(Level.Info, $"Обнаружены файлы в рабочей папке. Найдено {scanResult.Length} файлов.");
+            }
+            Logger.Write(Level.Error,"В рабочей папке нет файлов.");
             return scanResult;
         }
     }
