@@ -23,13 +23,10 @@ namespace CalcMathExpressionService.modal
 
         private static void CreateFolders()
         {
-            // создание директорий, если не существует
-            if (!Directory.Exists(FolderToScan)) 
-                Directory.CreateDirectory(FolderToScan);
-            if (!Directory.Exists(FolderResult))
-                Directory.CreateDirectory(FolderResult);
-            if (!Directory.Exists(FolderCompleted))
-                Directory.CreateDirectory(FolderCompleted);
+            // создание директорий, если не существуют
+            Directory.CreateDirectory(FolderToScan);
+            Directory.CreateDirectory(FolderResult);
+            Directory.CreateDirectory(FolderCompleted);
         }
 
         public static void StartCalculation()
@@ -46,15 +43,15 @@ namespace CalcMathExpressionService.modal
                 if (File.Exists(FolderResult + $"Result of {fileName}"))
                     File.Delete(FolderResult + $"Result of {fileName}");
 
-                var result = new StringBuilder();
+                var result = new StringBuilder(); // запись в стрингбилдер обработки файла
+
                 foreach (var textInFile in File.ReadLines(pathfile)) // цикл для считывания файла
                 {
+                    var separator = new Separator(textInFile);     // отправка в сепаратор для решения
+                    result.Append(textInFile + " = " + separator.WriteOut()).AppendLine();    // результат 
                     Logger.Write(Level.Info, $"Выражение {count++}: {textInFile}. Решение:");
-                    var separator = new Separator(textInFile); // отправка в сепаратор для решения
-                    result.Append(textInFile + " = " + separator.WriteOut()).AppendLine(); // результат 
-                    // запись в папку FolderResult
-                 }
-                File.AppendAllText(FolderResult + $"Result of {fileName}", $"{result}");
+                }
+                File.WriteAllText(FolderResult + $"Result of {fileName}", $"{result}"); // запись в папку FolderResult
                 // перемещение отработаных файлов в папку FolderCompleted
                 if (File.Exists(FolderCompleted + fileName))
                     File.Delete(FolderCompleted + fileName);
@@ -66,7 +63,7 @@ namespace CalcMathExpressionService.modal
         {
             // поиск файлов с расширением txt
             var scanResult = Directory.GetFiles(FolderToScan, "*.txt");
-            Logger.Write(Level.Info,
+            Logger.Write(Level.Error,
                 scanResult.Length != 0
                     ? $"Обнаружены файлы в рабочей папке. Найдено {scanResult.Length} файлов."
                     : "В рабочей папке нет файлов.");

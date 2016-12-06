@@ -20,6 +20,7 @@ namespace GenerateMathExpressionService
                 Console.WriteLine("Press a key for exit...");
                 Console.ReadKey(true);
                 svc.StopSvc();
+                Logger.Write(Level.Info, "Остановка сервера");
             }
             else
             {
@@ -44,11 +45,11 @@ namespace GenerateMathExpressionService
             try
             {
                 Logger.Dir = Config.Get.Log.Dir;
-                if (!Directory.Exists(Logger.Dir))
-                    Directory.CreateDirectory(Logger.Dir);
+                Directory.CreateDirectory(Logger.Dir); // если каталог не существует - создаст
             }
             catch
             {
+               
             }
 
             Logger.Prefix = Config.Get.Log.Prefix;

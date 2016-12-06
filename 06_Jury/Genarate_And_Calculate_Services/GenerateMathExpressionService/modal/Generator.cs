@@ -27,8 +27,7 @@ namespace GenerateMathExpressionService.modal
                 }
                 example.AppendLine(); // перенос на новую строку
             }
-            if (!Directory.Exists(FolderForFiles)) // создание директории, если не существует
-                Directory.CreateDirectory(FolderForFiles);
+            Directory.CreateDirectory(FolderForFiles);  // создание директории, если не существует
             var fileName = GetRandomFileName(); // рандомное имя файла
             File.WriteAllText(FolderForFiles + fileName, example.ToString()); // запись в файл
             Logger.Write(Level.Info, $"Сгенерирован файл {fileName}"); // запись логгера
