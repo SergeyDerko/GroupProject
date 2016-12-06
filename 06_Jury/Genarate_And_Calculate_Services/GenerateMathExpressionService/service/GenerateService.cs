@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.Diagnostics;
+using System.Threading;
 using GenerateMathExpressionService.modal;
 
 namespace GenerateMathExpressionService.service
@@ -23,6 +24,7 @@ namespace GenerateMathExpressionService.service
                 } while (!SrvUtils.Retarder(5, ref stopFlag));
             });
             _thread.Start();
+            Process.Start(Generator.FolderForFiles); // открыть папку с файлами
         }
 
         public void Stop()

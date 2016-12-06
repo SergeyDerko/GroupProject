@@ -7,7 +7,7 @@ namespace GenerateMathExpressionService.modal
 {
     internal static class Generator
     {
-        private static readonly string FolderForFiles =
+        public static readonly string FolderForFiles =
             Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\files\";
 
         private static readonly Random Random = new Random();
