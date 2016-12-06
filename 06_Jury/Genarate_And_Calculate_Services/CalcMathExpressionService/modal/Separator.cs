@@ -6,7 +6,7 @@ namespace CalcMathExpressionService.modal
 {
     internal class Separator
     {
-        private string _exampleInFile;
+        private  static string _exampleInFile;
 
         public Separator(string x)
         {

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Common;
 
 namespace GenerateMathExpressionService.modal
@@ -11,38 +8,39 @@ namespace GenerateMathExpressionService.modal
     internal static class Generator
     {
         private static readonly string FolderForFiles =
-            Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"..\..\..\files\";
+            Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\files\";
 
         private static readonly Random Random = new Random();
 
-        public static void  Generate()
+        public static void Generate()
         {
-           var example = new StringBuilder();
-           for (var j = 0; j <= Random.Next(10); j++) // рандомное количество примеров в файле
+            var example = new StringBuilder();
+            var operations = new[] { "*", "/", "+", "-" };
+            for (var j = 0; j <= Random.Next(5); j++) // рандомное количество примеров в файле
             {
                 for (var i = 0; i <= Random.Next(3, 20); i++) // рандомное количество елементов выражения
                 {
                     if (i == 0)
                         example.Append(Random.Next(1, 100));
-                    example.Append(Operation());
+                    example.Append(operations[Random.Next(4)]);  // рандомный знак 
                     example.Append(Random.Next(1, 100));
                 }
-                example.Append("").AppendLine();
+                example.AppendLine(); // перенос на новую строку
             }
-            
-            File.WriteAllText(FolderForFiles + GetRandomFileName(), example.ToString());
-            Logger.Write(Level.Info, $"Сгенерирован файл");
+            if (!Directory.Exists(FolderForFiles)) // создание директории, если не существует
+                Directory.CreateDirectory(FolderForFiles);
+            var fileName = GetRandomFileName(); // рандомное имя файла
+            File.WriteAllText(FolderForFiles + fileName, example.ToString()); // запись в файл
+            Logger.Write(Level.Info, $"Сгенерирован файл {fileName}"); // запись логгера
         }
-        private static string GetRandomFileName()
+
+        private static string GetRandomFileName() 
         {
-            var path = Path.GetRandomFileName();
+            var path = Path.GetRandomFileName(); // рандомное имя, убираем точку (метод генерит файл, с рандомным расширением)
             path = path.Replace(".", "");
             return $"file_{path}.txt";
         }
-        private static string Operation()
-        {
-            var operations = new[] {"*", "/", "+", "-"};
-            return operations[Random.Next(4)];
-        }
+
+        
     }
 }

@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
 using Common;
-using GenerateMathExpressionService.modal;
 using GenerateMathExpressionService.service;
 
 namespace GenerateMathExpressionService
