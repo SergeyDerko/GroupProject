@@ -23,6 +23,7 @@ namespace CalcMathExpressionService
                 Console.WriteLine("Press a key for exit...");
                 Console.ReadKey(true);
                 svc.StopSvc();
+                
             }
             else
             {
@@ -48,8 +49,7 @@ namespace CalcMathExpressionService
             try
             {
                 Logger.Dir = Config.Get.Log.Dir;
-                if (!Directory.Exists(Logger.Dir))
-                    Directory.CreateDirectory(Logger.Dir);
+                Directory.CreateDirectory(Logger.Dir);
             }
             catch
             {

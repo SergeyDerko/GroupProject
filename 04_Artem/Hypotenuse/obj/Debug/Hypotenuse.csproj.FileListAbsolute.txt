@@ -1,0 +1,6 @@
+D:\Repository\GroupProject\04_Artem\Hypotenuse\bin\Debug\Hypotenuse.exe.config
+D:\Repository\GroupProject\04_Artem\Hypotenuse\bin\Debug\Hypotenuse.exe
+D:\Repository\GroupProject\04_Artem\Hypotenuse\bin\Debug\Hypotenuse.pdb
+D:\Repository\GroupProject\04_Artem\Hypotenuse\obj\Debug\Hypotenuse.csprojResolveAssemblyReference.cache
+D:\Repository\GroupProject\04_Artem\Hypotenuse\obj\Debug\Hypotenuse.exe
+D:\Repository\GroupProject\04_Artem\Hypotenuse\obj\Debug\Hypotenuse.pdb
