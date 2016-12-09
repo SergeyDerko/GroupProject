@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Vladimir", "01_Vladimir", "{2A6A1F2A-6164-4450-B137-5ECD29FDA1A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -466,6 +466,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyper", "03_Oleg\Hyper\Hyper\Hyper.csproj", "{CD6FED0A-028F-491D-A010-55A565054D49}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part_1", "Part_1", "{4C56D27F-DF6F-41E9-B647-EE6574FC03B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "202", "202", "{196B43FC-2F1C-40DA-9916-83961860B10C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestWcf", "TestWcf", "{AA3F101C-3880-478D-B968-CFD3F374EB73}"
+	ProjectSection(SolutionItems) = preProject
+		Wcf.txt = Wcf.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -2066,5 +2073,7 @@ Global
 		{2B68581F-2DA1-4AF9-8BFC-498CBF46F294} = {1E5F935B-DC63-439B-BFE0-A5154DB54DBA}
 		{CD6FED0A-028F-491D-A010-55A565054D49} = {1E5F935B-DC63-439B-BFE0-A5154DB54DBA}
 		{4C56D27F-DF6F-41E9-B647-EE6574FC03B2} = {79A650D6-BA91-47D1-88CE-EC002A70A94C}
+		{196B43FC-2F1C-40DA-9916-83961860B10C} = {7768E47D-6065-4302-B586-26014DD0EA0B}
+		{AA3F101C-3880-478D-B968-CFD3F374EB73} = {196B43FC-2F1C-40DA-9916-83961860B10C}
 	EndGlobalSection
 EndGlobal
