@@ -1,7 +1,7 @@
 ﻿using System;
 using Car;
 using Lib1User = Lib1.User;
-using Lib2User = Lib2.User;
+using Lib2User = Lib2;
 
 namespace Assembly
 {
@@ -12,7 +12,7 @@ namespace Assembly
             var auto = new Auto();
             var sportCar = new SportCar();
             var user1 = new Lib1User {Name = NewGuid(), SName = NewGuid(), Age = NewRandom()};
-            var user2 = new Lib2User {Name = NewGuid(), SName = NewGuid(), Age = NewRandom()};
+            var user2 = new Lib2User::User() {Name = NewGuid(), SName = NewGuid(), Age = NewRandom()};
             Console.WriteLine(GetInstanceInformation(user1));
             Console.WriteLine(GetInstanceInformation(user2));
         }
