@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcfCommon", "Common\Tes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{E2780623-5D5C-4F09-81F0-378D091DB862}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcfClientLib", "Client\TestWcfClientLib\TestWcfClientLib.csproj", "{B363BE67-983E-485C-B88A-24F4673ADFF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6D360C5F-A3E9-471A-84AF-09FC8A7EAA13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D360C5F-A3E9-471A-84AF-09FC8A7EAA13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D360C5F-A3E9-471A-84AF-09FC8A7EAA13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B363BE67-983E-485C-B88A-24F4673ADFF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B363BE67-983E-485C-B88A-24F4673ADFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B363BE67-983E-485C-B88A-24F4673ADFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B363BE67-983E-485C-B88A-24F4673ADFF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,5 +40,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{60616979-FEFE-42D0-95CD-D4AFC4E5895F} = {E0C276AC-8717-4F50-94CD-F432BC1E962B}
 		{6D360C5F-A3E9-471A-84AF-09FC8A7EAA13} = {E2780623-5D5C-4F09-81F0-378D091DB862}
+		{B363BE67-983E-485C-B88A-24F4673ADFF7} = {5F88A5CE-40F6-4A63-852B-9D1539B0265B}
 	EndGlobalSection
 EndGlobal
