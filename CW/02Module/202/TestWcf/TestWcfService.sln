@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{E0C276AC-8717-4F50-94CD-F432BC1E962B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{5F88A5CE-40F6-4A63-852B-9D1539B0265B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcfLib", "Server\TestWcfLib\TestWcfLib.csproj", "{60616979-FEFE-42D0-95CD-D4AFC4E5895F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60616979-FEFE-42D0-95CD-D4AFC4E5895F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60616979-FEFE-42D0-95CD-D4AFC4E5895F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60616979-FEFE-42D0-95CD-D4AFC4E5895F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60616979-FEFE-42D0-95CD-D4AFC4E5895F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{60616979-FEFE-42D0-95CD-D4AFC4E5895F} = {E0C276AC-8717-4F50-94CD-F432BC1E962B}
+	EndGlobalSection
+EndGlobal
