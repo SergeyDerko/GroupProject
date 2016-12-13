@@ -59,5 +59,13 @@ Added: CW/02Module/202/TestWcf/Server/TestWcfService/TestWcfService.csproj
 Modified: CW/02Module/202/TestWcf/TestWcfService.sln
 Modified: CW/02Module/202/TestWcf/readme.txt
 ----------------------------------------------------------------------
+Revision: 7481181879ec80d346a907355e547aaa866d94ff
+Author: mihail <mihail_orlov@hotmail.com>
+Date: 14.12.2016 1:34:02
+Message:
+203 настройки конечной точки вынес в app.config
+----
+Modified: CW/02Module/202/TestWcf/Server/TestWcfService/App.config
+Modified: CW/02Module/202/TestWcf/Server/TestWcfService/Program.cs
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------

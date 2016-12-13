@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ServiceModel;
-using TestWcfCommon;
 using TestWcfLib;
 
 namespace TestWcfService
