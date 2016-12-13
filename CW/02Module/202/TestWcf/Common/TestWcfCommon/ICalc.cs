@@ -1,6 +1,6 @@
 ﻿using System.ServiceModel;
 
-namespace TestWcfLib
+namespace TestWcfCommon
 {
     [ServiceContract]
     public interface ICalc
