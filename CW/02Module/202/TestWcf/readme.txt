@@ -15,8 +15,6 @@ Author: mihail <mihail_orlov@hotmail.com>
 Date: 14.12.2016 0:26:07
 Message:
 203 создание WCF службы
-
-
 ----
 Modified: CW/02Module/202/TestWcf/Server/TestWcfLib/Calc.cs
 Modified: CW/02Module/202/TestWcf/Server/TestWcfLib/IUserManager.cs
@@ -28,8 +26,6 @@ Author: mihail <mihail_orlov@hotmail.com>
 Date: 14.12.2016 0:33:00
 Message:
 добавл€ю общую библиотеку
-
-
 ----
 Rename: CW/02Module/202/TestWcf/Common/TestWcfCommon/ICalc.cs (from CW/02Module/202/TestWcf/Server/TestWcfLib/IUserManager.cs)
 Added: CW/02Module/202/TestWcf/Common/TestWcfCommon/Properties/AssemblyInfo.cs
@@ -38,8 +34,19 @@ Modified: CW/02Module/202/TestWcf/Server/TestWcfLib/Calc.cs
 Modified: CW/02Module/202/TestWcf/Server/TestWcfLib/TestWcfLib.csproj
 Modified: CW/02Module/202/TestWcf/TestWcfService.sln
 ----------------------------------------------------------------------
-
+Revision: c1d69b464a892fa4382611f719d9b1097c2da7a3
+Author: mihail <mihail_orlov@hotmail.com>
+Date: 14.12.2016 0:56:37
+Message:
+203 добавил клиент
+----
+Added: CW/02Module/202/TestWcf/Client/TestWcfClientLib/App.config
+Added: CW/02Module/202/TestWcf/Client/TestWcfClientLib/Program.cs
+Added: CW/02Module/202/TestWcf/Client/TestWcfClientLib/Properties/AssemblyInfo.cs
+Added: CW/02Module/202/TestWcf/Client/TestWcfClientLib/TestWcfClientLib.csproj
+Modified: CW/02Module/202/TestWcf/TestWcfService.sln
 ----------------------------------------------------------------------
+
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
