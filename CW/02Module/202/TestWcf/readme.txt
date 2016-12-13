@@ -46,7 +46,18 @@ Added: CW/02Module/202/TestWcf/Client/TestWcfClientLib/Properties/AssemblyInfo.c
 Added: CW/02Module/202/TestWcf/Client/TestWcfClientLib/TestWcfClientLib.csproj
 Modified: CW/02Module/202/TestWcf/TestWcfService.sln
 ----------------------------------------------------------------------
-
+Revision: 4374c7d81798ab647319a02fd6a12100346b8754
+Author: mihail <mihail_orlov@hotmail.com>
+Date: 14.12.2016 1:21:18
+Message:
+203 добавл€ю в проект службу сервиса
+----
+Added: CW/02Module/202/TestWcf/Server/TestWcfService/App.config
+Added: CW/02Module/202/TestWcf/Server/TestWcfService/Program.cs
+Added: CW/02Module/202/TestWcf/Server/TestWcfService/Properties/AssemblyInfo.cs
+Added: CW/02Module/202/TestWcf/Server/TestWcfService/TestWcfService.csproj
+Modified: CW/02Module/202/TestWcf/TestWcfService.sln
+Modified: CW/02Module/202/TestWcf/readme.txt
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
