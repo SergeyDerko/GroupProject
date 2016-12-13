@@ -8,7 +8,9 @@ namespace TestWcfLib
     {
         public int Sum(int a, int b)
         {
-            return a + b;
+            var sum = a + b;
+            Console.WriteLine($"{a} + {b} = {sum}");
+            return sum;
         }
 
         public static void Main()
