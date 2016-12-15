@@ -37,13 +37,8 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceProcess" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
@@ -63,9 +58,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\TestWcfCommon\TestWcfCommon.csproj">
+      <Project>{7388342F-8734-4225-8CF3-A252109E11E7}</Project>
+      <Name>TestWcfCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{604f4451-79f0-422e-a1e8-fdb741ca969e}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestWcf\TestWcf.csproj">
+      <Project>{155E4009-7CEE-403C-B7AE-0B2A1053A604}</Project>
+      <Name>TestWcf</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
