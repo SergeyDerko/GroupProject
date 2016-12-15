@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.ServiceModel;
 using TestWcf6Common;
 using TestWcf6Lib;
@@ -9,15 +12,11 @@ namespace TestWcf6Service
     {
         static void Main(string[] args)
         {
-            var address = new Uri("http://localhost:555/ICalc");
-            var binding = new BasicHttpBinding();
-            var contract = typeof(ICalc);
-
             var host = new ServiceHost(typeof(Calc));
-            host.AddServiceEndpoint(contract, binding, address);
             host.Open();
+            var ipadress = Dns.GetHostEntry(Dns.GetHostName()).AddressList[2];
 
-            Console.WriteLine("Сервер запущен");
+            Console.WriteLine($"Сервер запущен! ip: {ipadress}");
             Console.ReadKey();
 
             host.Close();
