@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading;
-using WCFTest12;
 
 namespace TestService
 {
