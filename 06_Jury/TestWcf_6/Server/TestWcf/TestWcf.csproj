@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\TestWcfCommon\TestWcfCommon.csproj">
-      <Project>{7388342f-8734-4225-8cf3-a252109e11e7}</Project>
+      <Project>{7388342F-8734-4225-8CF3-A252109E11E7}</Project>
       <Name>TestWcfCommon</Name>
     </ProjectReference>
   </ItemGroup>
