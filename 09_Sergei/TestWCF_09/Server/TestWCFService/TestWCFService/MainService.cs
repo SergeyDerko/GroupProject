@@ -2,9 +2,9 @@
 
 namespace TestWCFService
 {
-    internal class MainService : ServiceBase
+    public class MainService : ServiceBase
     {
-        private readonly TestService _testService = new TestService();
+        private readonly TestService _testService = new TestService();  
         public void StartSvc()
         {
             _testService.Start();

@@ -4,7 +4,7 @@ using TestWCFLib;
 
 namespace TestWCFServer
 {
-    internal class Program
+    public class Program
     {
         private static void Main()
         {
