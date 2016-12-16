@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 using System.IO;
-using Common;
+using TestWsf_11_Common;
 
 namespace TestWsf_11_Servise
 {

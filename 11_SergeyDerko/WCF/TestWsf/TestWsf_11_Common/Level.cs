@@ -1,4 +1,4 @@
-﻿namespace Common
+﻿namespace TestWsf_11_Common
 {
     public enum Level
     {

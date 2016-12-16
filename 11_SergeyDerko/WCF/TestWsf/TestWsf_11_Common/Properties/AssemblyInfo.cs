@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("TestWsf_11_Servise")]
+[assembly: AssemblyTitle("TestWsf_11_Common")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TestWsf_11_Servise")]
+[assembly: AssemblyProduct("TestWsf_11_Common")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("8c2414d0-44e6-46b4-baeb-b0ceb8d5940e")]
+[assembly: Guid("d42e85eb-1a4f-4fbd-af46-02f460ccd04e")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

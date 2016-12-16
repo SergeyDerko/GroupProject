@@ -6,7 +6,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading;
 
-namespace Common
+namespace TestWsf_11_Common
 {
     public class Logger
     {
@@ -118,7 +118,7 @@ namespace Common
 
         public static void Write(Level level, string textmail, bool sendmail, string msg, params object[] args)
         {
-            if ((int) Level < (int) level || Level == Level.Off)
+            if ((int)Level < (int)level || Level == Level.Off)
                 return;
 
             var text = new StringBuilder();

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace Common
+namespace TestWsf_11_Common
 {
     /// generic Singleton<T> (потокобезопасный с использованием generic-класса и с отложенной инициализацией)
     /// <typeparam name="T">Singleton class</typeparam>
