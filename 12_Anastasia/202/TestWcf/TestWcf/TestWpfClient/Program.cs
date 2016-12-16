@@ -11,7 +11,7 @@ namespace TestWpfClient
         {
             Console.WriteLine(AppDomain.CurrentDomain.FriendlyName);
 
-            var address = new Uri("http://localhost:555/ICalc");
+            var address = new Uri("http://95.158.32.34:555/ICalc");
             var binding = new BasicHttpBinding();
             var endpoint = new EndpointAddress(address);
 
