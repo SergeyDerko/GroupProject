@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestWCF_09_Service
+namespace TestWCFService
 {
-    class Program
+    internal class TestConstants
     {
-        static void Main(string[] args)
-        {
-        }
+        public static int TimeScanStopParam = 500;
     }
 }

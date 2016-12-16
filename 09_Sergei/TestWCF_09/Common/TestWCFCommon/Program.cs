@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestWCF_09
+namespace TestWCFCommon
 {
-    public class Class1
+    class Program
     {
+        private static void Main()
+        {
+        }
     }
 }
