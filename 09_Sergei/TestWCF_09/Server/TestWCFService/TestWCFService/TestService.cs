@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Threading;
-using WCFTest12;
 
-namespace TestService
+namespace TestWCFService
 {
-    /// <summary>
-    /// Основной код сервиса для формирования задач в ис-про
-    /// </summary>
-    class TestService
+    internal class TestService
     {
         private volatile bool _stopFlag;
         private Thread _thread;
@@ -22,12 +18,14 @@ namespace TestService
                     for (int i = 0; i < 10000; i++)
                     {
                         Console.WriteLine($"TestService: {i}");
-                        SrvUtils.Retarder(1, ref _stopFlag);
+                        ServiceUtils.Retarder(1, ref _stopFlag);
                     }
-                } while (!SrvUtils.Retarder(30, ref _stopFlag));
+                } while (!ServiceUtils.Retarder(30, ref _stopFlag));
             });
             _thread.Start();
         }
+
+
 
         public void Stop()
         {

@@ -1,13 +1,10 @@
-﻿
+﻿using System.ServiceProcess;
 
-using System.ServiceProcess;
-
-namespace TestWCF_09_Service
+namespace TestWCFService
 {
-    class MainWCFService : ServiceBase
+    internal class MainService : ServiceBase
     {
-        private readonly TestWCFService _testService = new TestWCFService();
-
+        private readonly TestService _testService = new TestService();
         public void StartSvc()
         {
             _testService.Start();
@@ -18,11 +15,14 @@ namespace TestWCF_09_Service
             _testService.Stop();
         }
 
+
+
         protected override void OnStart(string[] args)
         {
             base.OnStart(args);
             StartSvc();
         }
+
 
         protected override void OnStop()
         {

@@ -1,6 +1,6 @@
-﻿namespace TestWCF_09_Service
+﻿namespace TestService
 {
-    internal class ConstantsWCF
+    public static class Constants
     {
         /// <summary>
         /// Интервал проверки флага завершения работы службы.

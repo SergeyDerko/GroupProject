@@ -1,8 +1,8 @@
 ﻿using System.Threading;
 
-namespace TestWCF_09_Service
+namespace TestService
 {
-    class SrvUtils
+    public static class SrvUtils
     {
         /// <summary>
         /// Замедляет работу основного потока на указанное количество секунд.
@@ -11,9 +11,9 @@ namespace TestWCF_09_Service
         /// <param name="stop">ссылка на ключ остановки службы</param>
         public static bool Retarder(int seconds, ref bool stop)
         {
-            for (int i = 0; !stop && i < seconds * 1000 / ConstantsWCF.TimeScanStopParam; i++)
+            for (int i = 0; !stop && i < seconds * 1000 / Constants.TimeScanStopParam; i++)
             {
-                Thread.Sleep(ConstantsWCF.TimeScanStopParam);
+                Thread.Sleep(Constants.TimeScanStopParam);
             }
             return stop;
         }

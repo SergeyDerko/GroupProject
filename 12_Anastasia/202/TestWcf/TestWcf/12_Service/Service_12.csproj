@@ -92,7 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="12_Service_TemporaryKey.pfx" />
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="bat\Install.bat" />
     <None Include="bat\Reinstall.bat" />
     <None Include="bat\Uninstall.bat" />
@@ -101,6 +103,10 @@
     <ProjectReference Include="..\..\..\..\..\Utils\Common\Common.csproj">
       <Project>{bc8d6f7f-6ca9-443b-b472-bc8e18a87bb8}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WCFTest12\WCFTest12.csproj">
+      <Project>{cc397a28-944b-438f-8656-a75abf02e9cf}</Project>
+      <Name>WCFTest12</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -2,9 +2,9 @@
 using System.IO;
 using Common;
 
-namespace TestWCF_09_Service
+namespace Test_Service
 {
-    class Config : ConfigurationSection
+    public class Config : ConfigurationSection
     {
         static Config _instance;
 

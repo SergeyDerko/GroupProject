@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Threading;
 
-namespace TestWCF_09_Service
+namespace TestService
 {
-    class TestWCFService
+    /// <summary>
+    /// Основной код сервиса для формирования задач в ис-про
+    /// </summary>
+    class TestService
     {
         private volatile bool _stopFlag;
         private Thread _thread;
