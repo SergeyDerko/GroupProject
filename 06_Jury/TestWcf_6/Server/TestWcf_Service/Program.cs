@@ -16,36 +16,19 @@ namespace TestWcf_Service
     {
         static void Main(string[] args)
         {
-            var address = new Uri("http://localhost:555/ICalc");
-            var binding = new BasicHttpBinding();
-            var contract = typeof(ICalc);
 
-            var host = new ServiceHost(typeof(Calc));
-            host.AddServiceEndpoint(contract, binding, address);
-            host.Open();
-
-            Console.WriteLine("Сервер запущен");
-            Console.ReadKey();
-
-            host.Close();
-
-
-            //var currentDomain = AppDomain.CurrentDomain;
-            //currentDomain.UnhandledException += UnhandledExceptionHandler;
-            //Initlog();
-            //var svc = new MainService();
-            //if (Array.IndexOf(args, "console") != -1 || Array.IndexOf(args, "c") != -1)
-            //{
-            //    svc.StartSvc();
-            //    Console.WriteLine("Press a key for exit...");
-            //    Console.ReadKey(true);
-            //    svc.StopSvc();
-               
-            //}
-            //else
-            //{
-            //    ServiceBase.Run(svc);
-            //}
+            var currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += UnhandledExceptionHandler;
+            Initlog();
+            var svc = new MainService();
+            if (Array.IndexOf(args, "console") != -1 || Array.IndexOf(args, "c") != -1)
+            {
+                svc.StartSvc();
+            }
+            else
+            {
+                ServiceBase.Run(svc);
+            }
         }
         private static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs args)
         {

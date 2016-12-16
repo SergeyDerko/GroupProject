@@ -1,4 +1,9 @@
-﻿using System.Threading;
+﻿using System;
+using System.Runtime.InteropServices;
+using System.ServiceModel;
+using System.Threading;
+using Common;
+using TestWcf;
 
 namespace TestWcf_Service.service
 {
@@ -7,27 +12,36 @@ namespace TestWcf_Service.service
     /// </summary>
     internal class TestWcfService
     {
-        private volatile bool _stopFlag;
-        private Thread _thread;
-
+        //private volatile bool _stopFlag;
+        //private Thread _thread;
+        private ServiceHost _host = null;
         public void Start()
         {
-            _thread = new Thread(x =>
+            if (_host == null)
             {
-                var stopFlag = _stopFlag;
-                do
-                {
-                    //Generator.Generate(); // старт
+                _host = new ServiceHost(typeof(Calc));
+                _host.Open();
+            }
+                
 
-                } while (!SrvUtils.Retarder(5, ref stopFlag));
-            });
-            _thread.Start();
+            //_thread = new Thread(x =>
+            //{
+            //    var stopFlag = _stopFlag;
+            //    do
+            //    {
+            //        //Generator.Generate(); // старт
+
+            //    } while (!SrvUtils.Retarder(5, ref stopFlag));
+            //});
+            //_thread.Start();
             //Process.Start(Generator.FolderForFiles); // открыть папку с файлами
         }
 
         public void Stop()
         {
-            _stopFlag = true;
+            _host?.Close();
+
+            //_stopFlag = true;
         }
     }
 }

@@ -12,6 +12,8 @@ namespace TestWcf6Service
     {
         static void Main(string[] args)
         {
+            Console.Title = "SERVER";
+
             var host = new ServiceHost(typeof(Calc));
             host.Open();
             var ipadress = Dns.GetHostEntry(Dns.GetHostName()).AddressList[2];
