@@ -2,6 +2,7 @@
 using System.IO;
 using System.ServiceProcess;
 using Common;
+using Test_Service;
 
 namespace TestService
 {
