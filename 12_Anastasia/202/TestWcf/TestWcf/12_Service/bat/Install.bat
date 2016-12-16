@@ -1,0 +1,1 @@
+sc create TestService binPath="..\bin\Debug\Service_12.exe" DisplayName= "Service_12DisplayName"
