@@ -1,4 +1,5 @@
 ﻿using System;
+using Common;
 using TestWcfCommon;
 
 namespace TestWcf
@@ -8,7 +9,8 @@ namespace TestWcf
         public int Sum(int a, int b)
         {
             var sum = a + b;
-            Console.WriteLine($"{a} + {b} = {sum}");
+            Console.WriteLine($"Method Sum was used --> {a} + {b} = {sum}");
+            Logger.Write(Level.Info, $"Method Sum was used --> {a} + {b} = {sum}");
             return sum;
         }
     }

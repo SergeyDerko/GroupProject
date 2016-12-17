@@ -1,7 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-using System.ServiceModel;
+﻿using System.ServiceModel;
 using System.Threading;
 using Common;
 using TestWcf;
@@ -35,6 +32,7 @@ namespace TestWcf_Service.service
         public void Stop()
         {
             _stopFlag = true;
+            Logger.Write(Level.Info, "Сервер остановлен!");
         }
     }
 }
