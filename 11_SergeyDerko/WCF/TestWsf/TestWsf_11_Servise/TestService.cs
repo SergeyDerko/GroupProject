@@ -1,5 +1,7 @@
 ﻿using System;
+using System.ServiceModel;
 using System.Threading;
+using TestWsf_11_Common;
 
 namespace TestWsf_11_Servise
 {
@@ -16,14 +18,17 @@ namespace TestWsf_11_Servise
         {
             _thread = new Thread(x =>
             {
-                do
+                using (var host = new ServiceHost(typeof(Calc)))
                 {
-                    for (int i = 0; i < 10000; i++)
+                    host.Open();
+                    do
                     {
-                        Console.WriteLine($"TestService: {i}");
-                        SrvUtils.Retarder(1, ref _stopFlag);
+                        var format = "Open";
+                        Logger.Trace("Start_Thread", format);
                     }
-                } while (!SrvUtils.Retarder(30, ref _stopFlag));
+                    while (!SrvUtils.Retarder(5, ref _stopFlag));
+                    host.Close();
+                }
             });
             _thread.Start();
         }
