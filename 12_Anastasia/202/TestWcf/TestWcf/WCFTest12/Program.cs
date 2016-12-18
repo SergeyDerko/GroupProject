@@ -21,12 +21,4 @@ namespace WCFTest12
             host.Close();
         }
     }
-
-    internal class Calc : ICalc
-    {
-        public int Sum(int a, int b)
-        {
-            return a + b;
-        }
-    }
 }

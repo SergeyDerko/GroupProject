@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ServiceModel;
 using System.Threading;
 
 namespace TestService
@@ -15,16 +16,22 @@ namespace TestService
         public void Start()
         {
             _thread = new Thread(x =>
-            {
-                do
                 {
-                    for (int i = 0; i < 10000; i++)
+                    using (var host = new ServiceHost(typeof(Calc)))
                     {
-                        Console.WriteLine($"TestService: {i}");
-                        SrvUtils.Retarder(1, ref _stopFlag);
+
+                        host.Open();
+
+                        Console.WriteLine("Сервер запущен");
+                        Console.ReadKey();
+                        do
+                        {
+
+                        } while (!SrvUtils.Retarder(30, ref _stopFlag));
+
+                        host.Close();
                     }
-                } while (!SrvUtils.Retarder(30, ref _stopFlag));
-            });
+                });
             _thread.Start();
         }
 
