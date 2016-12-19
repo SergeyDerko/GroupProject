@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1C9506C1-E525-4ECE-AF75-6DEBB565BAEF}</ProjectGuid>
+    <ProjectGuid>{88F2A2F8-243E-475B-AA48-51BF20619087}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestWcfService</RootNamespace>
-    <AssemblyName>TestWcfService</AssemblyName>
+    <RootNamespace>TestWcfNewService</RootNamespace>
+    <AssemblyName>TestWcfNewService</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,11 +34,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
-    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,30 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="MainService.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Calc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SrvUtils.cs" />
-    <Compile Include="TestInstaller.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\Common.csproj">
+    <ProjectReference Include="..\Common\Common.csproj">
       <Project>{bc8d6f7f-6ca9-443b-b472-bc8e18a87bb8}</Project>
       <Name>Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\TestWcfNewService\TestWcfNew.csproj">
-      <Project>{88f2a2f8-243e-475b-aa48-51bf20619087}</Project>
-      <Name>TestWcfNew</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

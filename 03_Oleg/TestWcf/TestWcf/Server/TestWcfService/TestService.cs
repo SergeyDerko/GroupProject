@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Threading;
+using Common;
+using System.ServiceModel;
+using TestWcfNew;
 
 namespace TestWcfService
 {
@@ -8,22 +11,22 @@ namespace TestWcfService
     /// </summary>
     class TestService
     {
+
         private volatile bool _stopFlag;
         private Thread _thread;
-        private volatile bool _processingError;
-
         public void Start()
         {
             _thread = new Thread(x =>
             {
-                do
+                using (var host = new ServiceHost(typeof(Calc)))
                 {
-                    for (int i = 0; i < 10000; i++)
+                    host.Open();
+                    do
                     {
-                        Console.WriteLine($"TestService: {i}");
-                        SrvUtils.Retarder(1, ref _stopFlag);
-                    }
-                } while (!SrvUtils.Retarder(30, ref _stopFlag));
+
+                    } while (!SrvUtils.Retarder(5, ref _stopFlag));
+                    host.Close();
+                }
             });
             _thread.Start();
         }
@@ -31,6 +34,7 @@ namespace TestWcfService
         public void Stop()
         {
             _stopFlag = true;
+            Logger.Write(Level.Info, "Сервер остановлен!");
         }
     }
 }
