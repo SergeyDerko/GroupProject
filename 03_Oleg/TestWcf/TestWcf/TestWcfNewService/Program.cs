@@ -1,8 +1,7 @@
 ﻿using System;
 using System.ServiceModel;
-using Common;
 
-namespace TestWcfService
+namespace TestWcfNew
 {
     class Program
     {
