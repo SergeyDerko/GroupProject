@@ -13,19 +13,7 @@ namespace TestWsf_11_Servise
         /// </summary>
         static void Main(string[] args)
         {
-
-
-            var address = new Uri("http://localhost:555/ICalc");
-            var binding = new BasicHttpBinding();
-
-            var host = new ServiceHost(typeof(Calc));
-            host.AddServiceEndpoint(typeof(ICalc), binding, address);
-            host.Open();
-
-            Console.WriteLine("Сервер запущен");
-            Console.ReadKey();
-
-            host.Close();
+            
 
             AppDomain currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += UnhandledExceptionHandler;
@@ -42,7 +30,20 @@ namespace TestWsf_11_Servise
             {
                 ServiceBase.Run(svc);
             }
+
+           /* var address = new Uri("http://localhost:555/ICalc");
+            var binding = new BasicHttpBinding();
+
+            var host = new ServiceHost(typeof(Calc));
+            host.AddServiceEndpoint(typeof(ICalc), binding, address);
+            host.Open();
+
+            Console.WriteLine("Сервер запущен");
+            Console.ReadKey();
+
+            host.Close();*/
         }
+        
 
         private static void Init()
         {

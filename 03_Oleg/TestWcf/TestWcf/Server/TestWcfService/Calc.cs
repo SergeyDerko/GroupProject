@@ -1,7 +1,7 @@
 ﻿using System;
 using Common;
 
-namespace Common
+namespace TestWcfService
 {
     public class Calc : ICalc
     {

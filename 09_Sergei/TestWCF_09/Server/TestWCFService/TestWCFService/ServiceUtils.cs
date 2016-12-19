@@ -11,9 +11,9 @@ namespace TestWCFService
     {
         public static bool Retarder(int seconds, ref bool stop)
         {
-            for (int i = 0; !stop && i < seconds * 1000 / Constants.TimeScanStopParam; i++)
+            for (int i = 0; !stop && i < seconds * 1000 / TestConstants.TimeScanStopParam; i++)
             {
-                Thread.Sleep(Constants.TimeScanStopParam);
+                Thread.Sleep(TestConstants.TimeScanStopParam);
             }
             return stop;
         }

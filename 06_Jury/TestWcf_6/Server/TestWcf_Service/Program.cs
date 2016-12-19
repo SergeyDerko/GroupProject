@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.ServiceModel;
+using System.Net;
 using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
 using Common;
-using TestWcf;
-using TestWcfCommon;
 using TestWcf_Service.service;
 
 namespace TestWcf_Service
@@ -16,20 +11,29 @@ namespace TestWcf_Service
     {
         static void Main(string[] args)
         {
-
             var currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += UnhandledExceptionHandler;
-            Initlog();
+            Initlog(); // инициализация логгера
             var svc = new MainService();
-            if (Array.IndexOf(args, "console") != -1 || Array.IndexOf(args, "c") != -1)
+            if (Array.IndexOf(args, "console") != -1 || Array.IndexOf(args, "c") != -1) // debug
             {
-                svc.StartSvc();
+                Console.Title = "---SERVER---";
+                svc.StartSvc(); // старт службы
+                var ipadress = Dns.GetHostEntry(Dns.GetHostName()).AddressList[2]; // определение ip-адреса 
+                Console.WriteLine($" Сервер запущен!\n Ip-адрес сервера: {ipadress}\n Нажмите любую клавишу для остановки сервера...");
+                Console.ReadKey(true);
+                svc.StopSvc(); // остановка службы
+
+                Console.Write(" Сервер остановлен!");
+                Logger.Write(Level.Info, "Сервер остановлен!");
             }
-            else
+            else // запуск службы windows
             {
                 ServiceBase.Run(svc);
             }
         }
+
+        #region Exception
         private static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs args)
         {
             const string method = "UnhandledExceptionHandler";
@@ -37,14 +41,16 @@ namespace TestWcf_Service
             Console.WriteLine(ex == null ? "Error!" : $"{method}\n{ex}");
         }
 
+
+        #endregion
+
+
+        #region Инициализация логгера
+
         private static void Initlog()
         {
-            #region Инициализация логгера
-
             Logger.Level = Config.Get.Log.Level;
-
             // Определение пути доступа к журналу событий
-
             try
             {
                 Logger.Dir = Config.Get.Log.Dir;
@@ -52,17 +58,12 @@ namespace TestWcf_Service
             }
             catch
             {
-
             }
-
             Logger.Prefix = Config.Get.Log.Prefix;
             Logger.Start();
-            Logger.Write(Level.Info, "Старт сервера");
-
-            #endregion
-
+            Logger.Write(Level.Info, "Старт службы. Сервер запущен!");
         }
 
-
+        #endregion
     }
 }

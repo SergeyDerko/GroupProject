@@ -5,10 +5,11 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
+using CommonLogger;
 
 namespace TestWCFService
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {

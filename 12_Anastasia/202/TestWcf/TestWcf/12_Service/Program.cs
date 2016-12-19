@@ -2,7 +2,6 @@
 using System.IO;
 using System.ServiceProcess;
 using Common;
-using Test_Service;
 
 namespace TestService
 {
@@ -42,7 +41,9 @@ namespace TestService
             {
                 Logger.Dir = Config.Get.Log.Dir;
                 if (!Directory.Exists(Logger.Dir))
+                {
                     Directory.CreateDirectory(Logger.Dir);
+                }
             }
             catch
             {

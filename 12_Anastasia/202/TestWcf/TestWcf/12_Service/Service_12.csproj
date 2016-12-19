@@ -7,8 +7,8 @@
     <ProjectGuid>{21F59E67-B3FF-47A1-9434-BAE400CD83A5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test_Service</RootNamespace>
-    <AssemblyName>Test_Service</AssemblyName>
+    <RootNamespace>TestService</RootNamespace>
+    <AssemblyName>TestService</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,9 +54,6 @@
     <ManifestCertificateThumbprint>8590FC217BD71663B2C812362639FFFFE937F317</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>12_Service_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
@@ -91,7 +88,6 @@
     <Compile Include="TestService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="12_Service_TemporaryKey.pfx" />
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
@@ -108,9 +104,6 @@
       <Project>{cc397a28-944b-438f-8656-a75abf02e9cf}</Project>
       <Name>WCFTest12</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
