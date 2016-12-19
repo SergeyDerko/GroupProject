@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{1028A470-B438-49D0-B96C-EB380F2B4F0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{19C2E36D-17CF-4B1C-BFF3-B2C1748F78EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{C9EDE1D1-90DF-4E62-9AAE-995CE9137103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWCFClient", "TestWCFClient\TestWCFClient.csproj", "{D8804225-6846-4278-9FA4-4472FC371A25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWCFService", "TestWCFService\TestWCFService.csproj", "{60E7944A-5618-4A51-ABEE-18551BA54EF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWCFCommon", "Common\TestWCFCommon\TestWCFCommon.csproj", "{FB704281-0416-4DB7-9A3B-134FEFA541CC}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TestWCFWebIIS", "Server\TestWCFWebIIS\", "{DFE54DDA-0D03-4D56-ADC1-9EEA58B6E982}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_8337"
+		Debug.AspNetCompiler.PhysicalPath = "Server\TestWCFWebIIS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8337\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_8337"
+		Release.AspNetCompiler.PhysicalPath = "Server\TestWCFWebIIS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8337\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "8337"
+		SlnRelativePath = "Server\TestWCFWebIIS\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWCFMex", "Client\TestWCFMex\TestWCFMex.csproj", "{00876527-C3B7-4157-B2C6-7F6BF2A894E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8804225-6846-4278-9FA4-4472FC371A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8804225-6846-4278-9FA4-4472FC371A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8804225-6846-4278-9FA4-4472FC371A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8804225-6846-4278-9FA4-4472FC371A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E7944A-5618-4A51-ABEE-18551BA54EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E7944A-5618-4A51-ABEE-18551BA54EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E7944A-5618-4A51-ABEE-18551BA54EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E7944A-5618-4A51-ABEE-18551BA54EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB704281-0416-4DB7-9A3B-134FEFA541CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB704281-0416-4DB7-9A3B-134FEFA541CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB704281-0416-4DB7-9A3B-134FEFA541CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB704281-0416-4DB7-9A3B-134FEFA541CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE54DDA-0D03-4D56-ADC1-9EEA58B6E982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE54DDA-0D03-4D56-ADC1-9EEA58B6E982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE54DDA-0D03-4D56-ADC1-9EEA58B6E982}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE54DDA-0D03-4D56-ADC1-9EEA58B6E982}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{00876527-C3B7-4157-B2C6-7F6BF2A894E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00876527-C3B7-4157-B2C6-7F6BF2A894E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00876527-C3B7-4157-B2C6-7F6BF2A894E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00876527-C3B7-4157-B2C6-7F6BF2A894E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D8804225-6846-4278-9FA4-4472FC371A25} = {C9EDE1D1-90DF-4E62-9AAE-995CE9137103}
+		{60E7944A-5618-4A51-ABEE-18551BA54EF2} = {1028A470-B438-49D0-B96C-EB380F2B4F0E}
+		{FB704281-0416-4DB7-9A3B-134FEFA541CC} = {19C2E36D-17CF-4B1C-BFF3-B2C1748F78EB}
+		{DFE54DDA-0D03-4D56-ADC1-9EEA58B6E982} = {1028A470-B438-49D0-B96C-EB380F2B4F0E}
+		{00876527-C3B7-4157-B2C6-7F6BF2A894E4} = {C9EDE1D1-90DF-4E62-9AAE-995CE9137103}
+	EndGlobalSection
+EndGlobal
