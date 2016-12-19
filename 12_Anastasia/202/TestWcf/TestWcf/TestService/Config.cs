@@ -2,7 +2,7 @@
 using System.IO;
 using Common;
 
-namespace Test_Service
+namespace TestService
 {
     public class Config : ConfigurationSection
     {
