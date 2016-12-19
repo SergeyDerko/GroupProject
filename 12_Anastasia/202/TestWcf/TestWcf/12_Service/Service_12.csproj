@@ -54,9 +54,6 @@
     <ManifestCertificateThumbprint>8590FC217BD71663B2C812362639FFFFE937F317</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>12_Service_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
@@ -91,7 +88,6 @@
     <Compile Include="TestService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="12_Service_TemporaryKey.pfx" />
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
