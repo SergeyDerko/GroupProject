@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{E0C276AC-8717-4F50-94CD-F432BC1E962B}"
 EndProject
@@ -17,25 +17,25 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcfClientLib", "Client\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcfService", "Server\TestWcfService\TestWcfService.csproj", "{ADDB2438-3EC2-4C5D-9F33-B2951475D666}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TestIISWCFService", "Server\TestIISWCFService\", "{A70BBDC4-66C7-4F94-891F-A9FF36072653}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TestWebWcf", "Server\TestWebWcf\", "{B61425E6-8E7A-4F04-AEAC-230927635143}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		ProjectReferences = "{60616979-FEFE-42D0-95CD-D4AFC4E5895F}|TestWcfLib.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_25762"
-		Debug.AspNetCompiler.PhysicalPath = "Server\TestIISWCFService\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_25762\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50765"
+		Debug.AspNetCompiler.PhysicalPath = "Server\TestWebWcf\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50765\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_25762"
-		Release.AspNetCompiler.PhysicalPath = "Server\TestIISWCFService\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_25762\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50765"
+		Release.AspNetCompiler.PhysicalPath = "Server\TestWebWcf\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50765\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "25762"
+		VWDPort = "50765"
+		SlnRelativePath = "Server\TestWebWcf\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -61,10 +61,10 @@ Global
 		{ADDB2438-3EC2-4C5D-9F33-B2951475D666}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADDB2438-3EC2-4C5D-9F33-B2951475D666}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADDB2438-3EC2-4C5D-9F33-B2951475D666}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A70BBDC4-66C7-4F94-891F-A9FF36072653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A70BBDC4-66C7-4F94-891F-A9FF36072653}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A70BBDC4-66C7-4F94-891F-A9FF36072653}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{A70BBDC4-66C7-4F94-891F-A9FF36072653}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B61425E6-8E7A-4F04-AEAC-230927635143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B61425E6-8E7A-4F04-AEAC-230927635143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B61425E6-8E7A-4F04-AEAC-230927635143}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B61425E6-8E7A-4F04-AEAC-230927635143}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +74,6 @@ Global
 		{6D360C5F-A3E9-471A-84AF-09FC8A7EAA13} = {E2780623-5D5C-4F09-81F0-378D091DB862}
 		{B363BE67-983E-485C-B88A-24F4673ADFF7} = {5F88A5CE-40F6-4A63-852B-9D1539B0265B}
 		{ADDB2438-3EC2-4C5D-9F33-B2951475D666} = {E0C276AC-8717-4F50-94CD-F432BC1E962B}
-		{A70BBDC4-66C7-4F94-891F-A9FF36072653} = {E0C276AC-8717-4F50-94CD-F432BC1E962B}
+		{B61425E6-8E7A-4F04-AEAC-230927635143} = {E0C276AC-8717-4F50-94CD-F432BC1E962B}
 	EndGlobalSection
 EndGlobal
