@@ -1,0 +1,4 @@
+Пояснение для себя :)
+Для создания службы изпод командной строки разработчика VS.(Запуск под администратором)
+cd C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319>InstallUtil.exe C:\SRW\TestWsf_11_Servise\TestWsf_11_Servise.exe
