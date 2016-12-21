@@ -18,9 +18,7 @@ namespace TestWCFService
                 {
                     host.Open();
                     Console.WriteLine("Сервер запушен!");
-                    do
-                    {
-                    } while ((!ServiceUtils.Retarder(5, ref _stopFlag)));
+                    while ((!ServiceUtils.Retarder(5, ref _stopFlag)));
                     host.Close();
                 }
                     Console.ReadKey();
