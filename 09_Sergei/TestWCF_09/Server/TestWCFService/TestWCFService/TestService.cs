@@ -17,6 +17,7 @@ namespace TestWCFService
                 using (var host = new ServiceHost(typeof(Calc)))
                 {
                     host.Open();
+                    Console.Title = "Server";
                     Console.WriteLine("Сервер запушен!");
                     while ((!ServiceUtils.Retarder(5, ref _stopFlag)));
                     host.Close();
