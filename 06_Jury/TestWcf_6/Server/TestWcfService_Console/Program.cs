@@ -3,9 +3,10 @@ using System.IO;
 using System.Net;
 using System.ServiceProcess;
 using Common;
-using TestWcf_Service.Windows_service;
+using TestWcfService_Console.Windows_service;
 
-namespace TestWcf_Service
+
+namespace TestWcfService_Console
 {
     class Program
     {
@@ -14,19 +15,18 @@ namespace TestWcf_Service
             var currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += UnhandledExceptionHandler;
             Initlog(); // инициализация логгера
-            var svc = new TestWcfService();
-            if (Array.IndexOf(args, "console") != -1 || Array.IndexOf(args, "c") != -1) // if debug
+            var svc = new MainService();
+            if (Array.IndexOf(args, "console") != -1 || Array.IndexOf(args, "c") != -1) // debug
             {
                 Console.Title = "---SERVER---";
-                var controller =
-                    new ServiceController(Path.GetFileNameWithoutExtension(typeof(Program).Assembly.CodeBase));
-                controller.Start(); // старт службы
+                svc.StartSvc(); // старт службы
                 var ipadress = Dns.GetHostEntry(Dns.GetHostName()).AddressList[2]; // определение ip-адреса 
-                Console.WriteLine(
-                    $" Сервер запущен!\n Ip-адрес сервера: {ipadress}\n Нажмите любую клавишу для остановки сервера...");
+                Console.WriteLine($" Сервер запущен!\n Ip-адрес сервера: {ipadress}\n Нажмите любую клавишу для остановки сервера...");
                 Console.ReadKey(true);
-                controller.Stop();
-                Console.Write(" Сервер остановлен!");
+                svc.StopSvc(); // остановка службы
+
+                Console.Write(" Сервер остановлен!!!");
+                //Logger.Write(Level.Info, "Сервер остановлен1!");
             }
             else // запуск службы windows
             {
@@ -35,15 +35,16 @@ namespace TestWcf_Service
         }
 
         #region Exception
-
         private static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs args)
         {
             const string method = "UnhandledExceptionHandler";
-            var ex = (Exception) args.ExceptionObject;
+            var ex = (Exception)args.ExceptionObject;
             Console.WriteLine(ex == null ? "Error!" : $"{method}\n{ex}");
         }
 
+
         #endregion
+
 
         #region Инициализация логгера
 
