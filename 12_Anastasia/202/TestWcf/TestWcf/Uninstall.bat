@@ -1,0 +1,1 @@
+sc delete TestService binPath="E:\GitHub\GroupProject\12_Anastasia\202\TestWcf\TestWcf\TestService\bin\Debug\TestService.exe" DisplayName= "TestServiceDisplayName"
