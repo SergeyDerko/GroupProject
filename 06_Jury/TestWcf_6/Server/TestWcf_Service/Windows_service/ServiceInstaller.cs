@@ -3,18 +3,18 @@ using System.Configuration.Install;
 using System.IO;
 using System.ServiceProcess;
 
-namespace TestWcf_Service.service
+namespace TestWcf_Service.Windows_service
 {
     [RunInstaller(true)]
-    public class SrvInstaller : Installer
+    public class ServiceInstaller : Installer
     {
         private readonly ServiceProcessInstaller _serviceProcessInstaller;
-        private readonly ServiceInstaller _serviceInstaller;
+        private readonly System.ServiceProcess.ServiceInstaller _serviceInstaller;
 
-        public SrvInstaller()
+        public ServiceInstaller()
         {
             _serviceProcessInstaller = new ServiceProcessInstaller();
-            _serviceInstaller = new ServiceInstaller();
+            _serviceInstaller = new System.ServiceProcess.ServiceInstaller();
 
             _serviceProcessInstaller.Account = ServiceAccount.LocalSystem;
 

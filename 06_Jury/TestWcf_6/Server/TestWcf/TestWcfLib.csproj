@@ -7,8 +7,8 @@
     <ProjectGuid>{155E4009-7CEE-403C-B7AE-0B2A1053A604}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestWcf</RootNamespace>
-    <AssemblyName>TestWcf</AssemblyName>
+    <RootNamespace>TestWcfLib</RootNamespace>
+    <AssemblyName>TestWcfLib</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

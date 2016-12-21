@@ -20,7 +20,8 @@ namespace TestWcfClient
             //var channel = factory.CreateChannel();
 
             Console.Title = "---CLIENT---";
-            Console.WriteLine(" Приложение выполняет операцию сложения двух рандомных чисел.\n");
+            Console.WriteLine(" Канал сгенерирован с помощью ChannelFactory!\n" + 
+                              " Приложение выполняет операцию сложения двух рандомных чисел:\n");
             var channel = new ChannelFactory<ICalc>(new BasicHttpBinding(), new EndpointAddress("http://localhost:555/Calc")).CreateChannel();
             try
             {
@@ -32,12 +33,6 @@ namespace TestWcfClient
                     var b = random.Next(100, 1000);
                     var sum = channel.Sum(a, b);
                     Console.WriteLine($" {a} + {b} = {sum}");
-                    var sub = channel.Sub(a, b);
-                    Console.WriteLine($" {a} - {b} = {sub}");
-                    var div = channel.Div(a, b);
-                    Console.WriteLine($" {a} / {b} = {div}");
-                    var mul = channel.Mul(a, b);
-                    Console.WriteLine($" {a} * {b} = {mul}");
                 }
             }
             catch (EndpointNotFoundException)

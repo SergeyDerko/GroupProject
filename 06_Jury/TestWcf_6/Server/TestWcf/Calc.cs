@@ -2,7 +2,7 @@
 using Common;
 using TestWcfCommon;
 
-namespace TestWcf
+namespace TestWcfLib
 {
     public class Calc : ICalc
     {

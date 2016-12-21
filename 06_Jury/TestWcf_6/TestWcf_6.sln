@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{C80047
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcf_Service", "Server\TestWcf_Service\TestWcf_Service.csproj", "{4F8839EE-F14B-471B-9960-92F226F54151}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcf", "Server\TestWcf\TestWcf.csproj", "{155E4009-7CEE-403C-B7AE-0B2A1053A604}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcfLib", "Server\TestWcf\TestWcfLib.csproj", "{155E4009-7CEE-403C-B7AE-0B2A1053A604}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{EEA7CFB9-05FC-44B0-AE1D-CD6B3E2F8172}"
 EndProject
@@ -18,28 +18,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcfClient", "Client\TestWcfClient\TestWcfClient.csproj", "{766884BC-085E-449C-955C-DF5B6366A2D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common\Common.csproj", "{604F4451-79F0-422E-A1E8-FDB741CA969E}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TestWcf_Service_IIS(3)", "Server\TestWcf_Service_IIS\", "{D677B419-B6BE-435F-B4C4-BF83CAA66EB1}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_57529"
-		Debug.AspNetCompiler.PhysicalPath = "Server\TestWcf_Service_IIS\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57529\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_57529"
-		Release.AspNetCompiler.PhysicalPath = "Server\TestWcf_Service_IIS\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57529\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "57529"
-		SlnRelativePath = "Server\TestWcf_Service_IIS\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcfClient_Mex", "Client\TestWcfClient_Mex\TestWcfClient_Mex.csproj", "{9A9AD871-7558-408C-A3F9-4B35CA793C2F}"
 EndProject
@@ -69,10 +47,6 @@ Global
 		{604F4451-79F0-422E-A1E8-FDB741CA969E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{604F4451-79F0-422E-A1E8-FDB741CA969E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{604F4451-79F0-422E-A1E8-FDB741CA969E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D677B419-B6BE-435F-B4C4-BF83CAA66EB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D677B419-B6BE-435F-B4C4-BF83CAA66EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D677B419-B6BE-435F-B4C4-BF83CAA66EB1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{D677B419-B6BE-435F-B4C4-BF83CAA66EB1}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{9A9AD871-7558-408C-A3F9-4B35CA793C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A9AD871-7558-408C-A3F9-4B35CA793C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A9AD871-7558-408C-A3F9-4B35CA793C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -87,7 +61,6 @@ Global
 		{7388342F-8734-4225-8CF3-A252109E11E7} = {EEA7CFB9-05FC-44B0-AE1D-CD6B3E2F8172}
 		{766884BC-085E-449C-955C-DF5B6366A2D7} = {C80047D3-C219-4D12-A40F-2FA10E1C7B05}
 		{604F4451-79F0-422E-A1E8-FDB741CA969E} = {EEA7CFB9-05FC-44B0-AE1D-CD6B3E2F8172}
-		{D677B419-B6BE-435F-B4C4-BF83CAA66EB1} = {874957DD-7074-4AC3-8862-3945145CB5AE}
 		{9A9AD871-7558-408C-A3F9-4B35CA793C2F} = {C80047D3-C219-4D12-A40F-2FA10E1C7B05}
 	EndGlobalSection
 EndGlobal
