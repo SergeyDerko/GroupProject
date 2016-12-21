@@ -41,11 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestWcfCommon\ICalc.cs" />
+    <Compile Include="TestWcfCommon\Interfaces\ICalc.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sinleton.cs" />
+    <Compile Include="TestWcfCommon\Interfaces\INotifier.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

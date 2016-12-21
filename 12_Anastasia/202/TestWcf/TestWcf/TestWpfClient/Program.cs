@@ -12,6 +12,7 @@ namespace TestWpfClient
             Console.WriteLine(AppDomain.CurrentDomain.FriendlyName);
 
             var address = new Uri("http://95.158.32.34:555/ICalc");
+            //var address = new Uri("http://10.10.10.45:555/ICalc");
             var binding = new BasicHttpBinding();
             var endpoint = new EndpointAddress(address);
 
@@ -23,7 +24,13 @@ namespace TestWpfClient
                 {
                     Thread.Sleep(1000);
                     var sum = channel.Sum(i, j);
+                    var div = channel.Division(i, j);
+                    var sub = channel.Substraction(i, j);
+                    var mul = channel.Multiplication(i, j);
                     Console.WriteLine($"{i} + {j} = {sum}");
+                    Console.WriteLine($"{i} - {j} = {sub}");
+                    Console.WriteLine($"{i} / {j} = {div}");
+                    Console.WriteLine($"{i} * {j} = {mul}");
                 }
             }
             Console.ReadKey();

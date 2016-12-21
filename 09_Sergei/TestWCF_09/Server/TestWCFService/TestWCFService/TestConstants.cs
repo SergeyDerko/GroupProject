@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestWCFService
 {
-    internal class TestConstants
+    public  class TestConstants
     {
         public static int TimeScanStopParam = 500;
     }

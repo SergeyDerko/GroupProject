@@ -13,17 +13,16 @@ namespace TestWcfClient
     {
         static void Main(string[] args)
         {
+            //var address = new Uri("http://localhost:555/ICalc");
+            //var binding = new BasicHttpBinding();
+            //var endpoint = new EndpointAddress(address);
+            //var factory = new ChannelFactory<ICalc>(binding, endpoint);
+            //var channel = factory.CreateChannel();
+
             Console.Title = "---CLIENT---";
-            // Console.WriteLine(AppDomain.CurrentDomain.FriendlyName);
-            Console.WriteLine(" Приложение выполняет операцию сложения двух рандомных чисел.\n");
-
-            var address = new Uri("http://localhost:555/ICalc");
-            var binding = new BasicHttpBinding();
-            var endpoint = new EndpointAddress(address);
-
-            var factory = new ChannelFactory<ICalc>(binding, endpoint);
-            var channel = factory.CreateChannel();
-
+            Console.WriteLine(" Канал сгенерирован с помощью ChannelFactory!\n" + 
+                              " Приложение выполняет операцию сложения двух рандомных чисел:\n");
+            var channel = new ChannelFactory<ICalc>(new BasicHttpBinding(), new EndpointAddress("http://localhost:555/Calc")).CreateChannel();
             try
             {
                 var random = new Random();
@@ -38,23 +37,15 @@ namespace TestWcfClient
             }
             catch (EndpointNotFoundException)
             {
-                Console.ForegroundColor= ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(" Cервер не запущен!");
                 Console.ResetColor();
             }
 
             Console.Write("\n Нажмите любую клавышу для выхода...");
             Console.ReadKey();
-
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    for (int j = 0; j < 10; j++)
-            //    {
-            //        Thread.Sleep(1000);
-            //        var sum = channel.Sum(i, j);
-            //        Console.WriteLine($"{i} + {j} = {sum}");
-            //    }
-            //}
         }
+
+        
     }
 }
