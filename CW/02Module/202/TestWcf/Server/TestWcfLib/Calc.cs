@@ -12,7 +12,7 @@ namespace TestWcfLib
             return sum;
 
             //const string method = "Sum";
-            //Logger.Start(method);
+            //Logger.Enter(method);
             //var sum = a + b;
             //var value = $"{a} + {b} = {sum}";
             //Logger.Info(method, value);
