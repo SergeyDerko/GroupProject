@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0E4EAA25-C532-435E-8389-074548774DDA}</ProjectGuid>
+    <ProjectGuid>{8A400C30-8F87-4973-A060-703089AE0DA8}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestWCFService</RootNamespace>
-    <AssemblyName>TestWCFService</AssemblyName>
+    <RootNamespace>TestWCFClient_Mex</RootNamespace>
+    <AssemblyName>TestWCFClient_Mex</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,11 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,35 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs" />
-    <Compile Include="MainService.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceUtils.cs" />
-    <Compile Include="TestConstants.cs" />
-    <Compile Include="TestWcfInstaller.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Common\TestWCFCommon\TestWCFCommon.csproj">
-      <Project>{d09101eb-3160-4c32-9af5-f2a01006a048}</Project>
-      <Name>TestWCFCommon</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\CommonLogger\CommonLogger.csproj">
-      <Project>{EF2EAC8E-9076-4F8F-A313-A0AA8AA610D6}</Project>
-      <Name>CommonLogger</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\TestWCFLib\TestWCFLib.csproj">
-      <Project>{B6AB111D-D6B8-4471-8D73-3F800FDCF4B4}</Project>
-      <Name>TestWCFLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
