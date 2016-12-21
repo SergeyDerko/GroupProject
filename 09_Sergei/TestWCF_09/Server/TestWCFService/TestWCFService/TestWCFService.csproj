@@ -55,20 +55,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceUtils.cs" />
     <Compile Include="TestConstants.cs" />
-    <Compile Include="TestInstaller.cs" />
+    <Compile Include="TestWcfInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\CommonLogger\CommonLogger.csproj">
+      <Project>{EF2EAC8E-9076-4F8F-A313-A0AA8AA610D6}</Project>
+      <Name>CommonLogger</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Common\TestWCFCommon\TestWCFCommon.csproj">
       <Project>{d09101eb-3160-4c32-9af5-f2a01006a048}</Project>
       <Name>TestWCFCommon</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\CommonLogger\CommonLogger.csproj">
-      <Project>{EF2EAC8E-9076-4F8F-A313-A0AA8AA610D6}</Project>
-      <Name>CommonLogger</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\TestWCFLib\TestWCFLib.csproj">
       <Project>{B6AB111D-D6B8-4471-8D73-3F800FDCF4B4}</Project>

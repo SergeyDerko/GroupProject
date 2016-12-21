@@ -13,7 +13,7 @@ namespace TestWCFService
     {
         static void Main(string[] args)
         {
-                AppDomain currentDomain = AppDomain.CurrentDomain;
+                var currentDomain = AppDomain.CurrentDomain;
                 currentDomain.UnhandledException += UnhandledExceptionHandler;
                 Init();
                 var svc = new MainService();
@@ -32,7 +32,7 @@ namespace TestWCFService
 
 
 
-        private static void Init()
+       private static void Init()
         {
             #region Инициализация логгера
             Logger.Level = Config.Get.Log.Level;
