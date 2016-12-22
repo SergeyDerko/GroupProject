@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ServiceModel;
+using System.Threading;
 using TestWCFLib;
 
 namespace TestWCFService
@@ -7,23 +8,29 @@ namespace TestWCFService
     public class TestService
     {
       //  private volatile bool _processingError;
-        private ServiceHost _host;
+        private bool _stopFlag;
+        public Thread Thread { get; private set; }
 
         public void Start()
         {
-            if(_host == null)
-            _host = new ServiceHost(typeof(Calc));
-            _host.Open();
-            Console.WriteLine("Сервер запущен");
-            Console.ReadKey();
-            _host.Close();
+            Thread = new Thread(x =>
+            {
+                using (var host = new ServiceHost(typeof(Calc)))
+                {
+                    host.Open();
+                    Console.Title = "Server";
+                    Console.WriteLine("Сервер запушен!");
+                    while ((!ServiceUtils.Retarder(5, ref _stopFlag)));
+                    host.Close();
+                }
+                    Console.ReadKey();
+            });
+            
         }
-
-
-
+        
         public void Stop()
         {
-            _host?.Close();
+            _stopFlag = false;
         }
     }
 }

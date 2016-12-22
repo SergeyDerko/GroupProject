@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.ServiceProcess;
 using Common;
-using TestWcf_Service.service;
+using TestWcf_Service.Windows_service;
 
 namespace TestWcf_Service
 {
@@ -14,18 +14,19 @@ namespace TestWcf_Service
             var currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += UnhandledExceptionHandler;
             Initlog(); // инициализация логгера
-            var svc = new MainService();
-            if (Array.IndexOf(args, "console") != -1 || Array.IndexOf(args, "c") != -1) // debug
+            var svc = new TestWcfService();
+            if (Array.IndexOf(args, "console") != -1 || Array.IndexOf(args, "c") != -1) // if debug
             {
                 Console.Title = "---SERVER---";
-                svc.StartSvc(); // старт службы
+                var controller =
+                    new ServiceController(Path.GetFileNameWithoutExtension(typeof(Program).Assembly.CodeBase));
+                controller.Start(); // старт службы
                 var ipadress = Dns.GetHostEntry(Dns.GetHostName()).AddressList[2]; // определение ip-адреса 
-                Console.WriteLine($" Сервер запущен!\n Ip-адрес сервера: {ipadress}\n Нажмите любую клавишу для остановки сервера...");
+                Console.WriteLine(
+                    $" Сервер запущен!\n Ip-адрес сервера: {ipadress}\n Нажмите любую клавишу для остановки сервера...");
                 Console.ReadKey(true);
-                svc.StopSvc(); // остановка службы
-
+                controller.Stop();
                 Console.Write(" Сервер остановлен!");
-                Logger.Write(Level.Info, "Сервер остановлен!");
             }
             else // запуск службы windows
             {
@@ -34,16 +35,15 @@ namespace TestWcf_Service
         }
 
         #region Exception
+
         private static void UnhandledExceptionHandler(object sender, UnhandledExceptionEventArgs args)
         {
             const string method = "UnhandledExceptionHandler";
-            var ex = (Exception)args.ExceptionObject;
+            var ex = (Exception) args.ExceptionObject;
             Console.WriteLine(ex == null ? "Error!" : $"{method}\n{ex}");
         }
 
-
         #endregion
-
 
         #region Инициализация логгера
 
@@ -61,7 +61,7 @@ namespace TestWcf_Service
             }
             Logger.Prefix = Config.Get.Log.Prefix;
             Logger.Start();
-            Logger.Write(Level.Info, "Старт службы. Сервер запущен!");
+            Logger.Write(Level.Info, "Старт службы!");
         }
 
         #endregion

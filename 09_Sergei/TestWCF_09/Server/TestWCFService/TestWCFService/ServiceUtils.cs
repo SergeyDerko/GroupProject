@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading;
 
 namespace TestWCFService
 {
-    class ServiceUtils
+    public class ServiceUtils
     {
         public static bool Retarder(int seconds, ref bool stop)
         {
-            for (int i = 0; !stop && i < seconds * 1000 / TestConstants.TimeScanStopParam; i++)
+            for (var i = 0; !stop && i < seconds * 1000 / TestConstants.TimeScanStopParam; i++)
             {
                 Thread.Sleep(TestConstants.TimeScanStopParam);
             }

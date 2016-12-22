@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
 using CommonLogger;
 
 namespace TestWCFService
@@ -13,7 +9,7 @@ namespace TestWCFService
     {
         static void Main(string[] args)
         {
-                AppDomain currentDomain = AppDomain.CurrentDomain;
+                var currentDomain = AppDomain.CurrentDomain;
                 currentDomain.UnhandledException += UnhandledExceptionHandler;
                 Init();
                 var svc = new MainService();
@@ -32,7 +28,7 @@ namespace TestWCFService
 
 
 
-        private static void Init()
+       private static void Init()
         {
             #region Инициализация логгера
             Logger.Level = Config.Get.Log.Level;

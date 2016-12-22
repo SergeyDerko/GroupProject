@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TestWCFService
+﻿namespace TestWCFService
 {
-    internal class TestConstants
+    public  class TestConstants
     {
         public static int TimeScanStopParam = 500;
     }

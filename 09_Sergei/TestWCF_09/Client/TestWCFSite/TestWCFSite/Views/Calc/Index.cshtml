@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Calculator";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="" content="width=device-width" />
+    <title>@ViewBag.Message</title>
+</head>
+<body>
+<h1>@ViewBag.Message</h1>
+<div>
+    @{
+        var r = new Random();
+        for (var i = 0; i < 10; i++)
+        {
+            var a = r.Next(1, 100);
+            var b = r.Next(1, 100);
+            var result = a + b;
+            <p>@a + @b = @result</p>
+        }
+    }
+</div>
+</body>
+</html>
