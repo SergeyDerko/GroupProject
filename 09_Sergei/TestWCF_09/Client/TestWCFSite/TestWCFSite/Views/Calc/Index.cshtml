@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<div>
+    @{
+        var r = new Random();
+        for (var i = 0; i < 10; i++)
+        {
+                var a = r.Next(1, 100);
+                var b = r.Next(1, 100);
+                var result = a + b;
+                <p>@a + @b = @result</p>
+        }
+    }
+</div>
+</body>
+</html>
