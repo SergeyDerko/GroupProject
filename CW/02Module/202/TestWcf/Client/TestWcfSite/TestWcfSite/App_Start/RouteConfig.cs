@@ -14,6 +14,12 @@ namespace TestWcfSite
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+               name: "Yuriy",
+               url: "{controller}/{action}/{a}/{b}",
+               defaults: new { controller = "Home", action = "Index", a = 0, b = 0 }
+           );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

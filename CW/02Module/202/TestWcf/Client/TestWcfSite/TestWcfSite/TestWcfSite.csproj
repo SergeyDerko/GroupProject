@@ -144,6 +144,7 @@
     <Compile Include="Controllers\CalcController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SergeyDerkoController.cs" />
+    <Compile Include="Controllers\YuriyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,6 +192,8 @@
     <Content Include="Views\Calc\Sum.cshtml" />
     <Content Include="Views\SergeyDerko\Index.cshtml" />
     <Content Include="Views\AlekseyAntonov\Index.cshtml" />
+    <Content Include="Views\Yuriy\Index.cshtml" />
+    <Content Include="Views\Yuriy\CalcSum.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
