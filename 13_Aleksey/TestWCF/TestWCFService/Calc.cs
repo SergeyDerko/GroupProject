@@ -7,9 +7,13 @@ namespace TestWCFService
     {
         public int Sum(int a, int b)
         {
+           // const string method = "Sum";
+           // Logger.Enter(method);
             var sum = a + b;
-            Console.WriteLine($"{a} + {b} = {sum}");
-            return sum;
+            var value = $"   {a} + {b} = {sum}";
+            //Logger.Info(method, value);
+            Console.WriteLine(value);
+            return sum;//Logger.Leave(method, sum);
         }
 
         public int Sub(int a, int b)
@@ -19,39 +23,27 @@ namespace TestWCFService
             return sub;
         }
 
-        public int Div(int a, int b)
+        public double Div(double a, double b)
         {
-            // var divInt = a/b;
-            //var divFloat = a%b;
             try
             {
-                var div = a/b; //divInt + divFloat;
+                var div = a/b; 
                 Console.WriteLine($"{a} / {b} = {div}");
                 return div;
             }
-            catch (Exception e)
+            catch (DivideByZeroException)
             {
-                Console.WriteLine($"Деление на ноль не допустимо");
+
                 return 0;
             }
-           
             
         }
 
         public int Mult(int a, int b)
         {
-            try
-            {
                 var mult = a*b;
                 Console.WriteLine($"{a} * {b} = {mult}");
                 return mult;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"умножение на ноль не допустимо");
-                return 0;
-            }
-
         }
     }
 }

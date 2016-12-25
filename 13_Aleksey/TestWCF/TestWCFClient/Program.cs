@@ -11,11 +11,11 @@ namespace TestWCFClient
         {
            Console.WriteLine(AppDomain.CurrentDomain.FriendlyName);
 
-            var address= new Uri("http://localhost:777/ICalc");
-            var binding = new BasicHttpBinding();
-            var endpoint = new EndpointAddress(address);
-
-            var factory = new ChannelFactory<ICalc>(binding, endpoint);
+            //var address = new Uri("http://localhost:777/ICalc");
+            //var binding = new BasicHttpBinding();
+            //var endpoint = new EndpointAddress(address);
+            //var factory = new ChannelFactory<ICalc>(binding, endpoint);
+            var factory = new ChannelFactory<ICalc>("WSHttpBinding_ICalc");
             var channel = factory.CreateChannel();
 
             for (int i = 0; i < 10; i++)
