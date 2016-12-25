@@ -18,6 +18,12 @@ namespace TestWcfSite
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Calc",
+                url: "{controller}/{action}/{a}/{b}",
+                defaults: new { controller = "Calc", action = "Sum", a = 0, b = 0 }
+            );
         }
     }
 }

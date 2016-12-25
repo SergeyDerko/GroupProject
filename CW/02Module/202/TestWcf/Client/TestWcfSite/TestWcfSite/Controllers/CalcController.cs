@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 
 namespace TestWcfSite.Controllers
 {
@@ -10,10 +11,29 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
-        public ActionResult Sum(int id = 0)
+        public ActionResult Sum(int? id = 0)
         {
-            ViewBag.Id = id;
-            ViewBag.Result = id + id;
+            if (id == null)
+            {
+                ViewBag.Id = 0;
+                ViewBag.Result = 0;
+            }
+            else
+            {
+                ViewBag.Id = id;
+                ViewBag.Result = id + id;
+            }
+            return View();
+        }
+
+        public ActionResult Sum(int? a, int? b)
+        {
+            if (a != null || b != null)
+            {
+                ViewBag.A = a;
+                ViewBag.B = b;
+                ViewBag.Result = a + b;
+            }
             return View();
         }
     }
