@@ -12,7 +12,7 @@ namespace TestWcfClient
         private static void Main()
         {
             Console.WriteLine(AppDomain.CurrentDomain.FriendlyName);
-            var address = new Uri("http://localhost:555/ICalc");
+            var address = new Uri("http://localhost:80/ICalc");
             
             var factory = new ChannelFactory<ICalc>(new BasicHttpBinding(), new EndpointAddress(address));
             var channel = factory.CreateChannel();

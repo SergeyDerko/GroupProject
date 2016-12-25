@@ -20,7 +20,7 @@ namespace TestWCFService.service
 
             _serviceInstaller.ServiceName = Path.GetFileNameWithoutExtension(typeof(Program).Assembly.CodeBase);
             _serviceInstaller.DisplayName = Path.GetFileNameWithoutExtension(typeof(Program).Assembly.CodeBase);
-            _serviceInstaller.Description = "TestWcf_Service";
+            _serviceInstaller.Description = "TestWCFService";
             _serviceInstaller.StartType = ServiceStartMode.Automatic;
 
             Installers.AddRange(new Installer[] { _serviceProcessInstaller, _serviceInstaller });

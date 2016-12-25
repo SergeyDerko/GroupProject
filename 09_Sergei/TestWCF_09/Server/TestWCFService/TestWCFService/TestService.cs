@@ -9,10 +9,11 @@ namespace TestWCFService
     {
       //  private volatile bool _processingError;
         private bool _stopFlag;
-        private Thread _thread;
+        public Thread Thread { get; private set; }
+
         public void Start()
         {
-            _thread = new Thread(x =>
+            Thread = new Thread(x =>
             {
                 using (var host = new ServiceHost(typeof(Calc)))
                 {
