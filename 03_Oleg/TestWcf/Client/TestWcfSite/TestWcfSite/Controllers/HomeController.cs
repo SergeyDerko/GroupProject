@@ -8,23 +8,42 @@ namespace TestWcfSite.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public class CalcController : Controller
         {
-            return View();
-        }
+            // GET: Calc
+            public ActionResult Calc()
+            {
+                ViewBag.Title = "Calculator";
+                ViewBag.Message = "Calculation page";
+                return View();
+            }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+            public ActionResult Sum()
+            {
+                ViewBag.Title = "Calculator";
+                ViewBag.Message = "Calculation page";
+                return View();
+            }
+            public ActionResult Del()
+            {
+                ViewBag.Title = "Calculator";
+                ViewBag.Message = "Calculation page";
+                return View();
+            }
 
-            return View();
-        }
+            public ActionResult Mult()
+            {
+                ViewBag.Title = "Calculator";
+                ViewBag.Message = "Calculation page";
+                return View();
+            }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            public ActionResult Div()
+            {
+                ViewBag.Title = "Calculator";
+                ViewBag.Message = "Calculation page";
+                return View();
+            }
         }
     }
 }

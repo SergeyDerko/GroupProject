@@ -1,6 +1,13 @@
 ﻿@{
-    ViewBag.Title = "About";
-}
+
+    for (int i = 1; i < 7; i++)
+    { 
+    var str = "<h" + i + ">Бу-" + i + "</h" + i + "></br>";
+        @Html.Raw(str)
+                     }
+    
+         ViewBag.Title = "About";
+    }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 

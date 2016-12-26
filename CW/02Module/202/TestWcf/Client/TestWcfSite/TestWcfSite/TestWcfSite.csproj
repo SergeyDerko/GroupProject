@@ -145,6 +145,7 @@
     <Compile Include="Controllers\ArtemController.cs" />
     <Compile Include="Controllers\CalcController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OlegController.cs" />
     <Compile Include="Controllers\SergeyDerkoController.cs" />
     <Compile Include="Controllers\SergeyPekhotaController.cs" />
     <Compile Include="Controllers\YuriyController.cs" />
@@ -204,6 +205,7 @@
     <Content Include="Views\Calc\Sqrt.cshtml" />
     <Content Include="Views\Calc\Div.cshtml" />
     <Content Include="Views\Artem\Index.cshtml" />
+    <Content Include="Views\Oleg\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
