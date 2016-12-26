@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using TestWCFSite.Models;
 
 namespace TestWCFSite.Controllers
 {
@@ -7,7 +8,8 @@ namespace TestWCFSite.Controllers
         // GET: Chat
         public ActionResult Chat()
         {
-            ViewBag.Title = "Chat";
+            var chat = new Chat();
+            ViewBag.Name = ".NetBrainChat";
             return View();
         }
     }

@@ -1,17 +1,22 @@
 ﻿
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Chat</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>
+<table>
+    <tr>
+        <th><h1 style="text-align: center">@ViewBag.Name</h1></th>
+        <td><textarea id="chat-count"></textarea></td>
+    </tr>
+    <tr>
+        <td>
+            <textarea id="chat-textarea-body" readonly="readonly"></textarea>
+        </td>
+        <td>
+            <textarea id="chat-textarea-list" readonly="readonly"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <textarea id="chat-textarea-writetext"></textarea>
+        </td>
+        <td><button id="chat-button-connect" name="btnConnect" title="Connetc"><b>Connect</b></button></td>
+    </tr>
+</table>
