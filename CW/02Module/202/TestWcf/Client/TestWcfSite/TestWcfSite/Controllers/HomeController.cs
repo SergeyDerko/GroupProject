@@ -10,6 +10,9 @@ namespace TestWcfSite.Controllers
     {
         public ActionResult Index()
         {
+            var o = RouteData.Values["a"];
+            var con = RouteData.Values["controller"];
+            var action = RouteData.Values["action"];
             return View();
         }
 
