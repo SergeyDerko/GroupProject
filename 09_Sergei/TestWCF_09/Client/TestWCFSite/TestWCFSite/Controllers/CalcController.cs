@@ -7,6 +7,7 @@ namespace TestWCFSite.Controllers
         // GET: Calc
         public ActionResult Calc()
         {
+            ViewBag.Title = "Calculator";
             ViewBag.Message = "Calculation page";
             return View();
         }
