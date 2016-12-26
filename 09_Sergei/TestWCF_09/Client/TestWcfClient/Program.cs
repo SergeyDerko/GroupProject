@@ -3,19 +3,18 @@ using System.ServiceModel;
 using System.Threading;
 using TestWCFCommon;
 
+
+
 namespace TestWcfClient
 {
-    class Program
+    internal class Program
     {
-        
-        static void Main(string[] args)
+        private static void Main()
         {
             Console.WriteLine(AppDomain.CurrentDomain.FriendlyName);
-            var address = new Uri("http://localhost:555/ICalc");
-            var binding = new BasicHttpBinding();
-            var endpoint = new EndpointAddress(address);
-
-            var factory = new ChannelFactory<ICalc>(binding, endpoint);
+            var address = new Uri("http://localhost:80/ICalc");
+            
+            var factory = new ChannelFactory<ICalc>(new BasicHttpBinding(), new EndpointAddress(address));
             var channel = factory.CreateChannel();
             var r = new Random();
             

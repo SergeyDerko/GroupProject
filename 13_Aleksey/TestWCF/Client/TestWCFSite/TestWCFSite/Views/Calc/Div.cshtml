@@ -1,0 +1,19 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <br/>Result = @ViewBag.Result<br />
+    
+    @Html.ActionLink("x / y  (/Calc/Div/x/y)", "Div", "Calc")
+    <br />
+    @Html.RouteLink("Index", new { controller = "Calc", action = "Index" })
+    @*<a href="/Calc/Div/2/3">2 / 3  (/Calc/Div)</a><br /><br />
+    <a href="/Calc/Index">Index</a><br />*@
+</div>
+</body>
+</html>

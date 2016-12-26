@@ -12,7 +12,7 @@ namespace TestWCFCommon
         int Sub(int a, int b);
 
         [OperationContract]
-        int Div(int a, int b);
+        double Div(double a, double b);
 
         [OperationContract]
         int Mult(int a, int b);

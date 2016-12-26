@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.ServiceModel;
 using System.Threading;
-using TestWcfCommon;
 
 namespace TestWpfClient
 {
@@ -11,12 +11,12 @@ namespace TestWpfClient
         {
             Console.WriteLine(AppDomain.CurrentDomain.FriendlyName);
 
-            var address = new Uri("http://95.158.32.34:555/ICalc");
-            //var address = new Uri("http://10.10.10.45:555/ICalc");
+            //var address = new Uri("http://95.158.32.34:555/ICalc");
+            var address = new Uri("http://localhost:555/ICalc");
             var binding = new BasicHttpBinding();
             var endpoint = new EndpointAddress(address);
 
-            var factory = new ChannelFactory<ICalc>(binding, endpoint);
+            var factory = new ChannelFactory<ICalc>("*");
             var channel = factory.CreateChannel();
             for (int i = 0; i < 10; i++)
             {
@@ -27,10 +27,6 @@ namespace TestWpfClient
                     var div = channel.Division(i, j);
                     var sub = channel.Substraction(i, j);
                     var mul = channel.Multiplication(i, j);
-                    Console.WriteLine($"{i} + {j} = {sum}");
-                    Console.WriteLine($"{i} - {j} = {sub}");
-                    Console.WriteLine($"{i} / {j} = {div}");
-                    Console.WriteLine($"{i} * {j} = {mul}");
                 }
             }
             Console.ReadKey();

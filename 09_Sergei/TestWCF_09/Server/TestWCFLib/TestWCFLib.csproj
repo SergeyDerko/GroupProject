@@ -51,6 +51,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\CommonLogger\CommonLogger.csproj">
+      <Project>{EF2EAC8E-9076-4F8F-A313-A0AA8AA610D6}</Project>
+      <Name>CommonLogger</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Common\TestWCFCommon\TestWCFCommon.csproj">
       <Project>{D09101EB-3160-4C32-9AF5-F2A01006A048}</Project>
       <Name>TestWCFCommon</Name>

@@ -1,10 +1,5 @@
 ﻿using System;
 using System.ServiceModel;
-using TestWcfCommon;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WCFTest12
 {

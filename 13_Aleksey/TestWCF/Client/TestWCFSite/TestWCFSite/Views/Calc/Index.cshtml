@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Index</title>
+</head>
+<body>
+<div>
+   
+   @* Result = @ViewBag.Result<br/>*@
+    
+    @Html.RouteLink("Sum", new { controller="Calc", action="Sum"})
+    <br/>
+    @Html.RouteLink("Sub", new {controller="Calc", action="Sub"})
+    <br />
+    @Html.RouteLink("Mult", new {controller="Calc", action="Mult"})
+    <br />
+    @Html.RouteLink("Div", new {controller="Calc", action="Div"})
+    <br />
+
+   @* <a href="/Calc/Sum/2/3">x + y  (/Calc/Sum)</a><br/>
+    <a href="/Calc/Sub/2/3">x - y  (/Calc/Sub)</a><br/>
+    <a href="/Calc/Mult/2/3">x * y  (/Calc/Mult)</a><br/>
+    <a href="/Calc/Div/2/3">x / y  (/Calc/Div)</a><br/>*@
+</div>
+</body>
+</html>

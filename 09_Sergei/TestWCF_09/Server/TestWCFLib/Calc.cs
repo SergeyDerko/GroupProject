@@ -1,4 +1,5 @@
 ﻿using System;
+using CommonLogger;
 using TestWCFCommon;
 
 namespace TestWCFLib
@@ -7,7 +8,10 @@ namespace TestWCFLib
     {
         public int Sum(int a, int b)
         {
+            const string method = "Sum";
+            Logger.Enter(method);
             var sum = a + b;
+            var value = $"{sum}={a}+{b}";
             Console.WriteLine($"{a} + {b} = {sum}");
             return sum;
         }
