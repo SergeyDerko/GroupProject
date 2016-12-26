@@ -142,6 +142,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Controllers\AlekseyAntonovController.cs" />
+    <Compile Include="Controllers\ArtemController.cs" />
     <Compile Include="Controllers\CalcController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SergeyDerkoController.cs" />
@@ -202,6 +203,7 @@
     <Content Include="Views\Calc\Min.cshtml" />
     <Content Include="Views\Calc\Sqrt.cshtml" />
     <Content Include="Views\Calc\Div.cshtml" />
+    <Content Include="Views\Artem\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
