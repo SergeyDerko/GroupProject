@@ -11,5 +11,32 @@ namespace TestWCFSite.Controllers
             ViewBag.Message = "Calculation page";
             return View();
         }
+
+        public ActionResult Sum()
+        {
+            ViewBag.Title = "Calculator";
+            ViewBag.Message = "Calculation page";
+            return View();
+        }
+        public ActionResult Del()
+        {
+            ViewBag.Title = "Calculator";
+            ViewBag.Message = "Calculation page";
+            return View();
+        }
+
+        public ActionResult Mult()
+        {
+            ViewBag.Title = "Calculator";
+            ViewBag.Message = "Calculation page";
+            return View();
+        }
+
+        public ActionResult Div()
+        {
+            ViewBag.Title = "Calculator";
+            ViewBag.Message = "Calculation page";
+            return View();
+        }
     }
 }
