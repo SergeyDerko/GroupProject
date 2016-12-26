@@ -189,11 +189,14 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Calc\Index.cshtml" />
-    <Content Include="Views\Calc\Sum.cshtml" />
+    <Content Include="Views\Calc\Result.cshtml" />
     <Content Include="Views\SergeyDerko\Index.cshtml" />
     <Content Include="Views\AlekseyAntonov\Index.cshtml" />
     <Content Include="Views\Yuriy\Index.cshtml" />
     <Content Include="Views\Yuriy\CalcSum.cshtml" />
+    <Content Include="Views\Calc\Sum.cshtml" />
+    <Content Include="Views\Calc\Min.cshtml" />
+    <Content Include="Views\Calc\Sqrt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

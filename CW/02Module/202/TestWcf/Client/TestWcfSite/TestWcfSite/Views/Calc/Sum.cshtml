@@ -1,20 +1,8 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    ViewBag.Title = "Sum";
+}
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-    <p>
-        @{
-            var o = ViewBag.Id + "+" + ViewBag.Id + "=" + ViewBag.Result;
-            <h5>@o</h5>
+<h2>Sum</h2>
 
-            var str = ViewBag.A + "+" + ViewBag.B + "=" + ViewBag.Result;
-            <h5>@str</h5>
-        }
-    </p>      
-</div>
-</body>
-</html>
+@Html.Partial("Result")

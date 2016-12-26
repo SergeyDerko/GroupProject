@@ -11,21 +11,6 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
-        public ActionResult Sum(int? id = 0)
-        {
-            if (id == null)
-            {
-                ViewBag.Id = 0;
-                ViewBag.Result = 0;
-            }
-            else
-            {
-                ViewBag.Id = id;
-                ViewBag.Result = id + id;
-            }
-            return View();
-        }
-
         public ActionResult Sum(int? a, int? b)
         {
             if (a != null || b != null)
@@ -33,6 +18,30 @@ namespace TestWcfSite.Controllers
                 ViewBag.A = a;
                 ViewBag.B = b;
                 ViewBag.Result = a + b;
+                ViewBag.Action = "+";
+            }
+            return View();
+        }
+
+        public ActionResult Min(int? a, int? b)
+        {
+            if (a != null || b != null)
+            {
+                ViewBag.A = a;
+                ViewBag.B = b;
+                ViewBag.Result = a - b;
+                ViewBag.Action = "-";
+            }
+            return View();
+        }
+
+        public ActionResult Sqrt(int? a)
+        {
+            if (a != null)
+            {
+                ViewBag.A = a;
+                ViewBag.Result = Math.Sqrt((double)a);
+                ViewBag.Action = "Sqrt";
             }
             return View();
         }
