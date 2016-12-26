@@ -7,7 +7,9 @@
 </head>
 <body>
 <div>
-    <p>Calc-index</p>
+    @Html.ActionLink("Sum: a = 20, b = 30", "Sum", "Calc", new {a = 20, b = 30}, null)
+    <br/>
+    @Html.RouteLink("Min: a = 50, b = 30", new {controller = "Calc", action="Min", a = 50, b = 30})
 </div>
 </body>
 </html>
