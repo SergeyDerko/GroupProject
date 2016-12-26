@@ -141,7 +141,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\AlekseyAntonovController.cs" />
     <Compile Include="Controllers\CalcController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -200,9 +199,11 @@
     <Content Include="Views\Calc\Sum.cshtml" />
     <Content Include="Views\Calc\Min.cshtml" />
     <Content Include="Views\Calc\Sqrt.cshtml" />
+    <Content Include="Views\Calc\Div.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Models\" />

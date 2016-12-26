@@ -45,5 +45,17 @@ namespace TestWcfSite.Controllers
             }
             return View();
         }
+
+        public ActionResult Div(int? a, int? b)
+        {
+            if (a != null && b != null && b != 0)
+            {
+                ViewBag.A = a;
+                ViewBag.B = b;
+                ViewBag.Result = a / b;
+                ViewBag.Action = "/";
+            }
+            return View();
+        }
     }
 }
