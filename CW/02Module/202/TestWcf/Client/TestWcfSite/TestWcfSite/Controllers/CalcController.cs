@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 
 namespace TestWcfSite.Controllers
 {
@@ -8,6 +11,7 @@ namespace TestWcfSite.Controllers
         // GET: Calc
         public ActionResult Index()
         {
+            ViewBag.List = TableMultiply();
             return View();
         }
 
@@ -56,6 +60,26 @@ namespace TestWcfSite.Controllers
                 ViewBag.Action = "/";
             }
             return View();
+        }
+
+        private List<string> TableMultiply()
+        {
+            var list = new List<string>();
+            for (int i = 2; i < 10; i++)
+            {
+                list.Add(TableBuilder(i));
+            }
+            return list;
+        }
+
+        private string TableBuilder(int num)
+        {
+            var s = new StringBuilder();
+            for (int i = 2; i <= 10; i++)
+            {
+                s.Append($"{num} x {i} = {num * i}<br/>");
+            }
+            return s.ToString();
         }
     }
 }

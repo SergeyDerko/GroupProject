@@ -10,6 +10,9 @@
     @Html.ActionLink("Sum: a = 20, b = 30", "Sum", "Calc", new {a = 20, b = 30}, null)
     <br/>
     @Html.RouteLink("Min: a = 50, b = 30", new {controller = "Calc", action="Min", a = 50, b = 30})
+
+    <br/>
+    @Html.Partial("TableMultiply")
 </div>
 </body>
 </html>
