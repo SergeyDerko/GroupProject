@@ -31,6 +31,7 @@ namespace TestWcfSite.Models
             {
                 str.Append($"{Value}x{i}={Value * i}");
                 list.Add(str.ToString());
+                str.Clear();
             } 
             return list;
         }
