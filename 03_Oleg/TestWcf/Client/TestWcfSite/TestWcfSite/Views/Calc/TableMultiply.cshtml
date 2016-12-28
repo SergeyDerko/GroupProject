@@ -1,0 +1,17 @@
+﻿<table border="2">
+    @for (int i = 0, index = 0; i < 2; i++)
+    {
+        <tr>
+            @for (var j = 0; j < 4; j++)
+            {
+                <td>
+                    @{
+                        var str = ((List<string>) ViewBag.List)[index];
+                        @Html.Raw(str)
+                        index++;
+                    }
+                </td>
+            }
+        </tr>
+    }
+</table>
