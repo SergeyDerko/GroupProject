@@ -29,10 +29,9 @@ namespace TestWcfSite.Models
             var str = new StringBuilder();
             for (var i = StartIndex; i < Count+StartIndex; i++)
             {
-                str.Append($"{Value}x{i}={Value * i}</br>");
+                str.Append($"{Value}x{i}={Value * i}");
                 list.Add(str.ToString());
-            }
-            
+            } 
             return list;
         }
     }
