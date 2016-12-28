@@ -226,6 +226,7 @@
     <Content Include="Views\Oleg\Index.cshtml" />
     <Content Include="Views\Oleg\MultResult.cshtml" />
     <Content Include="Views\Calc\TableMultiply.cshtml" />
+    <Content Include="Views\SergeyPekhota\_ViewPatrialTable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
