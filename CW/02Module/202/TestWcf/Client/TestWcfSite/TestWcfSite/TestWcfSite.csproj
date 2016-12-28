@@ -226,7 +226,13 @@
     <Content Include="Views\Oleg\Index.cshtml" />
     <Content Include="Views\Oleg\MultResult.cshtml" />
     <Content Include="Views\Calc\TableMultiply.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\SergeyPekhota\_ViewPatrialTable.cshtml" />
+=======
+    <Content Include="Views\Yuriy\TableMultiply.cshtml" />
+    <Content Include="Views\Yuriy\Expression.cshtml" />
+    <Content Include="Views\SergeyDerko\Table.cshtml" />
+>>>>>>> 8c6d4f1546f953e22d63d509f390713855d59198
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -254,7 +260,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>10919</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
