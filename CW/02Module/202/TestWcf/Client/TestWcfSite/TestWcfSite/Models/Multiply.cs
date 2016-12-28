@@ -23,9 +23,7 @@ namespace TestWcfSite.Models
 
         public List<string> Multy()
         {
-
             var list = new List<string>();
-            StartIndex = 2;
             var str = new StringBuilder();
             for (var i = StartIndex; i < Count+StartIndex; i++)
             {
