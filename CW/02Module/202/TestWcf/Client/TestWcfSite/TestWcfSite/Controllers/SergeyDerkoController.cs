@@ -32,6 +32,23 @@ namespace TestWcfSite.Controllers
 
             return View();
         }
+        private string TableBuilderOll()
+        {
+            var str = new StringBuilder();
+
+            for (int i = 2; i < 11; i++)
+            {
+                str.Append($"{ViewBag.A} x {i} = {ViewBag.A * i}<br/>");
+            }
+            return str.ToString();
+        }
+
+        public ActionResult TableOll(int? a)
+        {
+            ViewBag.A = a;
+            ViewBag.tableOll = TableBuilderOll();
+            return View();
+        }
 
 
         /*private string TableBuilder(int? a)

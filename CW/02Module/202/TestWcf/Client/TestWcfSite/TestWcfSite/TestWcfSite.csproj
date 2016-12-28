@@ -230,6 +230,7 @@
     <Content Include="Views\Yuriy\TableMultiply.cshtml" />
     <Content Include="Views\Yuriy\Expression.cshtml" />
     <Content Include="Views\SergeyDerko\Table.cshtml" />
+    <Content Include="Views\SergeyDerko\TableOll.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
