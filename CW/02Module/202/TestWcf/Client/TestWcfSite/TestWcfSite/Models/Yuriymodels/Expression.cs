@@ -1,4 +1,4 @@
-﻿namespace TestWcfSite.Models.Yuriy
+﻿namespace TestWcfSite.Models.Yuriymodels
 {
     public class Expression
     {

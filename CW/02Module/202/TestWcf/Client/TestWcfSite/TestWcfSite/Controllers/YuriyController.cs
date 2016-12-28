@@ -1,5 +1,5 @@
 ﻿using System.Web.Mvc;
-//using TestWcfSite.Models.Yuriy;
+using TestWcfSite.Models.Yuriymodels;
 
 namespace TestWcfSite.Controllers
 {
@@ -14,8 +14,8 @@ namespace TestWcfSite.Controllers
         public ActionResult TableMultiply()
         {
 
-            //var expression = new Expression {A = 1, B = 2, Operation = Operation.Mult};
-            //ViewBag.Expression = expression;
+            var expression = new Expression {A = 1, B = 2, Operation = Operation.Mult};
+            ViewBag.Expression = expression;
             return View();
         }
     }

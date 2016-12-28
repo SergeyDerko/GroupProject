@@ -169,6 +169,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Multiply.cs" />
+    <Compile Include="Models\Yuriymodels\Expression.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -216,7 +217,6 @@
     <Content Include="Views\SergeyDerko\Index.cshtml" />
     <Content Include="Views\AlekseyAntonov\Index.cshtml" />
     <Content Include="Views\Yuriy\Index.cshtml" />
-    <Content Include="Views\Yuriy\CalcSum.cshtml" />
     <Content Include="Views\SergeyPekhota\Index.cshtml" />
     <Content Include="Views\Calc\Sum.cshtml" />
     <Content Include="Views\Calc\Min.cshtml" />
@@ -226,7 +226,6 @@
     <Content Include="Views\Oleg\Index.cshtml" />
     <Content Include="Views\Oleg\MultResult.cshtml" />
     <Content Include="Views\Calc\TableMultiply.cshtml" />
-
     <Content Include="Views\SergeyPekhota\_ViewPatrialTable.cshtml" />
     <Content Include="Views\Yuriy\TableMultiply.cshtml" />
     <Content Include="Views\Yuriy\Expression.cshtml" />
