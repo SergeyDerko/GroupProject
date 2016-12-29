@@ -24,7 +24,7 @@ namespace TestWcfSite.Controllers
         }
 
         [HttpPost]
-        public ActionResult Update(Multiply mult)
+        public ActionResult Index(Multiply mult)
         {
 
             return View("Index",mult);

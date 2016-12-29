@@ -3,13 +3,13 @@
 
 <tr>
     <th>
-        @using (Html.BeginForm("Update", "SergeyPekhota",FormMethod.Post))
+        @using (Html.BeginForm("Index", "SergeyPekhota",FormMethod.Post))
         {
             @Html.Label("Value:", Model.Value) <br/>
             @Html.TextBox("Value", Model.Value)<br/>
             @Html.Label("StartIndex:", Model.StartIndex)<br />
             @Html.TextBox("StartIndex", Model.StartIndex)<br />
-            @Html.Label("Count:", Model.Count)<br />
+            @Html.Label("Кол-во примеров:", Model.Count)<br />
             @Html.TextBox("Count", Model.Count)
             <input type="submit" value="Update"/>
         }
