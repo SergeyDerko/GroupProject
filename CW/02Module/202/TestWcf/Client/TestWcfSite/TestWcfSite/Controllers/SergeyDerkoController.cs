@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using TestWcfSite.Models.SergeyDerkoModels;
 
 namespace TestWcfSite.Controllers
 {
@@ -50,24 +51,11 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
-
-        /*private string TableBuilder(int? a)
+        public ActionResult MultiplicationTable()
         {
-            StringBuilder str = new StringBuilder();
-            if (a > 1 && a < 10)
-            {
-                for (int i = 2; i < 11; i++)
-                {
-                    str.Append($"{a} x {i} = {a*i}<br/>");
-                }
-                return str.ToString();
-            }
-            else
-            {
-                str.Append("Введите правильное значение");
-                return str.ToString();
-
-            }
-        }*/
+            var exp = new Expression11();
+            ViewBag.MTable = exp.MultiplicationTable();
+            return View();
+        }
     }
 }

@@ -1,0 +1,38 @@
+﻿body {
+}
+#box2 {
+    position: absolute;
+    left: 350px;
+    top: 113px;
+}
+#box3 {
+    position: absolute;
+    left: 430px;
+    top: 113px;
+}
+#box4 {
+    position: absolute;
+    left: 510px;
+    top: 113px;
+}
+#box5 {
+    position: absolute;
+    left: 590px;
+    top: 113px;
+}
+#box6 {
+    position: absolute;
+    left: 670px;
+    top: 113px;
+}
+#box7 {
+    position: absolute;
+    left: 750px;
+    top: 113px;
+}
+#box8 {
+    position: absolute;
+    left: 830px;
+    top: 113px;
+}
+
