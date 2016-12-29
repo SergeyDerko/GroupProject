@@ -1,18 +1,18 @@
 ﻿@model TestWcfSite.Models.PikhotaSerhiiModels.Calculator
-    
+
 @using (Html.BeginForm("Index", "SergeyPekhota", FormMethod.Post))
 {
     <th>
         @Html.Label("Value:", Model.Value) <br />
         @Html.TextBox("Value", Model.Value)<br />
     </th>
-            <th>
-                @Html.Label("StartIndex:", Model.StartIndex)<br />
-                @Html.TextBox("StartIndex", Model.StartIndex)<br />
-            </th>
-            <th>
-                @Html.Label("Кол-во примеров:", Model.Count)<br />
-                @Html.TextBox("Count", Model.Count)
-            </th>
-            <th><input type="submit" value="Update" /></th>
+    <th>
+        @Html.Label("StartIndex:", Model.StartIndex)<br />
+        @Html.TextBox("StartIndex", Model.StartIndex)<br />
+    </th>
+    <th>
+        @Html.Label("Кол-во примеров:", Model.Count)<br />
+        @Html.TextBox("Count", Model.Count)
+    </th>
+    <th><input type="submit" value="Update" /></th>
 }
