@@ -1,25 +1,55 @@
-﻿@model TestWcfSite.Models.Multiply
+﻿@model TestWcfSite.Models.Calculator
 
 
 <tr>
-    <th>
-        @using (Html.BeginForm("Index", "SergeyPekhota",FormMethod.Post))
+    
+        @using (Html.BeginForm("Index", "SergeyPekhota", FormMethod.Post))
         {
-            @Html.Label("Value:", Model.Value) <br/>
-            @Html.TextBox("Value", Model.Value)<br/>
-            @Html.Label("StartIndex:", Model.StartIndex)<br />
-            @Html.TextBox("StartIndex", Model.StartIndex)<br />
-            @Html.Label("Кол-во примеров:", Model.Count)<br />
-            @Html.TextBox("Count", Model.Count)
-            <input type="submit" value="Update"/>
+            <th>
+                @Html.Label("Value:", Model.Value) <br />
+                @Html.TextBox("Value", Model.Value)<br />
+            </th>
+            <th>
+                @Html.Label("StartIndex:", Model.StartIndex)<br />
+                @Html.TextBox("StartIndex", Model.StartIndex)<br />
+            </th>
+            <th>
+                @Html.Label("Кол-во примеров:", Model.Count)<br />
+                @Html.TextBox("Count", Model.Count)
+            </th>
+            <th><input type="submit" value="Update"/></th>
         }
-    </th>
+    
+</tr>
+<tr>
+    <th>Table <br/> multiply</th>
+    <th>Table <br /> division</th>
+    <th>Table <br /> sums</th>
+    <th>Table <br /> subtractions</th>
 </tr>
 <tr>
     <td>
-        @foreach (var expr in Model.Multy())
-            {
+        @foreach (var expr in Model.Mult())
+        {
             @Html.DisplayFor(m => expr)<br />
+        }
+    </td>
+    <td>
+        @foreach (var expr in Model.Div())
+        {
+            @Html.DisplayFor(m => expr)<br />
+        }
+    </td>
+    <td>
+        @foreach (var expr in Model.Sum())
+        {
+            @Html.DisplayFor(m => expr)<br />
+        }
+    </td>
+    <td>
+        @foreach (var expr in Model.Sub())
+        {
+            @Html.DisplayFor(m => expr) <br />
         }
     </td>
 </tr>

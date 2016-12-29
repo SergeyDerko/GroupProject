@@ -13,7 +13,7 @@ namespace TestWcfSite.Controllers
         // GET: SergeyPekhota
         public ActionResult Index()
         {
-            var mult = new Multiply
+            var mult = new Calculator
             {
                 Value = 2,
                 StartIndex = 2,
@@ -24,7 +24,7 @@ namespace TestWcfSite.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(Multiply mult)
+        public ActionResult Index(Calculator mult)
         {
 
             return View("Index",mult);
