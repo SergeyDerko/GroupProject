@@ -53,7 +53,7 @@ namespace TestWcfSite.Models.PikhotaSerhiiModels
             var str = new StringBuilder();
             for (var i = StartIndex; i < Count + StartIndex; i++)
             {
-                if (i == 0)
+                if (i == 0 )
                 {
                     str.Append("Деление на ноль!");
                     list.Add(str.ToString());

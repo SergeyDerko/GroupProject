@@ -14,21 +14,23 @@ namespace TestWcfSite.Controllers
         // GET: SergeyPekhota
         public ActionResult Index()
         {
-            var mult = new Calculator
+            var calc = new Calculator
             {
                 Value = 2,
-                StartIndex = 2,
+                StartIndex = 1,
                 Count = 9
             };
-
-            return View(mult);
+            var li = new List<string>() {"111","222","333"};
+            
+            ViewBag.List = li;
+            return View(calc);
         }
 
         [HttpPost]
-        public ActionResult Index(Calculator mult)
+        public ActionResult Index(Calculator calc)
         {
 
-            return View("Index",mult);
+            return View("Index",calc);
         }
     }
 }
