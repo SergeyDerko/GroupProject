@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.Mvc;
 using TestWcfSite.Models;
@@ -12,13 +13,21 @@ namespace TestWcfSite.Controllers
         // GET: SergeyPekhota
         public ActionResult Index()
         {
-            var m = new Multiply
+            var mult = new Multiply
             {
                 Value = 2,
                 StartIndex = 2,
                 Count = 9
             };
-            return View(m);
+
+            return View(mult);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Multiply mult)
+        {
+
+            return PartialView("Index",mult);
         }
     }
 }

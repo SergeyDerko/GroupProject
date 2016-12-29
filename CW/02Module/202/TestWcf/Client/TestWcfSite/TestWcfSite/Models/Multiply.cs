@@ -21,6 +21,7 @@ namespace TestWcfSite.Models
         }
 
 
+
         public List<string> Multy()
         {
             var list = new List<string>();
@@ -33,5 +34,6 @@ namespace TestWcfSite.Models
             } 
             return list;
         }
+        
     }
 }
