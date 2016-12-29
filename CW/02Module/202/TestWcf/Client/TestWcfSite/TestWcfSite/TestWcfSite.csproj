@@ -168,7 +168,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Multiply.cs" />
+    <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
     <Compile Include="Models\SergeyDerkoModels\Expression11.cs" />
     <Compile Include="Models\Yuriymodels\Expression.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

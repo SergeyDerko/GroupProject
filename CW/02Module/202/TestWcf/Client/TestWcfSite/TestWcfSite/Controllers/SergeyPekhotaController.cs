@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.Mvc;
 using TestWcfSite.Models;
+using TestWcfSite.Models.PikhotaSerhiiModels;
 
 namespace TestWcfSite.Controllers
 {

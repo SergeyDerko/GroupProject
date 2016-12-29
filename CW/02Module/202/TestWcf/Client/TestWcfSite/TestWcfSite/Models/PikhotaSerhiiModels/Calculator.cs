@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace TestWcfSite.Models
+namespace TestWcfSite.Models.PikhotaSerhiiModels
 {
     public class Calculator
     {
@@ -60,7 +60,7 @@ namespace TestWcfSite.Models
                     str.Clear();
                     continue;
                 }
-                str.Append($"{Value}/{i}={Value / i}");
+                str.Append($"{(double)Value}/{(double)i}={((double)Value / (double)i):N2}");
                 list.Add(str.ToString());
                 str.Clear();
             }
