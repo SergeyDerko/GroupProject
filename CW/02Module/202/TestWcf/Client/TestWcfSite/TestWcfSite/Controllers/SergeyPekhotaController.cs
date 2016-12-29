@@ -20,9 +20,6 @@ namespace TestWcfSite.Controllers
                 StartIndex = 1,
                 Count = 9
             };
-            var li = new List<string>() {"111","222","333"};
-            
-            ViewBag.List = li;
             return View(calc);
         }
 
