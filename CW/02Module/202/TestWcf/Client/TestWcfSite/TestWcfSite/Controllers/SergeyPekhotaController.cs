@@ -27,7 +27,7 @@ namespace TestWcfSite.Controllers
         public ActionResult Update(Multiply mult)
         {
 
-            return PartialView("Index",mult);
+            return View("Index",mult);
         }
     }
 }
