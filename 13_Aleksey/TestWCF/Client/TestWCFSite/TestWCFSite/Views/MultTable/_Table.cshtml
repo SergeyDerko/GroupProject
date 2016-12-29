@@ -1,0 +1,23 @@
+﻿@using TestWcfSite.Models
+<br />
+<table align="center" border="2" cellpadding="10">
+    @{
+
+        for (int i = 2; i < 10; i++)
+        {
+            if (i == 2 || i == 6)
+            {
+                @Html.Raw("<tr>")
+            }
+            Multiplication.X = i;
+            @Html.Partial("_OneTable")
+
+            if (i == 5 || i == 9)
+            {
+                @Html.Raw("</tr>")
+            }
+        }
+    }
+</table>
+
+

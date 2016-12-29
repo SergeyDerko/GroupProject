@@ -15,10 +15,15 @@ namespace TestWCFSite
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{x}/{y}",
-                defaults: new { controller = "Calc", action = "Index", x=0, y=0 },
-                constraints: new {controller="^Calc$", action="^Index$|^Sum$|^Sub$|^Mult$|^Div$", x="^\\d+$", y= "^\\d+$" }
+                url: "{controller}/{action}/{a}",
+                defaults: new { controller = "Home", action = "Index", a=UrlParameter.Optional}
             );
+
+            routes.MapRoute(
+              name: "Calc",
+              url: "{controller}/{action}/{x}/{y}",
+              defaults: new { controller = "Calc", action = "Sum|Sub|Div|Mult", x = 0, y = 0 }
+          );
         }
     }
 }
