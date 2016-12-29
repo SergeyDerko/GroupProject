@@ -4,7 +4,10 @@
 }
 <h2>TableMultiply</h2>
 <div>
- 
+    <h3>Expression</h3>
     @Html.Partial("Expression", (Expression)ViewBag.Expression)
-
-</div>
+    <h3>OneTable</h3>
+    @Html.Partial("OneTable", (Expression)ViewBag.OneTable)
+    <h3>AllTables</h3>
+    @Html.Partial("AllTables", (Expression)ViewBag.Expression)
+  </div>

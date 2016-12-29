@@ -1,0 +1,11 @@
+﻿@model TestWcfSite.Models.Yuriymodels.Expression
+
+@{
+    for (var i = 1; i <= 10; i++)
+    {
+        var exp = Model.A + " x " + Model.B + " = " + Model.Result();
+        Model.B++;
+        <span>@exp</span>
+        <br>
+    }
+}

@@ -175,6 +175,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Yuriy.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -231,6 +232,8 @@
     <Content Include="Views\Yuriy\Expression.cshtml" />
     <Content Include="Views\SergeyDerko\Table.cshtml" />
     <Content Include="Views\SergeyDerko\TableOll.cshtml" />
+    <Content Include="Views\Yuriy\OneTable.cshtml" />
+    <Content Include="Views\Yuriy\AllTables.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -13,12 +13,12 @@ namespace TestWcfSite.Controllers
 
         public ActionResult TableMultiply()
         {
-
-            var expression = new Expression {A = 1, B = 2, Operation = Operation.Mult};
+            var expression = new Expression { A = 2, B = 1 };
             ViewBag.Expression = expression;
+            var oneTable = new Expression(2);
+            ViewBag.OneTable = oneTable;
+            
             return View();
         }
     }
 }
-
-   
