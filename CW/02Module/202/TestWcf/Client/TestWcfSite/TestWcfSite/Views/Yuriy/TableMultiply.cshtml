@@ -1,13 +1,17 @@
 ﻿@using TestWcfSite.Models.Yuriymodels
+@model IEnumerable<Expression>
 @{
     ViewBag.Title = "TableMultiply";
 }
-<h2>TableMultiply</h2>
+<h2>Table Multiply</h2>
 <div>
-    <h3>Expression</h3>
+    <h4>Expression</h4>
     @Html.Partial("Expression", (Expression)ViewBag.Expression)
-    <h3>OneTable</h3>
-    @Html.Partial("OneTable", (Expression)ViewBag.OneTable)
-    <h3>AllTables</h3>
-    @Html.Partial("AllTables", (Expression)ViewBag.Expression)
-  </div>
+
+    <h4>One Table</h4>
+    @foreach (var i in Model)
+    {
+        @Html.Partial("Expression", i)
+        <br />
+    }
+</div>
