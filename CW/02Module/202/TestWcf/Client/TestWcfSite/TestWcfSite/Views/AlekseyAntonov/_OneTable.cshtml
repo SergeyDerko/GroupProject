@@ -1,0 +1,10 @@
+﻿@using TestWcfSite.Models.AlekseyAntonov
+<td border="2">
+    @{
+        for (int j = 2; j < 10; j++)
+        {
+            Multiplication.Y = j;
+            @Html.Partial("_OneExpression")
+        }
+    }
+</td>

@@ -13,5 +13,13 @@ namespace TestWcfSite.Controllers
         {
             return View();
         }
+
+        public ActionResult _Table()
+        {
+            return View();
+        }
     }
+
+   
+
 }

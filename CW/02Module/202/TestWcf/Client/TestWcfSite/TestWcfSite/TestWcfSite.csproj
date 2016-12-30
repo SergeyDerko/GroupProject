@@ -168,6 +168,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AlekseyAntonov\Multiplication.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
     <Compile Include="Models\SergeyDerkoModels\Expression11.cs" />
     <Compile Include="Models\Yuriymodels\Expression.cs" />
@@ -238,6 +239,9 @@
     <Content Include="Views\SergeyDerko\MultiplicationTable.cshtml" />
     <Content Include="Views\SergeyPekhota\_ViewPatrialTableHeader.cshtml" />
     <Content Include="Views\SergeyPekhota\_ViewPatrialTableNames.cshtml" />
+    <Content Include="Views\AlekseyAntonov\_Table.cshtml" />
+    <Content Include="Views\AlekseyAntonov\_OneTable.cshtml" />
+    <Content Include="Views\AlekseyAntonov\_OneExpression.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
