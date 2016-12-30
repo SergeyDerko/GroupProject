@@ -160,6 +160,7 @@
     <Compile Include="Controllers\AlekseyAntonovController.cs" />
     <Compile Include="Controllers\ArtemController.cs" />
     <Compile Include="Controllers\CalcController.cs" />
+    <Compile Include="Controllers\DanilaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OlegController.cs" />
     <Compile Include="Controllers\SergeyDerkoController.cs" />
@@ -246,6 +247,7 @@
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Views\Danila\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
