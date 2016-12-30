@@ -47,6 +47,7 @@ namespace TestWcfSite.Models.PikhotaSerhiiModels
             }
             return list;
         }
+
         public List<string> Div()
         {
             var list = new List<string>();
@@ -60,8 +61,10 @@ namespace TestWcfSite.Models.PikhotaSerhiiModels
                     str.Clear();
                     continue;
                 }
-                str.Append($"{(double)Value}/{(double)i}={((double)Value / (double)i):N2}");
-                list.Add(str.ToString());
+                var result = Value %  i == 0 ? 
+                str.Append($"{Value}/{i}={(Value / i)}")
+                : str.Append($"{(double)Value}/{(double)i}={((double)Value / (double)i):N2}");
+                list.Add(result.ToString());
                 str.Clear();
             }
             return list;

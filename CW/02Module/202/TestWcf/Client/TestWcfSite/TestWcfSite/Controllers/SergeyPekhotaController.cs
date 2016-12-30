@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Web;
-using System.Web.Mvc;
-using TestWcfSite.Models;
+﻿using System.Web.Mvc;
 using TestWcfSite.Models.PikhotaSerhiiModels;
 
 namespace TestWcfSite.Controllers
@@ -12,13 +6,13 @@ namespace TestWcfSite.Controllers
     public class SergeyPekhotaController : Controller
     {
         // GET: SergeyPekhota
-        public ActionResult Index()
+        public ActionResult Index(int value = 2,int index=1,int count=9)
         {
             var calc = new Calculator
             {
-                Value = 2,
-                StartIndex = 1,
-                Count = 9
+                Value = value,
+                StartIndex = index,
+                Count = count
             };
             return View(calc);
         }
