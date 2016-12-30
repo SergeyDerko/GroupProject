@@ -13,5 +13,14 @@ namespace TestWcfSite.Controllers
         {
             return View();
         }
+        public ActionResult MultiTable()
+        {
+            var expression = new Expression { A = 2, B = 2 };
+            ViewBag.Expression = expression;
+
+            var table = Expression.AllTableExpressions();
+
+            return View(table);
+        }
     }
 }
