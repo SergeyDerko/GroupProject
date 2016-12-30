@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using System.Web.UI.HtmlControls;
 using TestWcfSite.Models.PikhotaSerhiiModels;
 
 namespace TestWcfSite.Controllers
@@ -20,8 +21,35 @@ namespace TestWcfSite.Controllers
         [HttpPost]
         public ActionResult Index(Calculator calc)
         {
-
             return View("Index",calc);
+        }
+
+        public ActionResult MultiplyTable()
+        {
+            var c = new Calculator();
+            
+            return View();
+        }
+
+        public ActionResult DivisionTable()
+        {
+            var c = new Calculator();
+
+            return View();
+        }
+
+        public ActionResult SumTable()
+        {
+            var c = new Calculator();
+
+            return View();
+        }
+
+        public ActionResult SubstractionTable()
+        {
+            var c = new Calculator();
+
+            return View();
         }
     }
 }
