@@ -50,11 +50,16 @@ namespace TestWcfSite.Controllers
         // GET: Oleg
         public ActionResult Index()
         {
-            Base newBase = new Base();
-            foreach (var alya in newBase.TabList)
+            Mult Start = new Mult(1, 10);
+            foreach (var i in Start.TabList)
+            {
+                ViewBag.First = i;
+            }          ;
+            /*Base newBase = new Base();
+            foreach (var alya in TabList)
             {
                 ViewBag.First = alya;
-            }
+            }*/
             return View();
         }
                 /*
