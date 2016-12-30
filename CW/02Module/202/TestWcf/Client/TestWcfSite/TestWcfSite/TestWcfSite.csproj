@@ -234,8 +234,6 @@
     <Content Include="Views\Yuriy\Expression.cshtml" />
     <Content Include="Views\SergeyDerko\Table.cshtml" />
     <Content Include="Views\SergeyDerko\TableOll.cshtml" />
-    <Content Include="Views\Yuriy\OneTable.cshtml" />
-    <Content Include="Views\Yuriy\AllTables.cshtml" />
     <Content Include="Views\SergeyDerko\MultiplicationTable.cshtml" />
     <Content Include="Views\SergeyPekhota\_ViewPatrialTableHeader.cshtml" />
     <Content Include="Views\SergeyPekhota\_ViewPatrialTableNames.cshtml" />
