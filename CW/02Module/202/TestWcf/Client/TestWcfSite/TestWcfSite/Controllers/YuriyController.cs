@@ -15,10 +15,8 @@ namespace TestWcfSite.Controllers
         {
             var expression = new Expression { A = 2, B = 2 };
             ViewBag.Expression = expression;
-
-            var expressions = new Expression();
-            //var oneTable = expressions.TableExpressions(3);
-            var table = expressions.AllTableExpressions();
+            
+            var table = Expression.AllTableExpressions();
             
             return View(table);
         }
