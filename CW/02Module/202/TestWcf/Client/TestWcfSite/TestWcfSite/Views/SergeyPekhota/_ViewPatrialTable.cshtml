@@ -1,29 +1,24 @@
 ﻿@model TestWcfSite.Models.PikhotaSerhiiModels.Calculator
 
-
-
-
-
-
-    <td>
+    <td class="tb-pikhota">
         @foreach (var expr in Model.Mult())
         {
             @Html.DisplayFor(m => expr)<br />
         }
     </td>
-    <td>
+    <td class="tb-pikhota">
         @foreach (var expr in Model.Div())
         {
             @Html.DisplayFor(m => expr)<br />
         }
     </td>
-    <td>
+    <td class="tb-pikhota">
         @foreach (var expr in Model.Sum())
         {
             @Html.DisplayFor(m => expr)<br />
         }
     </td>
-    <td>
+    <td class="tb-pikhota">
         @foreach (var expr in Model.Sub())
         {
             @Html.DisplayFor(m => expr) <br />
