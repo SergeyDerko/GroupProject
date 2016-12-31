@@ -1,16 +1,17 @@
 ﻿@model TestWcfSite.Models.PikhotaSerhiiModels.TablesOfMathActions
 @{
-    ViewBag.Title = "MultiplyTable";
+    ViewBag.Title = "SumTable";
     ViewBag.Counter = 0;
     ViewBag.Begintd = "<td class = \"tb-pikhota \"";
     ViewBag.Endtd = "</td>";
 }
 
-<h2>MultiplyTable</h2>
+<h2>SumTable</h2>
+
 
 <table>
     <tr class="tb-pikhota">
-        @foreach (var expression in Model.MultyTable())
+        @foreach (var expression in Model.SumTable())
         {
             if (ViewBag.Counter == 0)
             {

@@ -244,6 +244,9 @@
     <Content Include="Views\AlekseyAntonov\_OneExpression.cshtml" />
     <Content Include="Views\Danila\TestDanil.cshtml" />
     <Content Include="Views\SergeyPekhota\MultiplyTable.cshtml" />
+    <Content Include="Views\SergeyPekhota\DivisionTable.cshtml" />
+    <Content Include="Views\SergeyPekhota\SumTable.cshtml" />
+    <Content Include="Views\SergeyPekhota\SubstractionTable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
