@@ -24,32 +24,27 @@ namespace TestWcfSite.Controllers
             return View("Index",calc);
         }
 
-        public ActionResult MultiplyTable()
+        public ActionResult MultiplyTable(TablesOfMathActions table)
         {
-            var c = new Calculator();
+            return View(table);
+        }
+
+        public ActionResult DivisionTable(TablesOfMathActions table)
+        {
+
+            return View(table);
+        }
+
+        public ActionResult SumTable(TablesOfMathActions table)
+        {
             
-            return View();
+            return View(table);
         }
 
-        public ActionResult DivisionTable()
+        public ActionResult SubstractionTable(TablesOfMathActions table)
         {
-            var c = new Calculator();
-
-            return View();
-        }
-
-        public ActionResult SumTable()
-        {
-            var c = new Calculator();
-
-            return View();
-        }
-
-        public ActionResult SubstractionTable()
-        {
-            var c = new Calculator();
-
-            return View();
+            
+            return View(table);
         }
     }
 }

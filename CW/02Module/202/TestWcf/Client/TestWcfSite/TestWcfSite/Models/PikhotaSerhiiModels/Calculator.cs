@@ -63,7 +63,7 @@ namespace TestWcfSite.Models.PikhotaSerhiiModels
                 }
                 var result = Value %  i == 0 ? 
                 str.Append($"{Value}/{i}={(Value / i)}")
-                : str.Append($"{(double)Value}/{(double)i}={((double)Value / (double)i):N2}");
+                : str.Append($"{Value}/{i}={((double)Value /(double)i):N2}");
                 list.Add(result.ToString());
                 str.Clear();
             }

@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "MultiplyTable";
+    ViewBag.Counter = 0;
+    ViewBag.Begintd = "<td class = \"tb-pikhota \"";
+    ViewBag.Endtd = "</td>";
+}
+
+<h2>MultiplyTable</h2>
+
+<table>
+    <tr class="tb-pikhota">
+        @foreach (var expression in Model.MultyTable())
+        {
+            if (ViewBag.Counter == 0)
+            {
+                @Html.Raw(ViewBag.Begintd)
+            }
+
+            if (ViewBag.Counter < 8)
+            {
+                ViewBag.Counter++;
+                @Html.DisplayFor(m => expression)
+                <br />
+            }
+
+            if (ViewBag.Counter == 8)
+            {
+                @Html.Raw(ViewBag.Endtd)
+                ViewBag.Counter = 0;
+            }
+        }
+    </tr>
+
+</table>

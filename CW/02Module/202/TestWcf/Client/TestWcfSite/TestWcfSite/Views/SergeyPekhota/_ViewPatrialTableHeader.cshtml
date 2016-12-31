@@ -3,15 +3,15 @@
 @using (Html.BeginForm("Index", "SergeyPekhota", FormMethod.Post))
 {
     <th class="tb-pikhota" >
-        @Html.Label("Value:", Model.Value) <br />
+        @Html.Label("Value:") <br />
         @Html.TextBox("Value", Model.Value)<br />
     </th>
     <th class="tb-pikhota">
-        @Html.Label("StartIndex:", Model.StartIndex)<br />
+        @Html.Label("StartIndex:")<br />
         @Html.TextBox("StartIndex", Model.StartIndex)<br />
     </th>
     <th class="tb-pikhota">
-        @Html.Label("Кол-во примеров:", Model.Count)<br />
+        @Html.Label("Кол-во примеров:")<br />
         @Html.TextBox("Count", Model.Count)
     </th>
     <th><input type="submit" value="Update" style="width: 100%; height: 100%"/></th>
