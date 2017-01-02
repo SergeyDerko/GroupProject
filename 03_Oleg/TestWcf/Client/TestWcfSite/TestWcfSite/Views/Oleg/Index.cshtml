@@ -1,13 +1,14 @@
-﻿<!DOCTYPE html>
-
+﻿@{
+    ViewBag.Title = "Oleg homepage";
+}
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
 </head>
 <body>
-    <div>
-        @Html.Partial("MultResult")
-    </div>
+<div>
+    @Html.ActionLink("Index", "Index")
+</div>
 </body>
 </html>

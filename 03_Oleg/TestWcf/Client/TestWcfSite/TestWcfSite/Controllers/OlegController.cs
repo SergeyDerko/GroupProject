@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Diagnostics;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace TestWcfSite.Controllers
@@ -50,54 +45,66 @@ namespace TestWcfSite.Controllers
         // GET: Oleg
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult MultResult()
+        {
             Mult Start = new Mult(1, 10);
             foreach (var i in Start.TabList)
             {
                 ViewBag.First = i;
-            }          ;
+            };
             /*Base newBase = new Base();
             foreach (var alya in TabList)
             {
                 ViewBag.First = alya;
             }*/
+            return ViewBag.First;
+        }
+
+        public ActionResult Table()
+        {
+            ViewBag.table = MultResult();
+
             return View();
         }
-                /*
-                public ActionResult MultResult()
+        /*
+        public ActionResult MultResult()
+        {
+            for (int i = 1, m; i <= 10; i++)
+            {
+                for (int j = 1; j <= 10; j++)
                 {
-                    for (int i = 1, m; i <= 10; i++)
-                    {
-                        for (int j = 1; j <= 10; j++)
-                        {
-                            m = i*j;
-                            mess newWord = new mess(i, j, m);
-                            newWord.GO();
-                            RowInts.Add(newWord);
-                            m = 0;                    
-                        }
-                    }
-                    ViewBag.Mess = RowInts;
-                    return View();
+                    m = i*j;
+                    mess newWord = new mess(i, j, m);
+                    newWord.GO();
+                    RowInts.Add(newWord);
+                    m = 0;                    
                 }
             }
-        
-            public class mess
-            {
-                public int first;
-                public int second;
-                public int third;
-                public string newM;
-        
-                public mess(int a, int b, int c)
-                {
-                    first = a;
-                    second = b;
-                    third = c;
-                }
-        
-                internal void GO()
-                {
-                    newM = first + " * " + second + " = " + third;
-                }*/
+            ViewBag.Mess = RowInts;
+            return View();
+        }
+    }
+
+    public class mess
+    {
+        public int first;
+        public int second;
+        public int third;
+        public string newM;
+
+        public mess(int a, int b, int c)
+        {
+            first = a;
+            second = b;
+            third = c;
+        }
+
+        internal void GO()
+        {
+            newM = first + " * " + second + " = " + third;
+        }*/
     }
 }
