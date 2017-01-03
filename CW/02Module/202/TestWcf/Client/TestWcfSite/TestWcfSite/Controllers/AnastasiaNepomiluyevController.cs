@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Web;
+using System.Web.Mvc;
+
+namespace TestWcfSite.Controllers
+{
+    public class AnastasiaNepomiluyevController : Controller
+    {
+        #region ActionResult
+        // GET: AnastasiaNepomiluyev
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult Multiply(int? a, int? b)
+        {
+            ViewBag.A = a;
+            ViewBag.B = b;
+            ViewBag.Table = TableBuilder(a, b);
+            return View();
+        }
+        #endregion
+
+        #region  Methods
+
+        private string TableBuilder(int? a, int? b)
+        {
+            StringBuilder builder = new StringBuilder();
+            if (a != null && b != null)
+            {
+                builder.AppendLine("<table border=\"1\">");
+                for (int i = 1; i <= a; i++)
+                {
+                    for (int j = 1; j <= b; j++)
+                    {
+                        if(j == 1)
+                            builder.AppendLine("<tr>");
+
+                        builder.AppendLine(String.Format("<td>{0}*{1}={2}</td>", i, j, i*j));
+
+                        if (j == b)
+                            builder.AppendLine("</tr>");
+                    }
+                }
+            }
+            return builder.ToString();
+        }
+
+        #endregion
+    }
+}
