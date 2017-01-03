@@ -1,4 +1,5 @@
-﻿
+﻿@model TestWcfSite.Models.SergeyDerkoModels.CalcModel
+
 <!DOCTYPE html>
 
 <html>
@@ -13,6 +14,28 @@
         @Html.ActionLink("Таблица умножения на - что угодно, параметр задается в строке :)", "TableOll", "SergeyDerko", new { a = 3 }, null)
         <br />
         @Html.ActionLink("Таблица умножения (очень кривая реализация, без StringBilder ;) )", "MultiplicationTable", "SergeyDerko")
+        <br/>
+        <h3>Простенький калькулятор</h3>
+        @using (Html.BeginForm("Index", "SergeyDerko"))
+        {
+            @Html.TextBoxFor(a => a.First)
+
+            <select name="math">
+                <option>действие</option>
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+
+            @Html.TextBoxFor(b => b.Second)
+            <input id="Submit" type="submit" value="=" />
+            if (ViewBag.res != null)
+            {
+                <strong> @ViewBag.res</strong>
+            }
+        }
+        <h3>Результат действий  @ViewBag.First @ViewBag.Math @ViewBag.Second = @ViewBag.res</h3>
     </div>
 </body>
 </html>

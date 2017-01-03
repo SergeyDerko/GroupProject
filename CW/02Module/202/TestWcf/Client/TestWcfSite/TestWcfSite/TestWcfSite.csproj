@@ -172,6 +172,7 @@
     <Compile Include="Models\AlekseyAntonov\Multiplication.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\TablesOfMathActions.cs" />
+    <Compile Include="Models\SergeyDerkoModels\CalcModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\Expression11.cs" />
     <Compile Include="Models\Yuriymodels\Expression.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

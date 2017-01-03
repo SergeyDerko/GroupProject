@@ -15,6 +15,16 @@ namespace TestWcfSite.Controllers
         {
             return View();
         }
+        [HttpPost] // метод принимающий данные с клиента
+        public ActionResult Index(CalcModel model, string math)
+        {
+            model.Action = math;
+            ViewBag.Math = model.Action;
+            ViewBag.First = model.First;
+            ViewBag.Second = model.Second;
+            ViewBag.res = model.Result();
+            return View();
+        }
         private string TableBuilder()
         {
             var str = new StringBuilder();
