@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 using System.Web.Mvc;
 
 namespace TestWcfSite.Controllers
@@ -48,19 +49,20 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
-        public ActionResult MultResult()
+        public string MultResult()
         {
+            var str = new StringBuilder();
             Mult Start = new Mult(1, 10);
             foreach (var i in Start.TabList)
             {
-                ViewBag.First = i;
+                str.Append(i);
             };
             /*Base newBase = new Base();
             foreach (var alya in TabList)
             {
                 ViewBag.First = alya;
             }*/
-            return ViewBag.First;
+            return str.ToString();
         }
 
         public ActionResult Table()

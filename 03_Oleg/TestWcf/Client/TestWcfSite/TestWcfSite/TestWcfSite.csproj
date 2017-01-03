@@ -224,7 +224,7 @@
     <Content Include="Views\Calc\Div.cshtml" />
     <Content Include="Views\Artem\Index.cshtml" />
     <Content Include="Views\Oleg\Index.cshtml" />
-    <Content Include="Views\Oleg\MultResult.cshtml" />
+    <Content Include="Views\Oleg\Table.cshtml" />
     <Content Include="Views\Calc\TableMultiply.cshtml" />
     <Content Include="Views\SergeyPekhota\_ViewPatrialTable.cshtml" />
     <Content Include="Views\Yuriy\TableMultiply.cshtml" />
