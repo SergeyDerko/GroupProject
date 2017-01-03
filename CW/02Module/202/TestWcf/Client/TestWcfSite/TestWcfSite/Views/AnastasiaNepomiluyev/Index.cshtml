@@ -1,9 +1,8 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Anastasia Nepomiluyev page";
 }
 
-<h2>Index</h2>
-@Html.ActionLink("Мультипликатор от А до Б", "Multiply", "AnastasiaNepomiluyev", new {a = 1, b = 10 })
+<h2>@ViewBag.Title</h2>
+@Html.ActionLink("Мультипликатор А на Б", "Multiply", "AnastasiaNepomiluyev")
 <br/>
 
