@@ -171,6 +171,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AlekseyAntonov\Multiplication.cs" />
+    <Compile Include="Models\AnastasiaNepomiluyev\ManipulateWithNumbersModel.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\TablesOfMathActions.cs" />
     <Compile Include="Models\SergeyDerkoModels\CalcModel.cs" />

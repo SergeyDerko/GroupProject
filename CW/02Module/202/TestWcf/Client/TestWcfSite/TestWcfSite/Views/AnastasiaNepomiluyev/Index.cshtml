@@ -1,8 +1,9 @@
-﻿@{
+﻿@model TestWcfSite.Models.AnastasiaNepomiluyev.ManipulateWithNumbersModel
+@{
     ViewBag.Title = "Anastasia Nepomiluyev page";
 }
 
 <h2>@ViewBag.Title</h2>
-@Html.ActionLink("Мультипликатор А на Б", "Multiply", "AnastasiaNepomiluyev")
+@Html.ActionLink("Мультипликатор А на Б", "Multiply", "AnastasiaNepomiluyev", new {a = 5, b = 5}, null)
 <br/>
 

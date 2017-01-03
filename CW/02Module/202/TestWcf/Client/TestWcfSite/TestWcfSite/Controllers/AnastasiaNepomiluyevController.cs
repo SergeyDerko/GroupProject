@@ -26,7 +26,6 @@ namespace TestWcfSite.Controllers
         #endregion
 
         #region  Methods
-
         private string TableBuilder(int? a, int? b)
         {
             StringBuilder builder = new StringBuilder();
@@ -40,7 +39,7 @@ namespace TestWcfSite.Controllers
                         if(j == 1)
                             builder.AppendLine("<tr>");
 
-                        builder.AppendLine(String.Format("<td>{0}*{1}={2}</td>", i, j, i*j));
+                        builder.AppendLine(String.Format("<td>{0}*{1} = {2}</td>", i, j, i*j));
 
                         if (j == b)
                             builder.AppendLine("</tr>");
