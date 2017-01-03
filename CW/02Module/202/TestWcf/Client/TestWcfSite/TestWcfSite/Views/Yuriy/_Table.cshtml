@@ -1,0 +1,44 @@
+﻿@model IEnumerable<TestWcfSite.Models.Yuriymodels.Expression>
+@{
+    <h4>One Table</h4>
+    var onetable = Model.Where(n => n.A == 2);
+    foreach (var exp in onetable)
+    {
+        @Html.Partial("_Expression", exp)
+        <br/>
+    }
+
+    <h4>All Tables</h4>
+    <table border="1">
+        <tr>
+            @for (var i = 2; i <= 5; i++)
+            {
+                <td>
+                    @{
+                        var result = Model.Where(n => n.A == i);
+                        foreach (var exp in result)
+                        {
+                            @Html.Partial("_Expression", exp)
+                            <br/>
+                        }
+                    }
+                </td>
+            }
+        </tr>
+        <tr>
+            @for (var i = 6; i <= 9; i++)
+            {
+                <td>
+                    @{
+                        var result = Model.Where(n => n.A == i);
+                        foreach (var exp in result)
+                        {
+                            @Html.Partial("_Expression", exp)
+                            <br/>
+                        }
+                    }
+                </td>
+            }
+        </tr>
+    </table>
+}

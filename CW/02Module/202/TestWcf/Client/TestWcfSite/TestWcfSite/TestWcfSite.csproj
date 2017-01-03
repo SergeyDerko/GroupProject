@@ -236,7 +236,7 @@
     <Content Include="Views\Calc\TableMultiply.cshtml" />
     <Content Include="Views\SergeyPekhota\_ViewPatrialTable.cshtml" />
     <Content Include="Views\Yuriy\TableMultiply.cshtml" />
-    <Content Include="Views\Yuriy\Expression.cshtml" />
+    <Content Include="Views\Yuriy\_Expression.cshtml" />
     <Content Include="Views\SergeyDerko\Table.cshtml" />
     <Content Include="Views\SergeyDerko\TableOll.cshtml" />
     <Content Include="Views\SergeyDerko\MultiplicationTable.cshtml" />
@@ -252,6 +252,7 @@
     <Content Include="Views\SergeyPekhota\SubstractionTable.cshtml" />
     <Content Include="Views\AnastasiaNepomiluyev\Index.cshtml" />
     <Content Include="Views\AnastasiaNepomiluyev\Multiply.cshtml" />
+    <Content Include="Views\Yuriy\_Table.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
