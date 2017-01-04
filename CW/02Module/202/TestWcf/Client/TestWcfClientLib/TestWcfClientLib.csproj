@@ -40,15 +40,48 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\CalcServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Service References\CalcServiceReference\Calc.wsdl" />
+    <None Include="Service References\CalcServiceReference\ICalc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalcServiceReference\ICalc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\TestWcfCommon\TestWcfCommon.csproj">
       <Project>{6D360C5F-A3E9-471A-84AF-09FC8A7EAA13}</Project>
       <Name>TestWcfCommon</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CalcServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CalcServiceReference\ICalc.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CalcServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CalcServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CalcServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
