@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using System.Web.Mvc;
+using TestWcfSite.Models.KhlopovOlegModel;
 
 namespace TestWcfSite.Controllers
 {
@@ -72,9 +73,12 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
-        public ActionResult User()
+        public ActionResult User(User model)
         {
-            
+            ViewBag.name = model.name;
+            ViewBag.age = model.age;
+            ViewBag.sex = model.sex;
+            ViewBag.result = model.Result();
 
             return View();
         }

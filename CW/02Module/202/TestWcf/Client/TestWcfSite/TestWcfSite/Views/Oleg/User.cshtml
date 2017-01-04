@@ -1,6 +1,26 @@
-﻿
+﻿@model TestWcfSite.Models.KhlopovOlegModel.User
 @{
     ViewBag.Title = "User";
 }
 <h2>User</h2>
 
+@using (Html.BeginForm("User", "Oleg", FormMethod.Post))
+{
+    <th>
+        @Html.Label("name:") <br />
+        @Html.TextBoxFor(x => x.name)<br />
+    </th>
+    <th>
+        @Html.Label("age:")<br />
+        @Html.TextBoxFor(y => y.age)<br />
+    </th>
+    <th>
+        @Html.Label("sex")<br />
+        @Html.TextBoxFor(z => z.sex)<br />
+    </th>
+    <th>
+        @Html.Label("Result:") <br />
+        @Html.Raw(ViewBag.result)<br />
+    </th>
+    <th><input type="submit" value="Update" style="width: 100%; height: 100%" /></th>
+}

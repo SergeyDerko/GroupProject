@@ -176,7 +176,7 @@
     <Compile Include="Models\AnastasiaNepomiluyev\User.cs" />
     <Compile Include="Models\Calc\CalcModel.cs" />
     <Compile Include="Models\DanilaModels\ExpressionD.cs" />
-    <Compile Include="Models\KhlopovOlegModel\UserDemo.cs" />
+    <Compile Include="Models\KhlopovOlegModel\User.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
     <Compile Include="Models\SergeyDerkoModels\CalcModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\Expression11.cs" />
