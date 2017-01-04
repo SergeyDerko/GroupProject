@@ -24,13 +24,6 @@ namespace TestWcfSite.Controllers
         {
            return View();
         }
-        //[HttpPost]
-        //public ActionResult Client(string name, string lastname, int age)
-        //{
-        //    var newClient = new Client { Name = name, Lastname = lastname, Age = age};
-
-        //    return PartialView("_Clientdata", newClient);
-        //}
         [HttpPost]
         public ActionResult Client(Client client)
         {
