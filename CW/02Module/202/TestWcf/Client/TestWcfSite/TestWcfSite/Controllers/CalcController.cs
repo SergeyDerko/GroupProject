@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Web.Mvc;
-using System.Web.UI.WebControls;
+using TestWcfSite.Models.Calc;
 
 namespace TestWcfSite.Controllers
 {
@@ -17,13 +17,17 @@ namespace TestWcfSite.Controllers
 
         public ActionResult Sum(int? a, int? b)
         {
-            if (a != null || b != null)
+            if (b != null)
             {
-                ViewBag.A = a;
-                ViewBag.B = b;
-                ViewBag.Result = a + b;
-                ViewBag.Action = "+";
+                if (a != null)
+                {
+                    var model = new CalcModel();
+                    ViewBag.Result = model.Sum((int) a, (int) b);
+                    ViewBag.A = a;
+                    ViewBag.B = b;
+                }
             }
+            ViewBag.Action = "+";
             return View();
         }
 
@@ -44,7 +48,7 @@ namespace TestWcfSite.Controllers
             if (a != null)
             {
                 ViewBag.A = a;
-                ViewBag.Result = Math.Sqrt((double)a);
+                ViewBag.Result = Math.Sqrt((double) a);
                 ViewBag.Action = "Sqrt";
             }
             return View();
@@ -56,7 +60,7 @@ namespace TestWcfSite.Controllers
             {
                 ViewBag.A = a;
                 ViewBag.B = b;
-                ViewBag.Result = a / b;
+                ViewBag.Result = a/b;
                 ViewBag.Action = "/";
             }
             return View();
@@ -65,7 +69,7 @@ namespace TestWcfSite.Controllers
         private List<string> TableMultiply()
         {
             var list = new List<string>();
-            for (int i = 2; i < 10; i++)
+            for (var i = 2; i < 10; i++)
             {
                 list.Add(TableBuilder(i));
             }
@@ -75,9 +79,9 @@ namespace TestWcfSite.Controllers
         private string TableBuilder(int num)
         {
             var s = new StringBuilder();
-            for (int i = 2; i <= 10; i++)
+            for (var i = 2; i <= 10; i++)
             {
-                s.Append($"{num} x {i} = {num * i}<br/>");
+                s.Append($"{num} x {i} = {num*i}<br/>");
             }
             return s.ToString();
         }

@@ -100,6 +100,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -172,6 +173,7 @@
     </Compile>
     <Compile Include="Models\AlekseyAntonov\Multiplication.cs" />
     <Compile Include="Models\AnastasiaNepomiluyev\ManipulateWithNumbersModel.cs" />
+    <Compile Include="Models\Calc\CalcModel.cs" />
     <Compile Include="Models\DanilaModels\ExpressionD.cs" />
     <Compile Include="Models\KhlopovOlegModel\UserDemo.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
@@ -268,6 +270,12 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TestWcfClientLib\TestWcfClientLib.csproj">
+      <Project>{b363be67-983e-485c-b88a-24f4673adff7}</Project>
+      <Name>TestWcfClientLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
