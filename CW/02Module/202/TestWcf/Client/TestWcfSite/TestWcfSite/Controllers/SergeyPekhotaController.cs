@@ -26,24 +26,25 @@ namespace TestWcfSite.Controllers
 
         public ActionResult MultiplyTable(TablesOfMathActions table)
         {
+            ViewBag.Counter = 0;
             return View(table);
         }
 
         public ActionResult DivisionTable(TablesOfMathActions table)
         {
-
+            ViewBag.Counter = 0;
             return View(table);
         }
 
         public ActionResult SumTable(TablesOfMathActions table)
         {
-            
+            ViewBag.Counter = 0;
             return View(table);
         }
 
         public ActionResult SubstractionTable(TablesOfMathActions table)
         {
-            
+            ViewBag.Counter = 0;
             return View(table);
         }
     }
