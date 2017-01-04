@@ -72,7 +72,7 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
-        public ActionResult User(string name, int age, string sex)
+        public ActionResult User()
         {
             
 
