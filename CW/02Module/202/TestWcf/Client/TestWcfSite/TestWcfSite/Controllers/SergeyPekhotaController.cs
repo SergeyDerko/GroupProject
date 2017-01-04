@@ -49,7 +49,7 @@ namespace TestWcfSite.Controllers
             ViewBag.Endtd = "</td>";
             ViewBag.Counter = 0;
             ViewBag.TagBr = "<br />";
-            ViewData.Model = SubTables();
+            ViewData.Model = SumTables();
             return View();
         }
 
