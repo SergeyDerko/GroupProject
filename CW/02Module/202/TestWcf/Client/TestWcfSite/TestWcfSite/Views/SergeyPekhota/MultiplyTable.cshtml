@@ -1,15 +1,13 @@
-﻿@model TestWcfSite.Models.PikhotaSerhiiModels.TablesOfMathActions
+﻿
 @{
-    ViewBag.Title = "MultiplyTable";    
-    ViewBag.Begintd = "<td class = \"tb-pikhota \">";
-    ViewBag.Endtd = "</td>";
+    ViewBag.Title = "MultiplyTable";
 }
 
 <h2>MultiplyTable</h2>
 
 <table>
     <tr class="tb-pikhota">
-        @foreach (var expression in Model.MultyTable())
+        @foreach (var expression in ViewData.Model)
         {
             if (ViewBag.Counter == 0)
             {
@@ -20,7 +18,7 @@
             {
                 ViewBag.Counter++;
                 @Html.DisplayFor(m => expression)
-                <br />
+                @Html.Raw(ViewBag.TagBr)
             }
 
             if (ViewBag.Counter == 8)
