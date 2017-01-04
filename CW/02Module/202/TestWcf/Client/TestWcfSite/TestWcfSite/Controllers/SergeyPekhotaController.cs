@@ -12,7 +12,20 @@ namespace TestWcfSite.Controllers
         public ActionResult Index()
         {
             var calc = new Calculator();
+            ViewBag.Info = Info();
             return View(calc);
+        }
+
+        public string Info()
+        {   var b = new StringBuilder();
+            var browser = HttpContext.Request.Browser.Browser;
+            var agent = HttpContext.Request.UserAgent;
+            var url = HttpContext.Request.RawUrl;
+            var ip = HttpContext.Request.UserHostAddress;
+            var reffer = HttpContext.Request.UrlReferrer == null ? "" : HttpContext.Request.UrlReferrer.AbsoluteUri;
+            return b.Append($"<table class=\"tb-info\"><th class=\"th-info\">Info</th><tr><td><b>Browser:</b>{browser}</td><tr><td><b>User_agent:</b>{agent}</td></tr>" +
+                            $"<tr><td><b>url:</b>{url}</td></tr>" +
+                            $"<tr><td><b>IPadress:</b>{ip}</td></tr><tr><td><b>Reffer:{reffer}</td></tr></table>").ToString();
         }
 
         [HttpPost]

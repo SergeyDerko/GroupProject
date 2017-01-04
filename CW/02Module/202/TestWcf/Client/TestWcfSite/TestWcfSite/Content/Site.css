@@ -24,5 +24,19 @@ textarea {
 }
 
 .tb-pikhota {
-    border-style: solid 
+    border-style: solid;
+}
+
+.tb-info {
+    border: solid;
+    border-width: 2px;
+    border-color: darkblue;
+    color: crimson;
+}
+.th-info {
+    border: solid;
+    border-width: 2px;
+    border-color: darkblue;
+    color: black;
+    align-content: center;
 }
