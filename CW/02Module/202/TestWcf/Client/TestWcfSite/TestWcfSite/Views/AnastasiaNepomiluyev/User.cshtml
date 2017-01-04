@@ -1,0 +1,16 @@
+﻿@model TestWcfSite.Models.AnastasiaNepomiluyev.User
+
+@using(Html.BeginForm("User", "AnastasiaNepomiluyev", FormMethod.Post))
+{
+    @Html.Label("FirstName")
+    @Html.TextBox("FirstName", Model.FirstName)<br />
+    @Html.Label("LastName")
+    @Html.TextBox("LastName", Model.LastName)<br />
+    @Html.Label("Age")
+    @Html.TextBox("Age", Model.Age)<br />
+    <input type="submit" value="Update"/>
+    <br />
+    <br />
+    @ViewBag.UserToString
+}
+

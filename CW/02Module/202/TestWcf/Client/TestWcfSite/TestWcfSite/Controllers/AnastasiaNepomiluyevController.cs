@@ -13,6 +13,7 @@ namespace TestWcfSite.Controllers
         // GET: AnastasiaNepomiluyev
         public ActionResult Index()
         {
+            ViewBag.User = new TestWcfSite.Models.AnastasiaNepomiluyev.User();
             return View();
         }
 
@@ -23,6 +24,13 @@ namespace TestWcfSite.Controllers
             ViewBag.Table = TableBuilder(a, b);
             return View();
         }
+
+        public ActionResult User(TestWcfSite.Models.AnastasiaNepomiluyev.User user)
+        {
+            ViewBag.UserToString = String.Format("Result: {0} {1} {2}", user.FirstName, user.LastName, user.Age);
+            return View(user);
+        }
+
         #endregion
 
         #region  Methods

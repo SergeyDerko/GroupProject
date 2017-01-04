@@ -172,6 +172,7 @@
     </Compile>
     <Compile Include="Models\AlekseyAntonov\Multiplication.cs" />
     <Compile Include="Models\AnastasiaNepomiluyev\ManipulateWithNumbersModel.cs" />
+    <Compile Include="Models\AnastasiaNepomiluyev\User.cs" />
     <Compile Include="Models\DanilaModels\ExpressionD.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
     <Compile Include="Models\SergeyDerkoModels\CalcModel.cs" />
@@ -254,6 +255,7 @@
     <Content Include="Views\AnastasiaNepomiluyev\Multiply.cshtml" />
     <Content Include="Views\Yuriy\_Table.cshtml" />
     <Content Include="Views\Danila\ExpressionD.cshtml" />
+    <Content Include="Views\AnastasiaNepomiluyev\User.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
