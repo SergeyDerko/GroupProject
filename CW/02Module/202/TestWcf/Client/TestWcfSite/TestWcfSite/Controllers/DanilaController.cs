@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+
 
 namespace TestWcfSite.Controllers
 {
@@ -13,5 +10,14 @@ namespace TestWcfSite.Controllers
         {
             return View();
         }
-                }
+
+        public ActionResult ExpressionD()
+        {
+            Models.DanilaModels.ExpressionD.B = 2;
+            Models.DanilaModels.ExpressionD.A = 2;
+            return View();
+        }
+
+
     }
+}
