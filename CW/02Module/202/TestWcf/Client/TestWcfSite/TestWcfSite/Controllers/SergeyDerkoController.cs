@@ -15,6 +15,17 @@ namespace TestWcfSite.Controllers
         {
             return View();
         }
+
+        public ActionResult User_11(User11 user11)
+        {
+            var user = new StringBuilder();
+            user.Append("Привет тебе - " + user11.Name);
+            user.Append(" " + user11.Surname);
+            user.Append(" " + user11.Patronymic + "!");
+            ViewBag.User = user;
+            ViewBag.name = user11.Name;
+            return View();
+        }
         [HttpPost] // метод принимающий данные с клиента
         public ActionResult Index(CalcModel model, string math)
         {

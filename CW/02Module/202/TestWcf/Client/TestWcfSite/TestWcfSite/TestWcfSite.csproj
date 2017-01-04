@@ -180,6 +180,7 @@
     <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
     <Compile Include="Models\SergeyDerkoModels\CalcModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\Expression11.cs" />
+    <Compile Include="Models\SergeyDerkoModels\User11.cs" />
     <Compile Include="Models\Yuriymodels\Expression.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -260,6 +261,7 @@
     <Content Include="Views\Danila\ExpressionD.cshtml" />
     <Content Include="Views\AnastasiaNepomiluyev\User.cshtml" />
     <Content Include="Views\Oleg\User.cshtml" />
+    <Content Include="Views\SergeyDerko\User_11.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
