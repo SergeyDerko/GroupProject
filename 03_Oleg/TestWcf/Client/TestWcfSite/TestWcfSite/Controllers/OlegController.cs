@@ -71,6 +71,11 @@ namespace TestWcfSite.Controllers
 
             return View();
         }
+
+        public ActionResult User()
+        {
+            return View();
+        }
         /*
         public ActionResult MultResult()
         {

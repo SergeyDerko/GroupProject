@@ -100,6 +100,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -173,7 +174,9 @@
     <Compile Include="Models\AlekseyAntonov\Multiplication.cs" />
     <Compile Include="Models\AnastasiaNepomiluyev\ManipulateWithNumbersModel.cs" />
     <Compile Include="Models\AnastasiaNepomiluyev\User.cs" />
+    <Compile Include="Models\Calc\CalcModel.cs" />
     <Compile Include="Models\DanilaModels\ExpressionD.cs" />
+    <Compile Include="Models\KhlopovOlegModel\UserDemo.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
     <Compile Include="Models\SergeyDerkoModels\CalcModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\Expression11.cs" />
@@ -233,7 +236,7 @@
     <Content Include="Views\Calc\Div.cshtml" />
     <Content Include="Views\Artem\Index.cshtml" />
     <Content Include="Views\Oleg\Index.cshtml" />
-    <Content Include="Views\Oleg\MultResult.cshtml" />
+    <Content Include="Views\Oleg\Table.cshtml" />
     <Content Include="Views\Calc\TableMultiply.cshtml" />
     <Content Include="Views\SergeyPekhota\_ViewPatrialTable.cshtml" />
     <Content Include="Views\Yuriy\TableMultiply.cshtml" />
@@ -256,6 +259,7 @@
     <Content Include="Views\Yuriy\_Table.cshtml" />
     <Content Include="Views\Danila\ExpressionD.cshtml" />
     <Content Include="Views\AnastasiaNepomiluyev\User.cshtml" />
+    <Content Include="Views\Oleg\User.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -268,6 +272,12 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TestWcfClientLib\TestWcfClientLib.csproj">
+      <Project>{b363be67-983e-485c-b88a-24f4673adff7}</Project>
+      <Name>TestWcfClientLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
