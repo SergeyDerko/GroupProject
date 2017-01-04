@@ -20,8 +20,25 @@ namespace TestWcfSite.Controllers
             
             return View(table);
         }
-        
-        
+        public ActionResult Client()
+        {
+           return View();
+        }
+        //[HttpPost]
+        //public ActionResult Client(string name, string lastname, int age)
+        //{
+        //    var newClient = new Client { Name = name, Lastname = lastname, Age = age};
+
+        //    return PartialView("_Clientdata", newClient);
+        //}
+        [HttpPost]
+        public ActionResult Client(Client client)
+        {
+            var newClient = new Client { Name = client.Name, Lastname = client.Lastname, Age = client.Age };
+
+            return PartialView("_Clientdata", newClient);
+        }
+
 
     }
 }

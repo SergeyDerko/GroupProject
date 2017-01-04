@@ -1,0 +1,14 @@
+﻿@model TestWcfSite.Models.Yuriymodels.Client
+@{
+    ViewBag.Title = "Client";
+}
+
+<h2>Add new client</h2>
+
+@using (Html.BeginForm("Client", "Yuriy"))
+{
+    <label >Name:</label>@Html.TextBoxFor(name => name.Name);
+    <label>Lastname:</label>@Html.TextBoxFor(lastname => lastname.Lastname);
+    <label>Age:</label>@Html.TextBoxFor(age => age.Age);
+    <input type="submit" name="oper" value="Submit"/>
+}
