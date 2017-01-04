@@ -1,13 +1,11 @@
-﻿@model dynamic
-
-@{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
+﻿@{
+    ViewBag.Title = "Table";
 }
-
-<h2>title</h2>
-<table>
+<h2>Table</h2>
+<table border="2">
     <tr>
-        <td><p>ViewBag.Mess</p></td>
+        <td>
+            @Html.Raw(ViewBag.table)
+        </td>
     </tr>
 </table>
