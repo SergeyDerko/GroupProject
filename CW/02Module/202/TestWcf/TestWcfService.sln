@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{E0C276AC-8717-4F50-94CD-F432BC1E962B}"
 EndProject
@@ -48,6 +48,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		WebEssentials2015-Settings.json = WebEssentials2015-Settings.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pikhota", "Pikhota", "{3CAC6FDD-DB82-4315-9945-216DB46EDF33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConvertWcfClientLib", "Client\Pikhota\CurrencyConvertWcfClientLib\CurrencyConvertWcfClientLib.csproj", "{FC35314C-E831-4BB1-90A6-48ECA8FE47ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +86,10 @@ Global
 		{D72498BF-1D2F-4D34-B3D5-EE555BCD6755}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D72498BF-1D2F-4D34-B3D5-EE555BCD6755}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D72498BF-1D2F-4D34-B3D5-EE555BCD6755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC35314C-E831-4BB1-90A6-48ECA8FE47ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC35314C-E831-4BB1-90A6-48ECA8FE47ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC35314C-E831-4BB1-90A6-48ECA8FE47ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC35314C-E831-4BB1-90A6-48ECA8FE47ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,5 +102,7 @@ Global
 		{B61425E6-8E7A-4F04-AEAC-230927635143} = {E0C276AC-8717-4F50-94CD-F432BC1E962B}
 		{FA163766-5256-4AE8-8E7E-4523B0A7C7D2} = {5F88A5CE-40F6-4A63-852B-9D1539B0265B}
 		{D72498BF-1D2F-4D34-B3D5-EE555BCD6755} = {5F88A5CE-40F6-4A63-852B-9D1539B0265B}
+		{3CAC6FDD-DB82-4315-9945-216DB46EDF33} = {5F88A5CE-40F6-4A63-852B-9D1539B0265B}
+		{FC35314C-E831-4BB1-90A6-48ECA8FE47ED} = {3CAC6FDD-DB82-4315-9945-216DB46EDF33}
 	EndGlobalSection
 EndGlobal
