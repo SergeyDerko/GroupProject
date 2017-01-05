@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TemperSeviceLibrary")]
+[assembly: AssemblyTitle("Meteo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("TemperSeviceLibrary")]
+[assembly: AssemblyProduct("Meteo")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e563d276-9ca3-4063-a178-ce3411c3ec72")]
+[assembly: Guid("b63882c3-ddb7-442f-b7e4-4e5e71b92bdc")]
 
 // Version information for an assembly consists of the following four values:
 //
