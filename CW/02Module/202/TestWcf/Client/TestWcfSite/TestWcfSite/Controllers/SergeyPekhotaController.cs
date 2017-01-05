@@ -164,9 +164,9 @@ namespace TestWcfSite.Controllers
             var url = HttpContext.Request.RawUrl;
             var ip = HttpContext.Request.UserHostAddress;
             var reffer = HttpContext.Request.UrlReferrer == null ? "" : HttpContext.Request.UrlReferrer.AbsoluteUri;
-            return b.Append($"<table class=\"tb-info\"><th class=\"th-info\">Info</th><tr><td><b>Browser:</b>{browser}</td><tr><td><b>User_agent:</b>{agent}</td></tr>" +
+            return b.Append($"<table class=\"table table-bordered table-condensed\"><th>Info</th><tr><td><b>Browser:</b>{browser}</td><tr><td><b>User_agent:</b>{agent}</td></tr>" +
                             $"<tr><td><b>url:</b>{url}</td></tr>" +
-                            $"<tr><td><b>IPadress:</b>{ip}</td></tr><tr><td><b>Reffer:{reffer}</td></tr></table>").ToString();
+                            $"<tr><td><b>IPAdress:</b>{ip}</td></tr><tr><td><b>Reffer:{reffer}</td></tr></table>").ToString();
         }
         #endregion
 
