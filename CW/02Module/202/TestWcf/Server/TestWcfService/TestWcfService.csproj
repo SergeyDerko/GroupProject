@@ -38,6 +38,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalcService.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="MainService.cs">
@@ -59,7 +61,8 @@
     <Compile Include="TestInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TestService.cs" />
+    <Compile Include="BaseService.cs" />
+    <Compile Include="ScanPcService .cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

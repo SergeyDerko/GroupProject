@@ -1,14 +1,9 @@
-﻿using System;
-using System.ServiceModel;
+﻿using System.ServiceModel;
 using System.Threading;
-using TestWcfLib;
 
 namespace TestWcfService
 {
-    /// <summary>
-    /// Основной код сервиса для формирования задач в ис-про
-    /// </summary>
-    class TestService
+    class BaseService<T>
     {
         private volatile bool _stopFlag;
         private Thread _thread;
@@ -18,7 +13,7 @@ namespace TestWcfService
         {
             _thread = new Thread(x =>
             {
-                var host = new ServiceHost(typeof(Calc));
+                var host = new ServiceHost(typeof(T));
                 host.Open();
 
                 do
