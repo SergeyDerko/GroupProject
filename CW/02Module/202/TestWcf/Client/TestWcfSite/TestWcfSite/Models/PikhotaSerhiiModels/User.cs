@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace TestWcfSite.Models.PikhotaSerhiiModels
+﻿namespace TestWcfSite.Models.PikhotaSerhiiModels
 {
     public class User
     {
