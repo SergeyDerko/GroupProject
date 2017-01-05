@@ -11,27 +11,27 @@ namespace TestWcfSite.Controllers
         // GET: SergeyPekhota
         public ActionResult Index()
         {
-            var calc = new Calculator();
             ViewBag.Info = Info();
-            return View(calc);
-        }
-
-        public string Info()
-        {   var b = new StringBuilder();
-            var browser = HttpContext.Request.Browser.Browser;
-            var agent = HttpContext.Request.UserAgent;
-            var url = HttpContext.Request.RawUrl;
-            var ip = HttpContext.Request.UserHostAddress;
-            var reffer = HttpContext.Request.UrlReferrer == null ? "" : HttpContext.Request.UrlReferrer.AbsoluteUri;
-            return b.Append($"<table class=\"tb-info\"><th class=\"th-info\">Info</th><tr><td><b>Browser:</b>{browser}</td><tr><td><b>User_agent:</b>{agent}</td></tr>" +
-                            $"<tr><td><b>url:</b>{url}</td></tr>" +
-                            $"<tr><td><b>IPadress:</b>{ip}</td></tr><tr><td><b>Reffer:{reffer}</td></tr></table>").ToString();
+            return View();
         }
 
         [HttpPost]
-        public ActionResult Index(Calculator calc)
+        public ActionResult MathTables(Calculator calc)
         {
-            return View("Index",calc);
+            return View("MathTables",calc);
+        }
+        
+        public ActionResult MathTables()
+        {
+
+            var calc = new Calculator();
+            return View(calc);
+        }
+
+        public ActionResult UserData()
+        {
+
+            return View();
         }
 
         public ActionResult MultiplyTable()
@@ -148,6 +148,22 @@ namespace TestWcfSite.Controllers
             return list;
         }
         #endregion
+
+        #region OtherMethods
+        public string Info()
+        {
+            var b = new StringBuilder();
+            var browser = HttpContext.Request.Browser.Browser;
+            var agent = HttpContext.Request.UserAgent;
+            var url = HttpContext.Request.RawUrl;
+            var ip = HttpContext.Request.UserHostAddress;
+            var reffer = HttpContext.Request.UrlReferrer == null ? "" : HttpContext.Request.UrlReferrer.AbsoluteUri;
+            return b.Append($"<table class=\"tb-info\"><th class=\"th-info\">Info</th><tr><td><b>Browser:</b>{browser}</td><tr><td><b>User_agent:</b>{agent}</td></tr>" +
+                            $"<tr><td><b>url:</b>{url}</td></tr>" +
+                            $"<tr><td><b>IPadress:</b>{ip}</td></tr><tr><td><b>Reffer:{reffer}</td></tr></table>").ToString();
+        }
+        #endregion
+
 
     }
 }

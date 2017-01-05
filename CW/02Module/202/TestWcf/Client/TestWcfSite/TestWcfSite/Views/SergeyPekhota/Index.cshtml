@@ -1,9 +1,14 @@
-﻿
-<table style="border: black; border-style: solid; border-width: 2px;">
-    <tr class="tb-pikhota">@Html.Partial("_ViewPatrialTableHeader")</tr>
-    <tr class="tb-pikhota">@Html.Partial("_ViewPatrialTableNames")</tr>
-    <tr class="tb-pikhota">@Html.Partial("_ViewPatrialTable")</tr>
-</table>
+﻿@{
+    ViewBag.Title = "Вывод таблиц матиматических операций";
+}
+<div class="row">
+    <div class="col-md-4">
+        <h3>Table Multiply</h3>
+        <p></p>
+        <p>
+            <a class="btn btn-default" href="SergeyPekhota/MathTables">Перейти &raquo;</a>
+        </p>
+    </div>
+</div>
 
-@Html.Raw(ViewBag.Info)
-
+<footer>@Html.Raw(ViewBag.Info)</footer>
