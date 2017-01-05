@@ -1,9 +1,12 @@
 ﻿using System;
+using System.ServiceModel;
 
-namespace TimeOfDayConvertWcfClientLib
+namespace TimeOfDayConvertWcfLib
 {
+    [ServiceContract]
     interface ITimeOfDayConverter
     {
+        [OperationContract]
         string ConvertDateToTimeOfDay(DateTime currentDate);
     }
 }
