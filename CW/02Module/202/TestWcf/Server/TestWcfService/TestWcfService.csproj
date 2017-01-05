@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalcService.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="MainService.cs">
@@ -62,7 +61,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="BaseService.cs" />
-    <Compile Include="ScanPcService .cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
