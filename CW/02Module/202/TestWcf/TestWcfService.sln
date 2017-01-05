@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{E0C276AC-8717-4F50-94CD-F432BC1E962B}"
 EndProject
@@ -62,6 +62,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Yuriy", "Yuriy", "{D16E2742
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRatesServiceLib", "Server\Yuriy\ExchangeRatesServiceLib\ExchangeRatesServiceLib.csproj", "{C38C6159-5DC2-47CA-A78E-958D5195564E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Oleg", "Oleg", "{895C0E8A-2A3F-4398-B6F7-53D04F9D1A86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meteo", "Server\Oleg\TemperSeviceLibrary\Meteo\Meteo.csproj", "{B63882C3-DDB7-442F-B7E4-4E5E71B92BDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -108,6 +112,10 @@ Global
 		{C38C6159-5DC2-47CA-A78E-958D5195564E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C38C6159-5DC2-47CA-A78E-958D5195564E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C38C6159-5DC2-47CA-A78E-958D5195564E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B63882C3-DDB7-442F-B7E4-4E5E71B92BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B63882C3-DDB7-442F-B7E4-4E5E71B92BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B63882C3-DDB7-442F-B7E4-4E5E71B92BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B63882C3-DDB7-442F-B7E4-4E5E71B92BDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,5 +135,7 @@ Global
 		{7B9DA9DD-B000-40F8-A3D3-EEE3BB928DEC} = {E0C276AC-8717-4F50-94CD-F432BC1E962B}
 		{D16E2742-7896-40B3-B178-A8F2DECC48FD} = {5F88A5CE-40F6-4A63-852B-9D1539B0265B}
 		{C38C6159-5DC2-47CA-A78E-958D5195564E} = {7B9DA9DD-B000-40F8-A3D3-EEE3BB928DEC}
+		{895C0E8A-2A3F-4398-B6F7-53D04F9D1A86} = {E0C276AC-8717-4F50-94CD-F432BC1E962B}
+		{B63882C3-DDB7-442F-B7E4-4E5E71B92BDC} = {895C0E8A-2A3F-4398-B6F7-53D04F9D1A86}
 	EndGlobalSection
 EndGlobal
