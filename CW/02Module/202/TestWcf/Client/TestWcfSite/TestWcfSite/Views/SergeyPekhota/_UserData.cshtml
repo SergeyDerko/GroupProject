@@ -1,0 +1,25 @@
+﻿@model TestWcfSite.Models.PikhotaSerhiiModels.User
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>A new user is added!</h3>
+<table class="table table-bordered table-condensed" style="width: 50%">
+    <tr>
+        <th>
+            <b>Surname</b>
+        </th>
+        <th>
+            <b>Name</b>
+        </th>
+        <th>
+            <b>Age</b>
+        </th>
+    </tr>
+    <tr>
+        <td>@Model.Surname</td>
+        <td>@Model.Name</td>
+        <td>@Model.Age</td>
+    </tr>
+</table>
+<br>
+@Html.ActionLink("Add again...", "AddUser", "SergeyPekhota")

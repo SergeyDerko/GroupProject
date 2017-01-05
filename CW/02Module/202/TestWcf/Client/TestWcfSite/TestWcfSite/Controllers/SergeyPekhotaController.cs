@@ -28,10 +28,16 @@ namespace TestWcfSite.Controllers
             return View(calc);
         }
 
-        public ActionResult UserData()
+        public ActionResult AddUser()
         {
+            var user = new User();
+            return View(user);
+        }
 
-            return View();
+        [HttpPost]
+        public ActionResult DataUser(User user)
+        {
+            return PartialView("_UserData",user);
         }
 
         public ActionResult MultiplyTable()

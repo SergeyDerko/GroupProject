@@ -178,6 +178,7 @@
     <Compile Include="Models\DanilaModels\ExpressionD.cs" />
     <Compile Include="Models\KhlopovOlegModel\User.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
+    <Compile Include="Models\PikhotaSerhiiModels\User.cs" />
     <Compile Include="Models\SergeyDerkoModels\CalcModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\Expression11.cs" />
     <Compile Include="Models\SergeyDerkoModels\User11.cs" />
@@ -266,6 +267,8 @@
     <Content Include="Views\Yuriy\Client.cshtml" />
     <Content Include="Views\Yuriy\_Clientdata.cshtml" />
     <Content Include="Views\SergeyPekhota\MathTables.cshtml" />
+    <Content Include="Views\SergeyPekhota\AddUser.cshtml" />
+    <Content Include="Views\SergeyPekhota\_UserData.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

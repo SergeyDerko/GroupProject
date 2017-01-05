@@ -1,0 +1,17 @@
+﻿@model TestWcfSite.Models.PikhotaSerhiiModels.User
+@{
+    ViewBag.Title = "AddUser";
+}
+
+<h2>AddUser</h2>
+
+@using (Html.BeginForm("DataUser", "SergeyPekhota", FormMethod.Post))
+{
+    @Html.LabelFor(m=>Model.Surname)
+    @Html.TextBoxFor(m=>Model.Surname)
+    @Html.LabelFor(m=>Model.Name)
+    @Html.TextBoxFor(m=>Model.Name)
+    @Html.LabelFor(m => Model.Age)
+    @Html.TextBoxFor(m => Model.Age)
+    <input type="submit" value="ADD" class="btn"/>
+}
