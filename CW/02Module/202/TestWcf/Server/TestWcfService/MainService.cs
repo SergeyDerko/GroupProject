@@ -5,18 +5,18 @@ namespace TestWcfService
 {
     internal class MainService : ServiceBase
     {
-        private readonly ScanPcService<ScanPc> _scanPcService = new ScanPcService<ScanPc>();
+        //private readonly ScanPcService<ScanPc> _scanPcService = new ScanPcService<ScanPc>();
         private readonly CalcService<Calc> _calcService = new CalcService<Calc>();
 
         public void StartSvc()
         {
-            _scanPcService.Start();
+            //_scanPcService.Start();
             _calcService.Start();
         }
 
         public void StopSvc()
         {
-            _scanPcService.Stop();
+            //_scanPcService.Stop();
             _calcService.Stop();
         }
 
