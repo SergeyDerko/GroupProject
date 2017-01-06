@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ServiceModel;
 
 namespace ExchangeRatesServiceLib
 {
-    interface IExchangeRates
+    [ServiceContract]
+    public interface IExchangeRates
     {
-         string Usd { get; set; }
-         string Eur { get; set; }
+        [OperationContract]
+        string CurrentExchangeRates();
     }
 }

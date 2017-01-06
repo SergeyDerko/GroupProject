@@ -13,25 +13,32 @@ namespace TestWcfSite.Controllers
 
         public ActionResult TableMultiply()
         {
-            var expression = new Expression { A = 2, B = 2 };
+            var expression = new Expression {A = 2, B = 2};
             ViewBag.Expression = expression;
-            
+
             var table = Expression.AllTableExpressions();
-            
+
             return View(table);
         }
+
         public ActionResult Client()
         {
-           return View();
+            return View();
         }
+
         [HttpPost]
         public ActionResult Client(Client client)
         {
-            var newClient = new Client { Name = client.Name, Lastname = client.Lastname, Age = client.Age };
+            var newClient = new Client {Name = client.Name, Lastname = client.Lastname, Age = client.Age};
 
             return PartialView("_Clientdata", newClient);
         }
 
-
+        public ActionResult ExchangeRates()
+        {
+            var currentRates = new ExchangeRates();
+            ViewBag.CurrentRates = currentRates.CurrentExchange;
+            return View();
+        }
     }
 }

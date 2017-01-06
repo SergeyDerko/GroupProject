@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ADDB2438-3EC2-4C5D-9F33-B2951475D666}</ProjectGuid>
+    <ProjectGuid>{395AA418-683D-4BAC-A9FC-9989E58336A6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestWcfService</RootNamespace>
-    <AssemblyName>TestWcfService</AssemblyName>
+    <RootNamespace>ExchangeRatesClient1</RootNamespace>
+    <AssemblyName>ExchangeRatesClient1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,13 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,40 +45,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="MainService.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SrvUtils.cs" />
-    <Compile Include="TestInstaller.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="BaseService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="Service References\ServiceReference1\ExchangeRates.wsdl" />
+    <None Include="Service References\ServiceReference1\ExchangeRates.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\ExchangeRates1.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\TestWcfCommon\TestWcfCommon.csproj">
-      <Project>{6d360c5f-a3e9-471a-84af-09fc8a7eaa13}</Project>
-      <Name>TestWcfCommon</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SergeyDerko\SergeyDerkoLibrary\SergeyDerkoLibrary.csproj">
-      <Project>{9093DDCD-35E6-4F5B-9ABA-DDDFDB0DED14}</Project>
-      <Name>SergeyDerkoLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TestWcfLib\TestWcfLib.csproj">
-      <Project>{60616979-FEFE-42D0-95CD-D4AFC4E5895F}</Project>
-      <Name>TestWcfLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Yuriy\ExchangeRatesServiceLib\ExchangeRatesServiceLib.csproj">
-      <Project>{C38C6159-5DC2-47CA-A78E-958D5195564E}</Project>
-      <Name>ExchangeRatesServiceLib</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\ExchangeRates.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
