@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="70a286b0-d09d-4480-8422-456523afa806" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bc5679a6-75db-4ccc-be52-d49110fc144b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:555/ExchangeRates" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ExchangeRates.xsd" MetadataType="Schema" ID="43ed42f0-f2e4-4f58-9bad-55a00dfb3eb0" SourceId="1" SourceUrl="http://localhost:555/ExchangeRates?xsd=xsd1" />
-    <MetadataFile FileName="ExchangeRates1.xsd" MetadataType="Schema" ID="ff4fd614-3d1d-43d7-9228-73d9a6fad894" SourceId="1" SourceUrl="http://localhost:555/ExchangeRates?xsd=xsd0" />
-    <MetadataFile FileName="ExchangeRates.disco" MetadataType="Disco" ID="ad19d759-d9a0-46f5-a636-bc06f7516749" SourceId="1" SourceUrl="http://localhost:555/ExchangeRates?disco" />
-    <MetadataFile FileName="ExchangeRates.wsdl" MetadataType="Wsdl" ID="e31fe739-bb36-467c-91ef-6ef47b52d7f8" SourceId="1" SourceUrl="http://localhost:555/ExchangeRates?wsdl" />
+    <MetadataFile FileName="ExchangeRates.xsd" MetadataType="Schema" ID="f769b66b-a3a7-4463-bbee-1f2641225423" SourceId="1" SourceUrl="http://localhost:555/ExchangeRates?xsd=xsd1" />
+    <MetadataFile FileName="ExchangeRates1.xsd" MetadataType="Schema" ID="423fbe4d-fc7a-4805-855e-559b5fcb5939" SourceId="1" SourceUrl="http://localhost:555/ExchangeRates?xsd=xsd0" />
+    <MetadataFile FileName="ExchangeRates.disco" MetadataType="Disco" ID="17c706d8-fd64-4c21-a260-e2fa2a58dcbb" SourceId="1" SourceUrl="http://localhost:555/ExchangeRates?disco" />
+    <MetadataFile FileName="ExchangeRates.wsdl" MetadataType="Wsdl" ID="be79417c-e565-4bf9-b3f3-5bc44bd265b9" SourceId="1" SourceUrl="http://localhost:555/ExchangeRates?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

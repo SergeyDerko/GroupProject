@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D3344B4-CF12-47BE-9E2F-E67508072B1A}</ProjectGuid>
+    <ProjectGuid>{B08135DD-FD88-42C5-8C95-A538FAE7825D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExchangeRatesClientLib</RootNamespace>
-    <AssemblyName>ExchangeRatesClientLib</AssemblyName>
+    <RootNamespace>ExchangeRatesClientLibrary</RootNamespace>
+    <AssemblyName>ExchangeRatesClientLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
