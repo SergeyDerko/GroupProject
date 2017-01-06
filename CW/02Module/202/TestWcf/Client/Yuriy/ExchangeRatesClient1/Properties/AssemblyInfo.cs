@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ExchangeRatesClient")]
+[assembly: AssemblyTitle("ExchangeRatesClient1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ExchangeRatesClient")]
+[assembly: AssemblyProduct("ExchangeRatesClient1")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("bacac7cd-ada1-4b86-ad56-c2f3e8f42a21")]
+[assembly: Guid("395aa418-683d-4bac-a9fc-9989e58336a6")]
 
 // Version information for an assembly consists of the following four values:
 //

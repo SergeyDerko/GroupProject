@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B438E97E-A758-4C84-BE17-C66EB07DBEFC}</ProjectGuid>
+    <ProjectGuid>{3D3344B4-CF12-47BE-9E2F-E67508072B1A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ExchangeRatesClientLib</RootNamespace>
@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\ExchangeRatesReference\Reference.cs">
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -55,28 +55,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\ExchangeRatesReference\ExchangeRates.wsdl" />
-    <None Include="Service References\ExchangeRatesReference\ExchangeRates.xsd">
+    <None Include="Service References\ServiceReference1\ExchangeRates.wsdl" />
+    <None Include="Service References\ServiceReference1\ExchangeRates.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ExchangeRatesReference\ExchangeRates1.xsd">
+    <None Include="Service References\ServiceReference1\ExchangeRates1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ExchangeRatesReference\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ExchangeRatesReference\ExchangeRates.disco" />
+    <None Include="Service References\ServiceReference1\ExchangeRates.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ExchangeRatesReference\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ExchangeRatesReference\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ExchangeRatesReference\Reference.svcmap">
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
