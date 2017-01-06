@@ -20,6 +20,7 @@ namespace TestWcfSite.Controllers
             
             return View(table);
         }
+
         public ActionResult Client()
         {
            return View();
@@ -30,6 +31,11 @@ namespace TestWcfSite.Controllers
             var newClient = new Client { Name = client.Name, Lastname = client.Lastname, Age = client.Age };
 
             return PartialView("_Clientdata", newClient);
+        }
+        public ActionResult ExchangeRates()
+        {
+            
+            return View();
         }
 
 
