@@ -1,20 +1,16 @@
-﻿using System.ServiceModel;
-using ExchangeRatesClientLibrary.ServiceReference1;
+﻿using ExchangeRatesClientLibrary.ExchangeRatesServiceReference;
 
 namespace TestWcfSite.Models.Yuriymodels
 {
     public class ExchangeRates
     {
-        public string CurrentExchange { get; set; }
-
         public ExchangeRates()
         {
-            var channel = new ChannelFactory<IExchangeRates>(new BasicHttpBinding(), new EndpointAddress("http://localhost:555/ExchangeRates")).CreateChannel();
-            CurrentExchange = channel.CurrentExchangeRates();
-
-            //var client = new ExchangeRatesClient();
-            //CurrentExchange = client.CurrentExchangeRates();
-            //client.Close();
+            var client = new ExchangeRatesClient();
+            CurrentExchange = client.CurrentExchangeRates();
+            client.Close();
         }
+
+        public string CurrentExchange { get; private set; }
     }
 }

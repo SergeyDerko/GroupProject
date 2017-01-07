@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExchangeRatesClientLibrary.ServiceReference1 {
+namespace ExchangeRatesClientLibrary.ExchangeRatesServiceReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IExchangeRates")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ExchangeRatesServiceReference.IExchangeRates")]
     public interface IExchangeRates {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IExchangeRates/CurrentExchangeRates", ReplyAction="http://tempuri.org/IExchangeRates/CurrentExchangeRatesResponse")]
@@ -23,12 +23,12 @@ namespace ExchangeRatesClientLibrary.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IExchangeRatesChannel : ExchangeRatesClientLibrary.ServiceReference1.IExchangeRates, System.ServiceModel.IClientChannel {
+    public interface IExchangeRatesChannel : ExchangeRatesClientLibrary.ExchangeRatesServiceReference.IExchangeRates, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ExchangeRatesClient : System.ServiceModel.ClientBase<ExchangeRatesClientLibrary.ServiceReference1.IExchangeRates>, ExchangeRatesClientLibrary.ServiceReference1.IExchangeRates {
+    public partial class ExchangeRatesClient : System.ServiceModel.ClientBase<ExchangeRatesClientLibrary.ExchangeRatesServiceReference.IExchangeRates>, ExchangeRatesClientLibrary.ExchangeRatesServiceReference.IExchangeRates {
         
         public ExchangeRatesClient() {
         }
