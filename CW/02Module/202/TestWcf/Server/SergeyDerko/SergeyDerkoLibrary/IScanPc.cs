@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SergeyDerkoLibrary
 {
@@ -11,7 +7,7 @@ namespace SergeyDerkoLibrary
     public interface IScanPc
     {
         [OperationContract]
-        List<StringBuilder> Info();
+        Dictionary<string, string> Info();
 
     }
 }

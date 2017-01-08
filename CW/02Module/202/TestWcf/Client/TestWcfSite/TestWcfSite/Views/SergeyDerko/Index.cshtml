@@ -4,18 +4,16 @@
 
 <html>
 <head>
+    <link href="../../Content/SergeyDerko.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
 </head>
 <body>
     <div>
-        @Html.ActionLink("Таблица умножения на - 2", "Table", "SergeyDerko")
+
         <br />
-        @Html.ActionLink("Таблица умножения на - что угодно, параметр задается в строке :)", "TableOll", "SergeyDerko", new { a = 3 }, null)
-        <br />
-        @Html.ActionLink("Таблица умножения (очень кривая реализация, без StringBilder ;) )", "MultiplicationTable", "SergeyDerko")
-        <br/>
-        @Html.ActionLink("Воод данных Пользователя", "User_11", "SergeyDerko")
+
+        <a href="SergeyDerko/ScanPcResult" class="button9">Получение данных о компьютере >></a>     <a href="SergeyDerko/MultiplicationTable" class="button9">Таблица умножения >></a>   <a href="SergeyDerko/User_11" class="button9">Ввод данных Пользователя >></a>
         <br />
         <h3>Простенький калькулятор</h3>
         @using (Html.BeginForm("Index", "SergeyDerko"))

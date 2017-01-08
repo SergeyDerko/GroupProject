@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("SkanPcLibrary")]
+[assembly: AssemblyTitle("SergeyDerkoLibrary")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SkanPcLibrary")]
+[assembly: AssemblyProduct("SergeyDerkoLibrary")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("f334c9eb-fb37-44b5-b0b2-34d49d1c21ec")]
+[assembly: Guid("92597dc6-10fe-497f-8982-40c220d70c52")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //

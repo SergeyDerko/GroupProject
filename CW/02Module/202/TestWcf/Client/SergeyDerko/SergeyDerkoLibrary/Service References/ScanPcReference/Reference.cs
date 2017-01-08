@@ -8,27 +8,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SkanPcLibrary.ScanPcServiceReference {
+namespace SergeyDerkoLibrary.ScanPcReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ScanPcServiceReference.IScanPc")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ScanPcReference.IScanPc")]
     public interface IScanPc {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IScanPc/Info", ReplyAction="http://tempuri.org/IScanPc/InfoResponse")]
-        System.Text.StringBuilder[] Info();
+        System.Collections.Generic.Dictionary<string, string> Info();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IScanPc/Info", ReplyAction="http://tempuri.org/IScanPc/InfoResponse")]
-        System.Threading.Tasks.Task<System.Text.StringBuilder[]> InfoAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, string>> InfoAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IScanPcChannel : SkanPcLibrary.ScanPcServiceReference.IScanPc, System.ServiceModel.IClientChannel {
+    public interface IScanPcChannel : SergeyDerkoLibrary.ScanPcReference.IScanPc, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ScanPcClient : System.ServiceModel.ClientBase<SkanPcLibrary.ScanPcServiceReference.IScanPc>, SkanPcLibrary.ScanPcServiceReference.IScanPc {
+    public partial class ScanPcClient : System.ServiceModel.ClientBase<SergeyDerkoLibrary.ScanPcReference.IScanPc>, SergeyDerkoLibrary.ScanPcReference.IScanPc {
         
         public ScanPcClient() {
         }
@@ -49,11 +49,11 @@ namespace SkanPcLibrary.ScanPcServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public System.Text.StringBuilder[] Info() {
+        public System.Collections.Generic.Dictionary<string, string> Info() {
             return base.Channel.Info();
         }
         
-        public System.Threading.Tasks.Task<System.Text.StringBuilder[]> InfoAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, string>> InfoAsync() {
             return base.Channel.InfoAsync();
         }
     }

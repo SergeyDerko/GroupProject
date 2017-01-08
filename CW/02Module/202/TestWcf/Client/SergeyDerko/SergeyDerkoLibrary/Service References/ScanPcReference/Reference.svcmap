@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="497521e9-3939-4d6a-8fbc-62de0c35ef43" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c593c638-4018-495b-ba11-0fcd833cc38d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,10 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:555/IScanPc?singleWsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:555/IScanPc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ScanPc.wsdl" MetadataType="Wsdl" ID="57be0842-b0cb-4623-9a81-8a1687924338" SourceId="1" SourceUrl="http://localhost:555/IScanPc?singleWsdl" />
+    <MetadataFile FileName="IScanPc.xsd" MetadataType="Schema" ID="4c80f3c3-2c70-40ed-bcda-079d6f3b00d3" SourceId="1" SourceUrl="http://localhost:555/IScanPc?xsd=xsd0" />
+    <MetadataFile FileName="IScanPc1.xsd" MetadataType="Schema" ID="1458033f-0ac3-48a6-9a43-308f845961c3" SourceId="1" SourceUrl="http://localhost:555/IScanPc?xsd=xsd1" />
+    <MetadataFile FileName="IScanPc2.xsd" MetadataType="Schema" ID="b58f9e8a-83a5-4a66-aa81-d8523cb4106a" SourceId="1" SourceUrl="http://localhost:555/IScanPc?xsd=xsd2" />
+    <MetadataFile FileName="ScanPc.wsdl" MetadataType="Wsdl" ID="6eb5481d-83c5-4315-8c2d-a7567eb3ed9e" SourceId="1" SourceUrl="http://localhost:555/IScanPc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
