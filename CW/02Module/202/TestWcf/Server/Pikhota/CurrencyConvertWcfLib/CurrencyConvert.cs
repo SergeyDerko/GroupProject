@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CurrencyConvertLib;
+﻿using CurrencyConvertLib;
 
 namespace CurrencyConvertWcfLib
 {
@@ -12,13 +7,14 @@ namespace CurrencyConvertWcfLib
         public string Usd = "USD";
         public string Euro = "EUR";
         public string Uah = "UAH";
-        public decimal ChangeCurrency(string fromCurrency, string toCurrency)
+        public string ChangeCurrency(/*string fromCurrency, string toCurrency*/)
         {
-            decimal result = 0;
+            /*decimal result = 0;
             if (fromCurrency == Usd)
             {
-                
-            }
+                    
+            }*/
+            string result = "Service is working!";
             return result;
         }
     }
