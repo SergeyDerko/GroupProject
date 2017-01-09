@@ -178,6 +178,7 @@
     <Compile Include="Models\DanilaModels\ExpressionD.cs" />
     <Compile Include="Models\KhlopovOlegModel\User.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
+    <Compile Include="Models\PikhotaSerhiiModels\CurrencyConverter.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\User.cs" />
     <Compile Include="Models\SergeyDerkoModels\CalcModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\Expression11.cs" />
@@ -273,6 +274,7 @@
     <Content Include="Views\SergeyPekhota\_UserData.cshtml" />
     <Content Include="Views\Yuriy\ExchangeRates.cshtml" />
     <Content Include="Views\SergeyDerko\ScanPcResult.cshtml" />
+    <Content Include="Views\SergeyPekhota\CurrencyConverter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -287,6 +289,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Pikhota\CurrencyConvertClientLib\CurrencyConvertClientLib.csproj">
+      <Project>{be3bd64e-35e2-4967-835c-d57e527818ad}</Project>
+      <Name>CurrencyConvertClientLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\SergeyDerko\SergeyDerkoLibrary\SergeyDerkoLibrary.csproj">
       <Project>{92597dc6-10fe-497f-8982-40c220d70c52}</Project>
       <Name>SergeyDerkoLibrary</Name>
