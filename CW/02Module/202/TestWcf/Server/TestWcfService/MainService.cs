@@ -3,6 +3,7 @@ using ExchangeRatesServiceLib;
 using PlitkaLib;
 using SergeyDerkoLibrary;
 using TestWcfLib;
+using CurrencyConvertWcfLib;
 
 namespace TestWcfService
 {
@@ -12,6 +13,7 @@ namespace TestWcfService
         private readonly BaseService<ScanPc> _scanPcService = new BaseService<ScanPc>();
         private readonly BaseService<ExchangeRates> _exchangeRates = new BaseService<ExchangeRates>();
         private readonly BaseService<Plitka> _plitka = new BaseService<Plitka>();
+        private readonly BaseService<CurrencyConvert> _currencyConvert = new BaseService<CurrencyConvert>();
 
         public void StartSvc()
         {
@@ -19,6 +21,7 @@ namespace TestWcfService
             _scanPcService.Start();
             _exchangeRates.Start();
             _plitka.Start();
+            _currencyConvert.Start();
         }
 
         public void StopSvc()
@@ -27,6 +30,7 @@ namespace TestWcfService
             _calcService.Stop();
             _exchangeRates.Stop();
             _plitka.Stop();
+            _currencyConvert.Stop();
         }
 
         protected override void OnStart(string[] args)

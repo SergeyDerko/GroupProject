@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CurrencyConvertWcfClientLib
+﻿namespace CurrencyConvertWcfClientLib
 {
     class Program
     {

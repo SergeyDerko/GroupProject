@@ -75,6 +75,10 @@
       <Project>{42D39536-BCAD-48F8-B81A-A972FE66C8A3}</Project>
       <Name>PlitkaLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Pikhota\CurrencyConvertWcfLib\CurrencyConvertWcfLib.csproj">
+      <Project>{77f6cbd6-b5b2-48c7-8775-7ec4198999a1}</Project>
+      <Name>CurrencyConvertWcfLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SergeyDerko\SergeyDerkoLibrary\SergeyDerkoLibrary.csproj">
       <Project>{9093DDCD-35E6-4F5B-9ABA-DDDFDB0DED14}</Project>
       <Name>SergeyDerkoLibrary</Name>
@@ -87,6 +91,9 @@
       <Project>{C38C6159-5DC2-47CA-A78E-958D5195564E}</Project>
       <Name>ExchangeRatesServiceLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
