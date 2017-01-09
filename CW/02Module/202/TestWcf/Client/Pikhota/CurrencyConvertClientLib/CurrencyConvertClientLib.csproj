@@ -52,7 +52,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
     <None Include="Service References\CurrencyConvertServiceReference\CurrencyConvert.wsdl" />
     <None Include="Service References\CurrencyConvertServiceReference\CurrencyConvert.xsd">
       <SubType>Designer</SubType>
@@ -60,9 +63,6 @@
     <None Include="Service References\CurrencyConvertServiceReference\CurrencyConvert1.xsd">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\CurrencyConvertServiceReference\" />

@@ -1,5 +1,5 @@
 ﻿using System.ServiceModel;
-using CurrencyConvertClientLib.CurrencyConvertService;
+using CurrencyConvertClientLib.CurrencyConvertServiceReference;
 
 namespace TestWcfSite.Models.PikhotaSerhiiModels
 {
