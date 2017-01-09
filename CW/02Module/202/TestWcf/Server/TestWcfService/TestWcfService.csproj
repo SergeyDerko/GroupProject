@@ -75,9 +75,9 @@
       <Project>{42D39536-BCAD-48F8-B81A-A972FE66C8A3}</Project>
       <Name>PlitkaLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Pikhota\CurrencyConvertWcfLib\CurrencyConvertWcfLib.csproj">
+    <ProjectReference Include="..\Pikhota\CurrencyConvertWcfLib\CurrencyConvertLib.csproj">
       <Project>{77f6cbd6-b5b2-48c7-8775-7ec4198999a1}</Project>
-      <Name>CurrencyConvertWcfLib</Name>
+      <Name>CurrencyConvertLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\SergeyDerko\SergeyDerkoLibrary\SergeyDerkoLibrary.csproj">
       <Project>{9093DDCD-35E6-4F5B-9ABA-DDDFDB0DED14}</Project>

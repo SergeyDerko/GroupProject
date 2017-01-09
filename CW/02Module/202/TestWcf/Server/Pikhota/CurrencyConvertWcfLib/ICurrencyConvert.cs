@@ -7,7 +7,6 @@ namespace CurrencyConvertLib
     {
         [OperationContract]
         string ChangeCurrency();
-
         //decimal ChangeCurrency(string fromCurrency, string toCurrency);
     }
 }

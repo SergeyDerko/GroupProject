@@ -52,7 +52,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pikhota", "Pikhota", "{3CAC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pikhota", "Pikhota", "{95E8B7B6-E0E4-4514-83EC-41B2EDDA2298}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConvertWcfLib", "Server\Pikhota\CurrencyConvertWcfLib\CurrencyConvertWcfLib.csproj", "{77F6CBD6-B5B2-48C7-8775-7EC4198999A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConvertLib", "Server\Pikhota\CurrencyConvertWcfLib\CurrencyConvertLib.csproj", "{77F6CBD6-B5B2-48C7-8775-7EC4198999A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Yuriy", "Yuriy", "{7B9DA9DD-B000-40F8-A3D3-EEE3BB928DEC}"
 EndProject
