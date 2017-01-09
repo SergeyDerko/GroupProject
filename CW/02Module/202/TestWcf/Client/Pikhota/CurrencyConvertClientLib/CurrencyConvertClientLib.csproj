@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\CurrencyConvertService\Reference.cs">
+    <Compile Include="Service References\CurrencyConvertServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -53,11 +53,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\CurrencyConvertService\CurrencyConvert.wsdl" />
-    <None Include="Service References\CurrencyConvertService\CurrencyConvert.xsd">
+    <None Include="Service References\CurrencyConvertServiceReference\CurrencyConvert.wsdl" />
+    <None Include="Service References\CurrencyConvertServiceReference\CurrencyConvert.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\CurrencyConvertService\CurrencyConvert1.xsd">
+    <None Include="Service References\CurrencyConvertServiceReference\CurrencyConvert1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -65,19 +65,19 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\CurrencyConvertService\" />
+    <WCFMetadataStorage Include="Service References\CurrencyConvertServiceReference\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\CurrencyConvertService\CurrencyConvert.disco" />
+    <None Include="Service References\CurrencyConvertServiceReference\CurrencyConvert.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\CurrencyConvertService\configuration91.svcinfo" />
+    <None Include="Service References\CurrencyConvertServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\CurrencyConvertService\configuration.svcinfo" />
+    <None Include="Service References\CurrencyConvertServiceReference\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\CurrencyConvertService\Reference.svcmap">
+    <None Include="Service References\CurrencyConvertServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

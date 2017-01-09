@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CurrencyConvertClientLib.CurrencyConvertService {
+namespace CurrencyConvertClientLib.CurrencyConvertServiceReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CurrencyConvertService.ICurrencyConvert")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CurrencyConvertServiceReference.ICurrencyConvert")]
     public interface ICurrencyConvert {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICurrencyConvert/ChangeCurrency", ReplyAction="http://tempuri.org/ICurrencyConvert/ChangeCurrencyResponse")]
@@ -23,12 +23,12 @@ namespace CurrencyConvertClientLib.CurrencyConvertService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ICurrencyConvertChannel : CurrencyConvertClientLib.CurrencyConvertService.ICurrencyConvert, System.ServiceModel.IClientChannel {
+    public interface ICurrencyConvertChannel : CurrencyConvertClientLib.CurrencyConvertServiceReference.ICurrencyConvert, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CurrencyConvertClient : System.ServiceModel.ClientBase<CurrencyConvertClientLib.CurrencyConvertService.ICurrencyConvert>, CurrencyConvertClientLib.CurrencyConvertService.ICurrencyConvert {
+    public partial class CurrencyConvertClient : System.ServiceModel.ClientBase<CurrencyConvertClientLib.CurrencyConvertServiceReference.ICurrencyConvert>, CurrencyConvertClientLib.CurrencyConvertServiceReference.ICurrencyConvert {
         
         public CurrencyConvertClient() {
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="265a549f-a497-42ba-b01b-8e1f32ecbd94" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="19b008ae-2eea-49e5-88f2-427f1374bf3d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:555/CurrencyConvert" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CurrencyConvert.disco" MetadataType="Disco" ID="7daf8a79-8ac6-4d4c-bf68-0447c0231cdd" SourceId="1" SourceUrl="http://localhost:555/CurrencyConvert?disco" />
-    <MetadataFile FileName="CurrencyConvert.wsdl" MetadataType="Wsdl" ID="a7fbadf5-43c1-45ff-8371-f6d8e8ab782b" SourceId="1" SourceUrl="http://localhost:555/CurrencyConvert?wsdl" />
-    <MetadataFile FileName="CurrencyConvert.xsd" MetadataType="Schema" ID="7ddb8984-149c-41d6-8008-1da7a28d0d34" SourceId="1" SourceUrl="http://localhost:555/CurrencyConvert?xsd=xsd1" />
-    <MetadataFile FileName="CurrencyConvert1.xsd" MetadataType="Schema" ID="862536d7-4ede-4b1d-a543-4495bb7c3f48" SourceId="1" SourceUrl="http://localhost:555/CurrencyConvert?xsd=xsd0" />
+    <MetadataFile FileName="CurrencyConvert.disco" MetadataType="Disco" ID="5186920b-51d5-4377-8b5a-2b16a29d22b6" SourceId="1" SourceUrl="http://localhost:555/CurrencyConvert?disco" />
+    <MetadataFile FileName="CurrencyConvert.wsdl" MetadataType="Wsdl" ID="bfc1e2f1-0dbc-4107-b530-61c89eb87db0" SourceId="1" SourceUrl="http://localhost:555/CurrencyConvert?wsdl" />
+    <MetadataFile FileName="CurrencyConvert.xsd" MetadataType="Schema" ID="97a79003-7c79-450d-9f54-d56d651553fb" SourceId="1" SourceUrl="http://localhost:555/CurrencyConvert?xsd=xsd1" />
+    <MetadataFile FileName="CurrencyConvert1.xsd" MetadataType="Schema" ID="d456a152-0d81-48a5-ae34-6cd458dc3bb2" SourceId="1" SourceUrl="http://localhost:555/CurrencyConvert?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
