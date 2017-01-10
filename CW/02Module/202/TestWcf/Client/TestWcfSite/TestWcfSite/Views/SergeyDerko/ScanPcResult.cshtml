@@ -1,0 +1,44 @@
+﻿@model TestWcfSite.Models.SergeyDerkoModels.ScanPcModel
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h2>Получение данных о компьютере из службы</h2>
+    <div>
+        <table border="1">
+            <tr>
+                <td>
+                    <strong>Информация о накопителях</strong>
+                    <br />
+                    @Html.Raw(ViewBag.Hdd)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Информация о процессоре</strong>
+                    <br />
+                    @Html.Raw(ViewBag.Cpu)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Информация о видеокарте</strong>
+                    <br />
+                    @Html.Raw(ViewBag.Video)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Информация о оперативной памяти</strong>
+                    <br />
+                    @Html.Raw(ViewBag.Memory)
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

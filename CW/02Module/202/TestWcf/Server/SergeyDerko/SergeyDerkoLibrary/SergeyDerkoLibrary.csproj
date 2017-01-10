@@ -43,6 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IScanPc.cs" />
+    <Compile Include="MyLibrary\Cpu.cs" />
+    <Compile Include="MyLibrary\Hdd.cs" />
+    <Compile Include="MyLibrary\Memory.cs" />
+    <Compile Include="MyLibrary\Video.cs" />
     <Compile Include="ScanPc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

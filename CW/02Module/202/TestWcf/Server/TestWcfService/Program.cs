@@ -62,7 +62,14 @@ namespace TestWcfService
         {
             const string method = "UnhandledExceptionHandler";
             var ex = (Exception)args.ExceptionObject;
-            Console.WriteLine(ex == null ? "Error!" : $"{method}\n{ex}");
+            if (ex == null)
+            {
+                Logger.Error(method, "Undefined error!");
+            }
+            else
+            {
+                Logger.Exception(method, ex);
+            }
         }
 
         //sc create TestService binPath="w:\repos\GroupProject\CW\501\501_srv\bin\Debug\501_srv.exe" DisplayName= "TestServiceDisplayName"

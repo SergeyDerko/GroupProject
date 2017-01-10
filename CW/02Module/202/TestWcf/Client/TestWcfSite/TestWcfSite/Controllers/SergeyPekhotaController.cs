@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Permissions;
 using System.Text;
 using System.Web.Mvc;
 using System.Web.UI.HtmlControls;
@@ -26,6 +27,13 @@ namespace TestWcfSite.Controllers
 
             var calc = new Calculator();
             return View(calc);
+        }
+
+        public ActionResult CurrencyConverter()
+        {
+            var converter = new CurrencyConverter();
+            ViewBag.Convert = converter.CurrentConvert;
+            return View();
         }
 
         public ActionResult AddUser()

@@ -6,14 +6,21 @@
         <h3>Table Multiply</h3>
         <p>Вывод таблицы умножения с помощью частичного представления - Html.Partial</p>
         <p>
-            <a class="btn btn-default" href="Yuriy/TableMultiply">Перейти &raquo;</a>
+            @Html.ActionLink("Перейти", "TableMultiply", "Yuriy", new {@class = "btn btn-default"})
         </p>
     </div>
     <div class="col-md-4">
         <h3>Add new client</h3>
         <p>Отправка данных нового пользователя через форму и метод post</p>
         <p>
-            <a class="btn btn-default" href="Yuriy/Client">Перейти &raquo;</a>
+            @Html.ActionLink("Перейти", "Client", "Yuriy", new {@class = "btn btn-default"})
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h3>Exchange Rates</h3>
+        <p>Отображение курса валют</p>
+        <p>
+            @Html.ActionLink("Перейти", "ExchangeRates", "Yuriy", new {@class = "btn btn-default"})
         </p>
     </div>
 </div>

@@ -1,14 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ExchangeRatesServiceLib
 {
-    public class ExchangeRates:IExchangeRates
+    public class ExchangeRates : IExchangeRates
     {
-        public string Usd { get; set; }
-        public string Eur { get; set; }
+        public string CurrentExchangeRates()
+        {
+            var random = new Random();
+            var usd = random.Next(25, 30);
+            var eur = random.Next(30, 35);
+            return $"Usd = {usd}, Eur = {eur}";
+        }
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CurrencyConvertWcfClientLib")]
+[assembly: AssemblyTitle("CurrencyConvertClientLib")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CurrencyConvertWcfClientLib")]
+[assembly: AssemblyProduct("CurrencyConvertClientLib")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fc35314c-e831-4bb1-90a6-48eca8fe47ed")]
+[assembly: Guid("be3bd64e-35e2-4967-835c-d57e527818ad")]
 
 // Version information for an assembly consists of the following four values:
 //
