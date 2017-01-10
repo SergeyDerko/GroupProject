@@ -5,16 +5,19 @@ namespace TestService
     internal class MainService : ServiceBase
     {
 
-        private readonly TestService _testService = new TestService();
+        private readonly TestService _calcService = new TestService();
+        private readonly TimeOfDayService _timeOfDayService = new TimeOfDayService();
 
         public void StartSvc()
         {
-            _testService.Start();
+            _calcService.Start();
+            _timeOfDayService.Start();
         }
 
         public void StopSvc()
         {
-            _testService.Stop();
+            _calcService.Stop();
+            _timeOfDayService.Stop();
         }
 
         protected override void OnStart(string[] args)

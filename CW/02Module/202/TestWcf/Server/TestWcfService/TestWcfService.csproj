@@ -74,6 +74,10 @@
     <ProjectReference Include="..\..\TimeOfDayConvertWcfLib\TimeOfDayConvertWcfLib.csproj">
       <Project>{05D7C92B-9EDC-4BE6-9FC1-D8F1A9E01351}</Project>
       <Name>TimeOfDayConvertWcfLib</Name>
+	  </ProjectReference>
+    <ProjectReference Include="..\SergeyDerko\SergeyDerkoLibrary\SergeyDerkoLibrary.csproj">
+      <Project>{9093DDCD-35E6-4F5B-9ABA-DDDFDB0DED14}</Project>
+      <Name>SergeyDerkoLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestWcfLib\TestWcfLib.csproj">
       <Project>{60616979-FEFE-42D0-95CD-D4AFC4E5895F}</Project>
