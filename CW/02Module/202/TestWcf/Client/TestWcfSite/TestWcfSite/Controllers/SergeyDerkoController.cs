@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web;
+﻿using System.Text;
 using System.Web.Mvc;
 using TestWcfSite.Models.SergeyDerkoModels;
 
@@ -13,6 +9,16 @@ namespace TestWcfSite.Controllers
         // GET: SergeyDerko
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult ScanPcResult()
+        {
+            var scanPc = new ScanPcModel();
+            ViewBag.Hdd = scanPc.Hdd;
+            ViewBag.Cpu = scanPc.Cpu;
+            ViewBag.Video = scanPc.Video;
+            ViewBag.Memory = scanPc.Memory;
             return View();
         }
 
