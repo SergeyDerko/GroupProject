@@ -1,20 +1,25 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.Remoting.Messaging;
 using CurrencyConvertLib;
 
 namespace CurrencyConvertWcfLib
 {
     public class CurrencyConvert : ICurrencyConvert
     {
-        public decimal Usd { get; set; }
-        public decimal Uah { get; set; }
-        public decimal Euro { get; set; }
         public int Count { get; set; }
+
+        public List<string> Li { get; set; }
+
+        public CurrencyConvert()
+        {
+            Li = new List<string> { "USD", "EUR", "UAH" };
+            Count = 1;
+        }
 
         public decimal UsdToEuro()
         {
+            
             decimal result;
-            if (Count == 0)
+            if (Count <= 1)
             {
                 result = (decimal)0.9516;
             }
@@ -28,7 +33,7 @@ namespace CurrencyConvertWcfLib
         public decimal UsdToUah()
         {
             decimal result;
-            if (Count == 0)
+            if (Count <= 1)
             {
                 result = (decimal)27.2350;
             }
@@ -42,7 +47,7 @@ namespace CurrencyConvertWcfLib
         public decimal EuroToUsd()
         {
             decimal result;
-            if (Count == 0)
+            if (Count <= 1)
             {
                 result = (decimal)1.0512;
             }
@@ -56,7 +61,7 @@ namespace CurrencyConvertWcfLib
         public decimal EuroToUah()
         {
             decimal result;
-            if (Count == 0)
+            if (Count <= 1)
             {
                 result = (decimal)28.6226;
             }
@@ -70,7 +75,7 @@ namespace CurrencyConvertWcfLib
         public decimal UahToUsd()
         {
             decimal result;
-            if (Count == 0)
+            if (Count <= 1)
             {
                 result = (decimal)0.0367;
             }
@@ -84,7 +89,7 @@ namespace CurrencyConvertWcfLib
         public decimal UahToEuro()
         {
             decimal result;
-            if (Count == 0)
+            if (Count <= 1)
             {
                 result = (decimal)0.0349;
             }

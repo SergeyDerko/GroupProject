@@ -30,8 +30,7 @@ namespace TestWcfSite.Controllers
         public ActionResult CurrencyConverter()
         {
             var converter = new CurrencyConverter();
-            ViewBag.Convert = converter.CurrentConvert;
-            return View();
+            return View(converter);
         }
 
         public ActionResult AddUser()

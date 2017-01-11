@@ -10,15 +10,15 @@ namespace TestWcfSite.Models.PikhotaSerhiiModels
             try
             {
                 var client = new CurrencyConvertClient();
-                CurrentConvert = client.ChangeCurrency();
+                client.ChangeCurrency();
                 client.Close();
             }
             catch (EndpointNotFoundException)
             {
-                CurrentConvert = "Сервис CurrentConvert не запущен! :(";
+                Msg = "Сервис CurrentConvert не запущен! :(";
             }
         }
 
-        public string CurrentConvert { get; set; }
+        public string Msg { get; set; }
     }
 }

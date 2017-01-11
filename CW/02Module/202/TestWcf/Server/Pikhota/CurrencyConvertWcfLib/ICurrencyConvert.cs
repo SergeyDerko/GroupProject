@@ -1,16 +1,13 @@
-﻿using System.ServiceModel;
+﻿using System.Collections.Generic;
+using System.ServiceModel;
 
 namespace CurrencyConvertLib
 {
     [ServiceContract]
     public interface ICurrencyConvert
     {
-        decimal Usd { get; set; }
 
-        decimal Uah { get; set; }
-
-        decimal Euro { get; set; }
-
+        List<string> Li { get; set; }
         int Count { get; set; }
 
         [OperationContract]
