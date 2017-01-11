@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Security.Permissions;
 using System.Text;
 using System.Web.Mvc;
-using System.Web.UI.HtmlControls;
 using TestWcfSite.Models.PikhotaSerhiiModels;
 
 namespace TestWcfSite.Controllers
@@ -12,7 +10,7 @@ namespace TestWcfSite.Controllers
         // GET: SergeyPekhota
         public ActionResult Index()
         {
-            ViewBag.Info = Info();
+            //ViewBag.Info = Info();
             return View();
         }
 
@@ -164,7 +162,7 @@ namespace TestWcfSite.Controllers
         #endregion
 
         #region OtherMethods
-        public string Info()
+        /*public string Info()
         {
             var b = new StringBuilder();
             var browser = HttpContext.Request.Browser.Browser;
@@ -175,7 +173,7 @@ namespace TestWcfSite.Controllers
             return b.Append($"<table class=\"table table-bordered table-condensed\"><th>Info</th><tr><td><b>Browser:</b>{browser}</td><tr><td><b>User_agent:</b>{agent}</td></tr>" +
                             $"<tr><td><b>url:</b>{url}</td></tr>" +
                             $"<tr><td><b>IPAdress:</b>{ip}</td></tr><tr><td><b>Reffer:{reffer}</td></tr></table>").ToString();
-        }
+        }*/
         #endregion
 
 
