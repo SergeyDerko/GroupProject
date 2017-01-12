@@ -74,10 +74,14 @@
     <ProjectReference Include="..\..\TimeOfDayConvertWcfLib\TimeOfDayConvertWcfLib.csproj">
       <Project>{05D7C92B-9EDC-4BE6-9FC1-D8F1A9E01351}</Project>
       <Name>TimeOfDayConvertWcfLib</Name>
-	  </ProjectReference>
+    </ProjectReference>
     <ProjectReference Include="..\..\PlitkaLib\PlitkaLib.csproj">
       <Project>{42D39536-BCAD-48F8-B81A-A972FE66C8A3}</Project>
       <Name>PlitkaLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aleksey\ServicesVeawerLib\ServicesVeawerLib.csproj">
+      <Project>{48ffa191-a8a6-46ce-b053-68f994645fe5}</Project>
+      <Name>ServicesVeawerLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\Pikhota\CurrencyConvertWcfLib\CurrencyConvertLib.csproj">
       <Project>{77f6cbd6-b5b2-48c7-8775-7ec4198999a1}</Project>
