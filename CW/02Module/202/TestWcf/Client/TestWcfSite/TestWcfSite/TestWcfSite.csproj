@@ -176,6 +176,7 @@
     <Compile Include="Models\AnastasiaNepomiluyev\User.cs" />
     <Compile Include="Models\Calc\CalcModel.cs" />
     <Compile Include="Models\DanilaModels\ExpressionD.cs" />
+    <Compile Include="Models\DanilaModels\Plitka.cs" />
     <Compile Include="Models\KhlopovOlegModel\User.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\CurrencyConverter.cs" />
@@ -275,6 +276,7 @@
     <Content Include="Views\Yuriy\ExchangeRates.cshtml" />
     <Content Include="Views\SergeyDerko\ScanPcResult.cshtml" />
     <Content Include="Views\SergeyPekhota\CurrencyConverter.cshtml" />
+    <Content Include="Views\Danila\Plitka.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -289,6 +291,14 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\PlitkaClientLib\PlitkaClientLib.csproj">
+      <Project>{E0DDE38F-CEDA-465A-9970-F483830336A2}</Project>
+      <Name>PlitkaClientLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\PlitkaLib\PlitkaLib.csproj">
+      <Project>{42D39536-BCAD-48F8-B81A-A972FE66C8A3}</Project>
+      <Name>PlitkaLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Pikhota\CurrencyConvertClientLib\CurrencyConvertClientLib.csproj">
       <Project>{be3bd64e-35e2-4967-835c-d57e527818ad}</Project>
       <Name>CurrencyConvertClientLib</Name>

@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using TestWcfSite.Models.DanilaModels;
 
 
 namespace TestWcfSite.Controllers
@@ -17,7 +18,14 @@ namespace TestWcfSite.Controllers
             Models.DanilaModels.ExpressionD.A = 2;
             return View();
         }
+        public ActionResult Plitka()
+        {
+            var plitka = new Plitka();
+            ViewBag.Plitka = plitka.Error;
+            return View();
+        }
+    }
 
 
     }
-}
+
