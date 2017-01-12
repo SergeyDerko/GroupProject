@@ -92,6 +92,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConvertClientLib", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlitkaClientLib", "PlitkaClientLib\PlitkaClientLib.csproj", "{E0DDE38F-CEDA-465A-9970-F483830336A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyRateServiceLibrary", "Server\Yuriy\CurrencyRateServiceLibrary\CurrencyRateServiceLibrary.csproj", "{AB70722B-C3EC-4447-A375-837297CDF2A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyRateClientLibrary", "Client\Yuriy\CurrencyRateClientLibrary\CurrencyRateClientLibrary.csproj", "{889A0BB1-ED0D-4ACB-B0A5-F41C76E13C34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -170,6 +174,14 @@ Global
 		{E0DDE38F-CEDA-465A-9970-F483830336A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0DDE38F-CEDA-465A-9970-F483830336A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0DDE38F-CEDA-465A-9970-F483830336A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB70722B-C3EC-4447-A375-837297CDF2A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB70722B-C3EC-4447-A375-837297CDF2A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB70722B-C3EC-4447-A375-837297CDF2A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB70722B-C3EC-4447-A375-837297CDF2A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{889A0BB1-ED0D-4ACB-B0A5-F41C76E13C34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889A0BB1-ED0D-4ACB-B0A5-F41C76E13C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889A0BB1-ED0D-4ACB-B0A5-F41C76E13C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889A0BB1-ED0D-4ACB-B0A5-F41C76E13C34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -204,5 +216,7 @@ Global
 		{92597DC6-10FE-497F-8982-40C220D70C52} = {CF8FF486-E641-45C5-8266-78A60E52176D}
 		{BE3BD64E-35E2-4967-835C-D57E527818AD} = {3CAC6FDD-DB82-4315-9945-216DB46EDF33}
 		{E0DDE38F-CEDA-465A-9970-F483830336A2} = {C86D4CFD-2521-4352-9C39-E6182085E704}
+		{AB70722B-C3EC-4447-A375-837297CDF2A4} = {7B9DA9DD-B000-40F8-A3D3-EEE3BB928DEC}
+		{889A0BB1-ED0D-4ACB-B0A5-F41C76E13C34} = {D16E2742-7896-40B3-B178-A8F2DECC48FD}
 	EndGlobalSection
 EndGlobal

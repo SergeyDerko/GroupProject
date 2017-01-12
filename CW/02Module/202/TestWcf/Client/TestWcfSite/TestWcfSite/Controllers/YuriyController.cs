@@ -40,5 +40,11 @@ namespace TestWcfSite.Controllers
             ViewBag.CurrentRates = currentRates.CurrentExchange;
             return View();
         }
+        public ActionResult CurrencyRate()
+        {
+            var now = new CurrencyRate();
+            
+            return View(now.Current);
+        }
     }
 }

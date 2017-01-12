@@ -100,6 +100,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -186,6 +187,7 @@
     <Compile Include="Models\SergeyDerkoModels\ScanPcModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\User11.cs" />
     <Compile Include="Models\Yuriymodels\Client.cs" />
+    <Compile Include="Models\Yuriymodels\CurrencyRate.cs" />
     <Compile Include="Models\Yuriymodels\ExchangeRates.cs" />
     <Compile Include="Models\Yuriymodels\Expression.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -277,6 +279,7 @@
     <Content Include="Views\SergeyDerko\ScanPcResult.cshtml" />
     <Content Include="Views\SergeyPekhota\CurrencyConverter.cshtml" />
     <Content Include="Views\Danila\Plitka.cshtml" />
+    <Content Include="Views\Yuriy\CurrencyRate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -310,6 +313,10 @@
     <ProjectReference Include="..\..\TestWcfClientLib\TestWcfClientLib.csproj">
       <Project>{b363be67-983e-485c-b88a-24f4673adff7}</Project>
       <Name>TestWcfClientLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Yuriy\CurrencyRateClientLibrary\CurrencyRateClientLibrary.csproj">
+      <Project>{889a0bb1-ed0d-4acb-b0a5-f41c76e13c34}</Project>
+      <Name>CurrencyRateClientLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Yuriy\ExchangeRatesClientLibrary\ExchangeRatesClientLibrary.csproj">
       <Project>{b08135dd-fd88-42c5-8c95-a538fae7825d}</Project>

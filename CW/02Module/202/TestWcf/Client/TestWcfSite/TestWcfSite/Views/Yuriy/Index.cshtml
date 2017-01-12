@@ -1,26 +1,33 @@
 ﻿@{
     ViewBag.Title = "Yuriy homepage";
 }
-<div class="row">
-    <div class="col-md-4">
+<div class="row"> 
+    <div class="col-xs-4">
         <h3>Table Multiply</h3>
-        <p>Вывод таблицы умножения с помощью частичного представления - Html.Partial</p>
+        <p>Вывод таблицы умножения с помощью частичного представления - <code>Html.Partial</code>.</p>
         <p>
-            @Html.ActionLink("Перейти", "TableMultiply", "Yuriy", new {@class = "btn btn-default"})
+            @Html.ActionLink("Go", "TableMultiply", "Yuriy", new {@class = "btn btn-default"})
         </p>
     </div>
-    <div class="col-md-4">
+    <div class="col-xs-4">
         <h3>Add new client</h3>
-        <p>Отправка данных нового пользователя через форму и метод post</p>
+        <p>Отправка данных пользователя через форму и метод <code>post</code>.</p>
         <p>
-            @Html.ActionLink("Перейти", "Client", "Yuriy", new {@class = "btn btn-default"})
+            @Html.ActionLink("Go", "Client", "Yuriy", new {@class = "btn btn-default"})
         </p>
     </div>
-    <div class="col-md-4">
+    <div class="col-xs-3">
         <h3>Exchange Rates</h3>
-        <p>Отображение курса валют</p>
+        <p>Вывод <code>string</code> значения полученного с WCF сервиса.</p>
         <p>
-            @Html.ActionLink("Перейти", "ExchangeRates", "Yuriy", new {@class = "btn btn-default"})
+            @Html.ActionLink("Go", "ExchangeRates", "Yuriy", new {@class = "btn btn-default"})
+        </p>
+    </div>
+    <div class="col-xs-4">
+        <h3>Currency Rate</h3>
+        <p>Вывод колекции <code>List<></code> с помощью <code>WebGrid()</code>.</p>
+        <p>
+            @Html.ActionLink("Go", "CurrencyRate", "Yuriy", new { @class = "btn btn-default" })
         </p>
     </div>
 </div>
