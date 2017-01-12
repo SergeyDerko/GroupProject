@@ -5,7 +5,11 @@ using SergeyDerkoLibrary;
 using TestWcfLib;
 using TimeOfDayConvertWcfLib;
 using CurrencyConvertWcfLib;
+<<<<<<< HEAD
 using CurrencyRateServiceLibrary;
+=======
+using ServicesVeawerLib;
+>>>>>>> 1f776f387fa0a487890ce82172412783f762673b
 
 namespace TestWcfService
 {
@@ -18,7 +22,8 @@ namespace TestWcfService
         private readonly BaseService<CurrencyRate> _currencyRate = new BaseService<CurrencyRate>();
         private readonly BaseService<Plitka> _plitka = new BaseService<Plitka>();
         private readonly BaseService<CurrencyConvert> _currencyConvert = new BaseService<CurrencyConvert>();
-		
+        private readonly BaseService<ServicesVeawer> _servicesVeawer = new BaseService<ServicesVeawer>();
+
         public void StartSvc()
         {
             _timeOfDayService.Start();
@@ -28,6 +33,7 @@ namespace TestWcfService
             _currencyRate.Start();
             _plitka.Start();
             _currencyConvert.Start();
+            _servicesVeawer.Start();
         }
 
         public void StopSvc()
@@ -39,6 +45,7 @@ namespace TestWcfService
             _currencyRate.Stop();
             _plitka.Stop();
             _currencyConvert.Stop();
+            _servicesVeawer.Stop();
         }
 
         protected override void OnStart(string[] args)
