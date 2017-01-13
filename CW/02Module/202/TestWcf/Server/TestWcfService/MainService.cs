@@ -5,11 +5,8 @@ using SergeyDerkoLibrary;
 using TestWcfLib;
 using TimeOfDayConvertWcfLib;
 using CurrencyConvertWcfLib;
-<<<<<<< HEAD
 using CurrencyRateServiceLibrary;
-=======
 using ServicesVeawerLib;
->>>>>>> 1f776f387fa0a487890ce82172412783f762673b
 
 namespace TestWcfService
 {
