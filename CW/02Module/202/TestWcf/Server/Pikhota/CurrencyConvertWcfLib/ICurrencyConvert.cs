@@ -3,29 +3,30 @@ using System.ServiceModel;
 
 namespace CurrencyConvertLib
 {
+    
+
     [ServiceContract]
     public interface ICurrencyConvert
     {
-
-        List<string> Li { get; set; }
-        int Count { get; set; }
-
         [OperationContract]
-        decimal UsdToEuro();
-                
-        [OperationContract]
-        decimal UsdToUah();
+        string ChangeCurrency(string fromCurrency, string toCurrency,int count);
         
-        [OperationContract]
-        decimal EuroToUsd();
-
-        [OperationContract]
-        decimal EuroToUah();
-        
-        [OperationContract]
-        decimal UahToUsd();
-        
-        [OperationContract]
-        decimal UahToEuro();
+        /* [OperationContract]
+         decimal UsdToEuro(int count);
+                 
+         [OperationContract]
+         decimal UsdToUah(int count);
+         
+         [OperationContract]
+         decimal EuroToUsd(int count);
+ 
+         [OperationContract]
+         decimal EuroToUah(int count);
+         
+         [OperationContract]
+         decimal UahToUsd(int count);
+         
+         [OperationContract]
+         decimal UahToEuro(int count);*/
     }
 }

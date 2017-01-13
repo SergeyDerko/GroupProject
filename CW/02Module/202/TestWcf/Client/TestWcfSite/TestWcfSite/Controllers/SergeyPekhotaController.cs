@@ -14,25 +14,21 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult MathTables(Calculator calc)
-        {
-            return View("MathTables",calc);
-        }
-        
-        public ActionResult MathTables()
-        {
-
-            var calc = new Calculator();
-            return View(calc);
-        }
-
         public ActionResult CurrencyConverter()
         {
             var converter = new CurrencyConverter();
             return View(converter);
         }
 
+        [HttpPost]
+        public ActionResult CurrencyConverter(CurrencyConverter converter, int count, string fromCurrency, string toCurrency)
+        {
+            ViewBag.Result = converter.Client.ChangeCurrency(fromCurrency, toCurrency, count);
+            converter.Client.Close();
+            return View(converter);
+        }
+
+        #region User Controllers
         public ActionResult AddUser()
         {
             var user = new User();
@@ -42,7 +38,22 @@ namespace TestWcfSite.Controllers
         [HttpPost]
         public ActionResult DataUser(User user)
         {
-            return PartialView("_UserData",user);
+            return PartialView("_UserData", user);
+        }
+        #endregion
+
+
+        #region MathTablesOperations 
+        public ActionResult MathTables()
+        {
+
+            var calc = new Calculator();
+            return View(calc);
+        }
+        [HttpPost]
+        public ActionResult MathTables(Calculator calc)
+        {
+            return View("MathTables", calc);
         }
 
         public ActionResult MultiplyTable()
@@ -55,7 +66,7 @@ namespace TestWcfSite.Controllers
             ViewData.Model = MultyTables();
             return View();
         }
-        
+
 
         public ActionResult DivisionTable()
         {
@@ -86,6 +97,8 @@ namespace TestWcfSite.Controllers
             ViewData.Model = SubTables();
             return View();
         }
+        #endregion
+
 
         #region ActionMathMethods
         public List<string> MultyTables()

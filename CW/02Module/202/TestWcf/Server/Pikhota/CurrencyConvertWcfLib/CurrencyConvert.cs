@@ -1,101 +1,134 @@
-﻿using System.Collections.Generic;
+﻿using System.Globalization;
 using CurrencyConvertLib;
 
 namespace CurrencyConvertWcfLib
 {
     public class CurrencyConvert : ICurrencyConvert
     {
+        public string FromCurrency { get; set; }
+        public string ToCurrency { get; set; }
         public int Count { get; set; }
 
-        public List<string> Li { get; set; }
-
-        public CurrencyConvert()
+        public string ChangeCurrency(string fromCurrency, string toCurrency, int count)
         {
-            Li = new List<string> { "USD", "EUR", "UAH" };
-            Count = 1;
+            decimal result = 0;
+            switch (fromCurrency)
+            {
+                case "USD":
+                    result = ToCurUsd(toCurrency,count);
+                    break;
+                case "UAH":
+                    result = ToCurUah(toCurrency,count);
+                    break;
+                case "EUR":
+                    result = ToCurEur(toCurrency,count);
+                    break;
+            }
+            return result.ToString(CultureInfo.InvariantCulture);
         }
-
-        public decimal UsdToEuro()
+        
+        private decimal UsdToEuro(int count)
         {
-            
-            decimal result;
-            if (Count <= 1)
-            {
-                result = (decimal)0.9516;
-            }
-            else
-            {
-                result = Count * (decimal)0.9516;
-            }
+            var result = count * (decimal)0.9516;
             return result;
         }
 
-        public decimal UsdToUah()
+        private decimal UsdToUah(int count)
         {
-            decimal result;
-            if (Count <= 1)
-            {
-                result = (decimal)27.2350;
-            }
-            else
-            {
-                result = Count * (decimal)27.2350;
-            }
+            var result = count * (decimal)27.2350;
             return result;
         }
 
-        public decimal EuroToUsd()
+        private decimal EuroToUsd(int count)
         {
-            decimal result;
-            if (Count <= 1)
-            {
-                result = (decimal)1.0512;
-            }
-            else
-            {
-                result = Count*(decimal)1.0512;
-            }
+            var result = count * (decimal)1.0512;
             return result;
         }
 
-        public decimal EuroToUah()
+        private decimal EuroToUah(int count)
         {
-            decimal result;
-            if (Count <= 1)
-            {
-                result = (decimal)28.6226;
-            }
-            else
-            {
-                result = Count * (decimal)28.6226;
-            }
+            var result = count * (decimal)28.6226;
             return result;
         }
 
-        public decimal UahToUsd()
+        private decimal UahToUsd(int count)
         {
-            decimal result;
-            if (Count <= 1)
-            {
-                result = (decimal)0.0367;
-            }
-            else
-            {
-                result = Count * (decimal)0.0367;
-            }
+            var result = count * (decimal)0.0367;
             return result;
         }
 
-        public decimal UahToEuro()
+        private decimal UahToEuro(int count)
         {
-            decimal result;
-            if (Count <= 1)
+            var result = count * (decimal)0.0349;
+            return result;
+        }
+
+        private decimal ToCurUsd(string toCurrency,int count)
+        {
+            decimal result = 0;
+            switch (toCurrency)
             {
-                result = (decimal)0.0349;
+                case "USD":
+                    {
+                        result = count * 1;
+                        break;
+                    }
+                case "UAH":
+                    {
+                        result = UsdToUah(count);
+                        break;
+                    }
+                case "EUR":
+                    {
+                        result = UsdToEuro(count);
+                        break;
+                    }
             }
-            else
+            return result;
+        }
+        private decimal ToCurUah(string toCurrency, int count)
+        {
+            decimal result = 0;
+            switch (toCurrency)
             {
-                result = Count * (decimal)0.0349;
+                case "USD":
+                    {
+                        result = UahToUsd(count);
+                        break;
+                    }
+                case "UAH":
+                    {
+                        result = count*1;
+                        break;
+                    }
+                case "EUR":
+                    {
+                        result = UahToEuro(count);
+                        break;
+                    }
+            }
+            return result;
+        }
+        private decimal ToCurEur(string toCurrency,int count)
+        {
+            decimal result = 0;
+            switch (toCurrency)
+            {
+                case "USD":
+                    {
+                        result = EuroToUsd(count);
+                        break;
+                    }
+                case "UAH":
+                    {
+                        result = EuroToUah(count);
+                        break;
+                    }
+                case "EUR":
+                    {
+                        result = count*1;
+                        break;
+                    }
             }
             return result;
         }
