@@ -7,6 +7,6 @@ namespace ServicesVeawerLib
     public interface IServicesVeawer
     {
         [OperationContract]
-        List<string> ServicesSearcher();
+        List<Service> ServicesSearcher();
     }
 }
