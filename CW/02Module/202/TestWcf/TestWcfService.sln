@@ -98,8 +98,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesVeawerLib", "Server
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aleksey", "Aleksey", "{48537298-D755-4483-AA55-181464F0ED9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesVeawerClientLib", "Client\Aleksey\ServicesVeawerClientLib\ServicesVeawerClientLib.csproj", "{D5CB306D-9BF7-456F-ADAD-01BE7C0B49FC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -182,10 +180,6 @@ Global
 		{48FFA191-A8A6-46CE-B053-68F994645FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48FFA191-A8A6-46CE-B053-68F994645FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48FFA191-A8A6-46CE-B053-68F994645FE5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D5CB306D-9BF7-456F-ADAD-01BE7C0B49FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5CB306D-9BF7-456F-ADAD-01BE7C0B49FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5CB306D-9BF7-456F-ADAD-01BE7C0B49FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5CB306D-9BF7-456F-ADAD-01BE7C0B49FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -223,6 +217,5 @@ Global
 		{4E3A0CDD-DF43-4DC2-949D-942F07205919} = {E0C276AC-8717-4F50-94CD-F432BC1E962B}
 		{48FFA191-A8A6-46CE-B053-68F994645FE5} = {4E3A0CDD-DF43-4DC2-949D-942F07205919}
 		{48537298-D755-4483-AA55-181464F0ED9F} = {5F88A5CE-40F6-4A63-852B-9D1539B0265B}
-		{D5CB306D-9BF7-456F-ADAD-01BE7C0B49FC} = {48537298-D755-4483-AA55-181464F0ED9F}
 	EndGlobalSection
 EndGlobal
