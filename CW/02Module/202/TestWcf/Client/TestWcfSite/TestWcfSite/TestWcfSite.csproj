@@ -303,6 +303,10 @@
       <Project>{42D39536-BCAD-48F8-B81A-A972FE66C8A3}</Project>
       <Name>PlitkaLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Aleksey\ServicesVeawerClientLib\ServicesVeawerClientLib.csproj">
+      <Project>{6de69a05-b9cb-4698-9d61-eb098a88f34a}</Project>
+      <Name>ServicesVeawerClientLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Pikhota\CurrencyConvertClientLib\CurrencyConvertClientLib.csproj">
       <Project>{be3bd64e-35e2-4967-835c-d57e527818ad}</Project>
       <Name>CurrencyConvertClientLib</Name>
