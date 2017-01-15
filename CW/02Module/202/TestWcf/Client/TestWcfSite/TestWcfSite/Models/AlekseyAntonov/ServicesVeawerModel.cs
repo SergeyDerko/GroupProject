@@ -5,17 +5,14 @@ namespace TestWcfSite.Models.AlekseyAntonov
 {
     public class ServicesVeawerModel
     {
-       public ServicesVeawerModel()
+        //readonly static ServicesVeawerClient ServiceView = new ServicesVeawerClient();
+        public List<Service> ServicesList { get; set; }// = ServiceView.ServicesSearcher();
+      //  new List<Service>();
+        public ServicesVeawerModel()
         {
-            ServicesVeawerClient client = new ServicesVeawerClient();
-            List<Service> servicesList = new List<Service>();
-            var temp=client.ServicesSearcher();
-
-            foreach (var t in temp)
-            {
-                servicesList.Add(t);
-            }
-            client.Close();
-        } 
+            var serviceView = new ServicesVeawerClient();
+            ServicesList = new List<Service>(serviceView.ServicesSearcher());
+            serviceView.Close();
+        }
     }
 }
