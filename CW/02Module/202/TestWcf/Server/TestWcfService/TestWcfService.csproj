@@ -83,6 +83,10 @@
       <Project>{48ffa191-a8a6-46ce-b053-68f994645fe5}</Project>
       <Name>ServicesVeawerLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Artem\TemperatureServiceLib\TemperatureServiceLib.csproj">
+      <Project>{CC4E45D1-1C25-40D4-8A0B-5A7DDAA16364}</Project>
+      <Name>TemperatureServiceLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pikhota\CurrencyConvertWcfLib\CurrencyConvertLib.csproj">
       <Project>{77f6cbd6-b5b2-48c7-8775-7ec4198999a1}</Project>
       <Name>CurrencyConvertLib</Name>

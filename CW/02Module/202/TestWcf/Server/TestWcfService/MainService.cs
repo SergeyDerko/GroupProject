@@ -7,19 +7,21 @@ using TimeOfDayConvertWcfLib;
 using CurrencyConvertWcfLib;
 using CurrencyRateServiceLibrary;
 using ServicesVeawerLib;
+using TemperatureServiceLib;
 
 namespace TestWcfService
 {
     internal class MainService : ServiceBase
     {
         private readonly BaseService<Calc> _calcService = new BaseService<Calc>();
-        private  readonly  BaseService<TimeOfDayConvert> _timeOfDayService =  new BaseService<TimeOfDayConvert>();
+        private readonly  BaseService<TimeOfDayConvert> _timeOfDayService =  new BaseService<TimeOfDayConvert>();
         private readonly BaseService<ScanPc> _scanPcService = new BaseService<ScanPc>();
         private readonly BaseService<ExchangeRates> _exchangeRates = new BaseService<ExchangeRates>();
         private readonly BaseService<CurrencyRate> _currencyRate = new BaseService<CurrencyRate>();
         private readonly BaseService<Plitka> _plitka = new BaseService<Plitka>();
         private readonly BaseService<CurrencyConvert> _currencyConvert = new BaseService<CurrencyConvert>();
         private readonly BaseService<ServicesVeawer> _servicesVeawer = new BaseService<ServicesVeawer>();
+        private readonly BaseService<Temperature> _temperature = new BaseService<Temperature>();
 
         public void StartSvc()
         {
@@ -31,6 +33,7 @@ namespace TestWcfService
             _plitka.Start();
             _currencyConvert.Start();
             _servicesVeawer.Start();
+            _temperature.Start();
         }
 
         public void StopSvc()
@@ -43,6 +46,7 @@ namespace TestWcfService
             _plitka.Stop();
             _currencyConvert.Stop();
             _servicesVeawer.Stop();
+            _temperature.Stop();
         }
 
         protected override void OnStart(string[] args)
