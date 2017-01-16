@@ -1,5 +1,4 @@
-﻿
-@model TestWcfSite.Models.AlekseyAntonov.ServicesVeawerModel
+﻿@model TestWcfSite.Models.AlekseyAntonov.ServicesVeawerModel
 
 @{
     Layout = null;
@@ -17,9 +16,14 @@
         @{
             string text = "Text";
             int count = 0;
-            foreach (var service in ser)
+          @*//  ServicesVeawerModel temp=new ServicesVeawerModel(0);
+
+
+            for(int i=0;i<temp.CountModels;i++)
             {
-                @Html.Raw("<tr>")
+               // temp=new ServicesVeawerModel(i);
+                //temp.
+                //@Html.Raw("<tr>")
                 text += Convert.ToString(count + 1);
                 @Html.Raw("<td name='@text'>")
                 @Html.Raw(ViewBag.List)
@@ -30,7 +34,7 @@
                 // <input id="Button1" type="button" value="button" />
                 @Html.Raw("</td>")
                 @Html.Raw("</tr>")
-            }
+            }*@
         }
     </table>
 

@@ -18,8 +18,8 @@ namespace TestWcfSite.Controllers
 
         public ActionResult ServicesVeawer()
         {
-            var servicesVeawer = new ServicesVeawerModel();
-            string s=servicesVeawer.ServicesList.
+          //  var servicesVeawer = new ServicesVeawerModel();
+           // string s=servicesVeawer.ServicesList.
             return View();
         }
 

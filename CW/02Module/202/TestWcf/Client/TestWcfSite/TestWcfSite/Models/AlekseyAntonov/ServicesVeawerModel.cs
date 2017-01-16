@@ -11,9 +11,11 @@ namespace TestWcfSite.Models.AlekseyAntonov
         public  string EndpointBinding { get; set; }
         public  string EndpointContract { get; set; }
         public string BaseAddress { get; set; }
+        public int CountModels { get; set; }
         public ServicesVeawerModel(int num)
         {
             var serviceView = new ServicesVeawerClient();
+            this.CountModels = serviceView.ServicesSearcher().Length;
             Service temp = serviceView.ServicesSearcher()[num];
             this.BehaviorName = temp.BehaviorName;
             this.BaseAddress = temp.BaseAddress;
