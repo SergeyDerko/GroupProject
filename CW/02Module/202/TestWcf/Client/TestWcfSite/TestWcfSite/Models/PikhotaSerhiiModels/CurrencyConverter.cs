@@ -1,24 +1,37 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.ServiceModel;
-using System.Web.Mvc;
 using CurrencyConvertClientLib.CurrencyConvertServiceReference;
 
 namespace TestWcfSite.Models.PikhotaSerhiiModels
 {
+    
     public class CurrencyConverter
     {
-        public readonly CurrencyConvertClient Client = new CurrencyConvertClient();
         public string Msg { get; set; }
+
+        public CurrencyConvertClient Client = new CurrencyConvertClient();
 
         public CurrencyConverter()
         {
             try
             {
+                                        
             }
-            catch (EndpointNotFoundException)
+            catch (CommunicationException)
             {
-                Msg = "Сервис CurrentConvert не запущен! :(";
+                Msg = "Communication Exception Error!";
+                Client.Abort();
+            }
+            catch (TimeoutException)
+            {
+                Msg = "Your time is out:)";
+                Client.Abort();
+            }
+            finally
+            {
+                Client.Close();
             }
         }
     }
+    
 }

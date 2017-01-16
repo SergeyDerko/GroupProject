@@ -173,6 +173,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AlekseyAntonov\Multiplication.cs" />
+    <Compile Include="Models\AlekseyAntonov\oneService.cs" />
     <Compile Include="Models\AlekseyAntonov\ServicesVeawerModel.cs" />
     <Compile Include="Models\AnastasiaNepomiluyev\ManipulateWithNumbersModel.cs" />
     <Compile Include="Models\AnastasiaNepomiluyev\User.cs" />
@@ -281,6 +282,7 @@
     <Content Include="Views\SergeyPekhota\CurrencyConverter.cshtml" />
     <Content Include="Views\Danila\Plitka.cshtml" />
     <Content Include="Views\Yuriy\CurrencyRate.cshtml" />
+    <Content Include="Views\AlekseyAntonov\ServicesVeawer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -304,7 +306,7 @@
       <Name>PlitkaLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Aleksey\ServicesVeawerClientLib\ServicesVeawerClientLib.csproj">
-      <Project>{d5cb306d-9bf7-456f-adad-01be7c0b49fc}</Project>
+      <Project>{6de69a05-b9cb-4698-9d61-eb098a88f34a}</Project>
       <Name>ServicesVeawerClientLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Pikhota\CurrencyConvertClientLib\CurrencyConvertClientLib.csproj">

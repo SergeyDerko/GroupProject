@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using TestWcfSite.Models.AlekseyAntonov;
 
 namespace TestWcfSite.Controllers
 {
@@ -18,6 +15,15 @@ namespace TestWcfSite.Controllers
         {
             return View();
         }
+
+        public ActionResult ServicesVeawer()
+        {
+          //  var servicesVeawer = new ServicesVeawerModel();
+           // string s=servicesVeawer.ServicesList.
+            return View();
+        }
+
+        
     }
 
    
