@@ -99,6 +99,10 @@
       <Project>{60616979-FEFE-42D0-95CD-D4AFC4E5895F}</Project>
       <Name>TestWcfLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Yuriy\CurrencyRateServiceLibrary\CurrencyRateServiceLibrary.csproj">
+      <Project>{ab70722b-c3ec-4447-a375-837297cdf2a4}</Project>
+      <Name>CurrencyRateServiceLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Yuriy\ExchangeRatesServiceLib\ExchangeRatesServiceLib.csproj">
       <Project>{C38C6159-5DC2-47CA-A78E-958D5195564E}</Project>
       <Name>ExchangeRatesServiceLib</Name>

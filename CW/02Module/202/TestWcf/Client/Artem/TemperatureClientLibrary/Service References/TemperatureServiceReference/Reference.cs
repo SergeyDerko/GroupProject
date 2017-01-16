@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+
 namespace TemperatureClientLibrary.TemperatureServiceReference {
     
     
@@ -48,7 +50,12 @@ namespace TemperatureClientLibrary.TemperatureServiceReference {
         public TemperatureClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
-        
+
+        public string CurrentTemperature()
+        {
+            throw new NotImplementedException();
+        }
+
         public string Temp() {
             return base.Channel.Temp();
         }

@@ -177,6 +177,7 @@
     <Compile Include="Models\AlekseyAntonov\ServicesVeawerModel.cs" />
     <Compile Include="Models\AnastasiaNepomiluyev\ManipulateWithNumbersModel.cs" />
     <Compile Include="Models\AnastasiaNepomiluyev\User.cs" />
+    <Compile Include="Models\ArtemModels\Temperature.cs" />
     <Compile Include="Models\Calc\CalcModel.cs" />
     <Compile Include="Models\DanilaModels\ExpressionD.cs" />
     <Compile Include="Models\DanilaModels\Plitka.cs" />
@@ -283,6 +284,7 @@
     <Content Include="Views\Danila\Plitka.cshtml" />
     <Content Include="Views\Yuriy\CurrencyRate.cshtml" />
     <Content Include="Views\AlekseyAntonov\ServicesVeawer.cshtml" />
+    <Content Include="Views\Artem\Temperature.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -308,6 +310,10 @@
     <ProjectReference Include="..\..\Aleksey\ServicesVeawerClientLib\ServicesVeawerClientLib.csproj">
       <Project>{6de69a05-b9cb-4698-9d61-eb098a88f34a}</Project>
       <Name>ServicesVeawerClientLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Artem\TemperatureClientLibrary\TemperatureClientLibrary.csproj">
+      <Project>{1F4DA40A-A749-4ECF-A7BA-8715AB327DCB}</Project>
+      <Name>TemperatureClientLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Pikhota\CurrencyConvertClientLib\CurrencyConvertClientLib.csproj">
       <Project>{be3bd64e-35e2-4967-835c-d57e527818ad}</Project>
