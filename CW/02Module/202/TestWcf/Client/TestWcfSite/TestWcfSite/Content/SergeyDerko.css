@@ -1,38 +1,8 @@
 ﻿body {
 }
-#box2 {
-    position: absolute;
-    left: 210px;
-    top: 113px;
-}
-#box3 {
-    position: absolute;
-    left: 290px;
-    top: 113px;
-}
-#box4 {
-    position: absolute;
-    left: 370px;
-    top: 113px;
-}
-#box5 {
-    position: absolute;
-    left: 450px;
-    top: 113px;
-}
-#box6 {
-    position: absolute;
-    left: 530px;
-    top: 113px;
-}
-#box7 {
-    position: absolute;
-    left: 610px;
-    top: 113px;
-}
-#box8 {
-    position: absolute;
-    left: 690px;
+#box table {
+    float: left;
+    margin: 0.3%;
     top: 113px;
 }
 
