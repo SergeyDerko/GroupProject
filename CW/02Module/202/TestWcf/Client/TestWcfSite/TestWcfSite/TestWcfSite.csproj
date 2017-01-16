@@ -173,6 +173,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AlekseyAntonov\Multiplication.cs" />
+    <Compile Include="Models\AlekseyAntonov\oneService.cs" />
     <Compile Include="Models\AlekseyAntonov\ServicesVeawerModel.cs" />
     <Compile Include="Models\AnastasiaNepomiluyev\ManipulateWithNumbersModel.cs" />
     <Compile Include="Models\AnastasiaNepomiluyev\User.cs" />

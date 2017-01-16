@@ -5,13 +5,22 @@ namespace TestWcfSite.Models.AlekseyAntonov
 {
     public class ServicesVeawerModel
     {
-        //readonly static ServicesVeawerClient ServiceView = new ServicesVeawerClient();
-        public List<Service> ServicesList { get; set; }// = ServiceView.ServicesSearcher();
-      //  new List<Service>();
-        public ServicesVeawerModel()
+        public  string BehaviorName { get; set; }
+        public string ServiceBehaviorConfiguration { get; set; }
+        public string ServiceName { get; set; }
+        public  string EndpointBinding { get; set; }
+        public  string EndpointContract { get; set; }
+        public string BaseAddress { get; set; }
+        public ServicesVeawerModel(int num)
         {
             var serviceView = new ServicesVeawerClient();
-            ServicesList = new List<Service>(serviceView.ServicesSearcher());
+            Service temp = serviceView.ServicesSearcher()[num];
+            this.BehaviorName = temp.BehaviorName;
+            this.BaseAddress = temp.BaseAddress;
+            this.EndpointBinding = temp.EndpointBinding;
+            this.EndpointContract = temp.EndpointContract;
+            this.ServiceBehaviorConfiguration = temp.ServiceBehaviorConfiguration;
+            this.ServiceName = temp.ServiceName;
             serviceView.Close();
         }
     }
