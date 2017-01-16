@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ServiceModel;
 using System.Text;
 using System.Web.Mvc;
 using TestWcfSite.Models.PikhotaSerhiiModels;
@@ -16,8 +17,7 @@ namespace TestWcfSite.Controllers
 
         public ActionResult CurrencyConverter()
         {
-            var converter = new CurrencyConverter();
-            return View(converter);
+            return View();
         }
 
         [HttpPost]
