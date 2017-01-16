@@ -50,7 +50,7 @@ namespace CurrencyConvertWcfLib
                     result = 0;
                     break;
             }
-            return result.ToString(CultureInfo.CurrentCulture);
+            return result.ToString(CultureInfo.InvariantCulture);
         }
         private static string ToCurUah(string toCurrency, int count)
         {
@@ -76,11 +76,11 @@ namespace CurrencyConvertWcfLib
                     result = 0;
                     break;
             }
-            return result.ToString(CultureInfo.CurrentCulture);
+            return result.ToString(CultureInfo.InvariantCulture);
         }
         private static string ToCurEur(string toCurrency,int count)
         {
-            decimal result = 0;
+            decimal result;
             switch (toCurrency)
             {
                 case "USD":
@@ -102,7 +102,7 @@ namespace CurrencyConvertWcfLib
                     result = 0;
                     break;
             }
-            return result.ToString(CultureInfo.CurrentCulture);
+            return result.ToString(CultureInfo.InvariantCulture);
         }
     }
 }
