@@ -24,7 +24,6 @@ namespace TestWcfSite.Controllers
         public ActionResult CurrencyConverter(CurrencyConverter converter, int count, string fromCurrency, string toCurrency)
         {
             ViewBag.Result = converter.Client.ChangeCurrency(fromCurrency, toCurrency, count);
-            converter.Client.Close();
             return View(converter);
         }
 
