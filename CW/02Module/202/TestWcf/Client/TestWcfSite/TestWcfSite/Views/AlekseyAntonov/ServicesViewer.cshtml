@@ -17,16 +17,17 @@
 <div>
     <table>
         @{
-            StringBuilder text;// = new StringBuilder();
-            ServicesViewerModel temp = new ServicesViewerModel(0);
+            StringBuilder text = new StringBuilder();
+            ServicesViewerModel oneService = new ServicesViewerModel();
+            int count = oneService.AmountService();
 
 
-            for (int i = 0; i < temp.CountModels; i++)
+            for (int i = 0; i < count; i++)
             {
                 @Html.Raw("<tr>")
                 @Html.Raw("<td name='@text'>")
                 text = new StringBuilder();
-                temp = new ServicesViewerModel(i);
+                ServicesViewerModel temp=new ServicesViewerModel(i);
                 text.Append(temp.BaseAddress);
                 text.Append("\n");
                 text.Append(temp.BehaviorName);
@@ -41,12 +42,20 @@
                 @Html.Raw("</td>")
                 @Html.Raw("<td>")
                 <input id="Button1" type="button" value="@temp.ServiceName" />
-                
+
                 @Html.Raw("</td>")
                 @Html.Raw("</tr>")
             }
         }
     </table>
+
+
+
+
+
+
+
+
 
 
 
