@@ -20,13 +20,6 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
-        public ActionResult CurrentRates(CurrencyConverter acr)
-        {
-            if (acr == null) throw new ArgumentNullException(nameof(acr));
-            acr = new CurrencyConverter();
-            return PartialView(acr.Current);
-        }
-
         [HttpPost]
         public ActionResult CurrencyConverter(CurrencyConverter converter, int count, string fromCurrency, string toCurrency)
         {
