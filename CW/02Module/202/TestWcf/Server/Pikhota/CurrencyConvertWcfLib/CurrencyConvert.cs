@@ -5,6 +5,7 @@ namespace CurrencyConvertWcfLib
 {
     public class CurrencyConvert : ICurrencyConvert
     {
+
         public string ChangeCurrency(string fromCurrency, string toCurrency, int count)
         {
             string result;
