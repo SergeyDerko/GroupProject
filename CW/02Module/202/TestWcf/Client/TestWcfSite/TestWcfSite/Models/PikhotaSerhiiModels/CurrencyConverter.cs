@@ -27,7 +27,6 @@ namespace TestWcfSite.Models.PikhotaSerhiiModels
 
         public void Dispose()
         {
-            SrvCurrencyRate.Close();
             SrvConvertCurrency.Close();   
         }
         
