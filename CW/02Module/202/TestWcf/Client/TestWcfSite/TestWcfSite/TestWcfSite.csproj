@@ -283,6 +283,7 @@
     <Content Include="Views\Danila\Plitka.cshtml" />
     <Content Include="Views\Yuriy\CurrencyRate.cshtml" />
     <Content Include="Views\AlekseyAntonov\ServicesVeawer.cshtml" />
+    <Content Include="Views\SergeyPekhota\_CurrencyRates.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

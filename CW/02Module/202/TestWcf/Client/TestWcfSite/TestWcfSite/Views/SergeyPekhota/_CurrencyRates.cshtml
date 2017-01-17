@@ -1,0 +1,14 @@
+﻿@model List<CurrencyRateClientLibrary.CurrencyRateServiceReference.Currency>
+@{
+    
+}
+
+<h2>Currency Rate today - @DateTime.Now.ToShortDateString()</h2>
+@grid.GetHtml(tableStyle: "table table-condensed table-striped",
+              columns: grid.Columns(
+                  grid.Column(columnName: "Id", header: "#"),
+                  grid.Column(columnName: "CurrencyName", header: "Валюта", canSort: false),
+                  grid.Column(columnName: "CurrencyDescription", header: "Описание", canSort: false),
+                  grid.Column(columnName: "Purchase", header: "Покупка"),
+                  grid.Column(columnName: "Sale", header: "Продажа")
+                  ))

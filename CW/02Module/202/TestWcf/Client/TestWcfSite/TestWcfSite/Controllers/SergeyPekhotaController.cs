@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.ServiceModel;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Web.Mvc;
 using TestWcfSite.Models.PikhotaSerhiiModels;
@@ -20,10 +20,21 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
+        public ActionResult CurrentRates(CurrencyConverter acr)
+        {
+            if (acr == null) throw new ArgumentNullException(nameof(acr));
+            acr = new CurrencyConverter();
+            return PartialView(acr.Current);
+        }
+
         [HttpPost]
         public ActionResult CurrencyConverter(CurrencyConverter converter, int count, string fromCurrency, string toCurrency)
         {
-            ViewBag.Result = converter.Client.ChangeCurrency(fromCurrency, toCurrency, count);
+            using (converter)
+            {
+                var result = converter.SrvConvertCurrency.ChangeCurrency(fromCurrency, toCurrency, count);
+                ViewBag.Result = result;
+            }
             return View(converter);
         }
 
