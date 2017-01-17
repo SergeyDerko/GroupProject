@@ -8,16 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ServicesVeawerClientLib.ServicesVeawerServiceReference {
+namespace ServicesViewerClientLib.ServicesViewerServiceReference {
     using System.Runtime.Serialization;
     using System;
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Service", Namespace="http://schemas.datacontract.org/2004/07/ServicesVeawerLib")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OneService", Namespace="http://schemas.datacontract.org/2004/07/ServicesViewerLib")]
     [System.SerializableAttribute()]
-    public partial struct Service : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial struct OneService : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -138,48 +138,48 @@ namespace ServicesVeawerClientLib.ServicesVeawerServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServicesVeawerServiceReference.IServicesVeawer")]
-    public interface IServicesVeawer {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServicesViewerServiceReference.IServicesViewer")]
+    public interface IServicesViewer {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicesVeawer/ServicesSearcher", ReplyAction="http://tempuri.org/IServicesVeawer/ServicesSearcherResponse")]
-        ServicesVeawerClientLib.ServicesVeawerServiceReference.Service[] ServicesSearcher();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicesViewer/ServicesSearcher", ReplyAction="http://tempuri.org/IServicesViewer/ServicesSearcherResponse")]
+        ServicesViewerClientLib.ServicesViewerServiceReference.OneService[] ServicesSearcher();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicesVeawer/ServicesSearcher", ReplyAction="http://tempuri.org/IServicesVeawer/ServicesSearcherResponse")]
-        System.Threading.Tasks.Task<ServicesVeawerClientLib.ServicesVeawerServiceReference.Service[]> ServicesSearcherAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicesViewer/ServicesSearcher", ReplyAction="http://tempuri.org/IServicesViewer/ServicesSearcherResponse")]
+        System.Threading.Tasks.Task<ServicesViewerClientLib.ServicesViewerServiceReference.OneService[]> ServicesSearcherAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServicesVeawerChannel : ServicesVeawerClientLib.ServicesVeawerServiceReference.IServicesVeawer, System.ServiceModel.IClientChannel {
+    public interface IServicesViewerChannel : ServicesViewerClientLib.ServicesViewerServiceReference.IServicesViewer, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServicesVeawerClient : System.ServiceModel.ClientBase<ServicesVeawerClientLib.ServicesVeawerServiceReference.IServicesVeawer>, ServicesVeawerClientLib.ServicesVeawerServiceReference.IServicesVeawer {
+    public partial class ServicesViewerClient : System.ServiceModel.ClientBase<ServicesViewerClientLib.ServicesViewerServiceReference.IServicesViewer>, ServicesViewerClientLib.ServicesViewerServiceReference.IServicesViewer {
         
-        public ServicesVeawerClient() {
+        public ServicesViewerClient() {
         }
         
-        public ServicesVeawerClient(string endpointConfigurationName) : 
+        public ServicesViewerClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public ServicesVeawerClient(string endpointConfigurationName, string remoteAddress) : 
+        public ServicesViewerClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ServicesVeawerClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServicesViewerClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ServicesVeawerClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServicesViewerClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public ServicesVeawerClientLib.ServicesVeawerServiceReference.Service[] ServicesSearcher() {
+        public ServicesViewerClientLib.ServicesViewerServiceReference.OneService[] ServicesSearcher() {
             return base.Channel.ServicesSearcher();
         }
         
-        public System.Threading.Tasks.Task<ServicesVeawerClientLib.ServicesVeawerServiceReference.Service[]> ServicesSearcherAsync() {
+        public System.Threading.Tasks.Task<ServicesViewerClientLib.ServicesViewerServiceReference.OneService[]> ServicesSearcherAsync() {
             return base.Channel.ServicesSearcherAsync();
         }
     }

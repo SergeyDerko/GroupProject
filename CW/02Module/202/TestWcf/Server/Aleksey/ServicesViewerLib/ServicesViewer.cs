@@ -1,20 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Mime;
 using System.Reflection;
 using System.Xml.Linq;
 
-namespace ServicesVeawerLib
+namespace ServicesViewerLib
 {
-    public class ServicesVeawer : IServicesVeawer
+    public class ServicesViewer : IServicesViewer
     {
-        public List<Service> ServicesSearcher()
+        public List<OneService> ServicesSearcher()
         {
-            List<Service> servicesList=new List<Service>();
-            Service temp = new Service();
-            XDocument xdoc = XDocument.Load(Convert.ToString(System.IO.Path.GetFileName(Assembly.GetExecutingAssembly().FullName))+".config");
+            List<OneService> servicesList=new List<OneService>();
+            OneService temp = new OneService();
+            string path = System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase;
+            string executableFileName = System.IO.Path.GetFileName(path);
+            XDocument xdoc = XDocument.Load(executableFileName + ".config");
             int num = 0;
-           // string str = System.IO.Path.GetFileName();
+
             foreach (XElement serviceElement in xdoc.Element("configuration").Element("system.serviceModel").Elements("services").Elements("service"))
             {
                 XAttribute behaviorConfigAttribute = serviceElement.Attribute("behaviorConfiguration");
@@ -52,5 +53,4 @@ namespace ServicesVeawerLib
             return servicesList;
         }
     }
-
 }

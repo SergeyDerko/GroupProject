@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f543d731-b3a8-4b1f-a7c8-b46073b0b8da" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:555/ServicesViewer" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicesViewer.xsd" MetadataType="Schema" ID="df3203f2-2a85-4845-aee8-12d049378a4d" SourceId="1" SourceUrl="http://localhost:555/ServicesViewer?xsd=xsd2" />
+    <MetadataFile FileName="ServicesViewer1.xsd" MetadataType="Schema" ID="ecd2db23-4e80-4d27-9f06-bdc9b1bc2ea9" SourceId="1" SourceUrl="http://localhost:555/ServicesViewer?xsd=xsd0" />
+    <MetadataFile FileName="ServicesViewer.disco" MetadataType="Disco" ID="51015385-dce3-403f-95d4-8341309eb692" SourceId="1" SourceUrl="http://localhost:555/ServicesViewer?disco" />
+    <MetadataFile FileName="ServicesViewer.wsdl" MetadataType="Wsdl" ID="7d4c30e9-dd49-4a01-9429-b9aa23adbc4f" SourceId="1" SourceUrl="http://localhost:555/ServicesViewer?wsdl" />
+    <MetadataFile FileName="ServicesViewer2.xsd" MetadataType="Schema" ID="64263139-dd56-43ae-a53e-37ce4c8e7639" SourceId="1" SourceUrl="http://localhost:555/ServicesViewer?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

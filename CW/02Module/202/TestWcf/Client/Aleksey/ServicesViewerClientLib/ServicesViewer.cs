@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ServicesVeawerClientLib
+namespace ServicesViewerClientLib
 {
-    public class ServicesVeawer
+    public class ServicesViewer
     {
-        
     }
 }

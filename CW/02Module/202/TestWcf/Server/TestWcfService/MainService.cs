@@ -6,7 +6,7 @@ using TestWcfLib;
 using TimeOfDayConvertWcfLib;
 using CurrencyConvertWcfLib;
 using CurrencyRateServiceLibrary;
-using ServicesVeawerLib;
+using ServicesViewerLib;
 using TestWcfCommon;
 
 namespace TestWcfService
@@ -20,7 +20,7 @@ namespace TestWcfService
         private readonly BaseService<CurrencyRate> _currencyRate = new BaseService<CurrencyRate>();
         private readonly BaseService<Plitka> _plitka = new BaseService<Plitka>();
         private readonly BaseService<CurrencyConvert> _currencyConvert = new BaseService<CurrencyConvert>();
-        private readonly BaseService<ServicesVeawer> _servicesVeawer = new BaseService<ServicesVeawer>();
+        private readonly BaseService<ServicesViewer> _servicesViewer = new BaseService<ServicesViewer>();
 
         public void StartSvc()
         {
@@ -32,7 +32,7 @@ namespace TestWcfService
            _currencyRate.Start();
             _plitka.Start();
             _currencyConvert.Start();
-            _servicesVeawer.Start();
+            _servicesViewer.Start();
             Logger.Leave();
         }
 
@@ -46,7 +46,7 @@ namespace TestWcfService
             _currencyRate.Stop();
             _plitka.Stop();
             _currencyConvert.Stop();
-            _servicesVeawer.Stop();
+            _servicesViewer.Stop();
             Logger.Leave();
         }
 

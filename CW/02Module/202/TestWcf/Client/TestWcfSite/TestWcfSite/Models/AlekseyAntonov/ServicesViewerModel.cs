@@ -1,9 +1,9 @@
-﻿using ServicesVeawerClientLib.ServicesVeawerServiceReference;
+﻿using ServicesViewerClientLib.ServicesViewerServiceReference;
 using System.Collections.Generic;
 
 namespace TestWcfSite.Models.AlekseyAntonov
 {
-    public class ServicesVeawerModel 
+    public class ServicesViewerModel 
     {
 
         public  string BehaviorName { get; set; }
@@ -13,12 +13,12 @@ namespace TestWcfSite.Models.AlekseyAntonov
         public  string EndpointContract { get; set; }
         public string BaseAddress { get; set; }
         public int CountModels { get; set; }
-        public ServicesVeawerModel(int num)
+        public ServicesViewerModel(int num)
         {
           //  new Service();
-            var serviceView = new ServicesVeawerClient();
+            var serviceView = new ServicesViewerClient();
             this.CountModels = serviceView.ServicesSearcher().Length;
-            Service temp = serviceView.ServicesSearcher()[num];
+            OneService temp = serviceView.ServicesSearcher()[num];
             this.BehaviorName = temp.BehaviorName;
             this.BaseAddress = temp.BaseAddress;
             this.EndpointBinding = temp.EndpointBinding;

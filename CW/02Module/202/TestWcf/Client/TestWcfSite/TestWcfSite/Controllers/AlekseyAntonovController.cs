@@ -16,7 +16,7 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
-        public ActionResult ServicesVeawer()
+        public ActionResult ServicesViewer()
         {
           //  var servicesVeawer = new ServicesVeawerModel();
            // string s=servicesVeawer.ServicesList.

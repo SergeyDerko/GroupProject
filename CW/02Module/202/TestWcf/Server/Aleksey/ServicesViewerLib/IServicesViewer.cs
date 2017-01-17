@@ -1,12 +1,12 @@
 ﻿using System.ServiceModel;
 using System.Collections.Generic;
 
-namespace ServicesVeawerLib
+namespace ServicesViewerLib
 {
     [ServiceContract]
-    public interface IServicesVeawer
+    public interface IServicesViewer
     {
         [OperationContract]
-        List<Service> ServicesSearcher();
+        List<OneService> ServicesSearcher();
     }
 }

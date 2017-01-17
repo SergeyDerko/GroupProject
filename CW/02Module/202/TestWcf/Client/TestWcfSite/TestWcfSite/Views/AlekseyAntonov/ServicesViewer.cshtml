@@ -1,7 +1,7 @@
 ﻿@using System.Text
 @using System.Web.UI.WebControls
 @using TestWcfSite.Models.AlekseyAntonov
-@model TestWcfSite.Models.AlekseyAntonov.ServicesVeawerModel
+@model TestWcfSite.Models.AlekseyAntonov.ServicesViewerModel
 
 @{
     Layout = null;
@@ -18,7 +18,7 @@
     <table>
         @{
             StringBuilder text;// = new StringBuilder();
-            ServicesVeawerModel temp = new ServicesVeawerModel(0);
+            ServicesViewerModel temp = new ServicesViewerModel(0);
 
 
             for (int i = 0; i < temp.CountModels; i++)
@@ -26,7 +26,7 @@
                 @Html.Raw("<tr>")
                 @Html.Raw("<td name='@text'>")
                 text = new StringBuilder();
-                temp = new ServicesVeawerModel(i);
+                temp = new ServicesViewerModel(i);
                 text.Append(temp.BaseAddress);
                 text.Append("\n");
                 text.Append(temp.BehaviorName);

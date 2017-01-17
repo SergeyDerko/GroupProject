@@ -1,6 +1,6 @@
-﻿namespace ServicesVeawerLib
+﻿namespace ServicesViewerLib
 {
-    public struct Service
+    public struct OneService
     {
         public string BehaviorName;
         public string ServiceBehaviorConfiguration;
@@ -9,7 +9,7 @@
         public string EndpointContract;
         public string BaseAddress;
 
-        public Service(string behaviorName,string serviceBehaviorConfiguration, string serviceName,
+        public OneService(string behaviorName,string serviceBehaviorConfiguration, string serviceName,
             string endpointBinding, string endpointContract, string baseAddress)
         {
             this.BehaviorName = behaviorName;
