@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Mime;
+using System.Reflection;
 using System.Xml.Linq;
 
 namespace ServicesVeawerLib
@@ -10,9 +12,9 @@ namespace ServicesVeawerLib
         {
             List<Service> servicesList=new List<Service>();
             Service temp = new Service();
-            XDocument xdoc = XDocument.Load("ReadFromAppConfig.exe.config");
+            XDocument xdoc = XDocument.Load(Convert.ToString(System.IO.Path.GetFileName(Assembly.GetExecutingAssembly().FullName))+".config");
             int num = 0;
-
+           // string str = System.IO.Path.GetFileName();
             foreach (XElement serviceElement in xdoc.Element("configuration").Element("system.serviceModel").Elements("services").Elements("service"))
             {
                 XAttribute behaviorConfigAttribute = serviceElement.Attribute("behaviorConfiguration");

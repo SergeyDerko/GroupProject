@@ -1,4 +1,7 @@
-﻿@model TestWcfSite.Models.AlekseyAntonov.ServicesVeawerModel
+﻿@using System.Text
+@using System.Web.UI.WebControls
+@using TestWcfSite.Models.AlekseyAntonov
+@model TestWcfSite.Models.AlekseyAntonov.ServicesVeawerModel
 
 @{
     Layout = null;
@@ -14,27 +17,34 @@
 <div>
     <table>
         @{
-            string text = "Text";
-            int count = 0;
-          @*//  ServicesVeawerModel temp=new ServicesVeawerModel(0);
+            StringBuilder text;// = new StringBuilder();
+            ServicesVeawerModel temp = new ServicesVeawerModel(0);
 
 
-            for(int i=0;i<temp.CountModels;i++)
+            for (int i = 0; i < temp.CountModels; i++)
             {
-               // temp=new ServicesVeawerModel(i);
-                //temp.
-                //@Html.Raw("<tr>")
-                text += Convert.ToString(count + 1);
+                @Html.Raw("<tr>")
                 @Html.Raw("<td name='@text'>")
-                @Html.Raw(ViewBag.List)
-
-
+                text = new StringBuilder();
+                temp = new ServicesVeawerModel(i);
+                text.Append(temp.BaseAddress);
+                text.Append("\n");
+                text.Append(temp.BehaviorName);
+                text.Append("\n");
+                text.Append(temp.EndpointBinding);
+                text.Append("\n");
+                text.Append(temp.EndpointContract);
+                text.Append("\n");
+                text.Append(temp.ServiceBehaviorConfiguration);
+                text.Append("\n");
+                text.Append(temp.ServiceName);
                 @Html.Raw("</td>")
                 @Html.Raw("<td>")
-                // <input id="Button1" type="button" value="button" />
+                <input id="Button1" type="button" value="@temp.ServiceName" />
+                
                 @Html.Raw("</td>")
                 @Html.Raw("</tr>")
-            }*@
+            }
         }
     </table>
 

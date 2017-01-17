@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 namespace TestWcfSite.Models.AlekseyAntonov
 {
-    public class ServicesVeawerModel
+    public class ServicesVeawerModel 
     {
+
         public  string BehaviorName { get; set; }
         public string ServiceBehaviorConfiguration { get; set; }
         public string ServiceName { get; set; }
@@ -14,6 +15,7 @@ namespace TestWcfSite.Models.AlekseyAntonov
         public int CountModels { get; set; }
         public ServicesVeawerModel(int num)
         {
+          //  new Service();
             var serviceView = new ServicesVeawerClient();
             this.CountModels = serviceView.ServicesSearcher().Length;
             Service temp = serviceView.ServicesSearcher()[num];
