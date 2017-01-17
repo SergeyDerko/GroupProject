@@ -7,6 +7,7 @@ using TimeOfDayConvertWcfLib;
 using CurrencyConvertWcfLib;
 //using CurrencyRateServiceLibrary;
 using ServicesVeawerLib;
+using TestWcfCommon;
 
 namespace TestWcfService
 {
@@ -23,6 +24,7 @@ namespace TestWcfService
 
         public void StartSvc()
         {
+            Logger.Enter();
             _timeOfDayService.Start();
             _scanPcService.Start();
             _calcService.Start();
@@ -31,10 +33,12 @@ namespace TestWcfService
             _plitka.Start();
             _currencyConvert.Start();
             _servicesVeawer.Start();
+            Logger.Leave();
         }
 
         public void StopSvc()
         {
+            Logger.Enter();
             _timeOfDayService.Stop();
             _scanPcService.Stop();
             _calcService.Stop();
@@ -43,6 +47,7 @@ namespace TestWcfService
             _plitka.Stop();
             _currencyConvert.Stop();
             _servicesVeawer.Stop();
+            Logger.Leave();
         }
 
         protected override void OnStart(string[] args)
