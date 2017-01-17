@@ -16,17 +16,17 @@ namespace TestWcfService
             currentDomain.UnhandledException += UnhandledExceptionHandler;
             Init();
             var svc = new MainService();
-            if (Array.IndexOf(args, "console") != -1 || Array.IndexOf(args, "c") != -1)
+                if (Array.IndexOf(args, "console") != -1 || Array.IndexOf(args, "c") != -1)
             {
                 svc.StartSvc();
-                Console.WriteLine("Press a key for exit...");
+                Console.WriteLine("Press a key for stop services...");
                 Console.ReadKey(true);
                 svc.StopSvc();
+                Console.WriteLine("Press a key for exit...");
+                Console.ReadKey(true);
+                return;
             }
-            else
-            {
-                ServiceBase.Run(svc);
-            }
+            ServiceBase.Run(svc);
         }
 
         private static void Init()

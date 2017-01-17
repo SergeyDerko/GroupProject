@@ -9,7 +9,97 @@
 //------------------------------------------------------------------------------
 
 namespace TestWcfClientLib.CalcServiceReference {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Expression", Namespace="http://schemas.datacontract.org/2004/07/TestWcfLib")]
+    [System.SerializableAttribute()]
+    public partial class Expression : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal AField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal BField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestWcfClientLib.CalcServiceReference.MathAction MathActionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal A {
+            get {
+                return this.AField;
+            }
+            set {
+                if ((this.AField.Equals(value) != true)) {
+                    this.AField = value;
+                    this.RaisePropertyChanged("A");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal B {
+            get {
+                return this.BField;
+            }
+            set {
+                if ((this.BField.Equals(value) != true)) {
+                    this.BField = value;
+                    this.RaisePropertyChanged("B");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestWcfClientLib.CalcServiceReference.MathAction MathAction {
+            get {
+                return this.MathActionField;
+            }
+            set {
+                if ((this.MathActionField.Equals(value) != true)) {
+                    this.MathActionField = value;
+                    this.RaisePropertyChanged("MathAction");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MathAction", Namespace="http://schemas.datacontract.org/2004/07/TestWcfLib")]
+    public enum MathAction : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Sum = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Min = 2,
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CalcServiceReference.ICalc")]
@@ -20,6 +110,18 @@ namespace TestWcfClientLib.CalcServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalc/Sum", ReplyAction="http://tempuri.org/ICalc/SumResponse")]
         System.Threading.Tasks.Task<int> SumAsync(int a, int b);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalc/Execute", ReplyAction="http://tempuri.org/ICalc/ExecuteResponse")]
+        decimal Execute(TestWcfClientLib.CalcServiceReference.Expression expression);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalc/Execute", ReplyAction="http://tempuri.org/ICalc/ExecuteResponse")]
+        System.Threading.Tasks.Task<decimal> ExecuteAsync(TestWcfClientLib.CalcServiceReference.Expression expression);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalc/ExecuteParams", ReplyAction="http://tempuri.org/ICalc/ExecuteParamsResponse")]
+        decimal ExecuteParams(decimal a, decimal b, TestWcfClientLib.CalcServiceReference.MathAction mathAction);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalc/ExecuteParams", ReplyAction="http://tempuri.org/ICalc/ExecuteParamsResponse")]
+        System.Threading.Tasks.Task<decimal> ExecuteParamsAsync(decimal a, decimal b, TestWcfClientLib.CalcServiceReference.MathAction mathAction);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +157,22 @@ namespace TestWcfClientLib.CalcServiceReference {
         
         public System.Threading.Tasks.Task<int> SumAsync(int a, int b) {
             return base.Channel.SumAsync(a, b);
+        }
+        
+        public decimal Execute(TestWcfClientLib.CalcServiceReference.Expression expression) {
+            return base.Channel.Execute(expression);
+        }
+        
+        public System.Threading.Tasks.Task<decimal> ExecuteAsync(TestWcfClientLib.CalcServiceReference.Expression expression) {
+            return base.Channel.ExecuteAsync(expression);
+        }
+        
+        public decimal ExecuteParams(decimal a, decimal b, TestWcfClientLib.CalcServiceReference.MathAction mathAction) {
+            return base.Channel.ExecuteParams(a, b, mathAction);
+        }
+        
+        public System.Threading.Tasks.Task<decimal> ExecuteParamsAsync(decimal a, decimal b, TestWcfClientLib.CalcServiceReference.MathAction mathAction) {
+            return base.Channel.ExecuteParamsAsync(a, b, mathAction);
         }
     }
 }

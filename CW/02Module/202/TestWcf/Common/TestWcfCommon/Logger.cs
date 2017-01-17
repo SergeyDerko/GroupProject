@@ -17,6 +17,7 @@ namespace TestWcfCommon
         private const string MethodLeave = "<< {0} : {1}";
         private const string MethodLeaveVoid = "<< {0}";
         private const string MethodTrace = "Trace {0}";
+        private const string MethodInfo = "Info {0}";
         private static volatile Logger _instance;
         private static readonly object Lock = new object();
 
@@ -203,17 +204,17 @@ namespace TestWcfCommon
 
         public static void Info(string s, bool sendmail, string textmail, [CallerMemberName] string method = "")
         {
-            Write(Level.Info, textmail, sendmail, MethodTrace, method + " " + s);
+            Write(Level.Info, textmail, sendmail, MethodInfo, method + " " + s);
         }
 
         public static void Info(string s, bool sendmail, [CallerMemberName] string method = "")
         {
-            Write(Level.Info, null, sendmail, MethodTrace, method + " " + s);
+            Write(Level.Info, null, sendmail, MethodInfo, method + " " + s);
         }
 
         public static void Info(string s, [CallerMemberName] string method = "")
         {
-            Write(Level.Info, null, false, MethodTrace, method + " " + s);
+            Write(Level.Info, null, false, MethodInfo, method + " " + s);
         }
 
         public static void Start()

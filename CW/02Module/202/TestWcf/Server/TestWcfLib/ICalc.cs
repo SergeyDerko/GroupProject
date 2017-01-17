@@ -11,7 +11,7 @@ namespace TestWcfLib
         [OperationContract]
         decimal Execute(Expression expression);
 
-        [OperationContract]
+        [OperationContract(Name = "ExecuteParams")]
         decimal Execute(decimal a, decimal b, MathAction mathAction);
     }
 }

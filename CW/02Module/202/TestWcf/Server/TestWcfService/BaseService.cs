@@ -1,5 +1,6 @@
 ﻿using System.ServiceModel;
 using System.Threading;
+using TestWcfCommon;
 
 namespace TestWcfService
 {
@@ -13,7 +14,9 @@ namespace TestWcfService
         {
             _thread = new Thread(x =>
             {
-                var host = new ServiceHost(typeof(T));
+                var type = typeof(T);
+                var host = new ServiceHost(type);
+                Logger.Info("start service: " + type.Name);
                 host.Open();
 
                 do
@@ -22,6 +25,7 @@ namespace TestWcfService
                 } while (!SrvUtils.Retarder(30, ref _stopFlag));
 
                 host.Close();
+                Logger.Info("stop service: " + type.Name);
             });
             _thread.Start();
         }
