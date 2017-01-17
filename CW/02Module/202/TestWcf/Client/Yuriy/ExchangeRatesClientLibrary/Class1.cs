@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestWcfCommon
+namespace ExchangeRatesClientLibrary
 {
-    interface ICurrencyConvert
+    public class Class1
     {
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Mail;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 
@@ -10,28 +11,27 @@ namespace TestWcfCommon
 {
     public class Logger
     {
-        private static volatile Logger _instance;
-        private static readonly object Lock = new object();
-
-        private readonly List<string> _messages;
-        private readonly Thread _worker;
-        private DateTime _curLogFileDate;
-        private string _logDir;
-        private EventWaitHandle _logEvent;
-        private Level _level;
-        private string _logPrefix;
-        private string _mailTo, _mailFrom, _mailMsgName;
-        private string _smtpClientHost;
-        private int _smtpClientPort;
-        private bool _stop;
-        private StreamWriter _writer;
-
         private const string ExceptionForm = "{0}";
         private const string ExceptionWeb = "{0}";
         private const string MethodEnter = ">> {0}";
         private const string MethodLeave = "<< {0} : {1}";
         private const string MethodLeaveVoid = "<< {0}";
         private const string MethodTrace = "Trace {0}";
+        private static volatile Logger _instance;
+        private static readonly object Lock = new object();
+
+        private readonly List<string> _messages;
+        private readonly Thread _worker;
+        private DateTime _curLogFileDate;
+        private Level _level;
+        private string _logDir;
+        private EventWaitHandle _logEvent;
+        private string _logPrefix;
+        private string _mailTo, _mailFrom, _mailMsgName;
+        private string _smtpClientHost;
+        private int _smtpClientPort;
+        private bool _stop;
+        private StreamWriter _writer;
 
         private Logger()
         {
@@ -82,40 +82,6 @@ namespace TestWcfCommon
             set { Instance._logPrefix = value; }
         }
 
-        #region Реквизиты службы отправки почтовых сообщений
-
-        public static string MailTo
-        {
-            get { return Instance._mailTo; }
-            set { Instance._mailTo = value; }
-        }
-
-        public static string MailFrom
-        {
-            get { return Instance._mailFrom; }
-            set { Instance._mailFrom = value; }
-        }
-
-        public static string MailMsgName
-        {
-            get { return Instance._mailMsgName; }
-            set { Instance._mailMsgName = value; }
-        }
-
-        public static string SmtpClientHost
-        {
-            get { return Instance._smtpClientHost; }
-            set { Instance._smtpClientHost = value; }
-        }
-
-        public static int SmtpClientPort
-        {
-            get { return Instance._smtpClientPort; }
-            set { Instance._smtpClientPort = value; }
-        }
-
-        #endregion
-
         public static void Write(Level level, string textmail, bool sendmail, string msg, params object[] args)
         {
             if ((int) Level < (int) level || Level == Level.Off)
@@ -153,17 +119,17 @@ namespace TestWcfCommon
             Write(level, null, false, msg, args);
         }
 
-        public static void Enter(string method)
+        public static void Enter([CallerMemberName] string method = "")
         {
             Write(Level.Trace, null, false, MethodEnter, method);
         }
 
-        public static void Leave(string method)
+        public static void Leave([CallerMemberName] string method = "")
         {
             Write(Level.Trace, null, false, MethodLeaveVoid, method);
         }
 
-        public static T Leave<T>(string method, T ret)
+        public static T Leave<T>(T ret, [CallerMemberName] string method = "")
         {
             Write(Level.Trace, null, false, MethodLeave, method, ret);
             return ret;
@@ -220,19 +186,34 @@ namespace TestWcfCommon
             Error(string.Empty, s, false, null);
         }
 
-        public static void Trace(string method, string s, bool sendmail, string textmail)
+        public static void Trace(string s, bool sendmail, string textmail, [CallerMemberName] string method = "")
         {
             Write(Level.Trace, textmail, sendmail, MethodTrace, method + " " + s);
         }
 
-        public static void Trace(string method, string s, bool sendmail)
+        public static void Trace(string s, bool sendmail, [CallerMemberName] string method = "")
         {
-            Trace(method, s, sendmail, null);
+            Write(Level.Trace, null, sendmail, MethodTrace, method + " " + s);
         }
 
-        public static void Trace(string method, string s)
+        public static void Trace(string s, [CallerMemberName] string method = "")
         {
-            Trace(method, s, false, null);
+            Write(Level.Trace, null, false, MethodTrace, method + " " + s);
+        }
+
+        public static void Info(string s, bool sendmail, string textmail, [CallerMemberName] string method = "")
+        {
+            Write(Level.Info, textmail, sendmail, MethodTrace, method + " " + s);
+        }
+
+        public static void Info(string s, bool sendmail, [CallerMemberName] string method = "")
+        {
+            Write(Level.Info, null, sendmail, MethodTrace, method + " " + s);
+        }
+
+        public static void Info(string s, [CallerMemberName] string method = "")
+        {
+            Write(Level.Info, null, false, MethodTrace, method + " " + s);
         }
 
         public static void Start()
@@ -271,7 +252,7 @@ namespace TestWcfCommon
 
         private void WorkerProc()
         {
-            string msg = string.Empty;
+            var msg = string.Empty;
 
             do
             {
@@ -312,9 +293,9 @@ namespace TestWcfCommon
 
         private void CheckWriter()
         {
-            bool createWriter = _writer == null
-                                || _curLogFileDate.Date != DateTime.Now.Date
-                                || Level == Level.Off;
+            var createWriter = _writer == null
+                               || _curLogFileDate.Date != DateTime.Now.Date
+                               || Level == Level.Off;
 
             if (!createWriter)
                 return;
@@ -323,12 +304,12 @@ namespace TestWcfCommon
 
             try
             {
-                string fname = Prefix
-                               + DateTime.Now.Date.ToString(@"\-yyyy\-MM\-dd")
-                               + ".txt";
+                var fname = Prefix
+                            + DateTime.Now.Date.ToString(@"\-yyyy\-MM\-dd")
+                            + ".txt";
 
                 _writer = new StreamWriter(Path.Combine(Dir,
-                        fname),
+                    fname),
                     true,
                     Encoding.GetEncoding(1251));
             }
@@ -339,7 +320,7 @@ namespace TestWcfCommon
         }
 
         /// <summary>
-        /// Отправить почту
+        ///     Отправить почту
         /// </summary>
         /// <param name="to">Получатели</param>
         /// <param name="subject">Тема</param>
@@ -359,10 +340,10 @@ namespace TestWcfCommon
 
             try
             {
-                string[] addr = to.Split(',');
+                var addr = to.Split(',');
 
-                MailMessage message = new MailMessage();
-                foreach (string t in addr)
+                var message = new MailMessage();
+                foreach (var t in addr)
                     message.To.Add(t);
                 message.Subject = subject;
                 message.From = new MailAddress(from);
@@ -371,9 +352,11 @@ namespace TestWcfCommon
                 message.BodyEncoding = bodyEncoding;
                 message.IsBodyHtml = isBodyHtml;
                 if (attach != null)
-                    foreach (Attachment item in attach)
+                    foreach (var item in attach)
                         message.Attachments.Add(item);
-                var smtp = SmtpClientPort != 0 ? new SmtpClient(SmtpClientHost, SmtpClientPort) : new SmtpClient(SmtpClientHost);
+                var smtp = SmtpClientPort != 0
+                    ? new SmtpClient(SmtpClientHost, SmtpClientPort)
+                    : new SmtpClient(SmtpClientHost);
                 smtp.Send(message);
             }
             catch
@@ -381,5 +364,39 @@ namespace TestWcfCommon
                 // ignored
             }
         }
+
+        #region Реквизиты службы отправки почтовых сообщений
+
+        public static string MailTo
+        {
+            get { return Instance._mailTo; }
+            set { Instance._mailTo = value; }
+        }
+
+        public static string MailFrom
+        {
+            get { return Instance._mailFrom; }
+            set { Instance._mailFrom = value; }
+        }
+
+        public static string MailMsgName
+        {
+            get { return Instance._mailMsgName; }
+            set { Instance._mailMsgName = value; }
+        }
+
+        public static string SmtpClientHost
+        {
+            get { return Instance._smtpClientHost; }
+            set { Instance._smtpClientHost = value; }
+        }
+
+        public static int SmtpClientPort
+        {
+            get { return Instance._smtpClientPort; }
+            set { Instance._smtpClientPort = value; }
+        }
+
+        #endregion
     }
 }

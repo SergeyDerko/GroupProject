@@ -1,11 +1,12 @@
 ﻿using System.ServiceModel;
 
-namespace TestWcfCommon
+namespace TemperatureServiceLib
 {
     [ServiceContract]
-    public interface ICalc
+    public interface ITemperature
     {
         [OperationContract]
-        int Sum(int a, int b);
+
+        string Temp();
     }
 }

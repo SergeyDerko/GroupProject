@@ -9,7 +9,7 @@
 @using (Html.BeginForm("CurrencyConverter", "SergeyPekhota", FormMethod.Post))
 {
     @Html.TextBox("count")
-    <select name="fromCurrency" aria-selected="true">
+    <select name="fromCurrency" >
         <option value="USD">USD</option>
         <option value="UAH">UAH</option>
         <option value="EUR">EUR</option>
@@ -25,3 +25,4 @@
 
 @Html.Label("Результат")
 <b>@ViewBag.Result</b>
+

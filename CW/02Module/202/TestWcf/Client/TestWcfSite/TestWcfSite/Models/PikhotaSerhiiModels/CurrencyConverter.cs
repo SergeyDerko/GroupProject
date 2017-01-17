@@ -1,37 +1,37 @@
 ﻿using System;
-using System.ServiceModel;
+using System.Collections.Generic;
 using CurrencyConvertClientLib.CurrencyConvertServiceReference;
+using CurrencyRateClientLibrary.CurrencyRateServiceReference;
 
 namespace TestWcfSite.Models.PikhotaSerhiiModels
 {
     
-    public class CurrencyConverter
+    public class CurrencyConverter : IDisposable
     {
-        public string Msg { get; set; }
+        
 
-        public CurrencyConvertClient Client = new CurrencyConvertClient();
+        public CurrencyConvertClient SrvConvertCurrency = new CurrencyConvertClient();
+        public CurrencyRateClient SrvCurrencyRate;
+        public List<Currency> Current { get; }
 
         public CurrencyConverter()
         {
-            try
-            {
-                                        
-            }
-            catch (CommunicationException)
-            {
-                Msg = "Communication Exception Error!";
-                Client.Abort();
-            }
-            catch (TimeoutException)
-            {
-                Msg = "Your time is out:)";
-                Client.Abort();
-            }
-            finally
-            {
-                Client.Close();
-            }
+            
         }
+
+        public CurrencyConverter(CurrencyRateClient srvCurrencyRate)
+        {
+            SrvCurrencyRate = srvCurrencyRate;
+            Current = new List<Currency>(SrvCurrencyRate.CurrentRate());
+        }
+
+        public void Dispose()
+        {
+            SrvConvertCurrency.Close();   
+        }
+        
     }
+
+    
     
 }
