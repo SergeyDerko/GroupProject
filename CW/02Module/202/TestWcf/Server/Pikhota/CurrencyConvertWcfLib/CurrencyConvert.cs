@@ -5,13 +5,10 @@ namespace CurrencyConvertWcfLib
 {
     public class CurrencyConvert : ICurrencyConvert
     {
-        public string FromCurrency { get; set; }
-        public string ToCurrency { get; set; }
-        public int Count { get; set; }
 
         public string ChangeCurrency(string fromCurrency, string toCurrency, int count)
         {
-            decimal result = 0;
+            string result;
             switch (fromCurrency)
             {
                 case "USD":
@@ -23,49 +20,16 @@ namespace CurrencyConvertWcfLib
                 case "EUR":
                     result = ToCurEur(toCurrency,count);
                     break;
+                default:
+                    result = "";
+                    break;
             }
-            return result.ToString(CultureInfo.InvariantCulture);
-        }
-        
-        private decimal UsdToEuro(int count)
-        {
-            var result = count * (decimal)0.9516;
-            return result;
+            return result.ToString(CultureInfo.CurrentCulture);
         }
 
-        private decimal UsdToUah(int count)
+        private static string ToCurUsd(string toCurrency,int count)
         {
-            var result = count * (decimal)27.2350;
-            return result;
-        }
-
-        private decimal EuroToUsd(int count)
-        {
-            var result = count * (decimal)1.0512;
-            return result;
-        }
-
-        private decimal EuroToUah(int count)
-        {
-            var result = count * (decimal)28.6226;
-            return result;
-        }
-
-        private decimal UahToUsd(int count)
-        {
-            var result = count * (decimal)0.0367;
-            return result;
-        }
-
-        private decimal UahToEuro(int count)
-        {
-            var result = count * (decimal)0.0349;
-            return result;
-        }
-
-        private decimal ToCurUsd(string toCurrency,int count)
-        {
-            decimal result = 0;
+            decimal result;
             switch (toCurrency)
             {
                 case "USD":
@@ -75,25 +39,28 @@ namespace CurrencyConvertWcfLib
                     }
                 case "UAH":
                     {
-                        result = UsdToUah(count);
+                        result = count * (decimal)27.2350;
                         break;
                     }
                 case "EUR":
                     {
-                        result = UsdToEuro(count);
+                        result = count * (decimal)0.9516; ;
                         break;
                     }
+                    default:
+                    result = 0;
+                    break;
             }
-            return result;
+            return result.ToString(CultureInfo.InvariantCulture);
         }
-        private decimal ToCurUah(string toCurrency, int count)
+        private static string ToCurUah(string toCurrency, int count)
         {
-            decimal result = 0;
+            decimal result;
             switch (toCurrency)
             {
                 case "USD":
                     {
-                        result = UahToUsd(count);
+                        result = count * (decimal)0.0367;
                         break;
                     }
                 case "UAH":
@@ -103,25 +70,28 @@ namespace CurrencyConvertWcfLib
                     }
                 case "EUR":
                     {
-                        result = UahToEuro(count);
+                        result = count * (decimal)0.0349;
                         break;
                     }
+                default:
+                    result = 0;
+                    break;
             }
-            return result;
+            return result.ToString(CultureInfo.InvariantCulture);
         }
-        private decimal ToCurEur(string toCurrency,int count)
+        private static string ToCurEur(string toCurrency,int count)
         {
-            decimal result = 0;
+            decimal result;
             switch (toCurrency)
             {
                 case "USD":
                     {
-                        result = EuroToUsd(count);
+                        result = count * (decimal)1.0512;
                         break;
                     }
                 case "UAH":
                     {
-                        result = EuroToUah(count);
+                        result = count * (decimal)28.6226;
                         break;
                     }
                 case "EUR":
@@ -129,8 +99,11 @@ namespace CurrencyConvertWcfLib
                         result = count*1;
                         break;
                     }
+                default:
+                    result = 0;
+                    break;
             }
-            return result;
+            return result.ToString(CultureInfo.InvariantCulture);
         }
     }
 }

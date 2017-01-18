@@ -27,5 +27,25 @@ namespace TestWcfSite.Models.Calc
         {
             throw new NotImplementedException();
         }
+
+        public decimal Execute(Expression expression)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<decimal> ExecuteAsync(Expression expression)
+        {
+            throw new NotImplementedException();
+        }
+
+        public decimal ExecuteParams(decimal a, decimal b, MathAction mathAction)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<decimal> ExecuteParamsAsync(decimal a, decimal b, MathAction mathAction)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,29 +1,28 @@
 ﻿@model TestWcfSite.Models.PikhotaSerhiiModels.CurrencyConverter
 @{
-    ViewBag.Title = "CurrencyConverter";
+    ViewBag.Title = "Конвертер валют";
+
 }
 
 <h2>CurrencyConverter</h2>
 
-
-
 @using (Html.BeginForm("CurrencyConverter", "SergeyPekhota", FormMethod.Post))
 {
-    <select name="fromCurrency">
-        <option>FromCurrency</option>
-        <option>USD</option>
-        <option>UAH</option>
-        <option>EUR</option>
-    </select>
     @Html.TextBox("count")
-    <select name="toCurrency">
-        <option>ToCurrency</option>
-        <option>USD</option>
-        <option>UAH</option>
-        <option>EUR</option>
+    <select name="fromCurrency" >
+        <option value="USD">USD</option>
+        <option value="UAH">UAH</option>
+        <option value="EUR">EUR</option>
     </select>
-    <input type="submit" name="Change" value="Обменять"/>
+    @Html.Label("to")
+    <select name="toCurrency">
+        <option value="USD">USD</option>
+        <option value="UAH">UAH</option>
+        <option value="EUR">EUR</option>
+    </select>
+    <input type="submit" name="Change" value="Обменять" />
 }
 
 @Html.Label("Результат")
 <b>@ViewBag.Result</b>
+

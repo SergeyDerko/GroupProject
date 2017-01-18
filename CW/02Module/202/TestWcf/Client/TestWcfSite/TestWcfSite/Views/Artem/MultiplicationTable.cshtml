@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{
+    for (var i = 0; i < 2; i++)
+    {
+        <tr>
+            @for (var j = 0; j < 4; j++)
+            {
+                <td>
+                    @((List<string>ViewBag.List)[index])
+                    @index++
+                </td>
+            }
+        </tr>
+    }
+}
+
