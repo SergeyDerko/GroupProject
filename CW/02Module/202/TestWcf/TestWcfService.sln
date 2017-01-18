@@ -100,6 +100,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aleksey", "Aleksey", "{4853
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesVeawerClientLib", "Client\Aleksey\ServicesVeawerClientLib\ServicesVeawerClientLib.csproj", "{6DE69A05-B9CB-4698-9D61-EB098A88F34A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyRateClientLibrary", "Client\Yuriy\CurrencyRateClientLibrary\CurrencyRateClientLibrary.csproj", "{889A0BB1-ED0D-4ACB-B0A5-F41C76E13C34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -186,6 +188,10 @@ Global
 		{6DE69A05-B9CB-4698-9D61-EB098A88F34A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DE69A05-B9CB-4698-9D61-EB098A88F34A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DE69A05-B9CB-4698-9D61-EB098A88F34A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{889A0BB1-ED0D-4ACB-B0A5-F41C76E13C34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889A0BB1-ED0D-4ACB-B0A5-F41C76E13C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889A0BB1-ED0D-4ACB-B0A5-F41C76E13C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889A0BB1-ED0D-4ACB-B0A5-F41C76E13C34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -224,5 +230,6 @@ Global
 		{48FFA191-A8A6-46CE-B053-68F994645FE5} = {4E3A0CDD-DF43-4DC2-949D-942F07205919}
 		{48537298-D755-4483-AA55-181464F0ED9F} = {5F88A5CE-40F6-4A63-852B-9D1539B0265B}
 		{6DE69A05-B9CB-4698-9D61-EB098A88F34A} = {48537298-D755-4483-AA55-181464F0ED9F}
+		{889A0BB1-ED0D-4ACB-B0A5-F41C76E13C34} = {D16E2742-7896-40B3-B178-A8F2DECC48FD}
 	EndGlobalSection
 EndGlobal
