@@ -2,6 +2,7 @@
 using System.IO;
 using System.ServiceProcess;
 using TestWcfCommon;
+using ServicesViewerLib;
 
 namespace TestWcfService
 {
@@ -12,6 +13,7 @@ namespace TestWcfService
         /// </summary>
         static void Main(string[] args)
         {
+            ServicesViewer.path = System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase;
             AppDomain currentDomain = AppDomain.CurrentDomain;
             currentDomain.UnhandledException += UnhandledExceptionHandler;
             Init();

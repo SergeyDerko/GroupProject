@@ -1,5 +1,7 @@
 ﻿using System.Web.Mvc;
 using TestWcfSite.Models.AlekseyAntonov;
+using ServicesViewerClientLib.ServicesViewerServiceReference;
+using System.Collections.Generic;
 
 namespace TestWcfSite.Controllers
 {
@@ -18,8 +20,9 @@ namespace TestWcfSite.Controllers
 
         public ActionResult ServicesViewer()
         {
-          //  var servicesVeawer = new ServicesVeawerModel();
-           // string s=servicesVeawer.ServicesList.
+            ServicesViewerModel one = new ServicesViewerModel();
+           // List<OneService> allServices = one.ListServices();
+            ViewBag.allServices=one.ListServices();
             return View();
         }
 

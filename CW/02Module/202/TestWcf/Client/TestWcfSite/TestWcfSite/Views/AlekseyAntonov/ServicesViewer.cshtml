@@ -16,62 +16,34 @@
 </head>
 <body>
 <div>
-    <table>
+    <table width="700" border="1">
         @{
-            ServicesViewerModel one = new ServicesViewerModel();
-            List<OneService> allServices = one.ListServices();
-            StringBuilder text;// = new StringBuilder();
-            int count = allServices.Count;
-
-            foreach (var t in allServices)
+            foreach (var t in ViewBag.allServices)
             {
                 @Html.Raw("<tr>")
-                @Html.Raw("<td name='@text'>")
-                text = new StringBuilder();
-                text.Append(t.BaseAddress);
-                text.Append("\n");
-                text.Append(t.BehaviorName);
-                text.Append("\n");
-                text.Append(t.EndpointBinding);
-                text.Append("\n");
-                text.Append(t.EndpointContract);
-                text.Append("\n");
-                text.Append(t.ServiceBehaviorConfiguration);
-                text.Append("\n");
-                text.Append(t.ServiceName);
-                @Html.Raw("</td>")
                 @Html.Raw("<td>")
+                @Html.Raw("BaseAddress: " + t.BaseAddress + "<br/>");
+                @Html.Raw("BehaviorName: " + t.BehaviorName + "<br/>");
+                @Html.Raw("EndpointBinding: " + t.EndpointBinding + "<br/>");
+                @Html.Raw("EndPointContract: " + t.EndpointContract + "<br/>");
+                @Html.Raw("Service BehaviorConfiguration: " + t.ServiceBehaviorConfiguration + "<br/>");
+                @Html.Raw("</td>")
+                @Html.Raw("<td align='center'>")
                 <input id="Button1" type="button" value="@t.ServiceName" />
 
                 @Html.Raw("</td>")
                 @Html.Raw("</tr>")
             }
-            @*for (int i = 0; i < count; i++)
-            {
-                @Html.Raw("<tr>")
-                @Html.Raw("<td name='@text'>")
-                text = new StringBuilder();
-                ServicesViewerModel temp=new ServicesViewerModel(i);
-                text.Append(temp.BaseAddress);
-                text.Append("\n");
-                text.Append(temp.BehaviorName);
-                text.Append("\n");
-                text.Append(temp.EndpointBinding);
-                text.Append("\n");
-                text.Append(temp.EndpointContract);
-                text.Append("\n");
-                text.Append(temp.ServiceBehaviorConfiguration);
-                text.Append("\n");
-                text.Append(temp.ServiceName);
-                @Html.Raw("</td>")
-                @Html.Raw("<td>")
-                <input id="Button1" type="button" value="@temp.ServiceName" />
-
-                @Html.Raw("</td>")
-                @Html.Raw("</tr>")
-            }*@
         }
     </table>
+
+
+
+
+
+
+
+
 
 
 
