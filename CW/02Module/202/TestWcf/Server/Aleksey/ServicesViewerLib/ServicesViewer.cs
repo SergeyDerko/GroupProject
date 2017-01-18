@@ -9,7 +9,7 @@ namespace ServicesViewerLib
     {
         public List<OneService> ServicesSearcher()
         {
-            List<OneService> servicesList=new List<OneService>();
+            List<OneService> services = new List<OneService>();
             OneService temp = new OneService();
             string path = System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase;
             string executableFileName = System.IO.Path.GetFileName(path);
@@ -31,7 +31,7 @@ namespace ServicesViewerLib
                     temp.EndpointBinding = endpointBindingAttribute.Value;
                     temp.EndpointContract = endpointContractAttribute.Value;
                     temp.BaseAddress = baseAddressAttribute.Value;
-                    servicesList.Add(temp);
+                    services.Add(temp);
                     num++;
                 }
 
@@ -44,13 +44,13 @@ namespace ServicesViewerLib
 
                 if (nameAttribute != null)
                 {
-                    temp = servicesList[num];
+                    temp = services[num];
                     temp.BehaviorName = nameAttribute.Value;
-                    servicesList[num] = temp;
+                    services[num] = temp;
                 }
                 num++;
             }
-            return servicesList;
+            return services;
         }
     }
 }

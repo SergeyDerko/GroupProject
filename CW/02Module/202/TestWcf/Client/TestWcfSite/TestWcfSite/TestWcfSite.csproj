@@ -306,7 +306,7 @@
       <Name>PlitkaLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Aleksey\ServicesViewerClientLib\ServicesViewerClientLib.csproj">
-      <Project>{535d38c7-7739-43ba-ab2a-633bb2a1e7c4}</Project>
+      <Project>{efe62342-1a3b-4f21-aefb-f5770b913f7a}</Project>
       <Name>ServicesViewerClientLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Pikhota\CurrencyConvertClientLib\CurrencyConvertClientLib.csproj">

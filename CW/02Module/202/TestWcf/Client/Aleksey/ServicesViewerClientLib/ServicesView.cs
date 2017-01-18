@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ServicesViewerClientLib
 {
-    public class ServicesViewer
+    public class ServicesView
     {
     }
 }

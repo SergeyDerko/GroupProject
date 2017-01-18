@@ -1,5 +1,6 @@
 ﻿@using System.Text
 @using System.Web.UI.WebControls
+@using ServicesViewerClientLib.ServicesViewerServiceReference
 @using TestWcfSite.Models.AlekseyAntonov
 @model TestWcfSite.Models.AlekseyAntonov.ServicesViewerModel
 
@@ -17,12 +18,35 @@
 <div>
     <table>
         @{
-            StringBuilder text = new StringBuilder();
-            ServicesViewerModel oneService = new ServicesViewerModel();
-            int count = oneService.AmountService();
+            ServicesViewerModel one = new ServicesViewerModel();
+            List<OneService> allServices = one.ListServices();
+            StringBuilder text;// = new StringBuilder();
+            int count = allServices.Count;
 
+            foreach (var t in allServices)
+            {
+                @Html.Raw("<tr>")
+                @Html.Raw("<td name='@text'>")
+                text = new StringBuilder();
+                text.Append(t.BaseAddress);
+                text.Append("\n");
+                text.Append(t.BehaviorName);
+                text.Append("\n");
+                text.Append(t.EndpointBinding);
+                text.Append("\n");
+                text.Append(t.EndpointContract);
+                text.Append("\n");
+                text.Append(t.ServiceBehaviorConfiguration);
+                text.Append("\n");
+                text.Append(t.ServiceName);
+                @Html.Raw("</td>")
+                @Html.Raw("<td>")
+                <input id="Button1" type="button" value="@t.ServiceName" />
 
-            for (int i = 0; i < count; i++)
+                @Html.Raw("</td>")
+                @Html.Raw("</tr>")
+            }
+            @*for (int i = 0; i < count; i++)
             {
                 @Html.Raw("<tr>")
                 @Html.Raw("<td name='@text'>")
@@ -45,7 +69,7 @@
 
                 @Html.Raw("</td>")
                 @Html.Raw("</tr>")
-            }
+            }*@
         }
     </table>
 

@@ -17,7 +17,7 @@ namespace ServicesViewerClientLib.ServicesViewerServiceReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OneService", Namespace="http://schemas.datacontract.org/2004/07/ServicesViewerLib")]
     [System.SerializableAttribute()]
-    public partial struct OneService : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class OneService : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -40,6 +40,7 @@ namespace ServicesViewerClientLib.ServicesViewerServiceReference {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ServiceNameField;
         
+        [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
                 return this.extensionDataField;
@@ -129,7 +130,7 @@ namespace ServicesViewerClientLib.ServicesViewerServiceReference {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
-        void RaisePropertyChanged(string propertyName) {
+        protected void RaisePropertyChanged(string propertyName) {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));

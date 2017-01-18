@@ -1,24 +1,13 @@
 ﻿namespace ServicesViewerLib
 {
-    public struct OneService
+    public class OneService
     {
-        public string BehaviorName;
-        public string ServiceBehaviorConfiguration;
-        public string ServiceName;
-        public string EndpointBinding;
-        public string EndpointContract;
-        public string BaseAddress;
-
-        public OneService(string behaviorName,string serviceBehaviorConfiguration, string serviceName,
-            string endpointBinding, string endpointContract, string baseAddress)
-        {
-            this.BehaviorName = behaviorName;
-            this.ServiceBehaviorConfiguration = serviceBehaviorConfiguration;
-            this.ServiceName = serviceName;
-            this.EndpointBinding = endpointBinding;
-            this.EndpointContract = endpointContract;
-            this.BaseAddress = baseAddress;
-        }
+        public string BehaviorName { get; set; }
+        public string ServiceBehaviorConfiguration { get; set; }
+        public string ServiceName { get; set; }
+        public string EndpointBinding { get; set; }
+        public string EndpointContract { get; set; }
+        public string BaseAddress { get; set; }
     }
 }
 

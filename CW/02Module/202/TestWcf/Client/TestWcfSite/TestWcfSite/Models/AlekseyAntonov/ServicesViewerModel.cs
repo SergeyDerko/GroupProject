@@ -12,8 +12,6 @@ namespace TestWcfSite.Models.AlekseyAntonov
         public string EndpointContract { get; set; }
         public string BaseAddress { get; set; }
 
-        // public static ServicesViewerClient ServicesView { get; set; }
-
         public ServicesViewerModel(){}
 
         public ServicesViewerModel(int num)
@@ -28,12 +26,13 @@ namespace TestWcfSite.Models.AlekseyAntonov
             ServiceName = temp.ServiceName;
             servicesView.Close();
         }
-        public int AmountService()
+
+        public  List<OneService> ListServices()
         {
             var servicesView = new ServicesViewerClient();
-            int amount = servicesView.ServicesSearcher().Length;
+            List<OneService> services = new List<OneService>(servicesView.ServicesSearcher());
             servicesView.Close();
-            return amount;
+            return services;
         }
     }
 }
