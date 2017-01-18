@@ -18,13 +18,27 @@ namespace TestWcfSite.Controllers
             Models.DanilaModels.ExpressionD.A = 2;
             return View();
         }
+
         public ActionResult Plitka()
         {
-            var plitka = new Plitka();
-            ViewBag.Plitka = plitka.Error;
             return View();
         }
-    }
+
+       [HttpPost] // метод принимающий данные с клиента
+        public ActionResult Plitka(Plitka model)
+        {
+            
+       ViewBag.heightTile = model.heightTile;
+            ViewBag.heightWall = model.heightWall;
+            ViewBag.widthWall = model.widthWall;
+            ViewBag.heightTile = model.heightTile;
+            ViewBag.widthTile = model.widthTile;
+
+            ViewBag.res = model.Result();
+        return View();
+            }
+
+        }
 
 
     }

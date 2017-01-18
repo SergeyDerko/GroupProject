@@ -1,8 +1,19 @@
-﻿
+﻿@model TestWcfSite.Models.DanilaModels.Plitka
 @{
     ViewBag.Title = "Plitka";
 }
+@using (Html.BeginForm("Plitka", "Danila", FormMethod.Post))
+{
 
-<h2>Plitka</h2>
 
-<span>@ViewBag.Plitka</span>
+            <p><h2>Размер стены</h2></p>
+            <p><h3> @Html.TextBoxFor(a => a.heightWall) X @Html.TextBoxFor(b => b.widthWall)  </h3>
+          </p>
+        <p><h2>Размер плитки</h2></p>
+        <p><h3>  @Html.TextBoxFor(с => с.heightTile) X @Html.TextBoxFor(d => d.widthTile)</h3></p>
+        <p>
+            <input id="Submit" type="submit" value="calculate" />
+        </p>}
+            <h2>Вам необходимо   @ViewBag.res плитки</h2>
+
+
