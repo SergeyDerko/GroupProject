@@ -22,10 +22,11 @@
     <MetadataSource Address="http://localhost:555/ICalc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ICalc.disco" MetadataType="Disco" ID="ed7b9828-490b-4cf9-bad0-d4df9a44e914" SourceId="1" SourceUrl="http://localhost:555/ICalc?disco" />
-    <MetadataFile FileName="Calc.wsdl" MetadataType="Wsdl" ID="528f465f-ead3-40c6-bcdb-a29b2b4ca5df" SourceId="1" SourceUrl="http://localhost:555/ICalc?wsdl" />
+    <MetadataFile FileName="ICalc.wsdl" MetadataType="Wsdl" ID="7fb9b7da-050c-4ff0-84b1-222e955d9436" SourceId="1" SourceUrl="http://localhost:555/ICalc?wsdl=wsdl0" />
     <MetadataFile FileName="ICalc2.xsd" MetadataType="Schema" ID="6d2a5d70-e159-4090-96aa-8a9ce9996d12" SourceId="1" SourceUrl="http://localhost:555/ICalc?xsd=xsd2" />
     <MetadataFile FileName="ICalc.xsd" MetadataType="Schema" ID="67af6a38-aa9b-47c9-a16a-d1b988059fc1" SourceId="1" SourceUrl="http://localhost:555/ICalc?xsd=xsd1" />
+    <MetadataFile FileName="ICalc.disco" MetadataType="Disco" ID="ed7b9828-490b-4cf9-bad0-d4df9a44e914" SourceId="1" SourceUrl="http://localhost:555/ICalc?disco" />
+    <MetadataFile FileName="Calc.wsdl" MetadataType="Wsdl" ID="528f465f-ead3-40c6-bcdb-a29b2b4ca5df" SourceId="1" SourceUrl="http://localhost:555/ICalc?wsdl" />
     <MetadataFile FileName="ICalc1.xsd" MetadataType="Schema" ID="19848811-ad3b-4f67-86ba-a1ce50cc1a9a" SourceId="1" SourceUrl="http://localhost:555/ICalc?xsd=xsd0" />
   </Metadata>
   <Extensions>

@@ -15,8 +15,9 @@ namespace TestWcfClientLib.CalcServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Expression", Namespace="http://schemas.datacontract.org/2004/07/TestWcfLib")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Expression", Namespace="CalcService")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TestWcfClientLib.CalcServiceReference.ExpressionPlus))]
     public partial class Expression : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -90,6 +91,29 @@ namespace TestWcfClientLib.CalcServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ExpressionPlus", Namespace="CalcService")]
+    [System.SerializableAttribute()]
+    public partial class ExpressionPlus : TestWcfClientLib.CalcServiceReference.Expression {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal ZField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Z {
+            get {
+                return this.ZField;
+            }
+            set {
+                if ((this.ZField.Equals(value) != true)) {
+                    this.ZField = value;
+                    this.RaisePropertyChanged("Z");
+                }
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="MathAction", Namespace="http://schemas.datacontract.org/2004/07/TestWcfLib")]
     public enum MathAction : int {
@@ -102,25 +126,25 @@ namespace TestWcfClientLib.CalcServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CalcServiceReference.ICalc")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="CalcService", ConfigurationName="CalcServiceReference.ICalc")]
     public interface ICalc {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalc/Sum", ReplyAction="http://tempuri.org/ICalc/SumResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="CalcService/ICalc/Sum", ReplyAction="CalcService/ICalc/SumResponse")]
         int Sum(int a, int b);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalc/Sum", ReplyAction="http://tempuri.org/ICalc/SumResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="CalcService/ICalc/Sum", ReplyAction="CalcService/ICalc/SumResponse")]
         System.Threading.Tasks.Task<int> SumAsync(int a, int b);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalc/Execute", ReplyAction="http://tempuri.org/ICalc/ExecuteResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="CalcService/ICalc/Execute", ReplyAction="CalcService/ICalc/ExecuteResponse")]
         decimal Execute(TestWcfClientLib.CalcServiceReference.Expression expression);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalc/Execute", ReplyAction="http://tempuri.org/ICalc/ExecuteResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="CalcService/ICalc/Execute", ReplyAction="CalcService/ICalc/ExecuteResponse")]
         System.Threading.Tasks.Task<decimal> ExecuteAsync(TestWcfClientLib.CalcServiceReference.Expression expression);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalc/ExecuteParams", ReplyAction="http://tempuri.org/ICalc/ExecuteParamsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="CalcService/ICalc/ExecuteParams", ReplyAction="CalcService/ICalc/ExecuteParamsResponse")]
         decimal ExecuteParams(decimal a, decimal b, TestWcfClientLib.CalcServiceReference.MathAction mathAction);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalc/ExecuteParams", ReplyAction="http://tempuri.org/ICalc/ExecuteParamsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="CalcService/ICalc/ExecuteParams", ReplyAction="CalcService/ICalc/ExecuteParamsResponse")]
         System.Threading.Tasks.Task<decimal> ExecuteParamsAsync(decimal a, decimal b, TestWcfClientLib.CalcServiceReference.MathAction mathAction);
     }
     

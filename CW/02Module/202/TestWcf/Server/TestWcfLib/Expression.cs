@@ -2,7 +2,8 @@
 
 namespace TestWcfLib
 {
-    [DataContract]
+    [DataContract(Namespace = "CalcService")]
+    [KnownType(typeof(ExpressionPlus))]
     public class Expression
     {
         [DataMember]
@@ -14,6 +15,19 @@ namespace TestWcfLib
         [DataMember]
         public MathAction MathAction { get; set; }
     }
+
+    [DataContract(Namespace = "CalcService")]
+    public class ExpressionPlus : Expression
+    {
+        [DataMember]
+        public decimal Z { get; set; }
+
+        public override string ToString()
+        {
+            return $"{A} {MathAction} {B} = ";
+        }
+    }
+
     public enum MathAction
     {
         Sum = 1,

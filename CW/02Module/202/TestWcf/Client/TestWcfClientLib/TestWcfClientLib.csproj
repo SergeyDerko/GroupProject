@@ -54,6 +54,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Service References\CalcServiceReference\Calc.wsdl" />
+    <None Include="Service References\CalcServiceReference\ICalc.wsdl" />
     <None Include="Service References\CalcServiceReference\ICalc.xsd">
       <SubType>Designer</SubType>
     </None>

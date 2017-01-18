@@ -2,13 +2,15 @@
 
 namespace TestWcfLib
 {
-    [ServiceContract]
+    [ServiceContract(Namespace = "CalcService")]
+    //[ServiceKnownType(typeof(ExpressionPlus))]
     public interface ICalc
     {
         [OperationContract]
         int Sum(int a, int b);
 
         [OperationContract]
+        //[ServiceKnownType(typeof(ExpressionPlus))]
         decimal Execute(Expression expression);
 
         [OperationContract(Name = "ExecuteParams")]
