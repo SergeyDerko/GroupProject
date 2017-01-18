@@ -20,14 +20,13 @@ namespace TestWcfSite.Controllers
 
         public ActionResult ServicesViewer()
         {
-<<<<<<< HEAD
             ServicesViewerModel one = new ServicesViewerModel();
            // List<OneService> allServices = one.ListServices();
             ViewBag.allServices=one.ListServices();
-=======
+
             //  var servicesVeawer = new ServicesVeawerModel();
             // string s=servicesVeawer.ServicesList.
->>>>>>> 56f72662ddd9270d59636c49ee8baa8bfea5197e
+
             return View();
         }
 
