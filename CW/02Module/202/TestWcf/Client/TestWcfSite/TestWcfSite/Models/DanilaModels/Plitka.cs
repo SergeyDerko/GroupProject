@@ -1,25 +1,37 @@
-﻿using System.ServiceModel;
-using PlitkaClientLib.PlitkaServiceReference;
+﻿using PlitkaClientLib.PlitkaServiceReference;
 
 namespace TestWcfSite.Models.DanilaModels
 {
-    public class Plitka
+    public  class Plitka
     {
         public Plitka()
-        {
-            try
-            {
+        {var client =new PlitkaClient();
+            client.Close();
+            
+        }
+        public double heightWall { get; set; }
+        public double widthWall { get; set; }
+        public double heightTile { get; set; }
+        public double widthTile { get; set; }
 
-                var client = new PlitkaClient();
-                client.GetCountTiles();
-                client.Close();
-            }
-            catch (EndpointNotFoundException)
+        public double Result()
+        {
+            string res = "";
             {
-                Error = "СЕРВИС НЕ ЗАПУЩЕН!";
+                double sqrWall;
+                sqrWall = (heightWall * widthWall);
+                double sqrTile;
+                sqrTile = (heightTile * widthTile);
+                double result;
+                result = (sqrWall / sqrTile);
+                {
+
+                    return result;
+                }
             }
         }
-
-        public string Error { get; set; }
     }
 }
+
+
+

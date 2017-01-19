@@ -30,7 +30,9 @@ namespace TestWcfSite.Models.AlekseyAntonov
         public  List<OneService> ListServices()
         {
             var servicesView = new ServicesViewerClient();
-            List<OneService> services = new List<OneService>(servicesView.ServicesSearcher());
+            var services = new List<OneService>(servicesView.ServicesSearcher());
+            //foreach(var t in service)
+            //{ List<OneService> services = }
             servicesView.Close();
             return services;
         }
