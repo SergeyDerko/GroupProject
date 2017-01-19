@@ -175,6 +175,7 @@
     <Compile Include="Models\AlekseyAntonov\oneService.cs" />
     <Compile Include="Models\AlekseyAntonov\ServicesViewerModel.cs" />
     <Compile Include="Models\AnastasiaNepomiluyev\ManipulateWithNumbersModel.cs" />
+    <Compile Include="Models\AnastasiaNepomiluyev\TimeOfDayClient.cs" />
     <Compile Include="Models\AnastasiaNepomiluyev\User.cs" />
     <Compile Include="Models\Calc\CalcModel.cs" />
     <Compile Include="Models\DanilaModels\ExpressionD.cs" />
@@ -282,6 +283,7 @@
     <Content Include="Views\Danila\Plitka.cshtml" />
     <Content Include="Views\Yuriy\CurrencyRate.cshtml" />
     <Content Include="Views\AlekseyAntonov\ServicesViewer.cshtml" />
+    <Content Include="Views\AnastasiaNepomiluyev\TimeOfDay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
