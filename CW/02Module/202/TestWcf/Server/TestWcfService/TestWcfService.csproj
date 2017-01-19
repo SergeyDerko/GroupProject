@@ -83,6 +83,10 @@
       <Project>{48ffa191-a8a6-46ce-b053-68f994645fe5}</Project>
       <Name>ServicesViewerLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Oleg\MeteoTempServiceLib\MeteoTempServiceLib.csproj">
+      <Project>{849dd028-9d2f-4d56-b71f-9f0b68e24e64}</Project>
+      <Name>MeteoTempServiceLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pikhota\CurrencyConvertWcfLib\CurrencyConvertLib.csproj">
       <Project>{77f6cbd6-b5b2-48c7-8775-7ec4198999a1}</Project>
       <Name>CurrencyConvertLib</Name>
