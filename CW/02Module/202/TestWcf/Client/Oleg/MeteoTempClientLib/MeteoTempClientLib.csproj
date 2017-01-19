@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{849DD028-9D2F-4D56-B71F-9F0B68E24E64}</ProjectGuid>
+    <ProjectGuid>{356E8D70-D792-4954-854D-3FD1B4E706B3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MeteoTempServiceLib</RootNamespace>
-    <AssemblyName>MeteoTempServiceLib</AssemblyName>
+    <RootNamespace>MeteoTempClientLib</RootNamespace>
+    <AssemblyName>MeteoTempClientLib</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,9 +42,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMeteoTemp.cs" />
-    <Compile Include="MeteoTemp.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\MeteoTempServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\MeteoTempServiceReference\CurrentMeteoTemp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MeteoTempServiceReference\CurrentMeteoTemp1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MeteoTempServiceReference\MeteoTemp.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MeteoTempServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MeteoTempServiceReference\CurrentMeteoTemp.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MeteoTempServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MeteoTempServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MeteoTempServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

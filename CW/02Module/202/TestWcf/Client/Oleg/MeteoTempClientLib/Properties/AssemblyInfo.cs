@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CurrentTimerLibrary")]
+[assembly: AssemblyTitle("MeteoTempClientLib")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("CurrentTimerLibrary")]
+[assembly: AssemblyProduct("MeteoTempClientLib")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a0a86796-8ffd-454d-904e-882674731947")]
+[assembly: Guid("356e8d70-d792-4954-854d-3fd1b4e706b3")]
 
 // Version information for an assembly consists of the following four values:
 //

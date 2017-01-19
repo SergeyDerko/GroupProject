@@ -119,5 +119,12 @@ namespace TestWcfSite.Controllers
         {
             newM = first + " * " + second + " = " + third;
         }*/
+
+        public ActionResult MeteoTemp()
+        {
+            var currentTemp = new MeteoTemp();
+            ViewBag.CurrentTemp = currentTemp.CurrentMeteo;
+            return View();
+        }
     }
 }

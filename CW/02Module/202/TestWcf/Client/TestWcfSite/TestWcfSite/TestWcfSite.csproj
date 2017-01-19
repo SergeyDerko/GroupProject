@@ -179,6 +179,7 @@
     <Compile Include="Models\Calc\CalcModel.cs" />
     <Compile Include="Models\DanilaModels\ExpressionD.cs" />
     <Compile Include="Models\DanilaModels\Plitka.cs" />
+    <Compile Include="Models\KhlopovOlegModel\MeteoTemp.cs" />
     <Compile Include="Models\KhlopovOlegModel\User.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\Calculator.cs" />
     <Compile Include="Models\PikhotaSerhiiModels\CurrencyConverter.cs" />
@@ -282,6 +283,7 @@
     <Content Include="Views\Danila\Plitka.cshtml" />
     <Content Include="Views\Yuriy\CurrencyRate.cshtml" />
     <Content Include="Views\AlekseyAntonov\ServicesViewer.cshtml" />
+    <Content Include="Views\Oleg\MeteoTemp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -307,6 +309,10 @@
     <ProjectReference Include="..\..\Aleksey\ServicesViewerClientLib\ServicesViewerClientLib.csproj">
       <Project>{efe62342-1a3b-4f21-aefb-f5770b913f7a}</Project>
       <Name>ServicesViewerClientLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Oleg\MeteoTempClientLib\MeteoTempClientLib.csproj">
+      <Project>{356e8d70-d792-4954-854d-3fd1b4e706b3}</Project>
+      <Name>MeteoTempClientLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Pikhota\CurrencyConvertClientLib\CurrencyConvertClientLib.csproj">
       <Project>{be3bd64e-35e2-4967-835c-d57e527818ad}</Project>

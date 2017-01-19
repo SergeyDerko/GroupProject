@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CurrentTimerLibrary
+namespace MeteoTempClientLib
 {
     public class Class1
     {
+
     }
 }
