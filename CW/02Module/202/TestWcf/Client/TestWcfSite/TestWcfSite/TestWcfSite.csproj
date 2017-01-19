@@ -285,11 +285,8 @@
     <Content Include="Views\Danila\Plitka.cshtml" />
     <Content Include="Views\Yuriy\CurrencyRate.cshtml" />
     <Content Include="Views\AlekseyAntonov\ServicesViewer.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Oleg\MeteoTemp.cshtml" />
-=======
     <Content Include="Views\AnastasiaNepomiluyev\TimeOfDay.cshtml" />
->>>>>>> 918d8ae82f6aa3c91846ab2892ab9a14176187f3
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
