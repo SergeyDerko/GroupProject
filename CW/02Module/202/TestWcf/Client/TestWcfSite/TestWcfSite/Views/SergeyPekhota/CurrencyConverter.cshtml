@@ -11,6 +11,12 @@
         @Html.Label("Я хочу")
         Купить:  @Html.RadioButton("act", "buy",true)
         Продать: @Html.RadioButton("act", "sell",false)
+        <select name="toCurrency">
+            @foreach (var currencyNames in Model.GetCurrencyNames())
+            {
+                <option value="@currencyNames">@currencyNames</option>
+            }
+        </select>
     </div>
     <div>
         @Html.Label("Сумма")
@@ -21,12 +27,6 @@
     </div>
     <div>
         <input type="submit" name="Change" value="Результат" />
-        <select name="toCurrency">
-            @foreach (var currencyNames in Model.GetCurrencyNames())
-            {
-                <option value="@currencyNames">@currencyNames</option>
-            }
-        </select>
     </div>
             
 }
