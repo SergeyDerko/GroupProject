@@ -50,6 +50,12 @@
     <Compile Include="ScanPc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\TestWcfCommon\TestWcfCommon.csproj">
+      <Project>{6D360C5F-A3E9-471A-84AF-09FC8A7EAA13}</Project>
+      <Name>TestWcfCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

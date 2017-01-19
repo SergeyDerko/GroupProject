@@ -8,7 +8,7 @@ using CurrencyConvertWcfLib;
 using CurrencyRateServiceLibrary;
 using ServicesViewerLib;
 using TestWcfCommon;
-using MeteoTempServiceLib;
+//using MeteoTempServiceLib;
 
 namespace TestWcfService
 {
@@ -22,7 +22,7 @@ namespace TestWcfService
         private readonly BaseService<Plitka> _plitka = new BaseService<Plitka>();
         private readonly BaseService<CurrencyConvert> _currencyConvert = new BaseService<CurrencyConvert>();
         private readonly BaseService<ServicesViewer> _servicesViewer = new BaseService<ServicesViewer>();
-        private readonly BaseService<MeteoTemp> _meteoTemp = new BaseService<MeteoTemp>();
+       // private readonly BaseService<MeteoTemp> _meteoTemp = new BaseService<MeteoTemp>();
 
         public void StartSvc()
         {
@@ -35,7 +35,7 @@ namespace TestWcfService
             _plitka.Start();
             _currencyConvert.Start();
             _servicesViewer.Start();
-            _meteoTemp.Start();
+           // _meteoTemp.Start();
             Logger.Leave();
         }
 
@@ -50,7 +50,7 @@ namespace TestWcfService
             _plitka.Stop();
             _currencyConvert.Stop();
             _servicesViewer.Stop();
-            _meteoTemp.Stop();
+            //_meteoTemp.Stop();
             Logger.Leave();
         }
 
