@@ -14,6 +14,7 @@ namespace TestWcfSite.Controllers
         public ActionResult Index()
         {
             ViewBag.User = new TestWcfSite.Models.AnastasiaNepomiluyev.User();
+            ViewBag.TimeOfDayBlock = new TestWcfSite.Models.AnastasiaNepomiluyev.TimeOfDayClient();
             return View();
         }
 
@@ -29,6 +30,13 @@ namespace TestWcfSite.Controllers
         {
             ViewBag.UserToString = String.Format("Result: {0} {1} {2}", user.FirstName, user.LastName, user.Age);
             return View(user);
+        }
+
+        public ActionResult TimeOfDay(TestWcfSite.Models.AnastasiaNepomiluyev.TimeOfDayClient timeOfDay)
+        {
+            timeOfDay.SetTimeOfDay();
+            ViewBag.ShowTimeOfDay = timeOfDay.TimeOfDay;
+            return View(timeOfDay);
         }
 
         #endregion
