@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 using System.Web.Mvc;
 using TestWcfSite.Models.PikhotaSerhiiModels;
@@ -15,18 +14,20 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
-        public ActionResult CurrencyConverter()
+        public ActionResult CurrencyConverter(CurrencyConverter converter)
         {
-            return View();
+            return View(converter);
         }
 
         [HttpPost]
-        public ActionResult CurrencyConverter(CurrencyConverter converter, int count, string fromCurrency, string toCurrency)
+        public ActionResult CurrencyConverter(CurrencyConverter converter, int count, string fromCurrency, string toCurrency,string act)
         {
             using (converter)
             {
-                var result = converter.SrvConvertCurrency.ChangeCurrency(fromCurrency, toCurrency, count);
-                ViewBag.Result = result;
+                ViewBag.Result = "Результат: "+converter.SrvConvertCurrency.ChangeCurrency(fromCurrency,toCurrency,count,act);
+                ViewBag.Currency = toCurrency;
+                //var result = converter.SrvConvertCurrency.ChangeCurrency(fromCurrency, toCurrency, count);
+                //ViewBag.Result = result;
             }
             return View(converter);
         }
@@ -177,6 +178,7 @@ namespace TestWcfSite.Controllers
         #endregion
 
         #region OtherMethods
+        
         /*public string Info()
         {
             var b = new StringBuilder();

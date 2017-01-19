@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.ServiceModel;
 
 namespace CurrencyConvertLib
@@ -7,6 +7,6 @@ namespace CurrencyConvertLib
     public interface ICurrencyConvert
     {
         [OperationContract]
-        string ChangeCurrency(string fromCurrency, string toCurrency,int count);
+        string ChangeCurrency(string fromCurrency, string toCurrency,int count,string action);
     }
 }

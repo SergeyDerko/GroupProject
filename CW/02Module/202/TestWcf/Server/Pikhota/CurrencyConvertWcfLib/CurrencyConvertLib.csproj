@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,6 +46,16 @@
     <Compile Include="CurrencyConvert.cs" />
     <Compile Include="ICurrencyConvert.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Client\Pikhota\CurrencyConvertClientLib\CurrencyConvertClientLib.csproj">
+      <Project>{BE3BD64E-35E2-4967-835C-D57E527818AD}</Project>
+      <Name>CurrencyConvertClientLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Yuriy\CurrencyRateServiceLibrary\CurrencyRateServiceLibrary.csproj">
+      <Project>{ab70722b-c3ec-4447-a375-837297cdf2a4}</Project>
+      <Name>CurrencyRateServiceLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

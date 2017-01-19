@@ -41,3 +41,9 @@ textarea {
     align-content: center;
 }
 
+.selector-item {
+    display: inline-block;
+    list-style: none;
+    border-left: 1px solid #c8e5f6
+}
+
