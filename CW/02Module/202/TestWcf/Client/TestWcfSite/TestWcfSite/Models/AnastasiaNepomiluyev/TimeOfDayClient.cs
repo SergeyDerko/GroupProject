@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ServiceModel;
+using TimeOfDayConvertLib.TimeOfDayServiceReference;
 
 namespace TestWcfSite.Models.AnastasiaNepomiluyev
 {
@@ -11,7 +13,17 @@ namespace TestWcfSite.Models.AnastasiaNepomiluyev
 
         public void SetTimeOfDay()
         {
-            TimeOfDay = "Hello World!";
+            try
+            {
+                TimeOfDayConverterClient client = new TimeOfDayConverterClient();
+                TimeOfDay = client.ConvertDateToTimeOfDay(DateTime.Now);
+                client.Close();
+            }
+            catch (EndpointNotFoundException e)
+            {
+                TimeOfDay = "Попытка обращения к сервису закончилась неудачно :(";
+            }
+            
         }
     }
 }

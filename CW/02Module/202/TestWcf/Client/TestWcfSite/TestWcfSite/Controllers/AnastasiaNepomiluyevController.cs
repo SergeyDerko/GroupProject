@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Web;
 using System.Web.Mvc;
 
 namespace TestWcfSite.Controllers
@@ -14,7 +11,8 @@ namespace TestWcfSite.Controllers
         public ActionResult Index()
         {
             ViewBag.User = new TestWcfSite.Models.AnastasiaNepomiluyev.User();
-            ViewBag.TimeOfDayBlock = new TestWcfSite.Models.AnastasiaNepomiluyev.TimeOfDayClient();
+            ViewBag.TimeOfDayModel = new TestWcfSite.Models.AnastasiaNepomiluyev.TimeOfDayClient();
+            //var time = TimeOfDay(ViewBag.TimeOfDayModel);
             return View();
         }
 
@@ -35,7 +33,6 @@ namespace TestWcfSite.Controllers
         public ActionResult TimeOfDay(TestWcfSite.Models.AnastasiaNepomiluyev.TimeOfDayClient timeOfDay)
         {
             timeOfDay.SetTimeOfDay();
-            ViewBag.ShowTimeOfDay = timeOfDay.TimeOfDay;
             return View(timeOfDay);
         }
 

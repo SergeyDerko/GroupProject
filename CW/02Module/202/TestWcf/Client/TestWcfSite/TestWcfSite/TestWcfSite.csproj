@@ -319,6 +319,10 @@
       <Project>{ADDB2438-3EC2-4C5D-9F33-B2951475D666}</Project>
       <Name>TestWcfService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\TimeOfDayConvertLib\TimeOfDayConvertLib.csproj">
+      <Project>{01670c00-7122-4d30-ba8d-d0b8b8acc21c}</Project>
+      <Name>TimeOfDayConvertLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Aleksey\ServicesViewerClientLib\ServicesViewerClientLib.csproj">
       <Project>{efe62342-1a3b-4f21-aefb-f5770b913f7a}</Project>
       <Name>ServicesViewerClientLib</Name>
