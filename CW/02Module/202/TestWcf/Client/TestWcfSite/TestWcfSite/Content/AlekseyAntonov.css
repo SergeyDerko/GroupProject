@@ -1,0 +1,26 @@
+﻿body {
+}
+
+a.button1 {
+  position: relative;
+  display: inline-block;
+  color: #777674;
+  font-weight: bold;
+  text-decoration: none;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px rgb(128, 128, 128) inset;
+  user-select: none;
+  padding: 1em 2em;
+  outline: none;
+  border-radius: 3px / 100%;
+}
+a.button1:hover {
+  background: rgb(232,95,76);
+  transition: .5s linear;
+  background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+}
+a.button1:active {
+  background: rgb(152,15,0);
+  box-shadow: 0 3px rgb(105, 12, 12) inset;
+  top: 1px;
+}

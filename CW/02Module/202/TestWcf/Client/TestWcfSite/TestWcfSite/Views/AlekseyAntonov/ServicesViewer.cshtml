@@ -4,35 +4,50 @@
 @using TestWcfSite.Models.AlekseyAntonov
 @model TestWcfSite.Models.AlekseyAntonov.ServicesViewerModel
 
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 
 <html>
 <head>
+    <link href="../../Content/AlekseyAntonov.css" rel="stylesheet">
     <title>Перечень сервисов</title>
 </head>
 <body>
 <div>
+    <br/>
     <table width="700" border="1">
         @{
-            foreach (var t in ViewBag.allServices)
-            {
-                @Html.Raw("<tr>")
-                @Html.Raw("<td>")
-                @Html.Raw("BaseAddress: " + t.BaseAddress + "<br/>");
-                @Html.Raw("BehaviorName: " + t.BehaviorName + "<br/>");
-                @Html.Raw("EndpointBinding: " + t.EndpointBinding + "<br/>");
-                @Html.Raw("EndPointContract: " + t.EndpointContract + "<br/>");
-                @Html.Raw("Service BehaviorConfiguration: " + t.ServiceBehaviorConfiguration + "<br/>");
-                @Html.Raw("</td>")
-                @Html.Raw("<td align='center'>")
-                <input id="Button1" type="button" value="@t.ServiceName" />
+                int num = 0;
+                string link;
 
+                foreach (var t in ViewBag.allServices)
+                {
+                    @Html.Raw("<tr>")
+                    @Html.Raw("<td>")
+                    @Html.Raw("BaseAddress: " + t.BaseAddress + "<br/>");
+                    @Html.Raw("BehaviorName: " + t.BehaviorName + "<br/>");
+                    @Html.Raw("EndpointBinding: " + t.EndpointBinding + "<br/>");
+                    @Html.Raw("EndPointContract: " + t.EndpointContract + "<br/>");
+                    @Html.Raw("Service BehaviorConfiguration: " + t.ServiceBehaviorConfiguration + "<br/>");
+                    @Html.Raw("</td>")
+                    @Html.Raw("<td align='center'>")
+                    //@Html.ActionLink("SergeyDerko", "ScanPcResult", "SergeyDerko")
+                link = "/" + ViewBag.allControlls[num].nameController + "/" + @ViewBag.allControlls[num].nameAction;
+                <a href="@link" class="button1">@ViewBag.allControlls[num].nameAction</a>
+                //< input id = "Button1" type = "button" value = "@t.ServiceName " />
                 @Html.Raw("</td>")
                 @Html.Raw("</tr>")
+
+                num++;
+                @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Math", "Index", "Calc")</li>
+                    <li>@Html.ActionLink("Yuriy", "Index", "Yuriy")</li>
+                    <li>@Html.ActionLink("AnastasiaNepomiluyev", "Index", "AnastasiaNepomiluyev")</li>
+                    <li>@Html.ActionLink("AlekseyAntonov", "Index", "AlekseyAntonov")</li>
+                    <li>@Html.ActionLink("SergeyDerko", "Index", "SergeyDerko")</li>
+                    <li>@Html.ActionLink("SergeyPekhota", "Index", "SergeyPekhota")</li>
+                    <li>@Html.ActionLink("Artem", "Index", "Artem")</li>
+                    <li>@Html.ActionLink("Oleg", "Index", "Oleg")</li>
+                    <li>@Html.ActionLink("Danila", "Index", "Danila")</li>*@
             }
         }
     </table>

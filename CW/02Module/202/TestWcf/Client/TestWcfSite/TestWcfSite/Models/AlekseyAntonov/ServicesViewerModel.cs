@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TestWcfSite.Models.AlekseyAntonov
 {
-    public class ServicesViewerModel 
+    public class ServicesViewerModel
     {
         public string BehaviorName { get; set; }
         public string ServiceBehaviorConfiguration { get; set; }
@@ -12,7 +12,7 @@ namespace TestWcfSite.Models.AlekseyAntonov
         public string EndpointContract { get; set; }
         public string BaseAddress { get; set; }
 
-        public ServicesViewerModel(){}
+        public ServicesViewerModel() { }
 
         public ServicesViewerModel(int num)
         {
@@ -27,7 +27,7 @@ namespace TestWcfSite.Models.AlekseyAntonov
             servicesView.Close();
         }
 
-        public  List<OneService> ListServices()
+        public List<OneService> ListServices()
         {
             var servicesView = new ServicesViewerClient();
             var services = new List<OneService>(servicesView.ServicesSearcher());
@@ -35,6 +35,30 @@ namespace TestWcfSite.Models.AlekseyAntonov
             //{ List<OneService> services = }
             servicesView.Close();
             return services;
+        }
+    }
+
+
+    public class OneController
+    {
+        public string nameController { get; set; }
+        public string nameAction { get; set; }
+
+       public OneController(string controller, string action)
+        {
+            this.nameController = controller;
+            this.nameAction = action;
+        }
+        
+
+    }
+
+    public class AllControllers
+    {
+        public List<OneController> controllerCollection;// = new List<Controllers>();
+        public AllControllers()
+        {
+            controllerCollection = new List<OneController>();
         }
     }
 }
