@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{E0C276AC-8717-4F50-94CD-F432BC1E962B}"
 EndProject
@@ -108,6 +108,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Oleg", "Oleg", "{4C3AF243-2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteoTempClientLib", "Client\Oleg\MeteoTempClientLib\MeteoTempClientLib.csproj", "{356E8D70-D792-4954-854D-3FD1B4E706B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadLoger", "Client\SergeyDerko\ReadLoger\ReadLoger.csproj", "{F8FCB2DB-DEB8-4C6C-899D-0DF7075D78A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -206,6 +208,10 @@ Global
 		{356E8D70-D792-4954-854D-3FD1B4E706B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{356E8D70-D792-4954-854D-3FD1B4E706B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{356E8D70-D792-4954-854D-3FD1B4E706B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8FCB2DB-DEB8-4C6C-899D-0DF7075D78A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8FCB2DB-DEB8-4C6C-899D-0DF7075D78A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8FCB2DB-DEB8-4C6C-899D-0DF7075D78A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8FCB2DB-DEB8-4C6C-899D-0DF7075D78A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -248,5 +254,6 @@ Global
 		{849DD028-9D2F-4D56-B71F-9F0B68E24E64} = {A159893B-909E-4528-BF7D-1C97299A56E2}
 		{4C3AF243-2BA5-49EC-974D-91910ED003E5} = {5F88A5CE-40F6-4A63-852B-9D1539B0265B}
 		{356E8D70-D792-4954-854D-3FD1B4E706B3} = {4C3AF243-2BA5-49EC-974D-91910ED003E5}
+		{F8FCB2DB-DEB8-4C6C-899D-0DF7075D78A1} = {CF8FF486-E641-45C5-8266-78A60E52176D}
 	EndGlobalSection
 EndGlobal

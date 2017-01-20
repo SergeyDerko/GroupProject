@@ -188,6 +188,7 @@
     <Compile Include="Models\PikhotaSerhiiModels\User.cs" />
     <Compile Include="Models\SergeyDerkoModels\CalcModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\Expression11.cs" />
+    <Compile Include="Models\SergeyDerkoModels\ReadLogModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\ScanPcModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\User11.cs" />
     <Compile Include="Models\Yuriymodels\Client.cs" />
@@ -287,6 +288,7 @@
     <Content Include="Views\AlekseyAntonov\ServicesViewer.cshtml" />
     <Content Include="Views\Oleg\MeteoTemp.cshtml" />
     <Content Include="Views\AnastasiaNepomiluyev\TimeOfDay.cshtml" />
+    <Content Include="Views\SergeyDerko\InfoLog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -320,6 +322,10 @@
     <ProjectReference Include="..\..\Pikhota\CurrencyConvertClientLib\CurrencyConvertClientLib.csproj">
       <Project>{be3bd64e-35e2-4967-835c-d57e527818ad}</Project>
       <Name>CurrencyConvertClientLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SergeyDerko\ReadLoger\ReadLoger.csproj">
+      <Project>{f8fcb2db-deb8-4c6c-899d-0df7075d78a1}</Project>
+      <Name>ReadLoger</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\SergeyDerko\SergeyDerkoLibrary\SergeyDerkoLibrary.csproj">
       <Project>{92597dc6-10fe-497f-8982-40c220d70c52}</Project>

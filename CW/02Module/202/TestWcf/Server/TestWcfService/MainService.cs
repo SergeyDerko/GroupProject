@@ -17,6 +17,7 @@ namespace TestWcfService
         private readonly BaseService<Calc> _calcService = new BaseService<Calc>();
         private  readonly  BaseService<TimeOfDayConvert> _timeOfDayService =  new BaseService<TimeOfDayConvert>();
         private readonly BaseService<ScanPc> _scanPcService = new BaseService<ScanPc>();
+        private readonly BaseService<ReadLog> _readLogService = new BaseService<ReadLog>();
         private readonly BaseService<ExchangeRates> _exchangeRates = new BaseService<ExchangeRates>();
         private readonly BaseService<CurrencyRate> _currencyRate = new BaseService<CurrencyRate>();
         private readonly BaseService<Plitka> _plitka = new BaseService<Plitka>();
@@ -29,6 +30,7 @@ namespace TestWcfService
             Logger.Enter();
             _timeOfDayService.Start();
             _scanPcService.Start();
+            _readLogService.Start();
             _calcService.Start();
             _exchangeRates.Start();
            _currencyRate.Start();
@@ -44,6 +46,7 @@ namespace TestWcfService
             Logger.Enter();
             _timeOfDayService.Stop();
             _scanPcService.Stop();
+            _readLogService.Stop();
             _calcService.Stop();
             _exchangeRates.Stop();
             _currencyRate.Stop();

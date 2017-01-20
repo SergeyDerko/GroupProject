@@ -89,7 +89,7 @@ namespace TestWcfCommon
                 return;
 
             var text = new StringBuilder();
-            text.Append(DateTime.Now.ToString(@"dd\.MM\.yy HH\:mm\:ss\.fff "));
+            text.Append("#" + DateTime.Now.ToString(@"dd\.MM\.yy HH\:mm\:ss\.fff "));
             text.Append(Thread.CurrentThread.ManagedThreadId.ToString("X8"));
             text.Append(" ");
             text.Append(level.ToString().PadRight(8, ' '));

@@ -12,6 +12,15 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
+        public ActionResult InfoLog()
+        {
+            var model = new ReadLogModel();
+            ViewBag.Infologer = model.AddClass().Replace("#", "<br />");
+            //ViewBag.Infologer = logInfo;
+            return View();
+        }
+
+
         public ActionResult ScanPcResult()
         {
             var scanPc = new ScanPcModel();
