@@ -9,9 +9,14 @@
 {
     <div>
         @Html.Label("Я хочу")
-        Купить:  @Html.RadioButton("act", "buy",true)
-        Продать: @Html.RadioButton("act", "sell",false)
-        <select name="toCurrency">
+        Купить:  @Html.RadioButton("act", "buy", true)
+        Продать: @Html.RadioButton("act", "sell")
+    </div>
+    <div>
+        @Html.Label("Сумма")
+        @Html.TextBox("count")
+        <select name="fromCurrency">
+            <option value="UAH">UAH</option>
             @foreach (var currencyNames in Model.GetCurrencyNames())
             {
                 <option value="@currencyNames">@currencyNames</option>
@@ -19,16 +24,18 @@
         </select>
     </div>
     <div>
-        @Html.Label("Сумма")
-        @Html.TextBox("count")
-        <select name="fromCurrency">
+        <select name="toCurrency">
             <option value="UAH">UAH</option>
+            @foreach (var currencyNames in Model.GetCurrencyNames())
+            {
+                <option value="@currencyNames">@currencyNames</option>
+            }
         </select>
     </div>
     <div>
         <input type="submit" name="Change" value="Результат" />
     </div>
-            
+
 }
-<b>@ViewBag.Result @ViewBag.Currency</b>
+<b>Результат: @ViewBag.Result @ViewBag.Currency</b>
 

@@ -35,6 +35,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +52,10 @@
     <ProjectReference Include="..\..\..\Client\Pikhota\CurrencyConvertClientLib\CurrencyConvertClientLib.csproj">
       <Project>{BE3BD64E-35E2-4967-835C-D57E527818AD}</Project>
       <Name>CurrencyConvertClientLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\TestWcfCommon\TestWcfCommon.csproj">
+      <Project>{6D360C5F-A3E9-471A-84AF-09FC8A7EAA13}</Project>
+      <Name>TestWcfCommon</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Yuriy\CurrencyRateServiceLibrary\CurrencyRateServiceLibrary.csproj">
       <Project>{ab70722b-c3ec-4447-a375-837297cdf2a4}</Project>

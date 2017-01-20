@@ -1,59 +1,117 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using System.Collections.Generic;
 using CurrencyConvertLib;
 using CurrencyRateServiceLibrary;
+using TestWcfCommon;
 
 namespace CurrencyConvertWcfLib
 {
     public class CurrencyConvert : ICurrencyConvert
     {
 
-        public string ChangeCurrency(string fromCurrency, string toCurrency, int count, string action)
+        public double ChangeCurrency(string fromCurrency, string toCurrency, int count, string action)
         {
+            Logger.Enter();
+            var list = new List<Currency>(new CurrencyRate().CurrentRate());
             double result = 0;
-            switch (fromCurrency)
+            foreach (var item in list)
             {
-                case "UAH":
+                Logger.Write(Level.Debug, "Выбор валюты для покупки/продажи");
+                if (fromCurrency == item.CurrencyName)
                 {
+                    Logger.Write(Level.Info, $"Выбрана валюта {fromCurrency}");
+                    Logger.Write(Level.Debug, "Выбор действия");
                     switch (action)
                     {
                         case "buy":
-                            result = GetResultPurchase(toCurrency, count);
+                            Logger.Write(Level.Info, $"Выбрано действие купить {count} {fromCurrency} за {toCurrency}");
+                            result = GetResultPurchase(fromCurrency, toCurrency, count);
                             break;
                         case "sell":
-                            result = GetResultSell(toCurrency, count);
+                            Logger.Write(Level.Info, $"Выбрано действие продать {count} {fromCurrency} за {toCurrency}");
+                            result = GetResultSell(fromCurrency, toCurrency, count);
                             break;
                     }
-                    break;
                 }
+                else
+                {
+                    //Если выбрана гривна
+                    Logger.Write(Level.Info, $"Выбрана валюта {fromCurrency}");
+                    Logger.Write(Level.Debug, "Выбор действия");
+                    switch (action)
+                    {
+                        case "buy":
+                            Logger.Write(Level.Info, $"Выбрано действие купить {count} {fromCurrency} за {toCurrency}");
+                            result = GetResultPurchase(fromCurrency, toCurrency, count);
+                            break;
+                        case "sell":
+                            Logger.Write(Level.Info, $"Выбрано действие продать {count} {fromCurrency} за {toCurrency}");
+                            result = GetResultSell(fromCurrency, toCurrency, count);
+                            break;
+                    }
+                }
+                
             }
-            return result.ToString(CultureInfo.CurrentCulture);
+            Logger.Leave(result);
+            return result;
         }
 
-        public double GetResultPurchase(string toCurrency, int count)
+        public double GetResultPurchase(string fromCurrency, string toCurrency, int count)
         {
             var list = new List<Currency>(new CurrencyRate().CurrentRate());
             double result = 0;
-            foreach (var i in list)
+            foreach (var f in list)
             {
-                if (toCurrency == i.CurrencyName)
+                if (fromCurrency == f.CurrencyName || fromCurrency == "UAH")
                 {
-                    result = count / i.Purchase;
+                    foreach (var t in list)
+                    {
+                        if (fromCurrency == "UAH")
+                        {
+                            result = count / t.Sale;
+                            break;
+                        }
+                        if (toCurrency == "UAH")
+                        {
+                            result = count * t.Sale;
+                            break;
+                        }
+                        if (toCurrency == t.CurrencyName)
+                        {
+                            result = count * f.Sale / t.Sale;
+                            break;
+                        }
+                    }
                 }
             }
             return result;
         }
 
-        public double GetResultSell(string toCurrency, int count)
+        public double GetResultSell(string fromCurrency, string toCurrency, int count)
         {
             var list = new List<Currency>(new CurrencyRate().CurrentRate());
             double result = 0;
-            foreach (var i in list)
+            foreach (var f in list)
             {
-                if (toCurrency == i.CurrencyName)
+                if (fromCurrency == f.CurrencyName || fromCurrency == "UAH")
                 {
-                    result = count / i.Sale;
+                    foreach (var t in list)
+                    {
+                        if (toCurrency == t.CurrencyName)
+                        {
+                            result = count * f.Purchase / t.Purchase;
+                            break;
+                        }
+                        if (fromCurrency == "UAH")
+                        {
+                            result = count * t.Purchase;
+                            break;
+                        }
+                        if (toCurrency == "UAH")
+                        {
+                            result = count * t.Purchase;
+                            break;
+                        }
+                    }
                 }
             }
             return result;

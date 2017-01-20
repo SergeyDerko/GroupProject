@@ -16,10 +16,10 @@ namespace CurrencyConvertClientLib.CurrencyConvertServiceReference {
     public interface ICurrencyConvert {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICurrencyConvert/ChangeCurrency", ReplyAction="http://tempuri.org/ICurrencyConvert/ChangeCurrencyResponse")]
-        string ChangeCurrency(string fromCurrency, string toCurrency, int count, string action);
+        double ChangeCurrency(string fromCurrency, string toCurrency, int count, string action);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICurrencyConvert/ChangeCurrency", ReplyAction="http://tempuri.org/ICurrencyConvert/ChangeCurrencyResponse")]
-        System.Threading.Tasks.Task<string> ChangeCurrencyAsync(string fromCurrency, string toCurrency, int count, string action);
+        System.Threading.Tasks.Task<double> ChangeCurrencyAsync(string fromCurrency, string toCurrency, int count, string action);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,11 +49,11 @@ namespace CurrencyConvertClientLib.CurrencyConvertServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public string ChangeCurrency(string fromCurrency, string toCurrency, int count, string action) {
+        public double ChangeCurrency(string fromCurrency, string toCurrency, int count, string action) {
             return base.Channel.ChangeCurrency(fromCurrency, toCurrency, count, action);
         }
         
-        public System.Threading.Tasks.Task<string> ChangeCurrencyAsync(string fromCurrency, string toCurrency, int count, string action) {
+        public System.Threading.Tasks.Task<double> ChangeCurrencyAsync(string fromCurrency, string toCurrency, int count, string action) {
             return base.Channel.ChangeCurrencyAsync(fromCurrency, toCurrency, count, action);
         }
     }

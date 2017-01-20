@@ -24,10 +24,8 @@ namespace TestWcfSite.Controllers
         {
             using (converter)
             {
-                ViewBag.Result = "Результат: "+converter.SrvConvertCurrency.ChangeCurrency(fromCurrency,toCurrency,count,act);
+                ViewBag.Result = converter.SrvConvertCurrency.ChangeCurrency(fromCurrency, toCurrency, count, act);
                 ViewBag.Currency = toCurrency;
-                //var result = converter.SrvConvertCurrency.ChangeCurrency(fromCurrency, toCurrency, count);
-                //ViewBag.Result = result;
             }
             return View(converter);
         }
@@ -178,7 +176,9 @@ namespace TestWcfSite.Controllers
         #endregion
 
         #region OtherMethods
+
         
+
         /*public string Info()
         {
             var b = new StringBuilder();

@@ -303,6 +303,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\TestWcfCommon\TestWcfCommon.csproj">
+      <Project>{6D360C5F-A3E9-471A-84AF-09FC8A7EAA13}</Project>
+      <Name>TestWcfCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\PlitkaClientLib\PlitkaClientLib.csproj">
       <Project>{E0DDE38F-CEDA-465A-9970-F483830336A2}</Project>
       <Name>PlitkaClientLib</Name>
@@ -310,6 +314,10 @@
     <ProjectReference Include="..\..\..\PlitkaLib\PlitkaLib.csproj">
       <Project>{42D39536-BCAD-48F8-B81A-A972FE66C8A3}</Project>
       <Name>PlitkaLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Server\TestWcfService\TestWcfService.csproj">
+      <Project>{ADDB2438-3EC2-4C5D-9F33-B2951475D666}</Project>
+      <Name>TestWcfService</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Aleksey\ServicesViewerClientLib\ServicesViewerClientLib.csproj">
       <Project>{efe62342-1a3b-4f21-aefb-f5770b913f7a}</Project>
