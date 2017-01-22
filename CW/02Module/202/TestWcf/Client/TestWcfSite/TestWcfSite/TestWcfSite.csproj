@@ -156,8 +156,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\Config.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\StartLoger.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Controllers\AlekseyAntonovController.cs" />
     <Compile Include="Controllers\AnastasiaNepomiluyevController.cs" />
@@ -307,6 +309,7 @@
     <ProjectReference Include="..\..\..\Common\TestWcfCommon\TestWcfCommon.csproj">
       <Project>{6D360C5F-A3E9-471A-84AF-09FC8A7EAA13}</Project>
       <Name>TestWcfCommon</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
     <ProjectReference Include="..\..\..\PlitkaClientLib\PlitkaClientLib.csproj">
       <Project>{E0DDE38F-CEDA-465A-9970-F483830336A2}</Project>
