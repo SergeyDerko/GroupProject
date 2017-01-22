@@ -8,9 +8,11 @@ namespace MeteoTempServiceLib
         public string CurrentMeteoTemp()
         {
             string temp;
+            //string value = "";
             using (WebClient client = new WebClient())
             {
-                string htmlCode = client.DownloadString("https://www.wunderground.com/personal-weather-station/dashboard?ID=I30KYIV4");
+                string htmlCode = client.DownloadString("https://rss.wunderground.com/auto/rss_full/global/stations/33345.xml");
+
                 temp = htmlCode;
             }
             return $"Temp = {temp}";
