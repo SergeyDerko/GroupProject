@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{E0C276AC-8717-4F50-94CD-F432BC1E962B}"
 EndProject
@@ -110,6 +110,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadLoger", "Client\SergeyD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeOfDayConvertLib", "TimeOfDayConvertLib\TimeOfDayConvertLib.csproj", "{01670C00-7122-4D30-BA8D-D0B8B8ACC21C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBase", "DataBase", "{AEA403D7-BF21-4FA5-AA76-C780029FAC0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcfDB", "DataBase\TestWcfDB\TestWcfDB.csproj", "{8B51648C-B566-4A11-8349-FC8FB6A55F42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -212,6 +216,10 @@ Global
 		{01670C00-7122-4D30-BA8D-D0B8B8ACC21C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01670C00-7122-4D30-BA8D-D0B8B8ACC21C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01670C00-7122-4D30-BA8D-D0B8B8ACC21C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B51648C-B566-4A11-8349-FC8FB6A55F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B51648C-B566-4A11-8349-FC8FB6A55F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B51648C-B566-4A11-8349-FC8FB6A55F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B51648C-B566-4A11-8349-FC8FB6A55F42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -255,5 +263,6 @@ Global
 		{356E8D70-D792-4954-854D-3FD1B4E706B3} = {4C3AF243-2BA5-49EC-974D-91910ED003E5}
 		{F8FCB2DB-DEB8-4C6C-899D-0DF7075D78A1} = {CF8FF486-E641-45C5-8266-78A60E52176D}
 		{01670C00-7122-4D30-BA8D-D0B8B8ACC21C} = {C0593ECF-2623-4D6F-AF00-C710B820878E}
+		{8B51648C-B566-4A11-8349-FC8FB6A55F42} = {AEA403D7-BF21-4FA5-AA76-C780029FAC0E}
 	EndGlobalSection
 EndGlobal
