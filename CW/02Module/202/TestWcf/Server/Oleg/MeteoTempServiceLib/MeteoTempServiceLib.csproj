@@ -45,6 +45,15 @@
     <Compile Include="MeteoTemp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\TestWcfCommon\TestWcfCommon.csproj">
+      <Project>{6d360c5f-a3e9-471a-84af-09fc8a7eaa13}</Project>
+      <Name>TestWcfCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
