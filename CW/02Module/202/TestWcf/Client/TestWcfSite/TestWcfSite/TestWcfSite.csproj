@@ -294,11 +294,8 @@
     <Content Include="Views\Oleg\MeteoTemp.cshtml" />
     <Content Include="Views\AnastasiaNepomiluyev\TimeOfDay.cshtml" />
     <Content Include="Views\SergeyDerko\InfoLog.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Artem\Temperature.cshtml" />
-=======
     <Content Include="Views\Danila\Map.cshtml" />
->>>>>>> 8fabe75d4ba266b3a79b55d48d2f3a3668b2af03
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
