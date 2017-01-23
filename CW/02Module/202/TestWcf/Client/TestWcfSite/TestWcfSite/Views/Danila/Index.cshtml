@@ -1,14 +1,12 @@
-﻿<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <h3>Плитка</h3>
+﻿<div class="col-xs-3">
+    <h3>Plitka</h3>
     <p>
-        <a class="btn btn-default" href="Danila/Plitka">Перейти &raquo;</a>
+        @Html.ActionLink("Перейти", "Plitka","", new { @class = "btn btn-default" })
     </p>
-   </body>
-</html>
-
-   
+</div>
+<div class="col-xs-3">
+    <h3>Map</h3>
+    <p>
+        @Html.ActionLink("Перейти", "Map","", new { @class = "btn btn-default" })
+    </p>
+</div>

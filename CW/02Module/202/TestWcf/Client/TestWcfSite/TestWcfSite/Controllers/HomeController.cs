@@ -29,5 +29,10 @@ namespace TestWcfSite.Controllers
 
             return View();
         }
+
+        public ActionResult Map()
+        {
+          return View();
+        }
     }
 }
