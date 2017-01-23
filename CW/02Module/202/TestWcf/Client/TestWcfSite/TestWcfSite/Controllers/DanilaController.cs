@@ -1,5 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
 using TestWcfSite.Models.DanilaModels;
+
 
 
 namespace TestWcfSite.Controllers
@@ -24,22 +26,27 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
-       [HttpPost] // метод принимающий данные с клиента
+        [HttpPost] // метод принимающий данные с клиента
         public ActionResult Plitka(Plitka model)
         {
-            
-       ViewBag.heightTile = model.heightTile;
+
+            ViewBag.heightTile = model.heightTile;
             ViewBag.heightWall = model.heightWall;
             ViewBag.widthWall = model.widthWall;
             ViewBag.heightTile = model.heightTile;
             ViewBag.widthTile = model.widthTile;
 
             ViewBag.res = model.Result();
-        return View();
-            }
-
+            return View();
         }
 
+        public ActionResult Map()
+        {
+            return View();
+        }
 
+        
     }
+}
+
 
