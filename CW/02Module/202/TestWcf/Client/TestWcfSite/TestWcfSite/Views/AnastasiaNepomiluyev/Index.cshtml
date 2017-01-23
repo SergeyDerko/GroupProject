@@ -3,7 +3,7 @@
 }
 
 <h2>@ViewBag.Title</h2>
-@Html.Partial("TimeOfDay", (TestWcfSite.Models.AnastasiaNepomiluyev.TimeOfDayClient)ViewBag.TimeOfDayModel)
+<h3>@ViewBag.TimeOfDayModel.TimeOfDay</h3>
 <br />
 @Html.ActionLink("Мультипликатор А на Б", "Multiply", "AnastasiaNepomiluyev", new {a = 5, b = 5}, null)
 <br />

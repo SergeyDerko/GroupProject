@@ -12,7 +12,7 @@ namespace TestWcfSite.Controllers
         {
             ViewBag.User = new TestWcfSite.Models.AnastasiaNepomiluyev.User();
             ViewBag.TimeOfDayModel = new TestWcfSite.Models.AnastasiaNepomiluyev.TimeOfDayClient();
-            //var time = TimeOfDay(ViewBag.TimeOfDayModel);
+            ViewBag.TimeOfDayModel.SetTimeOfDay();
             return View();
         }
 
@@ -30,10 +30,12 @@ namespace TestWcfSite.Controllers
             return View(user);
         }
 
-        public ActionResult TimeOfDay(TestWcfSite.Models.AnastasiaNepomiluyev.TimeOfDayClient timeOfDay)
+        public ActionResult TimeOfDay()
         {
-            timeOfDay.SetTimeOfDay();
-            return View(timeOfDay);
+            var TimeOfDayModel = new TestWcfSite.Models.AnastasiaNepomiluyev.TimeOfDayClient();
+            TimeOfDayModel.SetTimeOfDay();
+            ViewBag.CurrentTimeOfDay = TimeOfDayModel.TimeOfDay;
+            return View();
         }
 
         #endregion
