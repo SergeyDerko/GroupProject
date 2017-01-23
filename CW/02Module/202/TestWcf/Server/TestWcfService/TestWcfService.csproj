@@ -83,10 +83,6 @@
       <Project>{48ffa191-a8a6-46ce-b053-68f994645fe5}</Project>
       <Name>ServicesViewerLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Artem\TemperatureServiceLib\TemperatureServiceLib.csproj">
-      <Project>{2623722C-5580-4AA4-AC8F-1B8CB22FC107}</Project>
-      <Name>TemperatureServiceLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Oleg\MeteoTempServiceLib\MeteoTempServiceLib.csproj">
       <Project>{849dd028-9d2f-4d56-b71f-9f0b68e24e64}</Project>
       <Name>MeteoTempServiceLib</Name>

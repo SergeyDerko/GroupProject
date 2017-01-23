@@ -294,11 +294,8 @@
     <Content Include="Views\Oleg\MeteoTemp.cshtml" />
     <Content Include="Views\AnastasiaNepomiluyev\TimeOfDay.cshtml" />
     <Content Include="Views\SergeyDerko\InfoLog.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Artem\Temperature.cshtml" />
-=======
     <Content Include="Views\Danila\Map.cshtml" />
->>>>>>> 8fabe75d4ba266b3a79b55d48d2f3a3668b2af03
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -337,10 +334,6 @@
     <ProjectReference Include="..\..\Aleksey\ServicesViewerClientLib\ServicesViewerClientLib.csproj">
       <Project>{efe62342-1a3b-4f21-aefb-f5770b913f7a}</Project>
       <Name>ServicesViewerClientLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Artem\TemperatureClientLib\TemperatureClientLibrary.csproj">
-      <Project>{CDDFEC31-D087-4E92-B8D6-95EB1377298C}</Project>
-      <Name>TemperatureClientLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Oleg\MeteoTempClientLib\MeteoTempClientLib.csproj">
       <Project>{356e8d70-d792-4954-854d-3fd1b4e706b3}</Project>
