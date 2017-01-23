@@ -31,9 +31,9 @@ namespace TestWcfSite.Controllers
             all.controllerCollection.Add(new OneController("SergeyDerko", "InfoLog"));
             all.controllerCollection.Add(new OneController("Yuriy", "ExchangeRates"));
             all.controllerCollection.Add(new OneController("Yuri", "CurrencyRate"));
+            all.controllerCollection.Add(new OneController("Danila", "Plitka"));
             all.controllerCollection.Add(new OneController("SergeyPekhota", "CurrencyConverter"));
             all.controllerCollection.Add(new OneController("AlekseyAntonov", "ServicesViewer"));
-            all.controllerCollection.Add(new OneController("Danila", "Plitka"));
             all.controllerCollection.Add(new OneController("Artem", "Index"));
             all.controllerCollection.Add(new OneController("Oleg", "MeteoTemp"));
         

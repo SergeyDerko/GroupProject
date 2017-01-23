@@ -3,8 +3,8 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:555/ServicesViewer?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://localhost:555/ServicesViewer?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:555/ServicesViewer?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServicesViewerLib" />
+      <xsd:import schemaLocation="http://localhost:555/ServicesViewer?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IServicesViewer_ServicesSearcher_InputMessage">
@@ -13,10 +13,18 @@
   <wsdl:message name="IServicesViewer_ServicesSearcher_OutputMessage">
     <wsdl:part name="parameters" element="tns:ServicesSearcherResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicesViewer_ServicesSearcher_ValidationFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/ServicesViewerLib" name="detail" element="q1:ValidationFault" />
+  </wsdl:message>
+  <wsdl:message name="IServicesViewer_ServicesSearcher_FileFoundFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/ServicesViewerLib" name="detail" element="q2:FileFound" />
+  </wsdl:message>
   <wsdl:portType name="IServicesViewer">
     <wsdl:operation name="ServicesSearcher">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicesViewer/ServicesSearcher" message="tns:IServicesViewer_ServicesSearcher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicesViewer/ServicesSearcherResponse" message="tns:IServicesViewer_ServicesSearcher_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicesViewer/ServicesSearcherValidationFaultFault" name="ValidationFaultFault" message="tns:IServicesViewer_ServicesSearcher_ValidationFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicesViewer/ServicesSearcherFileFoundFault" name="FileFoundFault" message="tns:IServicesViewer_ServicesSearcher_FileFoundFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServicesViewer" type="tns:IServicesViewer">
@@ -29,6 +37,12 @@
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ValidationFaultFault">
+        <soap:fault use="literal" name="ValidationFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="FileFoundFault">
+        <soap:fault use="literal" name="FileFoundFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="ServicesViewer">
