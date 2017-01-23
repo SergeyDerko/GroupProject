@@ -16,7 +16,17 @@ namespace TestWcfSite.Models.PikhotaSerhiiModels
 
         public CurrencyConverter()
         {
-            CurrencyList = new List<Currency>(SrvCurrencyRate.CurrentRate());
+            CurrencyList = new List<Currency>(SrvCurrencyRate.CurrentRate())
+            {
+                new Currency
+                {
+                    Id = 11,
+                    CurrencyDescription = "Украинская гривна",
+                    CurrencyName = "UAH",
+                    Purchase = 1,
+                    Sale = 1
+                }
+            };
         }
 
 

@@ -16,16 +16,13 @@
         @Html.Label("Сумма")
         @Html.TextBox("count")
         <select name="fromCurrency">
-            <option value="UAH">UAH</option>
             @foreach (var currencyNames in Model.GetCurrencyNames())
             {
                 <option value="@currencyNames">@currencyNames</option>
             }
         </select>
-    </div>
-    <div>
+        @Html.Label("за")
         <select name="toCurrency">
-            <option value="UAH">UAH</option>
             @foreach (var currencyNames in Model.GetCurrencyNames())
             {
                 <option value="@currencyNames">@currencyNames</option>
