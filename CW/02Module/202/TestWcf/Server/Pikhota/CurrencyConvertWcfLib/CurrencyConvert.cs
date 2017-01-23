@@ -11,12 +11,12 @@ namespace CurrencyConvertWcfLib
         private List<Currency> List { get; set; }
         private string FromCurrency { get; set; }
         private string ToCurrency { get; set; }
-        private int Count { get; set; }
+        private int? Count { get; set; }
         private string Change { get; set; }
         private string Action { get; set; }
-        private double Result { get; set; }
+        private double? Result { get; set; }
 
-        public string ChangeCurrency(string fromCurrency, string toCurrency, int count, string action)
+        public string ChangeCurrency(string fromCurrency, string toCurrency, int? count, string action)
         {
             Logger.Enter();
             Logger.Write(Level.Debug, "Иницаилизация переменных...");
@@ -26,7 +26,7 @@ namespace CurrencyConvertWcfLib
             Logger.Write(Level.Debug, "Выбор валюты для покупки/продажи...");
             foreach (var item in List)
             {
-                if (FromCurrency != item.CurrencyName) continue;
+                if (FromCurrency != item.CurrencyName)continue;
                 {
                     Logger.Write(Level.Info, $"Выбрана валюта {FromCurrency}");
                     Result = GetResult(FromCurrency, ToCurrency, Count);
@@ -38,7 +38,7 @@ namespace CurrencyConvertWcfLib
 
         }
         #region Methods
-        private void InitProperties(string fromCurrency, string toCurrency, int count, string action)
+        private void InitProperties(string fromCurrency, string toCurrency, int? count, string action)
         {
             FromCurrency = fromCurrency;
             ToCurrency = toCurrency;
@@ -61,9 +61,9 @@ namespace CurrencyConvertWcfLib
             };
         }
 
-        private double GetResult(string fromCurrency, string toCurrency, int count)
+        private double? GetResult(string fromCurrency, string toCurrency, int? count)
         {
-            double result = 0;
+            double? result = 0;
             foreach (var f in List)
             {
                 if (fromCurrency != f.CurrencyName) continue;

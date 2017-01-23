@@ -6,6 +6,6 @@ namespace CurrencyConvertLib
     public interface ICurrencyConvert
     {
         [OperationContract]
-        string ChangeCurrency(string fromCurrency, string toCurrency,int count,string action);
+        string ChangeCurrency(string fromCurrency, string toCurrency,int? count,string action);
     }
 }

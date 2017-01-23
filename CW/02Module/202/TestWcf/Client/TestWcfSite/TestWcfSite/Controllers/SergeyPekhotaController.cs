@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.ServiceModel;
 using System.Text;
 using System.Web.Mvc;
 using TestWcfSite.Models.PikhotaSerhiiModels;
@@ -20,11 +22,24 @@ namespace TestWcfSite.Controllers
         }
 
         [HttpPost]
-        public ActionResult CurrencyConverter(CurrencyConverter converter, int count, string fromCurrency, string toCurrency,string act)
+        public ActionResult CurrencyConverter(CurrencyConverter converter, int? count, string fromCurrency, string toCurrency,string act)
         {
             using (converter)
             {
-                ViewBag.Result = converter.SrvConvertCurrency.ChangeCurrency(fromCurrency, toCurrency, count, act);
+                try
+                {
+                    if (count != null)
+                        ViewBag.Result = converter.SrvConvertCurrency.ChangeCurrency(fromCurrency, toCurrency,
+                            count.Value, act);
+                }
+                catch (InvalidOperationException)
+                {
+                    ViewBag.ex = "Введите сумму пожалуста.";
+                }
+                catch (CommunicationException ex)
+                {
+                    ViewBag.ExConnect = $"Не удается подключиться к службе:{ex}";
+                }
             }
             return View(converter);
         }
