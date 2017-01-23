@@ -8,9 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-
-namespace TemperatureClientLibrary.TemperatureServiceReference {
+namespace TemperatureClientLib.TemperatureServiceReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -25,12 +23,12 @@ namespace TemperatureClientLibrary.TemperatureServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ITemperatureChannel : TemperatureClientLibrary.TemperatureServiceReference.ITemperature, System.ServiceModel.IClientChannel {
+    public interface ITemperatureChannel : TemperatureClientLib.TemperatureServiceReference.ITemperature, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class TemperatureClient : System.ServiceModel.ClientBase<TemperatureClientLibrary.TemperatureServiceReference.ITemperature>, TemperatureClientLibrary.TemperatureServiceReference.ITemperature {
+    public partial class TemperatureClient : System.ServiceModel.ClientBase<TemperatureClientLib.TemperatureServiceReference.ITemperature>, TemperatureClientLib.TemperatureServiceReference.ITemperature {
         
         public TemperatureClient() {
         }
@@ -50,12 +48,7 @@ namespace TemperatureClientLibrary.TemperatureServiceReference {
         public TemperatureClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
-
-        public string CurrentTemperature()
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public string Temp() {
             return base.Channel.Temp();
         }

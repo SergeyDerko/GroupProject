@@ -1,4 +1,4 @@
-﻿using TemperatureClientLib.TemperatureServiceReference;
+﻿using TemperatureClientLibrary.TemperatureServiceReference;
 
 namespace TestWcfSite.Models.ArtemModels
 {
@@ -9,6 +9,7 @@ namespace TestWcfSite.Models.ArtemModels
             var client = new TemperatureClient();
             CurrentTemperature = client.CurrentTemperature();
         }
+
         public string CurrentTemperature { get; private set; }
     }
 }
