@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+    <script src="http://maps.google.com/maps/api/js?sensor=true;language=ru;key=AIzaSyD2gZhwOHaHF4VZt2tBcOnajqzyufsM1sY" type="text/javascript"></script>
+   
+</head>
+<body>
+    
+    <style>
+        #map_canvas img {
+            max-width: none;
+        }
+    </style>
+    <style>
+        .infoDiv {
+            height: 200px;
+            width: 300px;
+            -webkit-user-select: none;
+            background-color: white;
+        }
+    </style>
+    <br />
+<div id="map_canvas" style="height: 550px;"></div>
+</body>
+    @section scripts {
+        <section class="scripts">
+
+            <script type="text/javascript">
+
+
+    $(document).ready(function () {
+        Initialize();
+    });
+
+    function Initialize() {
+
+        google.maps.visualRefresh = true;
+        var Brain = new google.maps.LatLng(50.398550, 30.516368);
+
+        var mapOptions = {
+            zoom: 8,
+            center: Brain,
+            mapTypeId: google.maps.MapTypeId.G_NORMAL_MAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+        var data = [
+                  { "Id": 1, "PlaceName": "BrainAcademy", "GeoLong": "50.398550", "GeoLat": "30.516368" },
+                 ];
+
+        $.each(data, function (i, item) {
+            var marker = new google.maps.Marker({
+                'position': new google.maps.LatLng(item.GeoLong, item.GeoLat),
+                'map': map,
+                'title': item.PlaceName
+            });
+
+            marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
+            var infowindow = new google.maps.InfoWindow({
+                content: "<div class='infoDiv'><h2>" + item.PlaceName + "</div></div>"
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map, marker);
+            });
+
+        });
+    }
+
+
+            </script>
+        </section>
+    }

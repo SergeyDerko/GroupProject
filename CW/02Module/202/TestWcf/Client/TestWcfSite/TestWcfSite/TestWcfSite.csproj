@@ -182,6 +182,7 @@
     <Compile Include="Models\AnastasiaNepomiluyev\User.cs" />
     <Compile Include="Models\Calc\CalcModel.cs" />
     <Compile Include="Models\DanilaModels\ExpressionD.cs" />
+    <Compile Include="Models\DanilaModels\Map.cs" />
     <Compile Include="Models\DanilaModels\Plitka.cs" />
     <Compile Include="Models\KhlopovOlegModel\MeteoTemp.cs" />
     <Compile Include="Models\KhlopovOlegModel\User.cs" />
@@ -292,6 +293,7 @@
     <Content Include="Views\Oleg\MeteoTemp.cshtml" />
     <Content Include="Views\AnastasiaNepomiluyev\TimeOfDay.cshtml" />
     <Content Include="Views\SergeyDerko\InfoLog.cshtml" />
+    <Content Include="Views\Danila\Map.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
