@@ -2,6 +2,8 @@
 using System.Text;
 using System.Web.Mvc;
 using TestWcfSite.Models.KhlopovOlegModel;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace TestWcfSite.Controllers
 {
@@ -16,7 +18,7 @@ namespace TestWcfSite.Controllers
 
         public string mesInList(int val, int var, int fin)
         {
-            messg = val + " * " + var + " = " + fin;
+            messg = val + " * " + var + " = " + fin + " |";
             return messg;
         }
     }

@@ -11,7 +11,7 @@ namespace ServicesViewerLib
         public static string path;
         public List<OneService> ServicesSearcher()
         {
-            Logger.Start();
+            Logger.Enter();
             Logger.Info(path);
             List<OneService> services = new List<OneService>();
 
@@ -37,8 +37,8 @@ namespace ServicesViewerLib
                         {
                             temp.ServiceBehaviorConfiguration = behaviorConfigAttribute.Value;
                             Logger.Info(temp.ServiceName = nameAttribute.Value);
-                            Logger.Info(temp.EndpointBinding = endpointBindingAttribute.Value);
-                            Logger.Info(temp.EndpointContract = endpointContractAttribute.Value);
+                            temp.EndpointBinding = endpointBindingAttribute.Value;
+                            temp.EndpointContract = endpointContractAttribute.Value;
                             temp.BaseAddress = baseAddressAttribute.Value;
                             services.Add(temp);
                             num++;
@@ -55,7 +55,7 @@ namespace ServicesViewerLib
                         {
                             OneService temp = new OneService();
                             temp = services[num];
-                            Logger.Info(temp.BehaviorName = nameAttribute.Value);
+                            temp.BehaviorName = nameAttribute.Value;
                             services[num] = temp;
                         }
                         num++;
