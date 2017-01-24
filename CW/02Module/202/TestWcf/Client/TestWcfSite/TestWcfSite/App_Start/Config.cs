@@ -39,7 +39,8 @@ namespace TestWcfSite
                 string ret = (string)this["dir"] ?? string.Empty;
 
                 if (!Path.IsPathRooted(ret))
-                    ret = HttpContext.Current.Server.MapPath(ret) + "\\Log";
+                ret = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "Log");
+               // ret = HttpContext.Current.Server.MapPath("~\\Log");
                 return ret;
             }
             }
