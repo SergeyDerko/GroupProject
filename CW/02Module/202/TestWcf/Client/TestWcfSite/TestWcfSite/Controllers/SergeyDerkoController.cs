@@ -16,6 +16,15 @@ namespace TestWcfSite.Controllers
             return View();
         }
 
+        public ActionResult InfoSiteLog()
+        {
+            Logger.Enter("SergeyDerkoController-->InfoLogInSite()");
+            var model = new ReadLogInSite();
+            ViewBag.InfologInSite = model.Read().Replace("#", "<br />");
+
+            return View();
+        }
+
         public ActionResult InfoLog()
         {
             Logger.Enter("SergeyDerkoController-->InfoLog()");

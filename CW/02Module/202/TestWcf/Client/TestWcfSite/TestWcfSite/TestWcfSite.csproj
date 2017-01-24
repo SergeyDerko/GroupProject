@@ -192,6 +192,7 @@
     <Compile Include="Models\PikhotaSerhiiModels\User.cs" />
     <Compile Include="Models\SergeyDerkoModels\CalcModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\Expression11.cs" />
+    <Compile Include="Models\SergeyDerkoModels\ReadLogInSite.cs" />
     <Compile Include="Models\SergeyDerkoModels\ReadLogModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\ScanPcModel.cs" />
     <Compile Include="Models\SergeyDerkoModels\User11.cs" />
@@ -295,6 +296,7 @@
     <Content Include="Views\SergeyDerko\InfoLog.cshtml" />
     <Content Include="Views\Artem\Temperature.cshtml" />
     <Content Include="Views\Danila\Map.cshtml" />
+    <Content Include="Views\SergeyDerko\InfoSiteLog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

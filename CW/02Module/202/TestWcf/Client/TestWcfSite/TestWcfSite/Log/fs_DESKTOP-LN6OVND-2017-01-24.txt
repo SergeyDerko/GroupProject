@@ -20,3 +20,14 @@
 #24.01.17 15:10:34.879 0000000A Info    Info Index второе значение: 53
 #24.01.17 15:10:34.879 0000000A Info    Info Index результат действия: 392
 #24.01.17 15:10:39.292 00000007 Trace   >> SergeyDerkoController-->InfoLog()
+#24.01.17 15:39:42.706 00000001 Info    Обращение к сайту
+#24.01.17 15:39:46.976 00000005 Trace   >> SergeyDerkoController-->Index()
+#24.01.17 15:40:15.582 00000001 Info    Обращение к сайту
+#24.01.17 15:40:18.063 00000008 Trace   >> SergeyDerkoController-->Index()
+#24.01.17 15:41:12.441 00000001 Info    Обращение к сайту
+#24.01.17 15:41:14.915 00000007 Trace   >> SergeyDerkoController-->Index()
+#24.01.17 15:41:22.859 00000008 Trace   >> SergeyDerkoController-->InfoLog()
+#24.01.17 15:42:00.105 00000001 Info    Обращение к сайту
+#24.01.17 15:42:02.725 00000007 Trace   >> SergeyDerkoController-->Index()
+#24.01.17 15:42:06.234 00000007 Trace   >> SergeyDerkoController-->InfoLog()
+#24.01.17 15:42:09.950 00000008 Trace   >> SergeyDerkoController-->InfoLogInSite()
