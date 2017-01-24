@@ -253,7 +253,6 @@
     <Content Include="Views\Calc\Min.cshtml" />
     <Content Include="Views\Calc\Sqrt.cshtml" />
     <Content Include="Views\Calc\Div.cshtml" />
-    <Content Include="Views\Artem\Index.cshtml" />
     <Content Include="Views\Oleg\Index.cshtml" />
     <Content Include="Views\Oleg\Table.cshtml" />
     <Content Include="Views\Calc\TableMultiply.cshtml" />
@@ -334,6 +333,10 @@
     <ProjectReference Include="..\..\Aleksey\ServicesViewerClientLib\ServicesViewerClientLib.csproj">
       <Project>{efe62342-1a3b-4f21-aefb-f5770b913f7a}</Project>
       <Name>ServicesViewerClientLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Artem\TemperatureClientLibrary\TemperatureClientLibrary.csproj">
+      <Project>{CDDFEC31-D087-4E92-B8D6-95EB1377298C}</Project>
+      <Name>TemperatureClientLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Oleg\MeteoTempClientLib\MeteoTempClientLib.csproj">
       <Project>{356e8d70-d792-4954-854d-3fd1b4e706b3}</Project>

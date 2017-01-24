@@ -7,8 +7,8 @@
     <ProjectGuid>{CDDFEC31-D087-4E92-B8D6-95EB1377298C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TemperatureClientLib</RootNamespace>
-    <AssemblyName>TemperatureClientLib</AssemblyName>
+    <RootNamespace>TemperatureClientLibrary</RootNamespace>
+    <AssemblyName>TemperatureClientLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

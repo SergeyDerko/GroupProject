@@ -6,7 +6,6 @@ namespace TemperatureServiceLib
     public interface ITemperature
     {
         [OperationContract]
-
         string Temp();
     }
 }

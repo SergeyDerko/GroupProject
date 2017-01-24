@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TemperatureClientLib.TemperatureServiceReference {
+namespace TemperatureClientLibrary.TemperatureServiceReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -23,12 +23,12 @@ namespace TemperatureClientLib.TemperatureServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ITemperatureChannel : TemperatureClientLib.TemperatureServiceReference.ITemperature, System.ServiceModel.IClientChannel {
+    public interface ITemperatureChannel : TemperatureClientLibrary.TemperatureServiceReference.ITemperature, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class TemperatureClient : System.ServiceModel.ClientBase<TemperatureClientLib.TemperatureServiceReference.ITemperature>, TemperatureClientLib.TemperatureServiceReference.ITemperature {
+    public partial class TemperatureClient : System.ServiceModel.ClientBase<TemperatureClientLibrary.TemperatureServiceReference.ITemperature>, TemperatureClientLibrary.TemperatureServiceReference.ITemperature {
         
         public TemperatureClient() {
         }
