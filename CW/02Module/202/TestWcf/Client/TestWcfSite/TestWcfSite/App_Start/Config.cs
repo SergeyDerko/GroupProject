@@ -1,5 +1,6 @@
 ﻿using System.Configuration;
 using System.IO;
+using System.Web;
 using TestWcfCommon;
 
 namespace TestWcfSite
@@ -15,7 +16,7 @@ namespace TestWcfSite
                 {
                     if (_instance == null)
                     {
-                        _instance = ConfigurationManager.GetSection("serviceConfig") as Config; //Не инициализируется
+                        _instance = ConfigurationManager.GetSection("serviceConfig") as Config; 
                     }
                     return _instance;
                 }
@@ -35,14 +36,12 @@ namespace TestWcfSite
             {
                 get
                 {
-                    string ret = (string)this["dir"] ?? string.Empty;
-                    if (!Path.IsPathRooted(ret))
-                    {
-                        var name = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-                        ret = Path.Combine(name, "Log");
-                    }
-                    return ret;
-                }
+                string ret = (string)this["dir"] ?? string.Empty;
+
+                if (!Path.IsPathRooted(ret))
+                    ret = HttpContext.Current.Server.MapPath(ret) + "\\Log";
+                return ret;
+            }
             }
 
             [ConfigurationProperty("level", DefaultValue = Level.Trace, IsRequired = false)]

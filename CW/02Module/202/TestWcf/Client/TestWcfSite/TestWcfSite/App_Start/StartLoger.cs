@@ -9,7 +9,7 @@ namespace TestWcfSite
         public static void Init()
         { 
             
-            Logger.Level = Config.Get.Log.Level; //при неотстроенном конфиге =  null
+            Logger.Level = Config.Get.Log.Level;
             
             try
             {

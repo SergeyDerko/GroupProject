@@ -1,0 +1,22 @@
+#24.01.17 14:46:38.800 00000001 Info    Обращение к сайту
+#24.01.17 14:51:39.900 00000001 Info    Обращение к сайту
+#24.01.17 14:51:45.630 00000008 Trace   >> SergeyDerkoController
+#24.01.17 15:06:12.915 00000001 Info    Обращение к сайту
+#24.01.17 15:06:20.175 00000007 Trace   >> SergeyDerkoController-->Index()
+#24.01.17 15:06:23.364 00000008 Trace   >> SergeyDerkoController-->MultiplicationTable()
+#24.01.17 15:06:26.392 00000007 Trace   >> SergeyDerkoController-->Table()
+#24.01.17 15:06:26.392 00000007 Trace   >> SergeyDerkoController-->TableBuilder()
+#24.01.17 15:06:36.395 00000007 Trace   >> SergeyDerkoController-->Index()[HttpPost]-->Calc
+#24.01.17 15:06:36.399 00000007 Info    Info Index 44
+#24.01.17 15:06:36.399 00000007 Info    Info Index +
+#24.01.17 15:06:36.399 00000007 Info    Info Index 33
+#24.01.17 15:06:36.399 00000007 Info    Info Index 77
+#24.01.17 15:10:14.419 00000001 Info    Обращение к сайту
+#24.01.17 15:10:19.930 00000007 Trace   >> SergeyDerkoController-->Index()
+#24.01.17 15:10:22.762 00000007 Trace   >> SergeyDerkoController-->MultiplicationTable()
+#24.01.17 15:10:34.864 0000000A Trace   >> SergeyDerkoController-->Index()[HttpPost]-->Calc
+#24.01.17 15:10:34.879 0000000A Info    Info Index первое значение: 445
+#24.01.17 15:10:34.879 0000000A Info    Info Index выбранное действие: -
+#24.01.17 15:10:34.879 0000000A Info    Info Index второе значение: 53
+#24.01.17 15:10:34.879 0000000A Info    Info Index результат действия: 392
+#24.01.17 15:10:39.292 00000007 Trace   >> SergeyDerkoController-->InfoLog()
