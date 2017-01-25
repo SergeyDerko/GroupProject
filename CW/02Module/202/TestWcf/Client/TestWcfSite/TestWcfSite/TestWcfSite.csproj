@@ -299,12 +299,9 @@
     <Content Include="Views\SergeyDerko\InfoLog.cshtml" />
     <Content Include="Views\Artem\Temperature.cshtml" />
     <Content Include="Views\Danila\Map.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Artem\Index.cshtml" />
-=======
     <Content Include="Views\SergeyDerko\InfoSiteLog.cshtml" />
     <Content Include="Views\AnastasiaNepomiluyev\Twitter.cshtml" />
->>>>>>> ce284863c5413eb41495017e5f06d1c02c5ae2a7
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
