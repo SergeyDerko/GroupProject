@@ -5,10 +5,14 @@
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.TimeOfDayModel.TimeOfDay</h3>
 <br />
-@Html.ActionLink("Мультипликатор А на Б", "Multiply", "AnastasiaNepomiluyev", new {a = 5, b = 5}, null)
-<br />
-@Html.Partial("User", (TestWcfSite.Models.AnastasiaNepomiluyev.User)ViewBag.User)
-<br/>
-@Html.Partial("Twitter", (TestWcfSite.Models.AnastasiaNepomiluyev.Twitter)ViewBag.TwitterModel)
-<br />
-
+<div class="row">
+    <div>
+        @Html.ActionLink("Мультипликатор А на Б", "Multiply", "AnastasiaNepomiluyev", new { a = 5, b = 5 }, new { @class = "btn" })
+    </div>
+    <div>
+        @Html.Partial("User", (TestWcfSite.Models.AnastasiaNepomiluyev.User)ViewBag.User)
+    </div>
+    <div>
+        @Html.Partial("Twitter", (TestWcfSite.Models.AnastasiaNepomiluyev.Twitter)ViewBag.TwitterModel)
+    </div>
+</div>
