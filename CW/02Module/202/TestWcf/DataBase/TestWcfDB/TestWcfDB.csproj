@@ -44,10 +44,11 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\StudentsContext.cs" />
+    <Compile Include="CalcContext.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="StudentsContext.cs" />
     <Compile Include="Program.cs" />
     <None Include="App.config" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,6 +58,10 @@
     <ProjectReference Include="..\..\Common\TestWcfCommon\TestWcfCommon.csproj">
       <Project>{6d360c5f-a3e9-471a-84af-09fc8a7eaa13}</Project>
       <Name>TestWcfCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\TestWcfTypes\TestWcfTypes.csproj">
+      <Project>{19B86A68-7A8D-46B9-B68D-757F5028A562}</Project>
+      <Name>TestWcfTypes</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
