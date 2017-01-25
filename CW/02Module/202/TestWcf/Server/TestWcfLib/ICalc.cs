@@ -1,4 +1,5 @@
 ﻿using System.ServiceModel;
+using TestWcfTypes.Expressions;
 
 namespace TestWcfLib
 {

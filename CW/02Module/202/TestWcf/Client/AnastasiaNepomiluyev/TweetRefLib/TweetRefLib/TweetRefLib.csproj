@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{416C1CC5-2945-41B7-89E0-A5D7BDB757B1}</ProjectGuid>
+    <ProjectGuid>{5605E1BE-BBD0-49E6-9626-C61DC40D0AF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TimeOfDayConvertWcfClientLib</RootNamespace>
-    <AssemblyName>TimeOfDayConvertWcfClientLib</AssemblyName>
+    <RootNamespace>TweetRefLib</RootNamespace>
+    <AssemblyName>TweetRefLib</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,13 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\TimeOfDayService\Reference.cs">
+    <Compile Include="Class1.cs" />
+    <Compile Include="Connected Services\TweetReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="ITimeOfDayConverter.cs" />
-    <Compile Include="TimeOfDayConvert.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,35 +55,31 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Connected Services\TimeOfDayService\ITimeOfDayConverter.xsd">
+    <None Include="Connected Services\TweetReference\ITweeter.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TimeOfDayService\ITimeOfDayConverter1.xsd">
+    <None Include="Connected Services\TweetReference\ITweeter1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\TimeOfDayService\TimeOfDayConvert.wsdl" />
+    <None Include="Connected Services\TweetReference\ITweeter2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TweetReference\Twitter.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\TimeOfDayService\" />
+    <WCFMetadataStorage Include="Connected Services\TweetReference\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\TimeOfDayService\configuration91.svcinfo" />
+    <None Include="Connected Services\TweetReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\TimeOfDayService\configuration.svcinfo" />
+    <None Include="Connected Services\TweetReference\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\TimeOfDayService\Reference.svcmap">
+    <None Include="Connected Services\TweetReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

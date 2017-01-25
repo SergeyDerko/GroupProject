@@ -33,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -73,10 +81,6 @@
       <Project>{6d360c5f-a3e9-471a-84af-09fc8a7eaa13}</Project>
       <Name>TestWcfCommon</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\TimeOfDayConvertWcfLib\TimeOfDayConvertWcfLib.csproj">
-      <Project>{05D7C92B-9EDC-4BE6-9FC1-D8F1A9E01351}</Project>
-      <Name>TimeOfDayConvertWcfLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\PlitkaLib\PlitkaLib.csproj">
       <Project>{42D39536-BCAD-48F8-B81A-A972FE66C8A3}</Project>
       <Name>PlitkaLib</Name>
@@ -84,6 +88,14 @@
     <ProjectReference Include="..\Aleksey\ServicesViewerLib\ServicesViewerLib.csproj">
       <Project>{48ffa191-a8a6-46ce-b053-68f994645fe5}</Project>
       <Name>ServicesViewerLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AnastasiaNepomiluyev\TimeOfDayConvertWcfLib\TimeOfDayConvertWcfLib.csproj">
+      <Project>{5ecf202e-55f9-4813-8980-79cbf083b913}</Project>
+      <Name>TimeOfDayConvertWcfLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AnastasiaNepomiluyev\TweetLib\TweetLib\TweetLib.csproj">
+      <Project>{2bcfefe7-6298-4b2a-b9c2-4aecda6b0679}</Project>
+      <Name>TweetLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\Artem\TemperatureServiceLib\TemperatureServiceLib.csproj">
       <Project>{2623722C-5580-4AA4-AC8F-1B8CB22FC107}</Project>

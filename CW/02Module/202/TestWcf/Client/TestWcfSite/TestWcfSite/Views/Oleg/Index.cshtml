@@ -7,10 +7,28 @@
     <title>Index</title>
 </head>
 <body>
-    <div>
-        @Html.ActionLink("Таблица умножения", "Table", "Oleg")
-        @Html.ActionLink("User", "User", "Oleg")
-        @Html.ActionLink("MeteoTemp", "MeteoTemp", "Oleg")
-    </div>
 </body>
 </html>
+<div class="row">
+    <div class="col-xs-4">
+        <h3>Table Multiply</h3>
+        <p>Вывод таблицы умножения</p>
+        <p>
+            @Html.ActionLink(" Таблица умножения ", "Table", "Oleg", new { @class = "btn btn-default" })
+        </p>
+    </div>
+    <div class="col-xs-4">
+        <h3>User</h3>
+        <p>Вывод пользователя</p>
+        <p>
+            @Html.ActionLink(" User ", "User", "Oleg", new { @class = "btn btn-default" })
+        </p>
+    </div>
+    <div class="col-xs-4">
+        <h3>Weather in Kyiv</h3>
+        <p>Температуры</p>
+        <p>
+            @Html.ActionLink(" MeteoTemp ", "MeteoTemp", "Oleg", new { @class = "btn btn-default" })
+        </p>
+    </div>
+</div>

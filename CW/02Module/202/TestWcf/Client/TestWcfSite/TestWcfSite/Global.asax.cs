@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -13,12 +9,11 @@ namespace TestWcfSite
     {
         protected void Application_Start()
         {
-            //Возможно он и стартанет, но не из под дебага, т.к. трасировка идет в IIS// 
-            //StartLoger.Init();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            StartLoger.Init();
         }
     }
 }

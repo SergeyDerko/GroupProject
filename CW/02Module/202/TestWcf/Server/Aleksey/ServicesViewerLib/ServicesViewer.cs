@@ -61,16 +61,15 @@ namespace ServicesViewerLib
                         num++;
                     }
                 }
-            Logger.Leave("Завершение работы метода ServiceViewer.ServicesSearcher()");
-            return services;
-        }
+           
+            }
             catch (FileNotFoundException e)
             {
                 ValidationFault fault = new ValidationFault();
 
                 fault.Result = false;
-                fault.Message = e.Message;
-                fault.Description = "File *exe.congig not found.";
+                Logger.Info(fault.Message = e.Message);
+                Logger.Info(fault.Description = "File *exe.congig not found.");
 
                 throw new FaultException<ValidationFault>(fault);
             }
@@ -79,11 +78,13 @@ namespace ServicesViewerLib
                 FileFound fault = new FileFound();
 
                 fault.Result = false;
-                fault.Message = e.Message;
-                fault.Description = "Cannot divide by zero.";
+                Logger.Info(fault.Message = e.Message);
+                Logger.Info(fault.Description = "Cannot divide by zero.");
 
                 throw new FaultException<FileFound>(fault);
             }
+            Logger.Leave("Завершение работы метода ServiceViewer.ServicesSearcher()");
+            return services;
         }
     }
 }

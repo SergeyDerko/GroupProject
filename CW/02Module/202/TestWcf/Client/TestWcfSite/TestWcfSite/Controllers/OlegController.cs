@@ -18,7 +18,7 @@ namespace TestWcfSite.Controllers
 
         public string mesInList(int val, int var, int fin)
         {
-            messg = val + " * " + var + " = " + fin + " |";
+            messg =  val + " * " + var + " = " + fin + " |\n";
             return messg;
         }
     }
@@ -80,6 +80,7 @@ namespace TestWcfSite.Controllers
             ViewBag.name = model.name;
             ViewBag.age = model.age;
             ViewBag.sex = model.sex;
+
             ViewBag.result = model.Result();
 
             return View();
