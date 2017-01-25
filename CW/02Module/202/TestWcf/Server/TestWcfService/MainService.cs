@@ -10,6 +10,7 @@ using ServicesViewerLib;
 using TestWcfCommon;
 using MeteoTempServiceLib;
 using TemperatureServiceLib;
+using TweetLib;
 
 
 namespace TestWcfService
@@ -27,6 +28,7 @@ namespace TestWcfService
         private readonly BaseService<ServicesViewer> _servicesViewer = new BaseService<ServicesViewer>();
         private readonly BaseService<MeteoTemp> _meteoTempService = new BaseService<MeteoTemp>();
         private readonly BaseService<Temperature> _temperature = new BaseService<Temperature>();
+        private readonly BaseService<Twitter> _tweetService = new BaseService<Twitter>();
 
         public void StartSvc()
         {
@@ -42,6 +44,7 @@ namespace TestWcfService
             _servicesViewer.Start();
             _meteoTempService.Start();
             _temperature.Start();
+            _tweetService.Start();
             Logger.Leave();
         }
 
@@ -59,6 +62,7 @@ namespace TestWcfService
             _servicesViewer.Stop();
             _meteoTempService.Stop();
             _temperature.Stop();
+            _tweetService.Stop();
             Logger.Leave();
         }
 

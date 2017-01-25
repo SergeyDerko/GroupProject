@@ -12,6 +12,8 @@ namespace TestWcfSite.Controllers
         {
             ViewBag.User = new TestWcfSite.Models.AnastasiaNepomiluyev.User();
             ViewBag.TimeOfDayModel = new TestWcfSite.Models.AnastasiaNepomiluyev.TimeOfDayClient();
+            ViewBag.TwitterModel = new TestWcfSite.Models.AnastasiaNepomiluyev.Twitter() { CountOfPosts = 10, UserName = "freeCodeCamp" };
+
             ViewBag.TimeOfDayModel.SetTimeOfDay();
             return View();
         }
@@ -36,6 +38,12 @@ namespace TestWcfSite.Controllers
             TimeOfDayModel.SetTimeOfDay();
             ViewBag.CurrentTimeOfDay = TimeOfDayModel.TimeOfDay;
             return View();
+        }
+
+        public ActionResult Twitter(TestWcfSite.Models.AnastasiaNepomiluyev.Twitter tweeter)
+        {
+            tweeter.GetTweets();
+            return View(tweeter);
         }
 
         #endregion

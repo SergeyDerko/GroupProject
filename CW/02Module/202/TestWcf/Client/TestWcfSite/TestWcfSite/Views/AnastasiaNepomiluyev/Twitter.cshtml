@@ -1,0 +1,26 @@
+﻿@model TestWcfSite.Models.AnastasiaNepomiluyev.Twitter
+
+@using (Html.BeginForm("Twitter", "AnastasiaNepomiluyev", FormMethod.Post))
+{
+    @Html.Label("UserName on Twitter: ")
+    @Html.TextBox("UserName", Model.UserName)<br />
+    @Html.Label("Count Of Posts: ")
+    @Html.TextBox("CountOfPosts", Model.CountOfPosts)<br />
+    <input type="submit" value="Update" />
+    <br />
+    <br />
+    @Html.Label("Tweets: ")
+}
+@{
+    if (Model.Posts != null)
+    {
+        foreach (var post in Model.Posts)
+        {
+            <div>
+                @post
+            </div>
+        }
+    }
+}
+
+

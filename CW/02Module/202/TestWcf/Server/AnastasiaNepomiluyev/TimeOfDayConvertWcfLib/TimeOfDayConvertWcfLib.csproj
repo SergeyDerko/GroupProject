@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{416C1CC5-2945-41B7-89E0-A5D7BDB757B1}</ProjectGuid>
+    <ProjectGuid>{5ECF202E-55F9-4813-8980-79CBF083B913}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TimeOfDayConvertWcfClientLib</RootNamespace>
-    <AssemblyName>TimeOfDayConvertWcfClientLib</AssemblyName>
+    <RootNamespace>TimeOfDayConvertWcfLib</RootNamespace>
+    <AssemblyName>TimeOfDayConvertWcfLib</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,7 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,42 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\TimeOfDayService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="ITimeOfDayConverter.cs" />
     <Compile Include="TimeOfDayConvert.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Connected Services\TimeOfDayService\ITimeOfDayConverter.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\TimeOfDayService\ITimeOfDayConverter1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\TimeOfDayService\TimeOfDayConvert.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\TimeOfDayService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\TimeOfDayService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\TimeOfDayService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\TimeOfDayService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <ProjectReference Include="..\..\..\Common\TestWcfCommon\TestWcfCommon.csproj">
+      <Project>{6d360c5f-a3e9-471a-84af-09fc8a7eaa13}</Project>
+      <Name>TestWcfCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

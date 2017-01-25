@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a6a3038e-f0ff-4c22-a03c-27aefa9c8ade" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8df453d0-53b7-4dba-8e12-dbf44755adcc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,12 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:555/ITimeOfDayConverter?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:555/ITweeter?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TimeOfDayConvert.wsdl" MetadataType="Wsdl" ID="448f64a0-6e10-47f1-b998-fff1f455321f" SourceId="1" SourceUrl="http://localhost:555/ITimeOfDayConverter?wsdl" />
-    <MetadataFile FileName="ITimeOfDayConverter.xsd" MetadataType="Schema" ID="c2906719-0afd-4da3-b698-d1b6da9d9bd4" SourceId="1" SourceUrl="http://localhost:555/ITimeOfDayConverter?xsd=xsd0" />
-    <MetadataFile FileName="ITimeOfDayConverter1.xsd" MetadataType="Schema" ID="1d0c3990-00ff-4ae7-b52b-82678e9c3018" SourceId="1" SourceUrl="http://localhost:555/ITimeOfDayConverter?xsd=xsd1" />
+    <MetadataFile FileName="ITweeter.xsd" MetadataType="Schema" ID="e1b5d09d-0aac-4ec2-8ba7-f6adfe35bc56" SourceId="1" SourceUrl="http://localhost:555/ITweeter?xsd=xsd1" />
+    <MetadataFile FileName="ITweeter1.xsd" MetadataType="Schema" ID="937a6cd9-5628-4964-ab62-be03ed1019a2" SourceId="1" SourceUrl="http://localhost:555/ITweeter?xsd=xsd2" />
+    <MetadataFile FileName="Twitter.wsdl" MetadataType="Wsdl" ID="72333662-7986-4744-8d00-7315684ad25a" SourceId="1" SourceUrl="http://localhost:555/ITweeter?wsdl" />
+    <MetadataFile FileName="ITweeter2.xsd" MetadataType="Schema" ID="fe3a1117-8c8a-49a0-bddd-670d54de579d" SourceId="1" SourceUrl="http://localhost:555/ITweeter?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
