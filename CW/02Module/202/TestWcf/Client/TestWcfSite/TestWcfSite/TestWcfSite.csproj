@@ -299,6 +299,7 @@
     <Content Include="Views\SergeyDerko\InfoLog.cshtml" />
     <Content Include="Views\Artem\Temperature.cshtml" />
     <Content Include="Views\Danila\Map.cshtml" />
+    <Content Include="Views\Artem\Index.cshtml" />
     <Content Include="Views\SergeyDerko\InfoSiteLog.cshtml" />
     <Content Include="Views\AnastasiaNepomiluyev\Twitter.cshtml" />
   </ItemGroup>

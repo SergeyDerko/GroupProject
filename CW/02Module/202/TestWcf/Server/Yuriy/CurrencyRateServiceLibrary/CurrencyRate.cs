@@ -12,7 +12,7 @@ namespace CurrencyRateServiceLibrary
                 new Currency
                 {
                     Id = 1,
-                    CurrencyName = "USD",
+                    CurrencyName = "EUR",
                     CurrencyDescription = "Доллар",
                     Purchase = datalist[0],
                     Sale = datalist[1]
@@ -20,7 +20,7 @@ namespace CurrencyRateServiceLibrary
                 new Currency
                 {
                     Id = 2,
-                    CurrencyName = "EUR",
+                    CurrencyName = "USD",
                     CurrencyDescription = "Евро",
                     Purchase = datalist[2],
                     Sale = datalist[3]
