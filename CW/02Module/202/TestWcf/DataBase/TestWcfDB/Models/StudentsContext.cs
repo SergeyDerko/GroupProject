@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using TestWcfCommon.Types;
 
 namespace TestWcfDB.Models
 {
