@@ -295,6 +295,7 @@
     <Content Include="Views\SergeyDerko\InfoLog.cshtml" />
     <Content Include="Views\Artem\Temperature.cshtml" />
     <Content Include="Views\Danila\Map.cshtml" />
+    <Content Include="Views\Artem\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
