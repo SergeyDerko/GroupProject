@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{E0C276AC-8717-4F50-94CD-F432BC1E962B}"
 EndProject
@@ -122,6 +122,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureServiceLib", "Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureClientLibrary", "Client\Artem\TemperatureClientLibrary\TemperatureClientLibrary.csproj", "{CDDFEC31-D087-4E92-B8D6-95EB1377298C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWcfTypes", "Common\TestWcfTypes\TestWcfTypes.csproj", "{19B86A68-7A8D-46B9-B68D-757F5028A562}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -236,6 +238,10 @@ Global
 		{CDDFEC31-D087-4E92-B8D6-95EB1377298C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDDFEC31-D087-4E92-B8D6-95EB1377298C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDDFEC31-D087-4E92-B8D6-95EB1377298C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B86A68-7A8D-46B9-B68D-757F5028A562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B86A68-7A8D-46B9-B68D-757F5028A562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B86A68-7A8D-46B9-B68D-757F5028A562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B86A68-7A8D-46B9-B68D-757F5028A562}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -284,5 +290,6 @@ Global
 		{31ABBBCC-4BCC-4070-8CB4-D5AB93E79845} = {5F88A5CE-40F6-4A63-852B-9D1539B0265B}
 		{2623722C-5580-4AA4-AC8F-1B8CB22FC107} = {DDA58E72-ACA4-4A9D-A5D2-45AFE8B8F714}
 		{CDDFEC31-D087-4E92-B8D6-95EB1377298C} = {31ABBBCC-4BCC-4070-8CB4-D5AB93E79845}
+		{19B86A68-7A8D-46B9-B68D-757F5028A562} = {E2780623-5D5C-4F09-81F0-378D091DB862}
 	EndGlobalSection
 EndGlobal
