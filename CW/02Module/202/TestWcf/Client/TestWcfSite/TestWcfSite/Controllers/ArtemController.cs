@@ -12,9 +12,15 @@ namespace TestWcfSite.Controllers
         // GET: Artem
         public ActionResult Index()
         {
+<<<<<<< HEAD
             return View();
         }
 
+=======
+            
+            return View();
+        }
+>>>>>>> 3fd223ec2c6635520172d6bdf13c78012af802ab
         public ActionResult Temperature()
         {
             var currentTemperature = new Temperature();
